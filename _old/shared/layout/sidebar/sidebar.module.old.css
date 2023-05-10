@@ -1,0 +1,60 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18.5em;
+  height: 100%;
+  padding: 2em;
+  border-right: 1px #eee solid;
+
+  & h1 {
+    margin-top: 0.8em !important;
+    margin-bottom: 0.6em !important;
+    font-size: 1.9em !important;
+  }
+
+  & h2 {
+    display: inline-block;
+    width: 9.38em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+/* Sidebar */
+
+.follow-icons {
+  margin-top: -0.7em;
+  margin-bottom: 1.5em;
+  font-size: 0.7em;
+
+  & a {
+    margin-right: 0.35em;
+    color: #ccc;
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 800px) {
+  .page-header {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-bottom: 1em;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px #eee solid;
+  }
+}
+
+/* Tiny Screens */
+@media only screen and (max-width: 320px) {
+  .page-header {
+    padding: 1.2em 1.2em 0.6em 1.2em;
+  }
+}
