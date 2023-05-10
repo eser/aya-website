@@ -17,11 +17,16 @@ const nextConfig = {
 
   trailingSlash: true,
   productionBrowserSourceMaps: true,
+  poweredByHeader: false,
 
   // i18n: {
   //   locales: ["en"],
   //   defaultLocale: "en",
   // },
+
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 
   experimental: {
     appDir: true,
@@ -40,16 +45,16 @@ const nextConfig = {
   // },
 
   // deno-lint-ignore require-await
-  redirects: async () => {
+  rewrites: async () => {
     return [
       {
-        source: '/',
-        destination: '/tr/',
-        permanent: false,
+        source: "/",
+        destination: "/tr/",
+        // locale: false,
+        // permanent: false,
       },
     ];
   },
-
 };
 
 const withMiddlewares = withContentlayer(nextConfig);

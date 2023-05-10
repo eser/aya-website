@@ -11,6 +11,7 @@ const Error = ({
 }) => {
   useEffect(() => {
     // Log the error to an error reporting service
+    // eslint-disable-next-line no-console
     console.error(error);
   }, [error]);
 
@@ -18,6 +19,7 @@ const Error = ({
     <div>
       <h2>Something went wrong!</h2>
       <button
+        type="button"
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()

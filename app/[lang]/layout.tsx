@@ -1,6 +1,7 @@
 import { dir } from "i18next";
-import { ThemeProvider } from "./theme-provider";
+import { ThemeProvider } from "./theme-provider.tsx";
 import { FontProvider } from "./font-provider.tsx";
+import { Analytics } from "./analytics.tsx";
 
 import "./global.css";
 
@@ -14,11 +15,18 @@ const generateStaticParams = () => {
   return Promise.resolve(paths);
 };
 
-const Layout = ({ children, params }) => {
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: {
+    lang: string;
+  };
+}
+
+const Layout = (props: RootLayoutProps) => {
   return (
     <html
-      lang={params.lang}
-      dir={dir(params.lang)}
+      lang={props.params.lang}
+      dir={dir(props.params.lang)}
       suppressHydrationWarning={true}
     >
       <head />
@@ -29,7 +37,8 @@ const Layout = ({ children, params }) => {
           defaultTheme="system"
           enableSystem={true}
         >
-          {children}
+          {props.children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

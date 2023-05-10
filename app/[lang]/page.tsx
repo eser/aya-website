@@ -27,7 +27,7 @@ const metadata = {
 const IndexPage = () => {
   return (
     <Layout>
-      <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
+      <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Onİleri <br className="hidden sm:inline" />
@@ -35,7 +35,7 @@ const IndexPage = () => {
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Geliştirici ekosistemini her geçen gün daha da iyileştirmek amacıyla
-            yola çıkarak bir meta-topluluk oluşturduk. 2015'ten bu yana topluluklar,
+            yola çıkarak bir meta-topluluk oluşturduk. 2015&apos;ten bu yana topluluklar,
             etkinlikler, projeler ve içerikler oluşturmak, topluluğu motive etmek,
             farkındalık aşılamak ve engelleri ortadan kaldırmak için çalışıyoruz.
           </p>
