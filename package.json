@@ -1,8 +1,13 @@
 {
-  "name": "10fwd-webclient",
+  "name": "aya-webclient",
   "private": true,
-  "description": "onileri web client",
+  "description": "açık yazılım ağı web client",
   "keywords": [
+    "acik",
+    "yazilim",
+    "agi",
+    "aya",
+    "kaynak",
     "10ileri",
     "onileri",
     "10forward",
@@ -10,13 +15,11 @@
     "tenforward",
     "tenfwd",
     "web",
-    "client",
-    "acik",
-    "kaynak"
+    "client"
   ],
   "version": "0.0.1",
-  "homepage": "https://onileri.io",
-  "author": "onileri <info@onileri.io>",
+  "homepage": "https://acikyazilimagi.com",
+  "author": "aya <info@acikyazilimagi.com>",
   "contributors": [
     {
       "name": "Eser Ozvataf",
@@ -26,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/10fwd/10fwd-webclient.git"
+    "url": "git+https://github.com/acikkaynak/aya-webclient.git"
   },
   "bugs": {
-    "url": "https://github.com/10fwd/10fwd-webclient/issues"
+    "url": "https://github.com/acikkaynak/aya-webclient/issues"
   },
   "license": "Apache-2.0",
   "scripts": {

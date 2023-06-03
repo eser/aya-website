@@ -8,8 +8,8 @@ import { buttonVariants } from "@/shared/components/ui/button";
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
   title: {
-    default: "Onİleri",
-    template: "%s | Onİleri",
+    default: "Açık Yazılım Ağı",
+    template: "%s | Açık Yazılım Ağı",
   },
   description: "Geliştiricilere yönelik bir meta-topluluk.",
 
@@ -40,8 +40,8 @@ const IndexPage = (props: IndexPageProps) => {
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-            Onİleri <br className="hidden sm:inline" />
-            Geliştirici Meta-Topluluğu
+            Açık Yazılım Ağı <br className="hidden sm:inline" />
+            Bilişim Meta-Topluluğu
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Geliştirici ekosistemini her geçen gün daha da iyileştirmek amacıyla

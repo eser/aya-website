@@ -11,8 +11,8 @@ interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  name: "Onİleri",
-  description: "Yazılım geliştiricilerine yönelik bir meta-topluluk.",
+  name: "Açık Yazılım Ağı",
+  description: "Bilişim Meta-Topluluğu",
   mainNav: [
     {
       title: "Haberler",
@@ -40,8 +40,8 @@ const siteConfig: SiteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/10forward_io",
-    github: "https://github.com/10fwd",
+    twitter: "https://twitter.com/acikyazilimagi",
+    github: "https://github.com/acikkaynak",
   },
 };
 
