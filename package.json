@@ -48,6 +48,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@happykit/flags": "^3.2.0",
     "@next-auth/prisma-adapter": "^1.0.6",
     "@prisma/client": "^4.14.0",
     "@radix-ui/react-accessible-icon": "^1.0.2",

@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@happykit/flags':
+    specifier: ^3.2.0
+    version: 3.2.0(next@13.4.1)(react@18.2.0)
   '@next-auth/prisma-adapter':
     specifier: ^1.0.6
     version: 1.0.6(@prisma/client@4.14.0)(next-auth@4.22.1)
@@ -1091,6 +1094,17 @@ packages:
       long: 4.0.0
       protobufjs: 7.2.3
       yargs: 17.7.2
+    dev: false
+
+  /@happykit/flags@3.2.0(next@13.4.1)(react@18.2.0):
+    resolution: {integrity: sha512-mX7UBioTQWg9b5Fe/AGTow9+Cz44pbC5sj2evP69llg3pg0b0LHvQ7OIEXcINTB+UuXw4fIFweUDcDqiERIvhw==}
+    peerDependencies:
+      next: '>=12.0.2'
+      react: '>=16.13.1'
+    dependencies:
+      nanoid: 3.2.0
+      next: 13.4.1(@babel/core@7.21.8)(@opentelemetry/api@1.4.1)(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
@@ -7804,6 +7818,12 @@ packages:
       any-promise: 1.3.0
       object-assign: 4.1.1
       thenify-all: 1.6.0
+
+  /nanoid@3.2.0:
+    resolution: {integrity: sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: false
 
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
