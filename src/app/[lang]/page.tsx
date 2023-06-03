@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/shared/config/site";
+import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n";
 import { Layout } from "@/shared/components/layout";
 import { buttonVariants } from "@/shared/components/ui/button";
@@ -11,8 +11,7 @@ const metadata = {
     default: "Onİleri",
     template: "%s | Onİleri",
   },
-  description:
-    "Geliştiricilere yönelik bir meta-topluluk.",
+  description: "Geliştiricilere yönelik bir meta-topluluk.",
 
   icons: {
     icon: "/favicon.ico",
@@ -26,7 +25,9 @@ const metadata = {
 };
 
 interface IndexPageProps {
-  lang: Language;
+  params: {
+    lang: Language;
+  };
 }
 
 const IndexPage = (props: IndexPageProps) => {
@@ -44,9 +45,10 @@ const IndexPage = (props: IndexPageProps) => {
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Geliştirici ekosistemini her geçen gün daha da iyileştirmek amacıyla
-            yola çıkarak bir meta-topluluk oluşturduk. 2015&apos;ten bu yana topluluklar,
-            etkinlikler, projeler ve içerikler oluşturmak, topluluğu motive etmek,
-            farkındalık aşılamak ve engelleri ortadan kaldırmak için çalışıyoruz.
+            yola çıkarak bir meta-topluluk oluşturduk. 2015&apos;ten bu yana
+            topluluklar, etkinlikler, projeler ve içerikler oluşturmak,
+            topluluğu motive etmek, farkındalık aşılamak ve engelleri ortadan
+            kaldırmak için çalışıyoruz.
           </p>
         </div>
         <div className="flex gap-4">

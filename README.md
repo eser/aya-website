@@ -23,7 +23,7 @@ A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 import * as React from "react";
 import Link from "next/link";
 
-import { siteConfig } from "@/shared/config/site";
+import { siteConfig } from "@/shared/config/site.ts";
 import { buttonVariants } from "@/shared/components/ui/button";
 import { twMerge } from "tailwind-merge";
 
@@ -42,11 +42,11 @@ import { twMerge } from "tailwind-merge";
 
 // Followed by third-party modules
 // Space
-import { type NavItem } from "@/shared/config/nav";
+import { type NavItem } from "@/shared/config/nav.ts";
 // types
-import { siteConfig } from "@/shared/config/site";
+import { siteConfig } from "@/shared/config/site.ts";
 // config
-import { cn } from "@/shared/lib/utils";
+import { cn } from "@/shared/lib/utils.ts";
 // lib
 import { buttonVariants } from "@/shared/components/ui/button";
 

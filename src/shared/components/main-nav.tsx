@@ -1,8 +1,8 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { type NavItem } from "@/shared/config/nav";
-import { siteConfig } from "@/shared/config/site";
+import { type NavItem } from "@/shared/config/nav.ts";
+import { siteConfig } from "@/shared/config/site.ts";
 import { cn } from "@/shared/lib/utils";
 import { Icons } from "@/shared/components/icons";
 import { Button } from "@/shared/components/ui/button";

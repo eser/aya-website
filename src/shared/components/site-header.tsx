@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/shared/config/site";
+import { siteConfig } from "@/shared/config/site.ts";
 import { Icons } from "@/shared/components/icons";
 import { MainNav } from "@/shared/components/main-nav";
 import { ThemeToggle } from "@/shared/components/theme-toggle";

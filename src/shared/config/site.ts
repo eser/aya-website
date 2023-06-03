@@ -1,4 +1,4 @@
-import { type NavItem } from "./nav";
+import { type NavItem } from "./nav.ts";
 
 interface SiteConfig {
   name: string;
