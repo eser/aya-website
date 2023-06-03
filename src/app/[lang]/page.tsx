@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/shared/config/site";
-import { type Language } from "@webclient/shared/i18n";
+import { type Language } from "@/shared/i18n";
 import { Layout } from "@/shared/components/layout";
 import { buttonVariants } from "@/shared/components/ui/button";
 

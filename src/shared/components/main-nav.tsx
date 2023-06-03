@@ -37,9 +37,9 @@ function replacePlaceholders(
 function MainNav(props: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="hidden items-center space-x-2 md:flex">
+      <Link href={replacePlaceholders("/{lang}/", props.placeholders)} className="hidden items-center space-x-2 md:flex">
         <Icons.logo className="h-6 w-6" />
-        <span className="hidden font-bold sm:inline-block">
+        <span className="font-bold inline-block">
           {siteConfig.name}
         </span>
       </Link>
@@ -68,10 +68,12 @@ function MainNav(props: MainNavProps) {
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="-ml-4 text-base hover:bg-transparent focus:ring-0 md:hidden"
+            className="-ml-4 text-base hover:bg-transparent focus:ring-0 items-center space-x-2 flex md:hidden"
           >
-            <Icons.logo className="mr-2 h-4 w-4" />{" "}
-            <span className="font-bold">Onİleri</span>
+            <Icons.logo className="h-6 w-6" />
+            <span className="font-bold inline-block">
+              {siteConfig.name}
+            </span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
@@ -79,17 +81,17 @@ function MainNav(props: MainNavProps) {
           sideOffset={24}
           className="w-[300px] overflow-scroll"
         >
-          <DropdownMenuLabel>
-            <Link href="/" className="flex items-center">
-              <Icons.logo className="mr-2 h-4 w-4" /> {siteConfig.name}
+          <DropdownMenuItem asChild>
+            <Link href={replacePlaceholders("/{lang}/", props.placeholders)}>
+              Ana Sayfa
             </Link>
-          </DropdownMenuLabel>
+          </DropdownMenuItem>
           <DropdownMenuSeparator />
           {props.items?.map(
             (item, index) =>
               item.href && (
                 <DropdownMenuItem key={index} asChild>
-                  <Link href={item.href}>{item.title}</Link>
+                  <Link href={replacePlaceholders(item.href, props.placeholders)}>{item.title}</Link>
                 </DropdownMenuItem>
               ),
           )}
