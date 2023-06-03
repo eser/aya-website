@@ -48,8 +48,12 @@ const StaticPageComponent: CustomPage<StaticPageComponentProps> = (
   const date = new Date(props.staticPage.date).toLocaleString("tr-TR");
   const MDXContent = useMDXComponent(props.staticPage.body.code);
 
+  const placeholders: Record<string, string> = {
+    lang: props.lang,
+  };
+
   return (
-    <Layout lang={props.lang}>
+    <Layout lang={props.lang} placeholders={placeholders}>
       <NextSeo title={props.staticPage.title} />
 
       <article className={styles.article}>

@@ -21,8 +21,12 @@ const InitiativesComponent: CustomPage<never> = (
 ) => {
   const { classes } = useStyles();
 
+  const placeholders: Record<string, string> = {
+    lang: props.lang,
+  };
+
   return (
-    <Layout lang={props.lang}>
+    <Layout lang={props.lang} placeholders={placeholders}>
       <NextSeo description="Yazılım geliştiricilerine yönelik bir meta-topluluk." />
       <HeroComponent lang={props.lang} />
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/shared/config/site";
+import { type Language } from "@webclient/shared/i18n";
 import { Layout } from "@/shared/components/layout";
 import { buttonVariants } from "@/shared/components/ui/button";
 
@@ -24,9 +25,17 @@ const metadata = {
   },
 };
 
-const IndexPage = () => {
+interface IndexPageProps {
+  lang: Language;
+}
+
+const IndexPage = (props: IndexPageProps) => {
+  const placeholders: Record<string, string> = {
+    lang: props.params.lang,
+  };
+
   return (
-    <Layout>
+    <Layout placeholders={placeholders}>
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
@@ -42,7 +51,7 @@ const IndexPage = () => {
         </div>
         <div className="flex gap-4">
           <Link
-            href="/guide/"
+            href={`/${placeholders.lang}/guide/`}
             rel="noreferrer"
             className={buttonVariants({ size: "lg" })}
           >

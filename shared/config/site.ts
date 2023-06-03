@@ -16,27 +16,27 @@ const siteConfig: SiteConfig = {
   mainNav: [
     {
       title: "Haberler",
-      href: "/news/",
+      href: "/{lang}/news/",
     },
     {
       title: "Topluluklar",
-      href: "/communities/",
+      href: "/{lang}/communities/",
     },
     {
       title: "Kişiler",
-      href: "/people/",
+      href: "/{lang}/people/",
     },
     {
       title: "Projeler",
-      href: "/projects/",
+      href: "/{lang}/projects/",
     },
     {
       title: "Rehber",
-      href: "/guide/",
+      href: "/{lang}/guide/",
     },
     {
       title: "Kurallar",
-      href: "/codes/",
+      href: "/{lang}/codes/",
     },
   ],
   links: {

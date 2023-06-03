@@ -17,9 +17,24 @@ import {
 
 interface MainNavProps {
   items?: NavItem[];
+  placeholders: Record<string, string>;
 }
 
-function MainNav({ items }: MainNavProps) {
+function replacePlaceholders(
+  href: string,
+  placeholders: Record<string, string>,
+): string {
+  if (placeholders === undefined) {
+    return href;
+  }
+
+  return href.replace(
+    "{lang}",
+    placeholders.lang,
+  );
+}
+
+function MainNav(props: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
@@ -28,15 +43,15 @@ function MainNav({ items }: MainNavProps) {
           {siteConfig.name}
         </span>
       </Link>
-      {items?.length
+      {props.items?.length
         ? (
           <nav className="hidden gap-6 md:flex">
-            {items?.map(
+            {props.items?.map(
               (item, index) =>
                 item.href && (
                   <Link
                     key={index}
-                    href={item.href}
+                    href={replacePlaceholders(item.href, props.placeholders)}
                     className={cn(
                       "flex items-center text-lg font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-100 sm:text-sm",
                       item.disabled && "cursor-not-allowed opacity-80",
@@ -70,7 +85,7 @@ function MainNav({ items }: MainNavProps) {
             </Link>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          {items?.map(
+          {props.items?.map(
             (item, index) =>
               item.href && (
                 <DropdownMenuItem key={index} asChild>
