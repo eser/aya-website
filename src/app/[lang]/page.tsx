@@ -1,17 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n";
 import { Layout } from "@/shared/components/layout";
 import { buttonVariants } from "@/shared/components/ui/button";
 
+import logo from "../../../public/brand/positive-1080x1080.svg";
+
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
   title: {
-    default: "Açık Yazılım Ağı",
-    template: "%s | Açık Yazılım Ağı",
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
   },
-  description: "Geliştiricilere yönelik bir meta-topluluk.",
+  description: siteConfig.description,
 
   icons: {
     icon: "/favicon.ico",
@@ -38,7 +41,13 @@ const IndexPage = (props: IndexPageProps) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
+        <div className="flex flex-col items-center">
+          <Link href="https://github.com/acikkaynak" rel="noreferrer">
+            <Image priority src={logo} alt="AYA | Açık Yazılım Ağı" />
+          </Link>
+        </div>
+        {
+          /* <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
@@ -67,7 +76,8 @@ const IndexPage = (props: IndexPageProps) => {
           >
             GitHub
           </Link>
-        </div>
+        </div> */
+        }
       </section>
     </Layout>
   );
