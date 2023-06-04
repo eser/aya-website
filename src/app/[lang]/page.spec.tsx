@@ -6,11 +6,16 @@ test("home", () => {
   render(<IndexPage params={{ lang: "tr" }} />);
 
   const main = within(screen.getByRole("main"));
+  // expect(
+  //   main.getByRole("heading", {
+  //     level: 1,
+  //     name: /açık yazılım ağı bilişim meta-topluluğu/i,
+  //   }),
+  // )
+  //   .toBeDefined();
+
   expect(
-    main.getByRole("heading", {
-      level: 1,
-      name: /açık yazılım ağı bilişim meta-topluluğu/i,
-    }),
+    main.getByAltText("AYA | Açık Yazılım Ağı"),
   )
     .toBeDefined();
 

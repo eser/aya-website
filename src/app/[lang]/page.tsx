@@ -45,7 +45,7 @@ const IndexPage = (props: IndexPageProps) => {
         <div className="flex flex-col items-center">
           <Link href="https://github.com/acikkaynak" rel="noreferrer">
             {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
-            <Image priority src={logo} alt="AYA | Açık Yazılım Ağı" />
+            <Image priority fill src={logo} alt="AYA | Açık Yazılım Ağı" />
           </Link>
         </div>
         {

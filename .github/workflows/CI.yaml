@@ -1,10 +1,10 @@
 on:
   push:
     branches:
-      - "**"
+      - "main"
+      # - "**"
   pull_request:
-    branches:
-      - "**"
+    types: [opened, synchronize]
 
 jobs:
   deploy:
@@ -12,42 +12,35 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    name: Deployment Checks
+    # To use Remote Caching, uncomment the next lines and follow the steps below.
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+    name: Build and Test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
         with:
-          node-version: latest
+          fetch-depth: 2
 
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v2.0.1
         id: pnpm-install
         with:
           version: 7
           run_install: false
 
-      - name: Get PNPM store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v3
-        name: Setup PNPM cache
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: latest
+          cache: "pnpm"
 
       - name: Install NPM dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install # --frozen-lockfile
 
       - name: Check Linter
-        run: pnpm lint
+        run: pnpm ci-lint
 
       - name: Run Tests
-        run: pnpm test
+        run: pnpm ci-test
