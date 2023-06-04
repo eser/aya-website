@@ -1,11 +1,13 @@
 on:
   push:
     branches:
-      - "main"
+      - main
       # - "**"
 
   pull_request:
-    types: [opened, synchronize]
+    types:
+      - opened
+      - synchronize
 
 jobs:
   build:
@@ -18,7 +20,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version:
+          - latest
+        # - 16.x
 
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
@@ -41,10 +45,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install NPM dependencies
-        run: pnpm install # --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Check Linter
         run: pnpm ci-lint
