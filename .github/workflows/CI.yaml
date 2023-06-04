@@ -3,20 +3,27 @@ on:
     branches:
       - "main"
       # - "**"
+
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  deploy:
+  build:
+    name: Build and Test
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       deployments: write
-    # To use Remote Caching, uncomment the next lines and follow the steps below.
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-    name: Build and Test
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,10 +37,10 @@ jobs:
           version: 7
           run_install: false
 
-      - name: Setup Node.js environment
+      - name: Setup Node.js ${{ matrix.node-version }} environment
         uses: actions/setup-node@v3
         with:
-          node-version: latest
+          node-version: ${{ matrix.node-version }}
           cache: "pnpm"
 
       - name: Install NPM dependencies
