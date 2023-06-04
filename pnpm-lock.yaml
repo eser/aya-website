@@ -235,6 +235,9 @@ devDependencies:
   eslint-plugin-tailwindcss:
     specifier: ^3.12.1
     version: 3.12.1(tailwindcss@3.3.2)
+  eslint-plugin-turbo:
+    specifier: ^1.10.1
+    version: 1.10.1(eslint@8.42.0)
   eslint-plugin-unicorn:
     specifier: ^47.0.0
     version: 47.0.0(eslint@8.42.0)
@@ -4853,6 +4856,14 @@ packages:
       fast-glob: 3.2.12
       postcss: 8.4.24
       tailwindcss: 3.3.2
+    dev: true
+
+  /eslint-plugin-turbo@1.10.1(eslint@8.42.0):
+    resolution: {integrity: sha512-bScQeG42PhVPzSeJgCTk79hRqN8jFYY6Io7fw2qyuOtlff4QkSuBTot+BBooxk4BL11gJglWZUJk2nqumLJGOA==}
+    peerDependencies:
+      eslint: '>6.6.0'
+    dependencies:
+      eslint: 8.42.0
     dev: true
 
   /eslint-plugin-unicorn@47.0.0(eslint@8.42.0):

@@ -21,7 +21,7 @@
     "plugin:tailwindcss/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["@typescript-eslint", "tailwindcss", "unicorn"],
+  "plugins": ["@typescript-eslint", "tailwindcss", "unicorn", "turbo"],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",

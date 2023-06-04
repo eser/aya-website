@@ -25,12 +25,11 @@ const nextConfig = {
   // },
 
   typescript: {
-    ignoreBuildErrors: true,
+    // ignoreBuildErrors: true,
   },
 
   experimental: {
-    appDir: true,
-    mdxRs: true,
+    // mdxRs: true,
     // runtime: "experimental-edge",
     // esmExternals: true,
   },
