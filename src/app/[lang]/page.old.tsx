@@ -1,10 +1,12 @@
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 import { siteConfig } from "@/shared/config/site.ts";
 // import { type Language } from "@/shared/i18n.ts";
 import { Layout } from "@/shared/components/layout.tsx";
-import { buttonVariants } from "@/shared/components/ui/button.tsx";
+// import { buttonVariants } from "@/shared/components/ui/button.tsx";
+
+import logo from "../../../public/brand/positive-1080x1080.svg";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -40,42 +42,33 @@ const IndexPage = (props: IndexPageProps) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
+        <div className="flex flex-col items-center">
+          <Link href="https://github.com/acikkaynak" rel="noreferrer">
+            {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+            <Image priority fill src={logo} alt="AYA | Açık Yazılım Ağı" />
+          </Link>
+        </div>
+        {
+          /* <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-            Bizler bilişim sektöründe halihazırda profesyonel olarak yer alan
-            gönüllüleriz. Kahramanmaraş&apos;ta gerçekleşen ve 10 ili etkileyen
-            deprem sonrası resmi kurumların ve sivil toplum kuruluşlarının
-            kullanımına yönelik açık kaynak kodlu teknolojilerin geliştirilmesi
-            için bir araya geldik.<br />
-            <br />
-            Zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
-            medya ağlarımızdaki çağrımız kısa süre içerisinde yankı bularak
-            alanında uzman binlerce profesyonelin gönüllü olarak projeye
-            katılmasını sağladı. Deprem sonrası hayati önem taşıyan sorunları
-            çözebilecek teknolojileri sunabilmek için AFAD, AHBAP, AKUT gibi
-            birçok resmi kurum ve sivil toplum kuruşu ile irtibatta kaldık ve
-            dış hizmet sağlayıcı olarak hareket ettik. Birçok kurumsal firmadan
-            insan ve altyapı desteği aldık.<br />
-            <br />
-            Bugün discord sunucumuzda 24,000&apos;i aşkın gönüllü bilişim
-            sektörü çalışanı olarak; herhangi bir sosyal sorumluluk gereksinimi
-            anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak,
-            açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
-            çalışıyoruz.
+            Geliştirici ekosistemini her geçen gün daha da iyileştirmek amacıyla
+            yola çıkarak bir meta-topluluk oluşturduk. 2015&apos;ten bu yana
+            topluluklar, etkinlikler, projeler ve içerikler oluşturmak,
+            topluluğu motive etmek, farkındalık aşılamak ve engelleri ortadan
+            kaldırmak için çalışıyoruz.
           </p>
         </div>
         <div className="flex gap-4">
           <Link
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            href={`/${placeholders.lang}/about/`}
+            href={`/${placeholders.lang}/guide/`}
             rel="noreferrer"
             className={buttonVariants({ size: "lg" })}
           >
-            Hakkında
+            Kurallar
           </Link>
           <Link
             target="_blank"
@@ -85,7 +78,8 @@ const IndexPage = (props: IndexPageProps) => {
           >
             GitHub
           </Link>
-        </div>
+        </div> */
+        }
       </section>
     </Layout>
   );

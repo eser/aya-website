@@ -17,30 +17,34 @@ const siteConfig: SiteConfig = {
   title: "AYA | Açık Yazılım Ağı",
   description: "açık yazılım ağı, bilişim meta-topluluğu.",
   mainNav: [
-    // {
-    //   title: "Haberler",
-    //   href: "/{lang}/news/",
-    // },
-    // {
-    //   title: "Topluluklar",
-    //   href: "/{lang}/communities/",
-    // },
-    // {
-    //   title: "Kişiler",
-    //   href: "/{lang}/people/",
-    // },
-    // {
-    //   title: "Projeler",
-    //   href: "/{lang}/projects/",
-    // },
-    // {
-    //   title: "Rehber",
-    //   href: "/{lang}/guide/",
-    // },
-    // {
-    //   title: "Kurallar",
-    //   href: "/{lang}/codes/",
-    // },
+    {
+      title: "Haberler",
+      href: "/{lang}/news/",
+    },
+    {
+      title: "Topluluklar",
+      href: "/{lang}/communities/",
+    },
+    {
+      title: "Kişiler",
+      href: "/{lang}/people/",
+    },
+    {
+      title: "Projeler",
+      href: "/{lang}/projects/",
+    },
+    {
+      title: "Rehber",
+      href: "/{lang}/guide/",
+    },
+    {
+      title: "Kurallar",
+      href: "/{lang}/policies/",
+    },
+    {
+      title: "Hakkında",
+      href: "/{lang}/about/",
+    },
   ],
   links: {
     twitter: "https://twitter.com/acikyazilimagi",
