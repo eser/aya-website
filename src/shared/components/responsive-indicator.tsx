@@ -1,4 +1,4 @@
-function ResponsiveIndicator() {
+const ResponsiveIndicator = () => {
   if (process.env.NODE_ENV === "production") {
     return null;
   }
@@ -15,6 +15,6 @@ function ResponsiveIndicator() {
       <div className="hidden 2xl:block">2xl</div>
     </div>
   );
-}
+};
 
 export { ResponsiveIndicator };

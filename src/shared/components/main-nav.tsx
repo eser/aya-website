@@ -10,7 +10,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu";
@@ -20,10 +19,10 @@ interface MainNavProps {
   placeholders: Record<string, string>;
 }
 
-function replacePlaceholders(
+const replacePlaceholders = (
   href: string,
   placeholders: Record<string, string>,
-): string {
+): string => {
   if (placeholders === undefined) {
     return href;
   }
@@ -32,12 +31,15 @@ function replacePlaceholders(
     "{lang}",
     placeholders.lang,
   );
-}
+};
 
-function MainNav(props: MainNavProps) {
+const MainNav = (props: MainNavProps) => {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href={replacePlaceholders("/{lang}/", props.placeholders)} className="hidden items-center space-x-2 md:flex">
+      <Link
+        href={replacePlaceholders("/{lang}/", props.placeholders)}
+        className="hidden items-center space-x-2 md:flex"
+      >
         <Icons.logo className="h-6 w-6" />
         <span className="font-bold inline-block">
           {siteConfig.name}
@@ -91,7 +93,11 @@ function MainNav(props: MainNavProps) {
             (item, index) =>
               item.href && (
                 <DropdownMenuItem key={index} asChild>
-                  <Link href={replacePlaceholders(item.href, props.placeholders)}>{item.title}</Link>
+                  <Link
+                    href={replacePlaceholders(item.href, props.placeholders)}
+                  >
+                    {item.title}
+                  </Link>
                 </DropdownMenuItem>
               ),
           )}
@@ -99,6 +105,6 @@ function MainNav(props: MainNavProps) {
       </DropdownMenu>
     </div>
   );
-}
+};
 
 export { MainNav };

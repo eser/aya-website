@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu";
 
-function ThemeToggle() {
+const ThemeToggle = () => {
   const { setTheme } = useTheme();
 
   return (
@@ -40,6 +40,6 @@ function ThemeToggle() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
 
 export { ThemeToggle };

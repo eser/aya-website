@@ -9,7 +9,7 @@ test("home", () => {
   expect(
     main.getByRole("heading", {
       level: 1,
-      name: /Açık Yazılım Ağı Bilişim Meta-Topluluğu/i,
+      name: /açık yazılım ağı bilişim meta-topluluğu/i,
     }),
   )
     .toBeDefined();

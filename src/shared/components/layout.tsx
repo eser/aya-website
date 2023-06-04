@@ -6,7 +6,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-function Layout(props: LayoutProps) {
+const Layout = (props: LayoutProps) => {
   return (
     <>
       <SiteHeader placeholders={props.placeholders} />
@@ -14,6 +14,6 @@ function Layout(props: LayoutProps) {
       <ResponsiveIndicator />
     </>
   );
-}
+};
 
 export { Layout };

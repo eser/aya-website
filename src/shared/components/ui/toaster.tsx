@@ -11,12 +11,12 @@ import {
   ToastViewport,
 } from "@/shared/components/ui/toast";
 
-function Toaster() {
+const Toaster = () => {
   const { toasts } = useToast();
 
   return (
     <ToastProvider>
-      {toasts.map(function ({ id, title, description, action, ...props }) {
+      {toasts.map(({ id, title, description, action, ...props }) => {
         return (
           <Toast key={id} {...props}>
             <div className="grid gap-1">
@@ -33,6 +33,6 @@ function Toaster() {
       <ToastViewport />
     </ToastProvider>
   );
-}
+};
 
 export { Toaster };
