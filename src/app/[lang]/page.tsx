@@ -35,6 +35,7 @@ interface IndexPageProps {
 
 const IndexPage = (props: IndexPageProps) => {
   const placeholders: Record<string, string> = {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     lang: props.params.lang,
   };
 
@@ -43,6 +44,7 @@ const IndexPage = (props: IndexPageProps) => {
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
         <div className="flex flex-col items-center">
           <Link href="https://github.com/acikkaynak" rel="noreferrer">
+            {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
             <Image priority src={logo} alt="AYA | Açık Yazılım Ağı" />
           </Link>
         </div>

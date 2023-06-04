@@ -72,7 +72,9 @@ const addToRemoveQueue = (toastId: string) => {
   toastTimeouts.set(toastId, timeout);
 };
 
+// eslint-disable-next-line consistent-return
 const reducer = (state: State, action: Action): State => {
+  // eslint-disable-next-line default-case
   switch (action.type) {
     case "ADD_TOAST":
       return {
@@ -83,12 +85,13 @@ const reducer = (state: State, action: Action): State => {
     case "UPDATE_TOAST":
       return {
         ...state,
+        // eslint-disable-next-line no-confusing-arrow
         toasts: state.toasts.map((t) =>
           t.id === action.toast.id ? { ...t, ...action.toast } : t
         ),
       };
 
-    case "DISMISS_TOAST":
+    case "DISMISS_TOAST": {
       const { toastId } = action;
 
       // ! Side effects ! - This could be extracted into a dismissToast() action,
@@ -96,6 +99,7 @@ const reducer = (state: State, action: Action): State => {
       if (toastId) {
         addToRemoveQueue(toastId);
       } else {
+        // eslint-disable-next-line unicorn/no-array-for-each
         state.toasts.forEach((toast) => {
           addToRemoveQueue(toast.id);
         });
@@ -103,6 +107,7 @@ const reducer = (state: State, action: Action): State => {
 
       return {
         ...state,
+        // eslint-disable-next-line no-confusing-arrow
         toasts: state.toasts.map((t) =>
           t.id === toastId || toastId === undefined
             ? {
@@ -112,6 +117,8 @@ const reducer = (state: State, action: Action): State => {
             : t
         ),
       };
+    }
+
     case "REMOVE_TOAST":
       if (action.toastId === undefined) {
         return {
@@ -119,6 +126,7 @@ const reducer = (state: State, action: Action): State => {
           toasts: [],
         };
       }
+
       return {
         ...state,
         toasts: state.toasts.filter((t) => t.id !== action.toastId),
@@ -132,6 +140,8 @@ let memoryState: State = { toasts: [] };
 
 const dispatch = (action: Action) => {
   memoryState = reducer(memoryState, action);
+
+  // eslint-disable-next-line unicorn/no-array-for-each
   listeners.forEach((listener) => {
     listener(memoryState);
   });
@@ -156,7 +166,9 @@ const toast = ({ ...props }: Toast) => {
       id: id,
       open: true,
       onOpenChange: (open) => {
-        if (!open) dismiss();
+        if (!open) {
+          dismiss();
+        }
       },
     },
   });

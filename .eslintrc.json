@@ -517,7 +517,12 @@
     "unicorn/require-number-to-fixed-digits-argument": "error",
     "unicorn/require-post-message-target-origin": "error",
     "unicorn/text-encoding-identifier-case": "error",
-    "unicorn/throw-new-error": "error"
+    "unicorn/throw-new-error": "error",
+
+    // ----------------
+    // TypeScript
+    // ----------------
+    "@typescript-eslint/no-empty-interface": "off"
   },
   "settings": {
     "tailwindcss": {
