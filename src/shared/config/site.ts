@@ -7,6 +7,7 @@ interface SiteConfig {
   mainNav: NavItem[];
   links: {
     twitter: string;
+    instagram: string;
     github: string;
   };
 }
@@ -43,6 +44,7 @@ const siteConfig: SiteConfig = {
   ],
   links: {
     twitter: "https://twitter.com/acikyazilimagi",
+    instagram: "https://www.instagram.com/acikyazilimagi/",
     github: "https://github.com/acikkaynak",
   },
 };

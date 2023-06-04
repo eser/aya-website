@@ -5,8 +5,8 @@ import { DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { ChevronsUpDown, Search } from "lucide-react";
 
-import { cn } from "@/shared/lib/utils";
-import { Dialog, DialogContent } from "@/shared/components/ui/dialog";
+import { cn } from "@/shared/lib/cn.ts";
+import { Dialog, DialogContent } from "@/shared/components/ui/dialog.tsx";
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,

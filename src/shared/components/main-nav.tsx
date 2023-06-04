@@ -3,16 +3,16 @@ import Link from "next/link";
 
 import { type NavItem } from "@/shared/config/nav.ts";
 import { siteConfig } from "@/shared/config/site.ts";
-import { cn } from "@/shared/lib/utils";
-import { Icons } from "@/shared/components/icons";
-import { Button } from "@/shared/components/ui/button";
+import { cn } from "@/shared/lib/cn.ts";
+import { Icons } from "@/shared/components/icons.tsx";
+import { Button } from "@/shared/components/ui/button.tsx";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/shared/components/ui/dropdown-menu";
+} from "@/shared/components/ui/dropdown-menu.tsx";
 
 interface MainNavProps {
   items?: NavItem[];

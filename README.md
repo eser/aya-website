@@ -24,11 +24,11 @@ import * as React from "react";
 import Link from "next/link";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { buttonVariants } from "@/shared/components/ui/button";
+import { buttonVariants } from "@/shared/components/ui/button.tsx";
 import { twMerge } from "tailwind-merge";
 
-import { type NavItem } from "@/shared/config/nav";
-import { cn } from "@/shared/lib/utils";
+import { type NavItem } from "@/shared/config/nav.ts";
+import { cn } from "@/shared/lib/cn.ts";
 ```
 
 ### Output
@@ -46,9 +46,9 @@ import { type NavItem } from "@/shared/config/nav.ts";
 // types
 import { siteConfig } from "@/shared/config/site.ts";
 // config
-import { cn } from "@/shared/lib/utils.ts";
+import { cn } from "@/shared/lib/cn.ts";
 // lib
-import { buttonVariants } from "@/shared/components/ui/button";
+import { buttonVariants } from "@/shared/components/ui/button.tsx";
 
 // components
 ```

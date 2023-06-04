@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { Icons } from "@/shared/components/icons";
-import { MainNav } from "@/shared/components/main-nav";
-import { ThemeToggle } from "@/shared/components/theme-toggle";
-import { buttonVariants } from "@/shared/components/ui/button";
+import { Icons } from "@/shared/components/icons.tsx";
+import { MainNav } from "@/shared/components/main-nav.tsx";
+import { ThemeToggle } from "@/shared/components/theme-toggle.tsx";
+import { buttonVariants } from "@/shared/components/ui/button.tsx";
 
 interface SiteHeaderProps {
   placeholders: Record<string, string>;
@@ -47,6 +47,22 @@ const SiteHeader = (props: SiteHeaderProps) => {
               >
                 <Icons.twitter className="h-5 w-5 fill-current" />
                 <span className="sr-only">Twitter</span>
+              </div>
+            </Link>
+            <Link
+              href={siteConfig.links.instagram}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "ghost",
+                  className: "text-slate-700 dark:text-slate-400",
+                })}
+              >
+                <Icons.instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
               </div>
             </Link>
             <ThemeToggle />

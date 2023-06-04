@@ -1,6 +1,6 @@
 "use client";
 
-import { useToast } from "@/shared/hooks/use-toast";
+import { useToast } from "@/shared/hooks/use-toast.tsx";
 
 import {
   Toast,
@@ -9,7 +9,7 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from "@/shared/components/ui/toast";
+} from "@/shared/components/ui/toast.tsx";
 
 const Toaster = () => {
   const { toasts } = useToast();

@@ -5,6 +5,7 @@ import {
   Moon,
   SunMedium,
   Twitter,
+  Instagram,
 } from "lucide-react";
 
 type Icon = LucideIcon;
@@ -14,6 +15,7 @@ const Icons = {
   moon: Moon,
   laptop: Laptop,
   twitter: Twitter,
+  instagram: Instagram,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 296" {...props}>
       <g clipPath="url(#clip0_1_15)">

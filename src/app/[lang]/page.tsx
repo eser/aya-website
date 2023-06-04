@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n";
-import { Layout } from "@/shared/components/layout";
-import { buttonVariants } from "@/shared/components/ui/button";
+// import { type Language } from "@/shared/i18n.ts";
+import { Layout } from "@/shared/components/layout.tsx";
+// import { buttonVariants } from "@/shared/components/ui/button.tsx";
 
 import logo from "../../../public/brand/positive-1080x1080.svg";
 
