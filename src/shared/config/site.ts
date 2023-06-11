@@ -22,8 +22,8 @@ const siteConfig: SiteConfig = {
       href: "/{lang}/news/",
     },
     {
-      title: "Topluluklar",
-      href: "/{lang}/communities/",
+      title: "Topluluk",
+      href: "/{lang}/community/",
     },
     {
       title: "Kişiler",

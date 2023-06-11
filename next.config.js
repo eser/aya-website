@@ -43,6 +43,17 @@ const nextConfig = {
   //   return config;
   // },
 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.hashnode.com",
+        port: "",
+        pathname: "/res/hashnode/image/upload/**",
+      }
+    ],
+  },
+
   // deno-lint-ignore require-await
   rewrites: async () => {
     return [
