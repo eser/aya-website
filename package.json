@@ -1,7 +1,7 @@
 {
-  "name": "aya-webclient",
+  "name": "aya-website",
   "private": true,
-  "description": "açık yazılım ağı web client",
+  "description": "açık yazılım ağı web sitesi",
   "keywords": [
     "acik",
     "yazilim",
@@ -15,7 +15,7 @@
     "tenforward",
     "tenfwd",
     "web",
-    "client"
+    "site"
   ],
   "version": "0.0.1",
   "homepage": "https://acikyazilimagi.com",
@@ -29,10 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acikkaynak/aya-webclient.git"
+    "url": "git+https://github.com/acikkaynak/aya-website.git"
   },
   "bugs": {
-    "url": "https://github.com/acikkaynak/aya-webclient/issues"
+    "url": "https://github.com/acikkaynak/aya-website/issues"
   },
   "license": "Apache-2.0",
   "scripts": {
