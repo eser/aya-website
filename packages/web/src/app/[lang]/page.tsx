@@ -71,7 +71,6 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
             Bilişim Meta-Topluluğu
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-            {/* <IntroText /> */}
             <MDXRemote source={introText} />
           </p>
         </div>

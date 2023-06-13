@@ -1,18 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# OS metadata
-.DS_Store
-Thumbs.db
-
-# Editor metadata
-.vscode/
-!.vscode/extensions.json
-.idea/
-
 # dependencies
 node_modules/
 .pnp/
 .pnp.js
-
-# next.js
-.turbo/

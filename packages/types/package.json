@@ -1,0 +1,12 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "format:write": "deno fmt",
+    "format:check": "deno fmt --check"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

@@ -1,34 +1,21 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDotEnv": [".env"],
   "pipeline": {
+    "dev": {
+      "cache": false
+    },
     "build": {
-      "outputs": [".next/**", "!.next/cache/**"],
-      "dotEnv": [
-        ".env.production.local",
-        ".env.local",
-        ".env.production",
-        ".env"
-      ]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      // "dependsOn": ["typecheck"]
+    },
+    "typecheck": {
+      "outputs": []
     },
     "lint": {
-      "dotEnv": [
-        ".env.development.local",
-        ".env.local",
-        ".env.development",
-        ".env"
-      ]
+      "outputs": []
     },
-    "dev": {
-      "dotEnv": [
-        ".env.development.local",
-        ".env.local",
-        ".env.development",
-        ".env"
-      ]
-    },
-    "test": {
-      "dotEnv": [".env.test.local", ".env.test", ".env"]
+    "test:run": {
+      "outputs": []
     }
   }
 }
