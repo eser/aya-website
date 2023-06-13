@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getMDXComponent } from "mdx-bundler/client";
+import { getMDXComponent } from "@/shared/lib/get-mdx-component.ts";
 
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n/languages.ts";
@@ -95,9 +95,9 @@ interface NewsCardProps {
   post: NewsPost;
 }
 
-const NewsCard = (props: NewsCardProps) => {
+const NewsCard = async (props: NewsCardProps) => {
   const { post } = props;
-  // const MDXContent = getMDXComponent(post.contentMarkdown);
+  const MDXContent = await getMDXComponent(post.contentMarkdown);
 
   return (
     <Card className="mb-5">
@@ -115,8 +115,7 @@ const NewsCard = (props: NewsCardProps) => {
             className="rounded-md object-cover"
           />
         </AspectRatio>
-        {/* <MDXContent /> */}
-        {post.brief}
+        <MDXContent />
       </CardContent>
     </Card>
   );

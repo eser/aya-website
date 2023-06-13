@@ -1,7 +1,5 @@
 // @ts-check
 
-const { withContentlayer } = require("next-contentlayer");
-
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
  * This is especially useful for Docker builds.
@@ -67,6 +65,4 @@ const nextConfig = {
   },
 };
 
-const withMiddlewares = withContentlayer(nextConfig);
-
-module.exports = withMiddlewares;
+module.exports = nextConfig;

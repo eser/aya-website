@@ -26,9 +26,6 @@ out/
 build/
 next-env.d.ts
 
-# Contentlayer
-.contentlayer/
-
 # local API keys and secrets
 .env.local
 .env.*.local
