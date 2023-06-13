@@ -33,10 +33,13 @@ const metadata = {
   },
 };
 
-interface NewsPageProps {
-  params: {
-    lang: Language;
-  };
+interface NewsPost {
+  slug: string;
+  dateAdded: string;
+  coverImage: string;
+  title: string;
+  brief: string;
+  contentMarkdown: string;
 }
 
 const hashnodeApiEndpoint = "https://api.hashnode.com/";
@@ -54,7 +57,9 @@ const hashnodeGql = async (query: string) => {
   return response.json();
 };
 
-const hashnodeGetPosts = async (username: string) => {
+const hashnodeGetPosts = async (
+  username: string,
+): Promise<NewsPost[]> => {
   const query = `{
     user(username: "${username}") {
       publication {
@@ -70,12 +75,27 @@ const hashnodeGetPosts = async (username: string) => {
     }
   }`;
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const result = await hashnodeGql(query);
 
-  return result.data.user.publication?.posts;
+  if (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    result?.data?.user?.publication === null ||
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    result?.data?.user?.publication === undefined
+  ) {
+    return [] as NewsPost[];
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  return result.data.user.publication.posts as NewsPost[];
 };
 
-const NewsCard = (props) => {
+interface NewsCardProps {
+  post: NewsPost;
+}
+
+const NewsCard = (props: NewsCardProps) => {
   const { post } = props;
   // const MDXContent = getMDXComponent(post.contentMarkdown);
 
@@ -101,6 +121,12 @@ const NewsCard = (props) => {
     </Card>
   );
 };
+
+interface NewsPageProps {
+  params: {
+    lang: Language;
+  };
+}
 
 const NewsPage = async (props: NewsPageProps) => {
   const placeholders: Record<string, string> = {

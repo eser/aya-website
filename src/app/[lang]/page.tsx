@@ -47,19 +47,21 @@ const IndexPage = (props: IndexPageProps) => {
           </h1>
           <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Bizler bilişim sektöründe halihazırda profesyonel olarak yer alan
-            gönüllüleriz. Kahramanmaraş&apos;ta gerçekleşen ve 10 ili etkileyen
-            deprem sonrası resmi kurumların ve sivil toplum kuruluşlarının
-            kullanımına yönelik açık kaynak kodlu teknolojilerin geliştirilmesi
-            için bir araya geldik.<br />
+            gönüllüleriz. 2015&apos;den bu yana yapmış olduğumuz çalışmalarla
+            kişilerin, firmaların, resmi kurumların ve sivil toplum
+            kuruluşlarının kullanımına yönelik açık kaynak kodlu teknolojilerin
+            geliştirilmesine öncülük ediyoruz.<br />
             <br />
-            Zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
-            medya ağlarımızdaki çağrımız kısa süre içerisinde yankı bularak
-            alanında uzman binlerce profesyonelin gönüllü olarak projeye
-            katılmasını sağladı. Deprem sonrası hayati önem taşıyan sorunları
-            çözebilecek teknolojileri sunabilmek için AFAD, AHBAP, AKUT gibi
-            birçok resmi kurum ve sivil toplum kuruşu ile irtibatta kaldık ve
-            dış hizmet sağlayıcı olarak hareket ettik. Birçok kurumsal firmadan
-            insan ve altyapı desteği aldık.<br />
+            Kahramanmaraş&apos;ta gerçekleşen ve 10 ili etkileyen deprem sonrası
+            zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
+            medya ağlarımızdaki çağrımız kısa süre içerisinde yankı
+            bulmasını sağlayarak alanında uzman binlerce profesyonelin gönüllü
+            olarak <a href="https://afet.org">afet.org</a>{" "}
+            projemize katılmasını sağladık. Deprem sonrası hayati önem taşıyan
+            sorunları çözebilecek teknolojileri sunabilmek için AFAD, AHBAP,
+            AKUT gibi birçok resmi kurum ve sivil toplum kuruşu ile irtibatta
+            kaldık ve dış hizmet sağlayıcı olarak hareket ettik. Birçok kurumsal
+            firmadan insan ve altyapı desteği aldık.<br />
             <br />
             Bugün discord sunucumuzda 24,000&apos;i aşkın gönüllü bilişim
             sektörü çalışanı olarak; herhangi bir sosyal sorumluluk gereksinimi
