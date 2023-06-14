@@ -141,9 +141,9 @@ const NewsPage = async (props: NewsPageProps) => {
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Haberler
           </h1>
-          <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             {data.map((post) => <NewsCard post={post} />)}
-          </p>
+          </div>
         </div>
       </section>
     </Layout>

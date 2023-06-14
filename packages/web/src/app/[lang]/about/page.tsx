@@ -40,7 +40,7 @@ const AboutPage = (props: AboutPageProps) => {
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
             Hakkında
           </h1>
-          <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Açık Yazılım Ağı, temelleri 2015&apos;de{" "}
             <a href="https://github.com/eser">Eser Özvataf</a> tarafından{" "}
             <a href="https://github.com/acikkaynak">github.com/acikkaynak</a>
@@ -80,7 +80,7 @@ const AboutPage = (props: AboutPageProps) => {
             anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak,
             açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
             çalışıyoruz.
-          </p>
+          </div>
         </div>
       </section>
     </Layout>

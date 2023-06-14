@@ -70,9 +70,9 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             <MDXRemote source={introText} />
-          </p>
+          </div>
         </div>
         <div className="flex gap-4">
           <Link

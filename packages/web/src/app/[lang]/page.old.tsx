@@ -54,13 +54,13 @@ const IndexPage = (props: IndexPageProps) => {
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <p className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             Geliştirici ekosistemini her geçen gün daha da iyileştirmek amacıyla
             yola çıkarak bir meta-topluluk oluşturduk. 2015&apos;ten bu yana
             topluluklar, etkinlikler, projeler ve içerikler oluşturmak,
             topluluğu motive etmek, farkındalık aşılamak ve engelleri ortadan
             kaldırmak için çalışıyoruz.
-          </p>
+          </div>
         </div>
         <div className="flex gap-4">
           <Link
