@@ -3,7 +3,7 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["deno", "fullTextSearch"]
+  previewFeatures = ["fullTextSearch"] // "deno",
   output          = "../node_modules/.prisma/client"
 }
 
