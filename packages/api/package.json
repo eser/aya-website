@@ -10,9 +10,9 @@
     "db:push": "prisma db push --skip-generate",
     "db:seed": "prisma db seed",
     "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/ && pnpm install",
-    "dev": "tsx watch src/index.ts",
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --external:express --external:cors",
-    "start": "node dist/index.js",
+    "dev": "supabase start && supabase functions serve",
+    "deploy": "supabase functions deploy",
+    "start": "",
     "typecheck": "tsc --noEmit",
     "format:write": "deno fmt",
     "format:check": "deno fmt --check"
