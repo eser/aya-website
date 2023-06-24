@@ -1,4 +1,4 @@
-import { PrismaClient } from "../generated/client";
+import { PrismaClient } from ".prisma/client";
 
 const main = async () => {
   const prisma = new PrismaClient();
@@ -7,13 +7,15 @@ const main = async () => {
     where: { email: "eser@ozvataf.com" },
     update: {},
     create: {
+      slug: "eser",
       email: "eser@ozvataf.com",
       name: "Eser",
       posts: {
         create: {
+          slug: "hello-world",
           title: "Hello world!",
           content: "https://acikyazilimagi.com/",
-          published: true,
+          publishedAt: new Date(),
         },
       },
     },

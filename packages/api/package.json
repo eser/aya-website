@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "pnpm run db:generate",
     "db:generate": "prisma generate --data-proxy",
-    "db:push": "prisma db push",
+    "db:push": "prisma db push --skip-generate",
     "db:seed": "prisma db seed",
     "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/ && pnpm install",
     "dev": "tsx watch src/index.ts",

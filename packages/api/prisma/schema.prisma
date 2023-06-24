@@ -3,8 +3,8 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["deno"]
-  output          = "../generated/client"
+  previewFeatures = ["deno", "fullTextSearch"]
+  output          = "../node_modules/.prisma/client"
 }
 
 datasource db {
@@ -24,24 +24,38 @@ enum LogLevel {
 }
 
 model Log {
-  id      String    @id @default(cuid())
-  level   LogLevel
-  message String
-  meta    Json
+  id          String    @id @default(cuid())
+  level       LogLevel
+  message     String
+  meta        Json
+
+  createdAt   DateTime  @default(now())
 }
 
 model User {
-  id      String    @id @default(cuid())
-  email   String    @unique
-  name    String
-  posts   Post[]
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  email       String    @unique
+  name        String
+  posts       Post[]
+
+  lastSeenAt  DateTime?
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
 }
 
 model Post {
-  id        String    @id @default(cuid())
-  title     String
-  content   String
-  published Boolean
-  user      User      @relation(fields: [userId], references: [id])
-  userId    String
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  title       String
+  content     String
+  publishedAt DateTime?
+  user        User      @relation(fields: [userId], references: [id])
+  userId      String
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
 }
