@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["deno"]
+  output          = "../generated/client"
+}
+
+datasource db {
+  provider  = "postgresql"
+  // NOTE: When using postgresql, mysql or sqlserver, uncomment the @db.Text annotations in model Account below
+  // Further reading:
+  // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
+  // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_DIRECT_URL")
+}
+
+enum LogLevel {
+  Info
+  Warn
+  Error
+}
+
+model Log {
+  id      String    @id @default(cuid())
+  level   LogLevel
+  message String
+  meta    Json
+}
+
+model User {
+  id      String    @id @default(cuid())
+  email   String    @unique
+  name    String
+  posts   Post[]
+}
+
+model Post {
+  id        String    @id @default(cuid())
+  title     String
+  content   String
+  published Boolean
+  user      User      @relation(fields: [userId], references: [id])
+  userId    String
+}
