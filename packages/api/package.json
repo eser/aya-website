@@ -5,7 +5,8 @@
     "seed": "tsx prisma/seed.ts"
   },
   "scripts": {
-    "postinstall": "pnpm run db:generate",
+    "postinstall": "pnpm run generate",
+    "generate": "pnpm run db:generate",
     "db:generate": "prisma generate --data-proxy",
     "db:push": "prisma db push --skip-generate",
     "db:seed": "prisma db seed",
@@ -19,8 +20,10 @@
   },
   "dependencies": {
     "@prisma/client": "4.16.1",
+    "@trpc/server": "^10.30.0",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",

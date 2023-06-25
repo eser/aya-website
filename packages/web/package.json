@@ -2,7 +2,10 @@
   "name": "web",
   "version": "1.0.0",
   "scripts": {
-    "generate": "tsx ./src/tools/generate.ts",
+    "postinstall": "pnpm run generate",
+    "generate": "pnpm run tool:generate",
+    "tool:generate": "tsx ./src/tools/generate.ts",
+    "tool:check-env": "tsx ./src/tools/check-env.ts",
     "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/ .next/ && pnpm install",
     "dev": "next dev",
     "build": "next build",
