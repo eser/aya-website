@@ -1,6 +1,10 @@
-import { PrismaClient } from ".prisma/client/edge";
+import { PrismaClient as PrismaClientRegular } from ".prisma/client";
+import { PrismaClient as PrismaClientEdge } from ".prisma/client/edge";
 
 const main = async () => {
+  const isEdge = process.env.DATABASE_URL.startsWith("prisma://");
+  const PrismaClient = isEdge ? PrismaClientEdge : PrismaClientRegular;
+
   const prisma = new PrismaClient();
 
   const userEser = await prisma.user.upsert({

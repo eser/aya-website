@@ -1,13 +1,10 @@
 import { wrapper } from "../_shared/wrapper.ts";
 
-wrapper(async (req, { supabase }) => {
-  const getUserResponse = await supabase.auth.getUser();
-
-  const { name } = await req.json();
+wrapper(async (_req, { supabase }) => {
+  const userQueryResponse = await supabase.from("User").select();
 
   const payload = {
-    message: `Hello ${name}!`,
-    data: getUserResponse.data,
+    data: userQueryResponse.data,
   };
 
   return payload;
