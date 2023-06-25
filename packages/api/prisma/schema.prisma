@@ -24,38 +24,106 @@ enum LogLevel {
 }
 
 model Log {
-  id          String    @id @default(cuid())
-  level       LogLevel
-  message     String
-  meta        Json
+  id                  String      @id @default(cuid())
+  level               LogLevel
+  message             String
+  meta                Json
 
-  createdAt   DateTime  @default(now())
+  createdAt           DateTime    @default(now())
 }
 
 model User {
-  id          String    @id @default(cuid())
-  slug        String    @unique
-  email       String    @unique
-  name        String
-  posts       Post[]
+  id                  String      @id @default(cuid())
+  email               String      @unique
 
-  lastSeenAt  DateTime?
+  lastSeenAt          DateTime?
+  profileMemberships  ProfileMembership[]
 
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  deletedAt   DateTime?
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  deletedAt           DateTime?
 }
 
-model Post {
-  id          String    @id @default(cuid())
-  slug        String    @unique
-  title       String
-  content     String
-  publishedAt DateTime?
-  user        User      @relation(fields: [userId], references: [id])
-  userId      String
+enum ProfileType {
+  Individual
+  // MeetupOrganization
+  // InterestOrganization
+  // EducationalOrganization
+  // HobbyOrganization
+  Organization
+  // ContentPlatform
+  // SoftwareProject
+  Product
+}
 
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  deletedAt   DateTime?
+model Profile {
+  id                  String      @id @default(cuid())
+  type                ProfileType
+  slug                String      @unique
+  email               String      @unique
+
+  title               String
+  description         String
+
+  pages               Page[]
+  links               Link[]
+  memberships         ProfileMembership[]
+
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  deletedAt           DateTime?
+}
+
+model Page {
+  id                  String      @id @default(cuid())
+  slug                String
+  title               String
+  content             String
+  publishedAt         DateTime?
+
+  profile             Profile     @relation(fields: [profileId], references: [id])
+  profileId           String
+
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  deletedAt           DateTime?
+}
+
+model Link {
+  id                  String      @id @default(cuid())
+  slug                String
+  title               String
+  description         String
+  uri                 String
+
+  profile             Profile     @relation(fields: [profileId], references: [id])
+  profileId           String
+
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  deletedAt           DateTime?
+}
+
+enum ProfileMembershipRole {
+  Owner
+  Lead
+  Maintainer
+  Contributor
+  Sponsor
+  Follower
+}
+
+model ProfileMembership {
+  id                  String      @id @default(cuid())
+  role                ProfileMembershipRole
+
+  profile             Profile     @relation(fields: [profileId], references: [id])
+  profileId           String
+
+  user                User        @relation(fields: [userId], references: [id])
+  userId              String
+
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  deletedAt           DateTime?
 }
