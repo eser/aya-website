@@ -4,6 +4,7 @@ import { siteConfig } from "@/shared/config/site.ts";
 import { Icons } from "@/shared/components/icons.tsx";
 import { MainNav } from "@/shared/components/main-nav.tsx";
 import { ThemeToggle } from "@/shared/components/theme-toggle.tsx";
+import { GitHubLogin } from "@/shared/components/github-login.tsx";
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
 
 interface SiteHeaderProps {
@@ -66,6 +67,7 @@ const SiteHeader = (props: SiteHeaderProps) => {
               </div>
             </Link>
             <ThemeToggle />
+            <GitHubLogin />
           </nav>
         </div>
       </div>
