@@ -35,6 +35,11 @@ model Log {
 model User {
   id                  String      @id @default(cuid())
   email               String      @unique
+  fullname            String
+  bio                 String
+  profilePictureUri   String
+  githubHandle        String
+  twitterHandle       String
 
   lastSeenAt          DateTime?
   profileMemberships  ProfileMembership[]
@@ -65,8 +70,8 @@ model Profile {
   title               String
   description         String
 
-  pages               Page[]
-  links               Link[]
+  pages               ProfilePage[]
+  links               ProfileLink[]
   memberships         ProfileMembership[]
 
   createdAt           DateTime    @default(now())
@@ -74,7 +79,7 @@ model Profile {
   deletedAt           DateTime?
 }
 
-model Page {
+model ProfilePage {
   id                  String      @id @default(cuid())
   slug                String
   title               String
@@ -89,7 +94,7 @@ model Page {
   deletedAt           DateTime?
 }
 
-model Link {
+model ProfileLink {
   id                  String      @id @default(cuid())
   slug                String
   title               String
