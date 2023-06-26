@@ -4,6 +4,7 @@ import { createContext, useState } from "react";
 
 import {
   createClientSupabaseClient,
+  type Session,
   type SupabaseClient,
 } from "@/shared/lib/supabase-client";
 import { type Database } from "@/shared/types/database";
@@ -34,4 +35,9 @@ const SupabaseProvider = (props: SupabaseProviderProps) => {
   );
 };
 
-export { SupabaseContext, type SupabaseContextState, SupabaseProvider };
+export {
+  type Session,
+  SupabaseContext,
+  type SupabaseContextState,
+  SupabaseProvider,
+};

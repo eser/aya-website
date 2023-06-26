@@ -1,11 +1,11 @@
 "use client";
 
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-// import { useSupabase } from "@/shared/contexts/use-supabase";
+import { type Session, useSupabase } from "@/shared/hooks/use-supabase.ts";
 
 interface SupabaseAuthContextState {
-  user: unknown | undefined;
+  session: Session | null;
   isLoading: boolean;
 
   signInWithGithub: () => Promise<void>;
@@ -13,7 +13,7 @@ interface SupabaseAuthContextState {
 }
 
 const initialState: SupabaseAuthContextState = {
-  user: undefined,
+  session: null,
   isLoading: true,
 
   signInWithGithub: () => Promise.resolve(),
@@ -25,15 +25,30 @@ const SupabaseAuthContext = createContext<SupabaseAuthContextState>(
 );
 
 interface SupabaseAuthProviderProps {
+  serverSession: Session | null;
   children: React.ReactNode;
 }
 
 const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
-  // const { supabase } = useSupabase();
+  const { supabase } = useSupabase();
+  const [session, setSession] = useState<Session | null>(props.serverSession);
 
-  // TODO(@eser) implement this
+  supabase.auth.onAuthStateChange((_event, session) => {
+    setSession(session);
+  });
 
-  const state: SupabaseAuthContextState = { ...initialState };
+  const state: SupabaseAuthContextState = {
+    ...initialState,
+    isLoading: false,
+    session: session,
+
+    signInWithGithub: async () => {
+      await supabase.auth.signInWithOAuth({ provider: "github" });
+    },
+    signOut: async () => {
+      await supabase.auth.signOut();
+    },
+  };
 
   return (
     <SupabaseAuthContext.Provider value={state}>

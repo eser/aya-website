@@ -1,4 +1,7 @@
 import { dir } from "i18next";
+import { createServerSupabaseClient } from "@/shared/lib/supabase-server";
+import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
+import { SupabaseAuthProvider } from "@/shared/contexts/supabase-auth-provider.tsx";
 import { ThemeProvider } from "./theme-provider.tsx";
 import { FontProvider } from "./font-provider.tsx";
 import { Analytics } from "./analytics.tsx";
@@ -22,7 +25,10 @@ interface RootLayoutProps {
   };
 }
 
-const Layout = (props: RootLayoutProps) => {
+const Layout = async (props: RootLayoutProps) => {
+  const supabase = createServerSupabaseClient();
+  const session = await supabase.auth.getSession();
+
   return (
     <html
       lang={props.params.lang}
@@ -37,9 +43,15 @@ const Layout = (props: RootLayoutProps) => {
           defaultTheme="system"
           enableSystem={true}
         >
-          {props.children}
-          <Analytics />
+          <SupabaseProvider>
+            <SupabaseAuthProvider
+              serverSession={session.data?.session}
+            >
+              {props.children}
+            </SupabaseAuthProvider>
+          </SupabaseProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap",
+  display: "swap", // "block",
 });
 
 // const fontMono = JetBrains_Mono({
