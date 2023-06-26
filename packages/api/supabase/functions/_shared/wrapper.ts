@@ -2,14 +2,12 @@
 // https://deno.land/manual/getting_started/setup_your_environment
 // This enables autocomplete, go to definition, etc.
 
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { serve, type ServerRequest } from "@std/http/server.ts";
 import { corsHeaders } from "./cors.ts";
-import { getSupabaseClientFromRequest } from "./supabase-client.ts";
-
 import {
-  type ServerRequest,
-} from "https://deno.land/std@0.168.0/http/server.ts";
-import { SupabaseClient } from "@supabase/supabase-js";
+  getSupabaseClientFromRequest,
+  type SupabaseClient,
+} from "./supabase-client.ts";
 
 interface Dependencies {
   supabase: SupabaseClient;

@@ -5,7 +5,6 @@
     "seed": "tsx prisma/seed.ts"
   },
   "scripts": {
-    "postinstall": "pnpm run generate",
     "generate": "pnpm run db:generate",
     "db:generate": "prisma generate --data-proxy",
     "db:push": "prisma db push --skip-generate",

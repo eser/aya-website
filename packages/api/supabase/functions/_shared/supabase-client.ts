@@ -1,4 +1,7 @@
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import {
+  createClient,
+  type SupabaseClient,
+} from "https://esm.sh/@supabase/supabase-js@2";
 
 const getSupabaseClientFromRequest = (req) => {
   const supabaseClient = createClient(
@@ -16,4 +19,4 @@ const getSupabaseClientFromRequest = (req) => {
   return supabaseClient;
 };
 
-export { getSupabaseClientFromRequest };
+export { getSupabaseClientFromRequest, type SupabaseClient };
