@@ -1,15 +1,20 @@
-import { createServerSupabaseClient } from "@/shared/lib/supabase-server";
+// import { useSupabase } from "@/shared/contexts/use-supabase";
 
-const sitemap = async () => {
-  const supabase = createServerSupabaseClient();
-  const { data: posts } = await supabase.from("posts").select();
+const sitemap = () => {
+  // const { supabase } = useSupabase();
 
-  return (
-    posts?.map(({ id }) => ({
-      url: `https://acikyazilimagi.com/${id}`,
-      lastModified: new Date(),
-    })) ?? []
-  );
+  // const { data: posts } = await supabase.from("posts").select();
+
+  // TODO(@eser) implement this
+
+  // return (
+  //   posts?.map(({ id }) => ({
+  //     url: `https://acikyazilimagi.com/${id}`,
+  //     lastModified: new Date(),
+  //   })) ?? []
+  // );
+
+  return [];
 };
 
 export { sitemap as default };

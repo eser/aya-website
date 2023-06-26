@@ -4,7 +4,9 @@ import { writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const getProjectDir = () => {
-  return join(__dirname, "../..");
+  const dir = new URL("../..", import.meta.url).pathname;
+
+  return dir;
 };
 
 const generateCommand = () => {
@@ -27,7 +29,7 @@ const generateCommand = () => {
 };
 
 const executeCommand = (command: [string, string[]]) => {
-  const output = execFileSync(...command, { encoding: "utf-8" });
+  const output = execFileSync(...command, { encoding: "utf8" });
 
   return output;
 };
@@ -36,7 +38,7 @@ const writeOutput = (filepath: string, output: string) => {
   writeFileSync(filepath, output);
 };
 
-const main = async () => {
+const main = () => {
   const projectDir = getProjectDir();
   loadEnvConfig(projectDir);
 
@@ -49,6 +51,7 @@ const main = async () => {
 
   const targetUserFriendly = relative(process.cwd(), target);
 
+  // eslint-disable-next-line no-console
   console.log(`done. output written to ${targetUserFriendly}.`);
 };
 

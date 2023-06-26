@@ -1,9 +1,8 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext } from "react";
 
-import { Session } from "@supabase/supabase-js";
-import { useSupabase } from "@/shared/contexts/use-supabase";
+// import { useSupabase } from "@/shared/contexts/use-supabase";
 
 interface SupabaseAuthContextState {
   user: unknown | undefined;
@@ -13,24 +12,28 @@ interface SupabaseAuthContextState {
   signOut: () => Promise<void>;
 }
 
-const SupabaseAuthContext = createContext<SupabaseAuthContextState>({
+const initialState: SupabaseAuthContextState = {
   user: undefined,
   isLoading: true,
 
-  signInWithGithub: async () => {},
-  signOut: async () => {}
-});
+  signInWithGithub: () => Promise.resolve(),
+  signOut: () => Promise.resolve(),
+};
+
+const SupabaseAuthContext = createContext<SupabaseAuthContextState>(
+  initialState,
+);
 
 interface SupabaseAuthProviderProps {
   children: React.ReactNode;
 }
 
 const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
-  const [supabase] = useState<SupabaseClient<Database>>(
-    () => createClientSupabaseClient(),
-  );
+  // const { supabase } = useSupabase();
 
-  const state: SupabaseAuthContextState = { supabase };
+  // TODO(@eser) implement this
+
+  const state: SupabaseAuthContextState = { ...initialState };
 
   return (
     <SupabaseAuthContext.Provider value={state}>
@@ -39,4 +42,8 @@ const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
   );
 };
 
-export { SupabaseAuthContext, type SupabaseAuthContextState, SupabaseAuthProvider };
+export {
+  SupabaseAuthContext,
+  type SupabaseAuthContextState,
+  SupabaseAuthProvider,
+};

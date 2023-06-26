@@ -1,9 +1,10 @@
 import { loadEnvConfig } from "@next/env";
 import { z } from "zod";
-import { join } from "node:path";
 
 const getProjectDir = () => {
-  return join(__dirname, "../..");
+  const dir = new URL("../..", import.meta.url).pathname;
+
+  return dir;
 };
 
 const envSchema = z.object({
@@ -13,13 +14,14 @@ const envSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).optional(),
 });
 
-const main = async () => {
+const main = () => {
   const projectDir = getProjectDir();
   loadEnvConfig(projectDir);
 
   const env = envSchema.safeParse(process.env);
 
   if (!env.success) {
+    // eslint-disable-next-line no-console
     console.error(
       "❌ Invalid environment variables:",
       JSON.stringify(env.error.format(), null, 4),
@@ -28,6 +30,7 @@ const main = async () => {
     process.exit(1);
   }
 
+  // eslint-disable-next-line no-console
   console.log("done.");
 };
 
