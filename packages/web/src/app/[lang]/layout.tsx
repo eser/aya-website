@@ -1,7 +1,7 @@
 import "server-only";
 import { dir } from "i18next";
 
-import { createServerSupabaseClient } from "@/shared/lib/supabase-server";
+import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
 import { SupabaseAuthProvider } from "@/shared/contexts/supabase-auth-provider.tsx";
 
@@ -32,7 +32,7 @@ interface RootLayoutProps {
 }
 
 const Layout = async (props: RootLayoutProps) => {
-  const supabase = createServerSupabaseClient();
+  const { supabase } = useSupabaseServer();
   const session = await supabase.auth.getSession();
 
   return (

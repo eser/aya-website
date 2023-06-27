@@ -3,6 +3,7 @@ import { type ResultType } from "./result-type.ts";
 type User = {
   id: string;
   fullname: string;
+  email: string;
 };
 
 type UserList = Array<User>;

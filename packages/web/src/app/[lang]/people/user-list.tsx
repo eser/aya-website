@@ -1,12 +1,12 @@
-"use client";
-
-import { useSupabase } from "@/shared/hooks/use-supabase.ts";
-import { type UserListResult } from "types/src/user-list-result.ts"
+import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
+import { type UserListResult } from "types/src/user-list-result.ts";
 
 const UserList = async () => {
-  const { supabase } = useSupabase();
+  const { supabase } = useSupabaseServer();
 
-  const userListResponse = await supabase.functions.invoke<UserListResult>("users-list");
+  const userListResponse = await supabase.functions.invoke<UserListResult>(
+    "users-list",
+  );
 
   return (
     <div>
