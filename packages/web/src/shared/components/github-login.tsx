@@ -3,7 +3,6 @@
 import { useCallback } from "react";
 
 import { useSupabaseAuth } from "@/shared/hooks/use-supabase-auth.ts";
-
 import { Button } from "@/shared/components/ui/button.tsx";
 
 // // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -11,6 +10,11 @@ const GitHubLogin = () => {
   const auth = useSupabaseAuth();
 
   const isLoggedIn = auth.session?.user !== undefined;
+  // if (isLoggedIn) {
+  //   // supabase.functions.invoke("init", { body: JSON.stringify({ name: "test" }) })
+  //   supabase.functions.invoke("users-list")
+  //     .then((res) => console.log(res.data));
+  // }
 
   const onClick = useCallback(
     async () => {

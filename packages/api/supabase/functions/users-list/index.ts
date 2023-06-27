@@ -1,13 +1,14 @@
 import { wrapper } from "../_shared/wrapper.ts";
+import { type UserList, type UserListResult } from "@types/user-list-result.ts";
 
 wrapper(async (_req, { supabase }) => {
-  const userQueryResponse = await supabase.from("User").select();
+  const userQueryResponse = await supabase.from("User").select("*");
 
-  const payload = {
-    data: userQueryResponse.data,
+  const result: UserListResult = {
+    payload: userQueryResponse.data as UserList,
   };
 
-  return payload;
+  return result;
 });
 
 // To invoke:

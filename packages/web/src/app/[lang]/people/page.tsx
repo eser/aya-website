@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n.ts";
 import { Layout } from "@/shared/components/layout.tsx";
+import { UserList } from "./user-list.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -41,7 +43,9 @@ const PeoplePage = (props: PeoplePageProps) => {
             Kişiler
           </h1>
           <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-            Sayfa henüz hazırlık aşamasında.
+            <Suspense fallback={<div>Loading...</div>}>
+              <UserList />
+            </Suspense>
           </div>
         </div>
       </section>
