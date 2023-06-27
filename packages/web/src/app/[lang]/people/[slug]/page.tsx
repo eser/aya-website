@@ -1,7 +1,8 @@
+import { useParams } from "next/navigation";
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n.ts";
 import { Layout } from "@/shared/components/layout.tsx";
-import { ProfileList } from "./profile-list.tsx";
+import { ProfileView } from "./profile-view.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -22,13 +23,14 @@ const metadata = {
   },
 };
 
-interface PeoplePageProps {
+interface ProfilePageProps {
   params: {
     lang: Language;
+    slug: string;
   };
 }
 
-const PeoplePage = (props: PeoplePageProps) => {
+const ProfilePage = (props: ProfilePageProps) => {
   const placeholders: Record<string, string> = {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     lang: props.params.lang,
@@ -38,11 +40,11 @@ const PeoplePage = (props: PeoplePageProps) => {
     <Layout placeholders={placeholders}>
       <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <ProfileList />
+          <ProfileView slug={props.params.slug} />
         </div>
       </section>
     </Layout>
   );
 };
 
-export { metadata, PeoplePage, PeoplePage as default };
+export { metadata, ProfilePage, ProfilePage as default };

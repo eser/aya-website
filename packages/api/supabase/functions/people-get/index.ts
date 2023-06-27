@@ -1,11 +1,21 @@
 import { wrapper } from "../_shared/wrapper.ts";
-import { type UserList, type UserListResult } from "@types/user-list-result.ts";
+import {
+  type PeopleGetResult,
+  type Profile,
+} from "@types/people-get-result.ts";
 
-wrapper(async (_req, { supabase }) => {
-  const userQueryResponse = await supabase.from("User").select("*");
+wrapper(async (req, { supabase }) => {
+  const { slug } = await req.json();
 
-  const result: UserListResult = {
-    payload: userQueryResponse.data as UserList,
+  const profileQueryResponse = await supabase
+    .from("Profile")
+    .select("*")
+    .eq("type", "Individual")
+    .eq("slug", slug)
+    .limit(1);
+
+  const result: PeopleGetResult = {
+    payload: profileQueryResponse.data.at(0) as Profile,
   };
 
   return result;
