@@ -20,9 +20,6 @@ importers:
       '@prisma/client':
         specifier: 4.16.1
         version: 4.16.1(prisma@4.16.1)
-      '@trpc/server':
-        specifier: ^10.32.0
-        version: 10.32.0
       cors:
         specifier: ^2.8.5
         version: 2.8.5
@@ -174,18 +171,6 @@ importers:
       '@tanstack/react-query':
         specifier: ^4.29.19
         version: 4.29.19(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/client':
-        specifier: ^10.32.0
-        version: 10.32.0(@trpc/server@10.32.0)
-      '@trpc/next':
-        specifier: ^10.32.0
-        version: 10.32.0(@tanstack/react-query@4.29.19)(@trpc/client@10.32.0)(@trpc/react-query@10.32.0)(@trpc/server@10.32.0)(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/react-query':
-        specifier: ^10.32.0
-        version: 10.32.0(@tanstack/react-query@4.29.19)(@trpc/client@10.32.0)(@trpc/server@10.32.0)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/server':
-        specifier: ^10.32.0
-        version: 10.32.0
       '@vercel/analytics':
         specifier: ^1.0.1
         version: 1.0.1
@@ -3074,55 +3059,6 @@ packages:
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
-
-  /@trpc/client@10.32.0(@trpc/server@10.32.0):
-    resolution: {integrity: sha512-hrj6XV84nE6DH5AmsPJ0JzIRcx3f6zU0tvS705DnZtNBOoMk7Lx+wX+KCDxj4DxLsTXC+roAxZxWwAB6/LGsXA==}
-    peerDependencies:
-      '@trpc/server': 10.32.0
-    dependencies:
-      '@trpc/server': 10.32.0
-    dev: false
-
-  /@trpc/next@10.32.0(@tanstack/react-query@4.29.19)(@trpc/client@10.32.0)(@trpc/react-query@10.32.0)(@trpc/server@10.32.0)(next@13.4.7)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qJ3yvJDTVmiOOPW1x/FCpmOvtcMJXnP2t3EbcUFrqwgH+D1KdbU2Kk1iSa89Gwy/BBEmXUxaKkWoM3e4Id80gw==}
-    peerDependencies:
-      '@tanstack/react-query': ^4.18.0
-      '@trpc/client': 10.32.0
-      '@trpc/react-query': 10.32.0
-      '@trpc/server': 10.32.0
-      next: '*'
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      '@tanstack/react-query': 4.29.19(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/client': 10.32.0(@trpc/server@10.32.0)
-      '@trpc/react-query': 10.32.0(@tanstack/react-query@4.29.19)(@trpc/client@10.32.0)(@trpc/server@10.32.0)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/server': 10.32.0
-      next: 13.4.7(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-ssr-prepass: 1.5.0(react@18.2.0)
-    dev: false
-
-  /@trpc/react-query@10.32.0(@tanstack/react-query@4.29.19)(@trpc/client@10.32.0)(@trpc/server@10.32.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-M4W1aGm3VAfQ9u4FJyK8M+pkcAV4lp32ZHxKnkRydxcsladhsqveZC9oqZqwklprEcYHtWU8v3R+jRGUjfCxpw==}
-    peerDependencies:
-      '@tanstack/react-query': ^4.18.0
-      '@trpc/client': 10.32.0
-      '@trpc/server': 10.32.0
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      '@tanstack/react-query': 4.29.19(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/client': 10.32.0(@trpc/server@10.32.0)
-      '@trpc/server': 10.32.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@trpc/server@10.32.0:
-    resolution: {integrity: sha512-C4HRHpaffw2pekpfNSHQtwlocq6kwAQq48mR9RIsUZGNbjXZbgvBC927vRP6QPAoG+n4oHPWyZ9G1hs3KMcPiw==}
-    dev: false
 
   /@tsconfig/node10@1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==}
@@ -8196,14 +8132,6 @@ packages:
       tslib: 2.6.0
       use-callback-ref: 1.3.0(@types/react@18.2.14)(react@18.2.0)
       use-sidecar: 1.1.2(@types/react@18.2.14)(react@18.2.0)
-    dev: false
-
-  /react-ssr-prepass@1.5.0(react@18.2.0):
-    resolution: {integrity: sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-style-singleton@2.2.1(@types/react@18.2.14)(react@18.2.0):
