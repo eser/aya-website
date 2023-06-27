@@ -8,20 +8,20 @@ import { Button } from "@/shared/components/ui/button.tsx";
 
 // // eslint-disable-next-line @typescript-eslint/no-empty-function
 const GitHubLogin = () => {
-  const { signInWithGithub, signOut, session } = useSupabaseAuth();
+  const auth = useSupabaseAuth();
 
-  const isLoggedIn = session?.user !== undefined;
+  const isLoggedIn = auth.session?.user !== undefined;
 
   const onClick = useCallback(
     async () => {
       if (isLoggedIn) {
-        await signOut();
+        await auth.signOut();
         return;
       }
 
-      await signInWithGithub();
+      await auth.signInWithGithub();
     },
-    [isLoggedIn, signInWithGithub, signOut],
+    [isLoggedIn, auth],
   );
 
   return (
@@ -30,8 +30,9 @@ const GitHubLogin = () => {
       onClick={onClick}
       className="flex items-center justify-center gap-2"
     >
+      {auth.isLoading}
       {isLoggedIn
-        ? <span>{session?.user.user_metadata.full_name}</span>
+        ? <span>{auth.session?.user.user_metadata.full_name}</span>
         : <span>Sign in w/ GitHub</span>}
     </Button>
   );

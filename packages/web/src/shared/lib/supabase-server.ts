@@ -1,7 +1,8 @@
+import "server-only";
 import { cache } from "react";
+import { cookies } from "next/headers";
 
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 
 import { type Database } from "@/shared/types/database";
 

@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { type Session, useSupabase } from "@/shared/hooks/use-supabase.ts";
 
@@ -30,23 +31,43 @@ interface SupabaseAuthProviderProps {
 }
 
 const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
+  const router = useRouter();
   const { supabase } = useSupabase();
+  const [isLoading, setIsLoading] = useState(true);
   const [session, setSession] = useState<Session | null>(props.serverSession);
 
-  supabase.auth.onAuthStateChange((_event, session) => {
-    setSession(session);
-  });
+  useEffect(() => {
+    const authStateChangeEvent = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session?.access_token !== props.serverSession?.access_token) {
+          router.refresh();
+          return;
+        }
+
+        setSession(session);
+        setIsLoading(false);
+      },
+    );
+
+    return () => {
+      authStateChangeEvent.data?.subscription?.unsubscribe?.();
+    };
+  }, [router, supabase, props.serverSession?.access_token]);
 
   const state: SupabaseAuthContextState = {
     ...initialState,
-    isLoading: false,
+    isLoading: isLoading,
     session: session,
 
     signInWithGithub: async () => {
-      await supabase.auth.signInWithOAuth({ provider: "github" });
+      await supabase.auth.signInWithOAuth({
+        provider: "github",
+        options: { redirectTo: `${window.location.origin}` },
+      });
     },
     signOut: async () => {
       await supabase.auth.signOut();
+      // router.push("/");
     },
   };
 

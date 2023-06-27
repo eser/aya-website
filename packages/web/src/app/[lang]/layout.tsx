@@ -1,22 +1,28 @@
+import "server-only";
 import { dir } from "i18next";
+
 import { createServerSupabaseClient } from "@/shared/lib/supabase-server";
 import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
 import { SupabaseAuthProvider } from "@/shared/contexts/supabase-auth-provider.tsx";
+
 import { ThemeProvider } from "./theme-provider.tsx";
 import { FontProvider } from "./font-provider.tsx";
 import { Analytics } from "./analytics.tsx";
 
 import "./global.css";
 
-const languages = ["tr", "en"];
+// TODO(@eser) must be re-enabled as soon as next.js bug is fixed
+//             reference: https://github.com/vercel/next.js/issues/49373
 
-const generateStaticParams = () => {
-  const paths = languages.map((lang) => ({
-    lang: lang,
-  }));
+// const languages = ["tr", "en"];
 
-  return Promise.resolve(paths);
-};
+// const generateStaticParams = () => {
+//   const paths = languages.map((lang) => ({
+//     lang: lang,
+//   }));
+
+//   return Promise.resolve(paths);
+// };
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -57,4 +63,4 @@ const Layout = async (props: RootLayoutProps) => {
   );
 };
 
-export { generateStaticParams, Layout, Layout as default };
+export { Layout, Layout as default };
