@@ -1,14 +1,19 @@
-import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { type PeopleGetResult } from "types/src/people-get-result.ts";
+
+import { type Language } from "@/shared/i18n/languages.ts";
+import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { ProfileHeading } from "./profile-heading.tsx";
 import { ProfilePages } from "./profile-pages.tsx";
 
 interface ProfileViewProps {
-  slug: string;
+  lang: Language;
+  slugs: string[];
 }
 
 const ProfileView = async (props: ProfileViewProps) => {
   const { supabase } = useSupabaseServer();
+
+  const [profileSlug, profilePageSlug] = props.slugs;
 
   const individualProfileResponse = await supabase.functions.invoke<
     PeopleGetResult
@@ -16,7 +21,7 @@ const ProfileView = async (props: ProfileViewProps) => {
     "people-get",
     {
       body: JSON.stringify({
-        slug: props.slug,
+        slug: profileSlug,
       }),
     },
   );
@@ -38,8 +43,12 @@ const ProfileView = async (props: ProfileViewProps) => {
 
   return (
     <>
-      <ProfileHeading item={profile} />
-      <ProfilePages item={profile} />
+      <ProfileHeading lang={props.lang} item={profile} />
+      <ProfilePages
+        lang={props.lang}
+        item={profile}
+        pageSlug={profilePageSlug}
+      />
     </>
   );
 };

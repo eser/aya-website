@@ -1,7 +1,10 @@
 // import Link from "next/link";
 import { type PeopleGetComposition } from "types/src/people-get-result.ts";
 
+import { type Language } from "@/shared/i18n/languages.ts";
+
 interface ProfileHeadingProps {
+  lang: Language;
   item: PeopleGetComposition;
 }
 

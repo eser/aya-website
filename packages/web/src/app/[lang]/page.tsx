@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n.ts";
+import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 
 import { buttonVariants } from "@/shared/components/ui/button.tsx";

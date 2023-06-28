@@ -1,5 +1,5 @@
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n.ts";
+import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 import { ProfileView } from "./profile-view.tsx";
 
@@ -25,7 +25,7 @@ const metadata = {
 interface ProfilePageProps {
   params: {
     lang: Language;
-    slug: string;
+    slugs: string[];
   };
 }
 
@@ -38,7 +38,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <ProfileView slug={props.params.slug} />
+        <ProfileView lang={props.params.lang} slugs={props.params.slugs} />
       </section>
     </Layout>
   );
