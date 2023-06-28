@@ -38,9 +38,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <ProfileView slug={props.params.slug} />
-        </div>
+        <ProfileView slug={props.params.slug} />
       </section>
     </Layout>
   );

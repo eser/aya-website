@@ -1,34 +1,11 @@
 import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { type PeopleGetResult } from "types/src/people-get-result.ts";
 import { ProfileHeading } from "./profile-heading.tsx";
-import { SidebarNav } from "./sidebar-nav.tsx";
+import { ProfilePages } from "./profile-pages.tsx";
 
 interface ProfileViewProps {
   slug: string;
 }
-
-const sidebarNavItems = [
-  {
-    title: "Profile",
-    href: "/examples/forms",
-  },
-  {
-    title: "Account",
-    href: "/examples/forms/account",
-  },
-  {
-    title: "Appearance",
-    href: "/examples/forms/appearance",
-  },
-  {
-    title: "Notifications",
-    href: "/examples/forms/notifications",
-  },
-  {
-    title: "Display",
-    href: "/examples/forms/display",
-  },
-];
 
 const ProfileView = async (props: ProfileViewProps) => {
   const { supabase } = useSupabaseServer();
@@ -44,18 +21,25 @@ const ProfileView = async (props: ProfileViewProps) => {
     },
   );
 
+  const profile = individualProfileResponse.data?.payload ?? null;
+
+  if (profile === null) {
+    return (
+      <>
+        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+          Profile
+        </h1>
+        <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          Profile not found.
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
-      <ProfileHeading item={individualProfileResponse.data?.payload} />
-
-      <section className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-        <aside className="-mx-4 lg:w-1/5">
-          <SidebarNav items={sidebarNavItems} />
-        </aside>
-        <div className="flex-1 lg:max-w-2xl">
-          Deneme
-        </div>
-      </section>
+      <ProfileHeading item={profile} />
+      <ProfilePages item={profile} />
     </>
   );
 };

@@ -2,7 +2,7 @@ type Profile = {
   id: string;
   slug: string;
   title: string;
-  email: string;
+  description: string;
 };
 
 type ProfileList = Array<Profile>;
