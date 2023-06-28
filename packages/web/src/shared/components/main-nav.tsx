@@ -41,7 +41,7 @@ const MainNav = (props: MainNavProps) => {
         className="hidden items-center space-x-2 md:flex"
       >
         <Icons.logo className="h-6 w-6" />
-        <span className="font-bold inline-block">
+        <span className="inline-block font-bold">
           {siteConfig.name}
         </span>
       </Link>
@@ -70,10 +70,10 @@ const MainNav = (props: MainNavProps) => {
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="-ml-4 text-base hover:bg-transparent focus:ring-0 items-center space-x-2 flex md:hidden"
+            className="-ml-4 flex items-center space-x-2 text-base hover:bg-transparent focus:ring-0 md:hidden"
           >
             <Icons.logo className="h-6 w-6" />
-            <span className="font-bold inline-block">
+            <span className="inline-block font-bold">
               {siteConfig.name}
             </span>
           </Button>

@@ -5,10 +5,10 @@ import {
   type Profile,
 } from "types/src/people-list-result.ts";
 
-interface ProfileListProps {
-}
+// interface ProfileListProps {
+// }
 
-const ProfileList = async (props: ProfileListProps) => {
+const ProfileList = async (/* props: ProfileListProps */) => {
   const { supabase } = useSupabaseServer();
 
   const peopleListResponse = await supabase.functions.invoke<PeopleListResult>(

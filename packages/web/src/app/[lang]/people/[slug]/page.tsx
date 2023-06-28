@@ -1,4 +1,3 @@
-import { useParams } from "next/navigation";
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n.ts";
 import { Layout } from "@/shared/components/layout.tsx";
@@ -38,7 +37,7 @@ const ProfilePage = (props: ProfilePageProps) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
+      <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <ProfileView slug={props.params.slug} />
         </div>

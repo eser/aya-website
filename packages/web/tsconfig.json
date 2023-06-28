@@ -5,6 +5,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,

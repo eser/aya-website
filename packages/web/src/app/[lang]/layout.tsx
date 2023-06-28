@@ -9,7 +9,7 @@ import { ThemeProvider } from "./theme-provider.tsx";
 import { FontProvider } from "./font-provider.tsx";
 import { Analytics } from "./analytics.tsx";
 
-import "./global.css";
+import "./globals.css";
 
 // TODO(@eser) must be re-enabled as soon as next.js bug is fixed
 //             reference: https://github.com/vercel/next.js/issues/49373

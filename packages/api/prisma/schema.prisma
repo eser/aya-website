@@ -45,7 +45,7 @@ model User {
   profileMemberships  ProfileMembership[]
 
   createdAt           DateTime    @default(now())
-  updatedAt           DateTime    @updatedAt
+  updatedAt           DateTime?   @updatedAt
   deletedAt           DateTime?
 }
 
@@ -75,7 +75,7 @@ model Profile {
   memberships         ProfileMembership[]
 
   createdAt           DateTime    @default(now())
-  updatedAt           DateTime    @updatedAt
+  updatedAt           DateTime?   @updatedAt
   deletedAt           DateTime?
 }
 
@@ -84,13 +84,14 @@ model ProfilePage {
   slug                String
   title               String
   content             String
+  order               Int
   publishedAt         DateTime?
 
   profile             Profile     @relation(fields: [profileId], references: [id])
   profileId           String
 
   createdAt           DateTime    @default(now())
-  updatedAt           DateTime    @updatedAt
+  updatedAt           DateTime?   @updatedAt
   deletedAt           DateTime?
 }
 
@@ -105,7 +106,7 @@ model ProfileLink {
   profileId           String
 
   createdAt           DateTime    @default(now())
-  updatedAt           DateTime    @updatedAt
+  updatedAt           DateTime?   @updatedAt
   deletedAt           DateTime?
 }
 
@@ -129,6 +130,6 @@ model ProfileMembership {
   userId              String
 
   createdAt           DateTime    @default(now())
-  updatedAt           DateTime    @updatedAt
+  updatedAt           DateTime?   @updatedAt
   deletedAt           DateTime?
 }

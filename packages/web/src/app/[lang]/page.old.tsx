@@ -41,7 +41,7 @@ const IndexPage = (props: IndexPageProps) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center pt-6 pb-8 md:py-10 gap-6">
+      <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex flex-col items-center">
           <Link href="https://github.com/acikkaynak" rel="noreferrer">
             {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}

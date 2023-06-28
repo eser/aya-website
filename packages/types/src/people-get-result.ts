@@ -1,6 +1,18 @@
 import { type ResultType } from "./result-type.ts";
 import { type Profile } from "./profile.ts";
+import { type ProfilePage, type ProfilePageList } from "./profile-page.ts";
 
-type PeopleGetResult = ResultType<Profile>;
+interface PeopleGetComposition {
+  profile: Profile;
+  pages: ProfilePageList;
+}
 
-export { type PeopleGetResult, type Profile };
+type PeopleGetResult = ResultType<PeopleGetComposition | null>;
+
+export {
+  type PeopleGetComposition,
+  type PeopleGetResult,
+  type Profile,
+  type ProfilePage,
+  type ProfilePageList,
+};

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import {
-  type Session,
+  
   SupabaseContext,
 } from "@/shared/contexts/supabase-provider";
 
@@ -15,4 +15,6 @@ const useSupabase = () => {
   return context;
 };
 
-export { type Session, useSupabase };
+export { useSupabase };
+
+export {type Session} from "@/shared/contexts/supabase-provider";
