@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 
 import {
@@ -120,16 +120,15 @@ const NewsCard = (props: NewsCardProps) => {
   );
 };
 
-interface NewsPageProps {
-  params: {
-    lang: Language;
-  };
-}
+// interface NewsPageProps {
+//   params: {
+//     // lang: Language;
+//   };
+// }
 
-const NewsPage = async (props: NewsPageProps) => {
+const NewsPage = async (/* props: NewsPageProps */) => {
   const placeholders: Record<string, string> = {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    lang: props.params.lang,
+    // lang: props.params.lang,
   };
 
   const data = await hashnodeGetPosts("eser");

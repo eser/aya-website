@@ -23,13 +23,9 @@ const replacePlaceholders = (
   href: string,
   placeholders: Record<string, string>,
 ): string => {
-  if (placeholders === undefined) {
-    return href;
-  }
-
-  return href.replace(
-    "{lang}",
-    placeholders.lang,
+  return Object.entries(placeholders).reduce(
+    (acc, curr) => acc.replace(`{${curr[0]}}`, curr[1]),
+    href,
   );
 };
 
@@ -37,7 +33,7 @@ const MainNav = (props: MainNavProps) => {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link
-        href={replacePlaceholders("/{lang}/", props.placeholders)}
+        href="/"
         className="hidden items-center space-x-2 md:flex"
       >
         <Icons.logo className="h-6 w-6" />
@@ -84,7 +80,7 @@ const MainNav = (props: MainNavProps) => {
           className="w-[300px] overflow-scroll"
         >
           <DropdownMenuItem asChild>
-            <Link href={replacePlaceholders("/{lang}/", props.placeholders)}>
+            <Link href="/">
               Ana Sayfa
             </Link>
           </DropdownMenuItem>

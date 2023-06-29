@@ -3,7 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
@@ -27,16 +27,15 @@ const metadata = {
   },
 };
 
-interface IndexPageProps {
-  params: {
-    lang: Language;
-  };
-}
+// interface IndexPageProps {
+//   params: {
+//     // lang: Language;
+//   };
+// }
 
-const IndexPage = (props: IndexPageProps) => {
+const IndexPage = (/* props: IndexPageProps */) => {
   const placeholders: Record<string, string> = {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    lang: props.params.lang,
+    // lang: props.params.lang,
   };
 
   const introText =
@@ -77,7 +76,7 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
         <div className="flex gap-4">
           <Link
             // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            href={`/${placeholders.lang}/about/`}
+            href={`/about/`}
             rel="noreferrer"
             className={buttonVariants({ size: "lg" })}
           >

@@ -55,12 +55,12 @@ const nextConfig = {
   // deno-lint-ignore require-await
   rewrites: async () => {
     return [
-      {
-        source: "/",
-        destination: "/tr/",
-        // locale: false,
-        // permanent: false,
-      },
+      // {
+      //   source: "/",
+      //   destination: "/tr/",
+      //   // locale: false,
+      //   // permanent: false,
+      // },
       // {
       //   source: "/:path*",
       //   has: [

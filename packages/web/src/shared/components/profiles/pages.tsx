@@ -4,7 +4,7 @@
 // import Link from "next/link";
 import { type PeopleGetComposition } from "types/src/people-get-result.ts";
 
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { cn } from "@/shared/lib/cn.ts";
 import { mdx } from "@/shared/lib/mdx.ts";
 import { SidebarNav } from "./sidebar-nav.tsx";
@@ -12,7 +12,7 @@ import { SidebarNav } from "./sidebar-nav.tsx";
 import styles from "./pages.module.scss";
 
 interface ProfilePagesProps {
-  lang: Language;
+  // lang: Language;
   item: PeopleGetComposition;
   pageSlug?: string;
 }
@@ -26,7 +26,7 @@ const ProfilePages = async (props: ProfilePagesProps) => {
 
   const sidebarNavItems = props.item.pages.map(
     (page) => {
-      let href = `/${props.lang}/people/${props.item.profile.slug}/`;
+      let href = `/${props.item.profile.slug}/`;
 
       if (page.slug !== INDEX_PAGE_SLUG) {
         href += `${page.slug}/`;

@@ -1,12 +1,12 @@
 import { type PeopleGetResult } from "types/src/people-get-result.ts";
 
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { ProfileHeading } from "./heading.tsx";
 import { ProfilePages } from "./pages.tsx";
 
 interface ProfileViewProps {
-  lang: Language;
+  // lang: Language;
   slugs: string[];
 }
 
@@ -43,9 +43,8 @@ const ProfileView = async (props: ProfileViewProps) => {
 
   return (
     <>
-      <ProfileHeading lang={props.lang} item={profile} />
+      <ProfileHeading item={profile} />
       <ProfilePages
-        lang={props.lang}
         item={profile}
         pageSlug={profilePageSlug}
       />

@@ -1,5 +1,5 @@
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
@@ -21,16 +21,15 @@ const metadata = {
   },
 };
 
-interface ProjectsPageProps {
-  params: {
-    lang: Language;
-  };
-}
+// interface ProjectsPageProps {
+//   params: {
+//     // lang: Language;
+//   };
+// }
 
-const ProjectsPage = (props: ProjectsPageProps) => {
+const ProjectsPage = (/* props: ProjectsPageProps */) => {
   const placeholders: Record<string, string> = {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    lang: props.params.lang,
+    // lang: props.params.lang,
   };
 
   return (

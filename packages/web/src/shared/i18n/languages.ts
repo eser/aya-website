@@ -1,3 +1,3 @@
-type Language = string;
+type Language = "tr";
 
 export { type Language };

@@ -1,7 +1,7 @@
 import { siteConfig } from "@/shared/config/site.ts";
-import { type Language } from "@/shared/i18n/languages.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
-import { ProfileList } from "./profile-list.tsx";
+import { ProfileView } from "@/shared/components/profiles/view.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -22,25 +22,25 @@ const metadata = {
   },
 };
 
-interface PeoplePageProps {
+interface ProfilePageProps {
   params: {
-    lang: Language;
+    // lang: Language;
+    slugs: string[];
   };
 }
 
-const PeoplePage = (props: PeoplePageProps) => {
+const ProfilePage = (props: ProfilePageProps) => {
   const placeholders: Record<string, string> = {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    lang: props.params.lang,
+    // lang: props.params.lang,
   };
 
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <ProfileList />
+        <ProfileView slugs={props.params.slugs} />
       </section>
     </Layout>
   );
 };
 
-export { metadata, PeoplePage, PeoplePage as default };
+export { metadata, ProfilePage, ProfilePage as default };

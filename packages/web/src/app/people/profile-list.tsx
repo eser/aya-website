@@ -24,7 +24,7 @@ const ProfileList = async (/* props: ProfileListProps */) => {
         <ul>
           {peopleListResponse.data?.payload.map((profile: Profile) => (
             <li key={profile.id}>
-              <Link href={`./${profile.slug}`}>{profile.title}</Link>
+              <Link href={`/${profile.slug}`}>{profile.title}</Link>
             </li>
           ))}
         </ul>

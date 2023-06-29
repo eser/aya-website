@@ -1,6 +1,9 @@
 import "server-only";
 import { dir } from "i18next";
 
+// import { siteConfig } from "@/shared/config/site.ts";
+// import { type Language } from "@/shared/i18n/languages.ts";
+
 import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
 import { SupabaseAuthProvider } from "@/shared/contexts/supabase-auth-provider.tsx";
@@ -27,9 +30,11 @@ import "./globals.css";
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
-    lang: string;
+    // lang: Language;
   };
 }
+
+const DEFAULT_LANG = "tr";
 
 const Layout = async (props: RootLayoutProps) => {
   const { supabase } = useSupabaseServer();
@@ -37,8 +42,8 @@ const Layout = async (props: RootLayoutProps) => {
 
   return (
     <html
-      lang={props.params.lang}
-      dir={dir(props.params.lang)}
+      lang={DEFAULT_LANG}
+      dir={dir(DEFAULT_LANG)}
       suppressHydrationWarning={true}
     >
       <head />
