@@ -61,16 +61,16 @@ const nextConfig = {
         // locale: false,
         // permanent: false,
       },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "(?<subdomain>\\w+)\..*",
-          },
-        ],
-        destination: "/tr/people/:subdomain/:path*",
-      },
+      // {
+      //   source: "/:path*",
+      //   has: [
+      //     {
+      //       type: "host",
+      //       value: "(?<subdomain>\\w+)\..*",
+      //     },
+      //   ],
+      //   destination: "/tr/people/:subdomain/:path*",
+      // },
     ];
   },
 };
