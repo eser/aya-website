@@ -62,14 +62,14 @@ const nextConfig = {
         // permanent: false,
       },
       {
-        source: "/:path((?!_next/|_static/|[\\w-]+\\.\\w+).*)",
+        source: "/:path*)",
         has: [
           {
             type: "host",
-            value: "(?<subdomain>\\w+)\\..*",
+            value: "(?<subdomain>\\w+)\..*",
           },
         ],
-        destination: "/tr/people/:subdomain/:path",
+        destination: "/tr/people/:subdomain/:path*",
       },
     ];
   },
