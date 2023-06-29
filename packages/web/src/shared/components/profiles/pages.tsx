@@ -1,3 +1,6 @@
+// "use client";
+
+// import { usePathname } from "next/navigation";
 // import Link from "next/link";
 import { type PeopleGetComposition } from "types/src/people-get-result.ts";
 
@@ -6,7 +9,7 @@ import { cn } from "@/shared/lib/cn.ts";
 import { mdx } from "@/shared/lib/mdx.ts";
 import { SidebarNav } from "./sidebar-nav.tsx";
 
-import styles from "./profile-pages.module.scss";
+import styles from "./pages.module.scss";
 
 interface ProfilePagesProps {
   lang: Language;
@@ -17,6 +20,8 @@ interface ProfilePagesProps {
 const INDEX_PAGE_SLUG = "index";
 
 const ProfilePages = async (props: ProfilePagesProps) => {
+  // const pathname = usePathname();
+
   const activePage = props.pageSlug ?? INDEX_PAGE_SLUG;
 
   const sidebarNavItems = props.item.pages.map(
@@ -30,6 +35,7 @@ const ProfilePages = async (props: ProfilePagesProps) => {
       return {
         href: href,
         title: page.title,
+        isActive: page.slug === activePage,
       };
     },
   );

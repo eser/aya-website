@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { cn } from "@/shared/lib/cn.ts";
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
@@ -10,12 +7,13 @@ interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     href: string;
     title: string;
+    isActive?: boolean;
   }[];
 }
 
-const SidebarNav = ({ className, items, ...props }: SidebarNavProps) => {
-  const pathname = usePathname();
-
+const SidebarNav = (
+  { className, items, ...props }: SidebarNavProps,
+) => {
   return (
     <nav
       className={cn(
@@ -30,7 +28,7 @@ const SidebarNav = ({ className, items, ...props }: SidebarNavProps) => {
           href={item.href}
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            pathname === item.href
+            item.isActive
               ? "bg-muted hover:bg-muted"
               : "hover:bg-transparent hover:underline",
             "justify-start",

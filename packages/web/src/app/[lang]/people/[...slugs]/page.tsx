@@ -1,7 +1,7 @@
 import { siteConfig } from "@/shared/config/site.ts";
 import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
-import { ProfileView } from "./profile-view.tsx";
+import { ProfileView } from "@/shared/components/profiles/view.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
