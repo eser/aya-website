@@ -16,3 +16,4 @@ node_modules/
 
 # next.js
 .turbo/
+.vercel/

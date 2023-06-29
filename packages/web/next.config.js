@@ -48,7 +48,7 @@ const nextConfig = {
         hostname: "cdn.hashnode.com",
         port: "",
         pathname: "/res/hashnode/image/upload/**",
-      }
+      },
     ],
   },
 
@@ -60,6 +60,16 @@ const nextConfig = {
         destination: "/tr/",
         // locale: false,
         // permanent: false,
+      },
+      {
+        source: "/:path((?!_next/|_static/|[\\w-]+\\.\\w+).*)",
+        has: [
+          {
+            type: "host",
+            value: "(?<subdomain>\\w+)\\..*",
+          },
+        ],
+        destination: "/tr/people/:subdomain/:path",
       },
     ];
   },
