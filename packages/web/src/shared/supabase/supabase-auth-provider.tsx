@@ -3,7 +3,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { type Session, useSupabase } from "@/shared/hooks/use-supabase.ts";
+import { type Session, useSupabase } from "./use-supabase.ts";
 
 interface SupabaseAuthContextState {
   session: Session | null;

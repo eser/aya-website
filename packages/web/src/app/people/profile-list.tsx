@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
+import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import {
   type PeopleListResult,
   type Profile,

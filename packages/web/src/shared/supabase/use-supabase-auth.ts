@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { SupabaseAuthContext } from "@/shared/contexts/supabase-auth-provider";
+import { SupabaseAuthContext } from "./supabase-auth-provider.tsx";
 
 const useSupabaseAuth = () => {
   const context = useContext(SupabaseAuthContext);

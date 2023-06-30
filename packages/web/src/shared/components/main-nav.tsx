@@ -1,8 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { type NavItem } from "@/shared/config/nav.ts";
-import { siteConfig } from "@/shared/config/site.ts";
+import { siteConfig } from "@/shared/config.ts";
 import { cn } from "@/shared/lib/cn.ts";
 import { Icons } from "@/shared/components/icons.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
@@ -13,6 +12,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu.tsx";
+
+interface NavItem {
+  title: string;
+  href?: string;
+  disabled?: boolean;
+  external?: boolean;
+}
 
 interface MainNavProps {
   items?: NavItem[];
@@ -103,4 +109,4 @@ const MainNav = (props: MainNavProps) => {
   );
 };
 
-export { MainNav };
+export { MainNav, type NavItem };

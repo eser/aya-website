@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 
-import { useSupabaseAuth } from "@/shared/hooks/use-supabase-auth.ts";
+import { useSupabaseAuth } from "@/shared/supabase/use-supabase-auth";
 import { Button } from "@/shared/components/ui/button.tsx";
 
 // // eslint-disable-next-line @typescript-eslint/no-empty-function

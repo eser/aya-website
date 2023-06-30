@@ -69,7 +69,7 @@ const nextConfig = {
       //       value: "(?<subdomain>\\w+)\..*",
       //     },
       //   ],
-      //   destination: "/tr/people/:subdomain/:path*",
+      //   destination: "/:subdomain/:path*",
       // },
     ];
   },

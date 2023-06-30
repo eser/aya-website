@@ -1,11 +1,42 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/shared/config/site.ts";
+import { siteConfig } from "@/shared/config.ts";
 import { Icons } from "@/shared/components/icons.tsx";
-import { MainNav } from "@/shared/components/main-nav.tsx";
+import { MainNav, type NavItem } from "@/shared/components/main-nav.tsx";
 import { ThemeToggle } from "@/shared/components/theme-toggle.tsx";
 import { GitHubLogin } from "@/shared/components/github-login.tsx";
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
+
+const mainNav: NavItem[] = [
+  {
+    title: "Haberler",
+    href: "/news/",
+  },
+  {
+    title: "Topluluk",
+    href: "/community/",
+  },
+  {
+    title: "Kişiler",
+    href: "/people/",
+  },
+  {
+    title: "Projeler",
+    href: "/projects/",
+  },
+  {
+    title: "Rehber",
+    href: "/guide/",
+  },
+  {
+    title: "Kurallar",
+    href: "/policies/",
+  },
+  {
+    title: "Hakkında",
+    href: "/about/",
+  },
+];
 
 interface SiteHeaderProps {
   placeholders: Record<string, string>;
@@ -15,7 +46,7 @@ const SiteHeader = (props: SiteHeaderProps) => {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white dark:border-b-slate-700 dark:bg-slate-900">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} placeholders={props.placeholders} />
+        <MainNav items={mainNav} placeholders={props.placeholders} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
             <Link

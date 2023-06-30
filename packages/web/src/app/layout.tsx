@@ -1,11 +1,11 @@
 import "server-only";
 
-// import { siteConfig } from "@/shared/config/site.ts";
+// import { siteConfig } from "@/shared/config.ts";
 import { languages } from "@/shared/i18n/languages.ts";
 
-import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
-import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
-import { SupabaseAuthProvider } from "@/shared/contexts/supabase-auth-provider.tsx";
+import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { SupabaseProvider } from "@/shared/supabase/supabase-provider.tsx";
+import { SupabaseAuthProvider } from "@/shared/supabase/supabase-auth-provider.tsx";
 
 import { ThemeProvider } from "./theme-provider.tsx";
 import { FontProvider } from "./font-provider.tsx";

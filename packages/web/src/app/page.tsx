@@ -2,7 +2,7 @@ import Link from "next/link";
 // import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
-import { siteConfig } from "@/shared/config/site.ts";
+import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layout.tsx";
 

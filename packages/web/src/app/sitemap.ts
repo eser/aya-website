@@ -1,4 +1,4 @@
-// import { useSupabase } from "@/shared/contexts/use-supabase";
+// import { useSupabase } from "@/shared/supabase/use-supabase";
 
 const sitemap = () => {
   // const { supabase } = useSupabase();

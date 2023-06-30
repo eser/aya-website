@@ -45,7 +45,7 @@ const main = () => {
   const command = generateCommand();
   const output = executeCommand(command);
 
-  const target = join(projectDir, "src/shared/types/database.ts");
+  const target = join(projectDir, "src/shared/supabase/database-types.ts");
 
   writeOutput(target, output);
 

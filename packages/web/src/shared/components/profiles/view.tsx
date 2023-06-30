@@ -1,7 +1,7 @@
 import { type PeopleGetResult } from "types/src/people-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
-import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
+import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { ProfileHeading } from "./heading.tsx";
 import { ProfilePages } from "./pages.tsx";
 

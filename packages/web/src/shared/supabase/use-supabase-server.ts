@@ -1,4 +1,4 @@
-import { createServerSupabaseClient } from "@/shared/lib/supabase-server";
+import { createServerSupabaseClient } from "./supabase-server.ts";
 
 const useSupabaseServer = () => {
   const supabase = createServerSupabaseClient();

@@ -4,10 +4,10 @@ import { createContext, useState } from "react";
 
 import {
   createClientSupabaseClient,
-  
+  type Session,
   type SupabaseClient,
-} from "@/shared/lib/supabase-client";
-import { type Database } from "@/shared/types/database";
+} from "./supabase-client.ts";
+import { type Database } from "@/shared/supabase/database-types.ts";
 
 interface SupabaseContextState {
   supabase: SupabaseClient<Database>;
@@ -36,10 +36,8 @@ const SupabaseProvider = (props: SupabaseProviderProps) => {
 };
 
 export {
-  
+  type Session,
   SupabaseContext,
   type SupabaseContextState,
   SupabaseProvider,
 };
-
-export {type Session} from "@/shared/lib/supabase-client";
