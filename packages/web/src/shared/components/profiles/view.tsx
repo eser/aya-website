@@ -1,4 +1,4 @@
-import { type PeopleGetResult } from "types/src/people-get-result.ts";
+import { type ProfileGetResult } from "types/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
@@ -16,9 +16,9 @@ const ProfileView = async (props: ProfileViewProps) => {
   const [profileSlug, profilePageSlug] = props.slugs;
 
   const individualProfileResponse = await supabase.functions.invoke<
-    PeopleGetResult
+    ProfileGetResult
   >(
-    "people-get",
+    "profile-get",
     {
       body: JSON.stringify({
         slug: profileSlug,
@@ -35,7 +35,7 @@ const ProfileView = async (props: ProfileViewProps) => {
           Profile
         </h1>
         <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-          Profile not found.
+          Profile &quot;{props.slugs[0] ?? "-"}&quot; not found.
         </div>
       </>
     );

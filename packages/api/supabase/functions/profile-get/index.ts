@@ -1,10 +1,10 @@
 import { wrapper } from "../_shared/wrapper.ts";
 import {
-  // type PeopleGetComposition,
-  type PeopleGetResult,
   type Profile,
+  // type ProfileGetComposition,
+  type ProfileGetResult,
   ProfilePageList,
-} from "@types/people-get-result.ts";
+} from "@types/profile-get-result.ts";
 
 wrapper(async (req, { supabase }) => {
   const { slug } = await req.json();
@@ -12,7 +12,6 @@ wrapper(async (req, { supabase }) => {
   const profileQueryResponse = await supabase
     .from("Profile")
     .select("*")
-    .eq("type", "Individual")
     .eq("slug", slug)
     .is("deletedAt", null)
     .limit(1)
@@ -22,7 +21,7 @@ wrapper(async (req, { supabase }) => {
   const profile = profileQueryResponse.data as Profile | undefined;
 
   if (profile === undefined) {
-    const result: PeopleGetResult = {
+    const result: ProfileGetResult = {
       payload: null,
       error: {
         message: `Profile not found for slug: ${slug}`,
@@ -41,7 +40,7 @@ wrapper(async (req, { supabase }) => {
 
   const pages = profilePagesQueryResponse.data as ProfilePageList;
 
-  const result: PeopleGetResult = {
+  const result: ProfileGetResult = {
     payload: {
       profile: profile,
       pages: pages,

@@ -1,4 +1,4 @@
-import { type PeopleGetComposition } from "types/src/people-get-result.ts";
+import { type ProfileGetComposition } from "types/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { cn } from "@/shared/lib/cn.ts";
@@ -9,7 +9,7 @@ import styles from "./pages.module.scss";
 
 interface ProfilePagesProps {
   // lang: Language;
-  item: PeopleGetComposition;
+  item: ProfileGetComposition;
   pageSlug?: string;
 }
 

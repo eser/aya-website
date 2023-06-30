@@ -8,7 +8,8 @@ wrapper(async (_req, { supabase }) => {
   const profileQueryResponse = await supabase
     .from("Profile")
     .select("*")
-    .eq("type", "Individual");
+    .eq("type", "Individual")
+    .is("deletedAt", null);
 
   const result: PeopleListResult = {
     payload: profileQueryResponse.data as ProfileList,
