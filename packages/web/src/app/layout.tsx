@@ -1,8 +1,7 @@
 import "server-only";
-import { dir } from "i18next";
 
 // import { siteConfig } from "@/shared/config/site.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+import { languages } from "@/shared/i18n/languages.ts";
 
 import { useSupabaseServer } from "@/shared/hooks/use-supabase-server.ts";
 import { SupabaseProvider } from "@/shared/contexts/supabase-provider.tsx";
@@ -14,19 +13,6 @@ import { Analytics } from "./analytics.tsx";
 
 import "./globals.css";
 
-// TODO(@eser) must be re-enabled as soon as next.js bug is fixed
-//             reference: https://github.com/vercel/next.js/issues/49373
-
-// const languages = ["tr", "en"];
-
-// const generateStaticParams = () => {
-//   const paths = languages.map((lang) => ({
-//     lang: lang,
-//   }));
-
-//   return Promise.resolve(paths);
-// };
-
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
@@ -34,7 +20,7 @@ interface RootLayoutProps {
   };
 }
 
-const DEFAULT_LANG = "tr";
+const DEFAULT_LANG = languages[0]!;
 
 const Layout = async (props: RootLayoutProps) => {
   const { supabase } = useSupabaseServer();
@@ -42,8 +28,8 @@ const Layout = async (props: RootLayoutProps) => {
 
   return (
     <html
-      lang={DEFAULT_LANG}
-      dir={dir(DEFAULT_LANG)}
+      lang={DEFAULT_LANG.code}
+      dir={DEFAULT_LANG.dir}
       suppressHydrationWarning={true}
     >
       <head />

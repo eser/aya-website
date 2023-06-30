@@ -1,3 +1,25 @@
-type Language = "tr";
+type LanguageKey = "tr" | "en";
 
-export { type Language };
+interface Language {
+  code: LanguageKey;
+  name: string;
+  flag: string;
+  dir: "ltr" | "rtl";
+}
+
+const languages: Language[] = [
+  {
+    code: "tr",
+    name: "Türkçe",
+    flag: "🇹🇷",
+    dir: "ltr",
+  },
+  {
+    code: "en",
+    name: "English",
+    flag: "🇺🇸",
+    dir: "ltr",
+  },
+];
+
+export { type Language, type LanguageKey, languages };
