@@ -17,7 +17,7 @@ const getLocale = (req: NextRequest): string | undefined => {
   const availableLanguages = languages.map((language) =>
     language.code as string
   );
-  const defaultLanguage = languages[0]!.code;
+  const defaultLanguage = languages[0]?.code ?? "en";
 
   // Check if locale is set in cookie
   const cookieLocale = req.cookies.get("language")?.value;
@@ -27,7 +27,10 @@ const getLocale = (req: NextRequest): string | undefined => {
 
   // Instantiate negotiator with request headers
   const negotiatorHeaders: Record<string, string> = {};
-  req.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+  // eslint-disable-next-line unicorn/no-array-for-each
+  req.headers.forEach((value, key) => {
+    negotiatorHeaders[key] = value;
+  });
 
   const negotiator = new Negotiator({ headers: negotiatorHeaders });
   const negotiatorLanguages = negotiator.languages();
@@ -48,7 +51,7 @@ const middleware = async (req: NextRequest) => {
 
   await getSupabaseSession(req, res);
 
-  console.log(getLocale(req), req.nextUrl.href);
+  // console.log(getLocale(req), req.nextUrl.href);
   // req.locale
 
   return res;

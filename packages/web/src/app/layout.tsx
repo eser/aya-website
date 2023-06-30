@@ -20,7 +20,7 @@ interface RootLayoutProps {
   };
 }
 
-const DEFAULT_LANG = languages[0]!;
+const DEFAULT_LANG = languages[0] ?? { code: "tr", dir: "ltr" };
 
 const Layout = async (props: RootLayoutProps) => {
   const { supabase } = useSupabaseServer();

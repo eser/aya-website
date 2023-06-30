@@ -7,7 +7,7 @@ interface Language {
   dir: "ltr" | "rtl";
 }
 
-const languages: Language[] = [
+const languages: readonly Language[] = [
   {
     code: "tr",
     name: "Türkçe",
