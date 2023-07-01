@@ -3,6 +3,7 @@ type Profile = {
   slug: string;
   title: string;
   description: string;
+  profilePictureUri: string | null;
 };
 
 type ProfileList = Array<Profile>;

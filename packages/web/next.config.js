@@ -49,6 +49,12 @@ const nextConfig = {
         port: "",
         pathname: "/res/hashnode/image/upload/**",
       },
+      {
+        protocol: "https",
+        hostname: "alejxsvqroubkwwyfwdn.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/profile-pictures/**",
+      },
     ],
   },
 
