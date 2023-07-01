@@ -13,6 +13,10 @@ const mainNav: NavItem[] = [
     href: "/news/",
   },
   {
+    title: "Rehber",
+    href: "/guide/",
+  },
+  {
     title: "Topluluk",
     href: "/community/",
   },
@@ -21,20 +25,8 @@ const mainNav: NavItem[] = [
     href: "/people/",
   },
   {
-    title: "Projeler",
-    href: "/projects/",
-  },
-  {
-    title: "Rehber",
-    href: "/guide/",
-  },
-  {
-    title: "Kurallar",
-    href: "/policies/",
-  },
-  {
-    title: "Hakkında",
-    href: "/about/",
+    title: "Üretimler",
+    href: "/products/",
   },
 ];
 

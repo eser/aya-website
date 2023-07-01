@@ -21,13 +21,13 @@ const metadata = {
   },
 };
 
-// interface ProjectsPageProps {
+// interface ProductsPageProps {
 //   params: {
 //     // lang: Language;
 //   };
 // }
 
-const ProjectsPage = (/* props: ProjectsPageProps */) => {
+const ProductsPage = (/* props: ProductsPageProps */) => {
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
@@ -48,4 +48,4 @@ const ProjectsPage = (/* props: ProjectsPageProps */) => {
   );
 };
 
-export { metadata, ProjectsPage, ProjectsPage as default };
+export { metadata, ProductsPage, ProductsPage as default };
