@@ -1,17 +1,17 @@
 import { wrapper } from "../_shared/wrapper.ts";
 import {
-  type PeopleListResult,
+  type CommunityListResult,
   type ProfileList,
-} from "@types/people-list-result.ts";
+} from "@types/community-list-result.ts";
 
 wrapper(async (_req, { supabase }) => {
   const profileQueryResponse = await supabase
     .from("Profile")
     .select("*")
-    .eq("type", "Individual")
+    .eq("type", "Organization")
     .is("deletedAt", null);
 
-  const result: PeopleListResult = {
+  const result: CommunityListResult = {
     payload: profileQueryResponse.data as ProfileList,
   };
 
