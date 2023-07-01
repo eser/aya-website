@@ -1,7 +1,9 @@
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
+
 import { type ProfileGetComposition } from "types/src/profile-get-result.ts";
 
+import { getLinkIcon } from "@/shared/components/icons.tsx";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
@@ -29,6 +31,20 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
       <h2 className="text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
         {props.item.profile.description}
       </h2>
+      <Conditional test={props.item.links.length > 0}>
+        <div className="flex flex-row">
+          {props.item.links.map((link) => (
+            <Link
+              key={link.id}
+              href={link.uri}
+              className="text-lg text-slate-700 dark:text-slate-400 sm:text-xl mr-4"
+              title={link.title}
+            >
+              {getLinkIcon(link.iconSet, link.iconKey)}
+            </Link>
+          ))}
+        </div>
+      </Conditional>
     </>
   );
 };

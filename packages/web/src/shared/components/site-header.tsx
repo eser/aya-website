@@ -53,7 +53,7 @@ const SiteHeader = (props: SiteHeaderProps) => {
                   className: "text-slate-700 dark:text-slate-400",
                 })}
               >
-                <Icons.gitHub className="h-5 w-5" />
+                <Icons.github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>

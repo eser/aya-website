@@ -3,7 +3,8 @@ import {
   type Profile,
   // type ProfileGetComposition,
   type ProfileGetResult,
-  ProfilePageList,
+  type ProfileLinkList,
+  type ProfilePageList,
 } from "@types/profile-get-result.ts";
 
 wrapper(async (req, { supabase }) => {
@@ -31,18 +32,31 @@ wrapper(async (req, { supabase }) => {
     return result;
   }
 
-  const profilePagesQueryResponse = await supabase
-    .from("ProfilePage")
-    .select("*")
-    .eq("profileId", profile.id)
-    .is("deletedAt", null)
-    .order("order", { ascending: true });
+  const [profileLinksQueryResponse, profilePagesQueryResponse] = await Promise
+    .all([
+      /* profile links query */
+      supabase
+        .from("ProfileLink")
+        .select("*")
+        .eq("profileId", profile.id)
+        .is("deletedAt", null)
+        .order("order", { ascending: true }),
+      /* profile pages query */
+      supabase
+        .from("ProfilePage")
+        .select("*")
+        .eq("profileId", profile.id)
+        .is("deletedAt", null)
+        .order("order", { ascending: true }),
+    ]);
 
+  const links = profileLinksQueryResponse.data as ProfileLinkList;
   const pages = profilePagesQueryResponse.data as ProfilePageList;
 
   const result: ProfileGetResult = {
     payload: {
       profile: profile,
+      links: links,
       pages: pages,
     },
   };
