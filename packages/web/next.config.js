@@ -13,7 +13,7 @@ const nextConfig = {
 
   pageExtensions: ["ts", "tsx", "js", "jsx"],
 
-  trailingSlash: true,
+  trailingSlash: false,
   productionBrowserSourceMaps: true,
   poweredByHeader: false,
 
