@@ -21,7 +21,7 @@ const ProfileList = async (/* props: ProfileListProps */) => {
         Kişiler
       </h1>
       <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
-        <ul>
+        <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
           {peopleListResponse.data?.payload.map((profile: Profile) => (
             <li key={profile.id}>
               <Link href={`/${profile.slug}`}>{profile.title}</Link>
