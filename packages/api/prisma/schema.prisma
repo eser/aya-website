@@ -35,6 +35,8 @@ model Log {
 model Language {
   code                         String      @id
   name                         String
+  englishName                  String
+  order                        Int
 
   userTranslations             UserTx[]
   profileTranslations          ProfileTx[]
@@ -70,8 +72,8 @@ model UserTx {
   language                     Language    @relation(fields: [languageCode], references: [code])
   languageCode                 String
 
-  fullname                     String
-  bio                          String
+  fullnameTx                   String
+  bioTx                        String
 
   createdAt                    DateTime    @default(now())
   updatedAt                    DateTime?   @updatedAt
@@ -121,8 +123,8 @@ model ProfileTx {
   language                     Language    @relation(fields: [languageCode], references: [code])
   languageCode                 String
 
-  title                        String
-  description                  String
+  titleTx                      String
+  descriptionTx                String
 
   createdAt                    DateTime    @default(now())
   updatedAt                    DateTime?   @updatedAt
@@ -161,8 +163,8 @@ model ProfilePageTx {
   language                     Language    @relation(fields: [languageCode], references: [code])
   languageCode                 String
 
-  title                        String
-  content                      String
+  titleTx                      String
+  contentTx                    String
 
   createdAt                    DateTime    @default(now())
   updatedAt                    DateTime?   @updatedAt
@@ -203,8 +205,8 @@ model ProfileLinkTx {
   language                     Language    @relation(fields: [languageCode], references: [code])
   languageCode                 String
 
-  title                        String
-  description                  String
+  titleTx                      String
+  descriptionTx                String
 
   createdAt                    DateTime    @default(now())
   updatedAt                    DateTime?   @updatedAt

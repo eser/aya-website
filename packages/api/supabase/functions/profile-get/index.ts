@@ -1,4 +1,4 @@
-import { type Dependencies, wrapper } from "../_shared/wrapper.ts";
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type Profile,
   // type ProfileGetComposition,
@@ -8,20 +8,22 @@ import {
 } from "@types/profile-get-result.ts";
 
 const fn = async (req: Request, { supabase }: Dependencies) => {
-  const { slug } = await req.json();
+  const { slug, lang = config.defaultLanguage } = await req.json();
 
   const profileQueryResponse = await supabase
     .from("Profile")
-    .select("*")
+    .select("*, ProfileTx(*)")
     .eq("slug", slug)
+    .eq("ProfileTx.languageCode", lang)
     .is("deletedAt", null)
+    .is("ProfileTx.deletedAt", null)
     .limit(1)
     .maybeSingle();
   // .returns<Profile>();
 
-  const profile = profileQueryResponse.data as Profile | undefined;
+  const profile = profileQueryResponse.data as Profile | null;
 
-  if (profile === undefined) {
+  if (profile === null) {
     const result: ProfileGetResult = {
       payload: null,
       error: {
@@ -37,16 +39,20 @@ const fn = async (req: Request, { supabase }: Dependencies) => {
       /* profile links query */
       supabase
         .from("ProfileLink")
-        .select("*")
+        .select("*, ProfileLinkTx(*)")
         .eq("profileId", profile.id)
+        .eq("ProfileLinkTx.languageCode", lang)
         .is("deletedAt", null)
+        .is("ProfileLinkTx.deletedAt", null)
         .order("order", { ascending: true }),
       /* profile pages query */
       supabase
         .from("ProfilePage")
-        .select("*")
+        .select("*, ProfilePageTx(*)")
         .eq("profileId", profile.id)
+        .eq("ProfilePageTx.languageCode", lang)
         .is("deletedAt", null)
+        .is("ProfilePageTx.deletedAt", null)
         .order("order", { ascending: true }),
     ]);
 

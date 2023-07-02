@@ -1,15 +1,19 @@
-import { type Dependencies, wrapper } from "../_shared/wrapper.ts";
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type ProductsListResult,
   type ProfileList,
 } from "@types/products-list-result.ts";
 
-const fn = async (_req: Request, { supabase }: Dependencies) => {
+const fn = async (req: Request, { supabase }: Dependencies) => {
+  const { lang = config.defaultLanguage } = await req.json();
+
   const profileQueryResponse = await supabase
     .from("Profile")
-    .select("*")
+    .select("*, ProfileTx(*)")
     .eq("type", "Product")
-    .is("deletedAt", null);
+    .eq("ProfileTx.languageCode", lang)
+    .is("deletedAt", null)
+    .is("ProfileTx.deletedAt", null);
 
   const result: ProductsListResult = {
     payload: profileQueryResponse.data as ProfileList,
