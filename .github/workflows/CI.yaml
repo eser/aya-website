@@ -34,6 +34,11 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
       - name: Setup PNPM
         uses: pnpm/action-setup@v2.2.4
         id: pnpm-install
