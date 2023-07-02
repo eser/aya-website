@@ -9,12 +9,12 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <SiteHeader placeholders={props.placeholders} />
-      <main>{props.children}</main>
+      <main className="flex-1">{props.children}</main>
       <SiteFooter placeholders={props.placeholders} />
       <ResponsiveIndicator />
-    </>
+    </div>
   );
 };
 
