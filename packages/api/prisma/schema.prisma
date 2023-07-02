@@ -24,29 +24,60 @@ enum LogLevel {
 }
 
 model Log {
-  id                  String      @id @default(cuid())
-  level               LogLevel
-  message             String
-  meta                Json
+  id                           String      @id @default(cuid())
+  level                        LogLevel
+  message                      String
+  meta                         Json
 
-  createdAt           DateTime    @default(now())
+  createdAt                    DateTime    @default(now())
+}
+
+model Language {
+  code                         String      @id
+  name                         String
+
+  userTranslations             UserTx[]
+  profileTranslations          ProfileTx[]
+  profilePageTranslations      ProfilePageTx[]
+  profileLinkTranslations      ProfileLinkTx[]
 }
 
 model User {
-  id                  String      @id @default(cuid())
-  email               String      @unique
-  fullname            String
-  bio                 String
-  profilePictureUri   String?
-  githubHandle        String
-  twitterHandle       String
+  id                           String      @id @default(cuid())
+  email                        String      @unique
+  profilePictureUri            String?
+  githubHandle                 String
+  twitterHandle                String
 
-  lastSeenAt          DateTime?
-  profileMemberships  ProfileMembership[]
+  fullname                     String // TODO(@eser) will be removed
+  bio                          String // TODO(@eser) will be removed
+  languages                    UserTx[]
 
-  createdAt           DateTime    @default(now())
-  updatedAt           DateTime?   @updatedAt
-  deletedAt           DateTime?
+  lastSeenAt                   DateTime?
+  profileMemberships           ProfileMembership[]
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+}
+
+model UserTx {
+  id                           String      @id @default(cuid())
+
+  user                         User        @relation(fields: [userId], references: [id])
+  userId                       String
+
+  language                     Language    @relation(fields: [languageCode], references: [code])
+  languageCode                 String
+
+  fullname                     String
+  bio                          String
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+
+  @@unique([userId, languageCode])
 }
 
 enum ProfileType {
@@ -62,63 +93,124 @@ enum ProfileType {
 }
 
 model Profile {
-  id                  String      @id @default(cuid())
-  type                ProfileType
-  slug                String      @unique
-  email               String      @unique
+  id                           String      @id @default(cuid())
+  type                         ProfileType
+  slug                         String      @unique
+  email                        String      @unique
+  profilePictureUri            String?
 
-  title               String
-  description         String
-  profilePictureUri   String?
+  title                        String // TODO(@eser) will be removed
+  description                  String // TODO(@eser) will be removed
+  languages                    ProfileTx[]
 
-  pages               ProfilePage[]
-  links               ProfileLink[]
-  memberships         ProfileMembership[]
+  pages                        ProfilePage[]
+  links                        ProfileLink[]
+  memberships                  ProfileMembership[]
 
-  createdAt           DateTime    @default(now())
-  updatedAt           DateTime?   @updatedAt
-  deletedAt           DateTime?
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+}
+
+model ProfileTx {
+  id                           String      @id @default(cuid())
+
+  profile                      Profile     @relation(fields: [profileId], references: [id])
+  profileId                    String
+
+  language                     Language    @relation(fields: [languageCode], references: [code])
+  languageCode                 String
+
+  title                        String
+  description                  String
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+
+  @@unique([profileId, languageCode])
 }
 
 model ProfilePage {
-  id                  String      @id @default(cuid())
-  slug                String
-  title               String
-  content             String
-  order               Int
-  publishedAt         DateTime?
+  id                           String      @id @default(cuid())
+  slug                         String
+  order                        Int
+  publishedAt                  DateTime?
 
-  profile             Profile     @relation(fields: [profileId], references: [id])
-  profileId           String
+  title                        String // TODO(@eser) will be removed
+  content                      String // TODO(@eser) will be removed
+  languages                    ProfilePageTx[]
 
-  createdAt           DateTime    @default(now())
-  updatedAt           DateTime?   @updatedAt
-  deletedAt           DateTime?
+  profile                      Profile     @relation(fields: [profileId], references: [id])
+  profileId                    String
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
 
   @@index([profileId], type: Hash)
   @@unique([profileId, slug])
 }
 
+model ProfilePageTx {
+  id                           String      @id @default(cuid())
+
+  profilePage                  ProfilePage @relation(fields: [profilePageId], references: [id])
+  profilePageId                String
+
+  language                     Language    @relation(fields: [languageCode], references: [code])
+  languageCode                 String
+
+  title                        String
+  content                      String
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+
+  @@unique([profilePageId, languageCode])
+}
+
 model ProfileLink {
-  id                  String      @id @default(cuid())
-  slug                String
-  title               String
-  description         String
-  uri                 String
+  id                           String      @id @default(cuid())
+  slug                         String
+  iconSet                      String?
+  iconKey                      String?
+  uri                          String
+  order                        Int
 
-  iconSet             String?
-  iconKey             String?
-  order               Int
+  title                        String // TODO(@eser) will be removed
+  description                  String // TODO(@eser) will be removed
+  languages                    ProfileLinkTx[]
 
-  profile             Profile     @relation(fields: [profileId], references: [id])
-  profileId           String
+  profile                      Profile     @relation(fields: [profileId], references: [id])
+  profileId                    String
 
-  createdAt           DateTime    @default(now())
-  updatedAt           DateTime?   @updatedAt
-  deletedAt           DateTime?
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
 
   @@index([profileId], type: Hash)
   @@unique([profileId, slug])
+}
+
+model ProfileLinkTx {
+  id                           String      @id @default(cuid())
+
+  profileLink                  ProfileLink @relation(fields: [profileLinkId], references: [id])
+  profileLinkId                String
+
+  language                     Language    @relation(fields: [languageCode], references: [code])
+  languageCode                 String
+
+  title                        String
+  description                  String
+
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
+
+  @@unique([profileLinkId, languageCode])
 }
 
 enum ProfileMembershipRole {
@@ -131,18 +223,18 @@ enum ProfileMembershipRole {
 }
 
 model ProfileMembership {
-  id                  String      @id @default(cuid())
-  role                ProfileMembershipRole
+  id                           String      @id @default(cuid())
+  role                         ProfileMembershipRole
 
-  profile             Profile     @relation(fields: [profileId], references: [id])
-  profileId           String
+  profile                      Profile     @relation(fields: [profileId], references: [id])
+  profileId                    String
 
-  user                User        @relation(fields: [userId], references: [id])
-  userId              String
+  user                         User        @relation(fields: [userId], references: [id])
+  userId                       String
 
-  createdAt           DateTime    @default(now())
-  updatedAt           DateTime?   @updatedAt
-  deletedAt           DateTime?
+  createdAt                    DateTime    @default(now())
+  updatedAt                    DateTime?   @updatedAt
+  deletedAt                    DateTime?
 
   @@index([profileId], type: Hash)
   @@index([userId], type: Hash)
