@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import {
   type PeopleListResult,
   type Profile,
 } from "types/src/people-list-result.ts";
+import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { Conditional } from "@/shared/components/conditional.tsx";
 
 // interface ProfileListProps {
 // }
@@ -13,7 +14,10 @@ const ProfileList = async (/* props: ProfileListProps */) => {
 
   const peopleListResponse = await supabase.functions.invoke<PeopleListResult>(
     "people-list",
+    { body: JSON.stringify({}) },
   );
+
+  const profiles = peopleListResponse.data?.payload ?? [];
 
   return (
     <>
@@ -22,12 +26,15 @@ const ProfileList = async (/* props: ProfileListProps */) => {
       </h1>
       <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
         <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-          {peopleListResponse.data?.payload.map((profile: Profile) => (
+          {profiles.map((profile: Profile) => (
             <li key={profile.id}>
               <Link href={`/${profile.slug}`}>{profile.title}</Link>
             </li>
           ))}
         </ul>
+        <Conditional test={profiles.length === 0}>
+          Liste boş.
+        </Conditional>
       </div>
     </>
   );
