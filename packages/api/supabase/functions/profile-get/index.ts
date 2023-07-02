@@ -1,4 +1,4 @@
-import { wrapper } from "../_shared/wrapper.ts";
+import { type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type Profile,
   // type ProfileGetComposition,
@@ -7,7 +7,7 @@ import {
   type ProfilePageList,
 } from "@types/profile-get-result.ts";
 
-wrapper(async (req, { supabase }) => {
+const fn = async (req: Request, { supabase }: Dependencies) => {
   const { slug } = await req.json();
 
   const profileQueryResponse = await supabase
@@ -62,4 +62,10 @@ wrapper(async (req, { supabase }) => {
   };
 
   return result;
-});
+};
+
+if (import.meta.main) {
+  wrapper(fn);
+}
+
+export { fn };

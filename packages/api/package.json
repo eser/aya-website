@@ -18,7 +18,9 @@
     "start": "",
     "typecheck": "tsc --noEmit",
     "format:write": "deno fmt",
-    "format:check": "deno fmt --check"
+    "format:check": "deno fmt --check",
+    "test:run": "deno test",
+    "test": "deno test --watch"
   },
   "dependencies": {
     "@prisma/client": "4.16.1",
@@ -27,6 +29,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@edge-runtime/vm": "^3.0.3",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/node": "^20.3.2",

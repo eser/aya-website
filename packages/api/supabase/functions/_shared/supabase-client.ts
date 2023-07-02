@@ -3,7 +3,7 @@ import {
   type SupabaseClient,
 } from "https://esm.sh/@supabase/supabase-js@2";
 
-const getSupabaseClientFromRequest = (req) => {
+const getSupabaseClientFromRequest = (req: Request) => {
   const supabaseClient = createClient(
     // Supabase API URL - env var exported by default.
     Deno.env.get("SUPABASE_URL") ?? "",

@@ -1,6 +1,6 @@
-import { wrapper } from "../_shared/wrapper.ts";
+import { type Dependencies, wrapper } from "../_shared/wrapper.ts";
 
-wrapper(async (req, { supabase }) => {
+const fn = async (req: Request, { supabase }: Dependencies) => {
   const getUserResponse = await supabase.auth.getUser();
 
   const { name } = await req.json();
@@ -11,7 +11,13 @@ wrapper(async (req, { supabase }) => {
   };
 
   return payload;
-});
+};
+
+if (import.meta.main) {
+  wrapper(fn);
+}
+
+export { fn };
 
 // To invoke:
 // curl -i --location --request POST 'http://localhost:54321/functions/v1/' \

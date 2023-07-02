@@ -16,6 +16,9 @@
     },
     "test:run": {
       "outputs": []
+    },
+    "test": {
+      "outputs": []
     }
   }
 }

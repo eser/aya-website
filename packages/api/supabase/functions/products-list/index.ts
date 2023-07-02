@@ -1,10 +1,10 @@
-import { wrapper } from "../_shared/wrapper.ts";
+import { type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type ProductsListResult,
   type ProfileList,
 } from "@types/products-list-result.ts";
 
-wrapper(async (_req, { supabase }) => {
+const fn = async (_req: Request, { supabase }: Dependencies) => {
   const profileQueryResponse = await supabase
     .from("Profile")
     .select("*")
@@ -16,4 +16,10 @@ wrapper(async (_req, { supabase }) => {
   };
 
   return result;
-});
+};
+
+if (import.meta.main) {
+  wrapper(fn);
+}
+
+export { fn };

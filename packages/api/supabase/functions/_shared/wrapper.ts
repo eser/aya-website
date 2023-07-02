@@ -2,7 +2,7 @@
 // https://deno.land/manual/getting_started/setup_your_environment
 // This enables autocomplete, go to definition, etc.
 
-import { serve, type ServerRequest } from "@std/http/server.ts";
+import { serve } from "@std/http/server.ts";
 import { corsHeaders } from "./cors.ts";
 import {
   getSupabaseClientFromRequest,
@@ -13,8 +13,8 @@ interface Dependencies {
   supabase: SupabaseClient;
 }
 
-const wrapper = (fn: (req: ServerRequest, deps: Dependencies) => unknown) => {
-  serve(async (req: ServerRequest) => {
+const wrapper = (fn: (req: Request, deps: Dependencies) => unknown) => {
+  serve(async (req: Request) => {
     if (req.method === "OPTIONS") {
       return new Response("ok", { headers: corsHeaders });
     }
@@ -44,10 +44,45 @@ const wrapper = (fn: (req: ServerRequest, deps: Dependencies) => unknown) => {
   });
 };
 
+const getMockDependencies = (): Dependencies => {
+  // const mockUser = {
+  //   id: "123",
+  //   aud: "authenticated",
+  //   role: "authenticated",
+  //   email: "",
+  //   app_metadata: {
+  //     provider: "email",
+  //   },
+  //   user_metadata: {
+  //     full_name: "Test User",
+  //   },
+  //   created_at: "2021-03-01T00:00:00.000000Z",
+  //   updated_at: "2021-03-01T00:00:00.000000Z",
+  // };
+  const mockUser = null;
+
+  const mockSupabaseClient = {
+    from: () => mockSupabaseClient,
+    select: () => mockSupabaseClient,
+    insert: () => mockSupabaseClient,
+    update: () => mockSupabaseClient,
+    delete: () => mockSupabaseClient,
+    auth: {
+      getUser: () => Promise.resolve({ data: { user: mockUser } }),
+      signIn: () => Promise.resolve({ data: mockUser, error: null }),
+      signOut: () => Promise.resolve({ error: null }),
+    },
+  } as unknown as SupabaseClient;
+
+  return {
+    supabase: mockSupabaseClient,
+  };
+};
+
 // To invoke:
 // curl -i --location --request POST 'http://localhost:54321/functions/v1/' \
 //   --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0' \
 //   --header 'Content-Type: application/json' \
 //   --data '{"name":"Functions"}'
 
-export { wrapper };
+export { type Dependencies, getMockDependencies, wrapper };
