@@ -36,6 +36,7 @@ model Language {
   code                         String                 @id
   name                         String
   englishName                  String
+  flag                         String
   order                        Int
 
   userTranslations             UserTx[]
