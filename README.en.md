@@ -1,4 +1,4 @@
-# Aya - Open Source Network
+# AYA - Open Source Network
 [![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
 ![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)
 
@@ -22,16 +22,15 @@ These are the technologies we use to build our projects:
 
 For Web:
 - [Next.js](https://nextjs.org)
-- [Tailwind CSS](https://tailwindcss.com)
+- [Shadcn](https://shadcn/ui)
 - [Supabase](https://supabase.io)
 - [Vercel](https://vercel.com)
 
 For Backend:
+- [Supabase](https://supabase.io)
 - [Prisma](https://prisma.io)
 - [Deno](https://deno.land)
-- [Express](https://expressjs.com)
 
 ## How to Contribute
 
 We welcome contributions from everyone. If you want to help you can check out our [issues](https://github.com/acikkaynak/aya-website/issues). If you have any questions, feel free to join our [Discord server](https://discord.gg/itdepremyardim). If you are stuck at any point, feel free to ask for help on Github Issues or Discord.
-

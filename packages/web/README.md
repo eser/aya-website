@@ -1,4 +1,4 @@
-# Aya - Open Source Network Web
+# AYA - Open Source Network Web
 [![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
 ![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)
 
@@ -18,4 +18,4 @@ You can now open your browser and go to http://localhost:3000 to connect to the 
 > **Note:** If you used AWS ECR in docker please login to your account with `aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/` command.
 
 # 📝 License
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed. Please see [LICENSE](/LICENSE) file in our monorepo root.
