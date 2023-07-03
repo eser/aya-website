@@ -33,7 +33,7 @@ const Layout = async (props: RootLayoutProps) => {
       suppressHydrationWarning={true}
     >
       <head />
-      <body className="min-h-screen bg-white font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50">
+      <body className="min-h-screen font-sans antialiased">
         <FontProvider />
         <ThemeProvider
           attribute="class"

@@ -30,8 +30,8 @@ const SidebarNav = (
             buttonVariants({ variant: "ghost" }),
             item.isActive
               ? "bg-muted hover:bg-muted"
-              : "hover:bg-transparent hover:underline",
-            "justify-start",
+              : "hover:bg-transparent",
+            "justify-start font-serif text-lg hover:text-link-foreground",
           )}
         >
           {item.title}

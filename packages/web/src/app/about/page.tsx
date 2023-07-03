@@ -36,10 +36,10 @@ const AboutPage = (/* props: AboutPageProps */) => {
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+          <h1>
             Hakkında
           </h1>
-          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg sm:text-xl">
             Açık Yazılım Ağı, temelleri 2015&apos;de{" "}
             <a href="https://github.com/eser">Eser Özvataf</a> tarafından{" "}
             <a href="https://github.com/acikkaynak">github.com/acikkaynak</a>

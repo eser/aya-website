@@ -44,7 +44,7 @@ gönüllüleriz. 2015'den bu yana yapmış olduğumuz çalışmalarla
 kişilerin, firmaların, resmi kurumların ve sivil toplum
 kuruluşlarının kullanımına yönelik açık kaynak kodlu teknolojilerin
 geliştirilmesine öncülük ediyoruz.
-<br />
+
 Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem sonrası
 zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
 medya ağlarımızdaki çağrımız kısa süre içerisinde yankı
@@ -54,7 +54,7 @@ Deprem sonrası hayati önem taşıyan sorunları çözebilecek teknolojileri
 sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi kurum ve sivil
 toplum kuruşu ile irtibatta kaldık ve dış hizmet sağlayıcı olarak
 hareket ettik. Birçok kurumsal firmadan insan ve altyapı desteği aldık.
-<br />
+
 Bugün discord sunucumuzda 24,000'i aşkın gönüllü bilişim
 sektörü çalışanı olarak; herhangi bir sosyal sorumluluk gereksinimi
 anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak,
@@ -65,11 +65,11 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+          <div className="max-w-[980px] text-lg sm:text-xl">
             <MDXRemote source={introText} />
           </div>
         </div>

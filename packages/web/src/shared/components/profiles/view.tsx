@@ -31,10 +31,10 @@ const ProfileView = async (props: ProfileViewProps) => {
   if (profile === null) {
     return (
       <>
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+        <h1>
           Profile
         </h1>
-        <div className="max-w-[980px] text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+        <div className="max-w-[980px] text-lg sm:text-xl">
           Profile &quot;{props.slugs[0] ?? "-"}&quot; not found.
         </div>
       </>

@@ -15,7 +15,7 @@ interface ProfileHeadingProps {
 const ProfileHeading = (props: ProfileHeadingProps) => {
   return (
     <>
-      <h1 className="flex flex-row items-center text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
+      <h1 className="flex flex-row items-center my-0">
         <Conditional test={props.item.profile.profilePictureUri !== null}>
           <Image
             src={props.item.profile.profilePictureUri}
@@ -28,7 +28,7 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
         </Conditional>
         {props.item.profile.title}
       </h1>
-      <h2 className="text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
+      <h2 className="text-lg sm:text-xl my-0 font-sans">
         {props.item.profile.description}
       </h2>
       <Conditional test={props.item.links.length > 0}>
@@ -37,7 +37,7 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
             <Link
               key={link.id}
               href={link.uri}
-              className="text-lg text-slate-700 dark:text-slate-400 sm:text-xl mr-4"
+              className="text-lg sm:text-xl mr-4"
               title={link.title}
             >
               {getLinkIcon(link.iconSet, link.iconKey)}

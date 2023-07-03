@@ -1,12 +1,18 @@
 "use client";
 
-import { Inter } from "next/font/google";
-// import { JetBrains_Mono } from "next/font/google";
+import { Bree_Serif, Open_Sans } from "next/font/google";
 
-const fontSans = Inter({
+const fontSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap", // "block",
+  display: "block", // "swap",
+});
+
+const fontSerif = Bree_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "block", // "swap",
+  weight: "400",
 });
 
 // const fontMono = JetBrains_Mono({
@@ -21,6 +27,7 @@ const FontProvider = () => {
       {`
       :root {
         --font-sans: ${fontSans.style.fontFamily};
+        --font-serif: ${fontSerif.style.fontFamily};
       }
     `}
     </style>

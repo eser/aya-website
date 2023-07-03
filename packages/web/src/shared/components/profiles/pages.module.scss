@@ -1,45 +1,5 @@
 .content {
-  & > h1 {
-    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl my-8 first:mt-0;
-  }
-
-  & > h2 {
-    @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors mt-8 first:mt-0 mb-4;
-  }
-
-  & > h3 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight mt-6 first:mt-0 mb-4;
-  }
-
-  & > h4 {
-    @apply scroll-m-20 text-xl font-semibold tracking-tight mt-4 first:mt-0 mb-2;
-  }
-
-  & > p {
-    @apply leading-7 mb-6;
-
-    &.lead {
-      @apply text-xl text-muted-foreground;
-    }
-  }
-
-  & blockquote {
-    @apply mt-6 border-l-2 pl-6 italic;
-  }
-
-  & code {
-    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
-  }
-
-  & pre {
-    @apply mt-6 p-4 bg-gray-100 rounded-md;
-  }
-
-  & ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2;
-  }
-
   & a {
-    @apply font-medium text-primary underline underline-offset-4;
+    @apply hover:underline;
   }
 }
