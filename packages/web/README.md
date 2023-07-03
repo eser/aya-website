@@ -15,5 +15,7 @@
 
 You can now open your browser and go to http://localhost:3000 to connect to the application.
 
+> **Note:** If you used AWS ECR in docker please login to your account with `aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/` command.
+
 # 📝 License
 This project is licensed under the [MIT License](./LICENSE).
