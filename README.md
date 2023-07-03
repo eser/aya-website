@@ -1,67 +1,37 @@
-# next-template
+# Aya - Açık Yazılım Ağı
+[![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
+![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 
-## Features
+(For English please click [here](README.en.md))
 
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
+Açık kaynak yazılımı ve açık kaynak verilerine ortak ilgi duyan bireylerden oluşan sıkı bağlı ve tutkulu bir topluluğuz. Toplumun iyileştirilmesi için teknolojiden yararlanma kararlılığımızla birleşerek, Türkiye'de meydana gelen yıkıcı [Şubat 2023 depremi](https://en.wikipedia.org/wiki/2023_Turkey%E2%80%93Syria_earthquake) sonrasında güçlerimizi birleştirdik.
 
-## Tailwind CSS Features
+Depremin ardından, etkilenenlere destek olma ve aileleri ile sevdiklerini yeniden bir araya getirme sürecine yardım etme acil ihtiyacını fark ettik. Bu amaç doğrultusunda, bireyler arasındaki arama ve bağlantıyı kolaylaştırmayı hedefleyen yenilikçi araçlar ve çözümler geliştirmek için yola çıktık.
 
-- Class merging with `taiwind-merge`
-- Animation with `tailwindcss-animate`
-- Conditional classes with `clsx`
-- Variants with `class-variance-authority`
-- Automatic class sorting with `eslint-plugin-tailwindcss`
+Yorulmak bilmeyen işbirliği ve kolektif çabalar sayesinde topluluğumuz ilham verici bir büyüklüğe ulaştı ve 24.000 kişiden oluşan bir topluluk haline geldik. Birlikte, aileleri yeniden bir araya getirmeye, umudu geri kazandırmaya ve depremden etkilenenlere teselli sunmaya yardımcı olmak için teknolojinin gücünden yararlanarak araçlarımızı sürekli olarak geliştiriyoruz ve genişletiyoruz.
 
-### Input
+İlerlemeye devam ederken, taahhüdümüzden sapmadan devam ediyoruz. Araçlarımızı geliştirmeye, açık kaynak projelere aktif olarak katkıda bulunmaya ve bilgi paylaşımı ve işbirliğinin geliştiği destekleyici bir ortamı teşvik etmeye çalışıyoruz. Açık kaynak topluluğunun bir parçası olmaktan gurur duyuyoruz ve sizlerle olan yolculuğumuza dört gözle devam etmek için sabırsızlanıyoruz.
 
-```tsx
-import * as React from "react";
-import Link from "next/link";
+## Görevimiz
 
-import { siteConfig } from "@/shared/config.ts";
-import { buttonVariants } from "@/shared/components/ui/button.tsx";
-import { twMerge } from "tailwind-merge";
+Açık kaynak çözümlerini kullanarak, bilgi sistemlerini uygulayarak ve mühendislik uygulamalarını hayata geçirerek, içinde yaşadığımız toplumun iyileştirilmesine aktif olarak katkıda bulunmayı hedefliyoruz. Öncelikli odak noktamız, sosyal sorumluluk ihtiyaçlarını karşılamak ve bu yollarla çeşitli toplumsal zorluklarla baş etmektir. Uzmanlığımızı ve kaynaklarımızı kullanarak, topluluğumuz içinde pozitif bir etki yaratmayı ve sürdürülebilir kalkınmayı teşvik etmeyi amaçlıyoruz.
 
-import { cn } from "@/shared/lib/cn.ts";
-```
+## Teknoloji
 
-### Output
+Projelerimizi oluşturmak için kullandığımız teknolojiler şunlardır:
 
-```tsx
-import * as React from "react";
-// React is always first.
-import Link from "next/link";
-// Followed by next modules.
-import { twMerge } from "tailwind-merge";
+Frontend için:
+- [Next.js](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Supabase](https://supabase.io)
+- [Vercel](https://vercel.com)
 
-// Followed by third-party modules
-// Space
-import { siteConfig } from "@/shared/config.ts";
-// config
-import { cn } from "@/shared/lib/cn.ts";
-// lib
-import { buttonVariants } from "@/shared/components/ui/button.tsx";
+Backend için:
+- [Prisma](https://prisma.io)
+- [Deno](https://deno.land)
+- [Ekspres](https://expressjs.com)
 
-// components
-```
+## Nasıl Katkıda Bulunabilirsin?
 
-### Class Merging
-
-The `cn` util handles conditional classes and class merging.
-
-### Input
-
-```ts
-cn("px-2 bg-slate-100 py-2 bg-slate-200");
-// Outputs `p-2 bg-slate-200`
-```
-
-## License
-
-Licensed under the
-[MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issulara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, Github Issues veya Discord üzerinden yardım istemekten çekinmeyin.
