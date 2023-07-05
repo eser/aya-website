@@ -31,7 +31,7 @@ const GitHubLogin = () => {
       {auth.isLoading}
       {isLoggedIn
         ? <span>{auth.session?.user.user_metadata.full_name}</span>
-        : <span>Sign in w/ GitHub</span>}
+        : <span>GitHub ile Giriş Yap</span>}
     </Button>
   );
 };
