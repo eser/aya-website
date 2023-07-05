@@ -100,7 +100,7 @@ const NewsCard = (props: NewsCardProps) => {
 
   const dateAdded = new Date(post.dateAdded);
   const dateFormatterOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" };
-  const dateFormatter = new Intl.DateTimeFormat('tr-TR', dateFormatterOptions);
+  const dateFormatter = new Intl.DateTimeFormat("tr-TR", dateFormatterOptions);
   const formattedDate = dateFormatter.format(dateAdded);
 
   return (
