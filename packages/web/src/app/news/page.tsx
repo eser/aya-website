@@ -98,11 +98,16 @@ interface NewsCardProps {
 const NewsCard = (props: NewsCardProps) => {
   const { post } = props;
 
+  const dateAdded = new Date(post.dateAdded);
+  const dateFormatterOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" };
+  const dateFormatter = new Intl.DateTimeFormat('tr-TR', dateFormatterOptions);
+  const formattedDate = dateFormatter.format(dateAdded);
+
   return (
     <Card className="mb-5">
       <CardHeader>
         <CardTitle>{post.title}</CardTitle>
-        <CardDescription>{post.dateAdded}</CardDescription>
+        <CardDescription>{formattedDate}</CardDescription>
       </CardHeader>
       <CardContent>
         <AspectRatio ratio={16 / 9} className="bg-muted">
