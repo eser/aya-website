@@ -23,14 +23,14 @@ Projelerimizi oluşturmak için kullandığımız teknolojiler şunlardır:
 
 Frontend için:
 - [Next.js](https://nextjs.org)
-- [Tailwind CSS](https://tailwindcss.com)
+- [Shadcn](https://shadcn/ui)
 - [Supabase](https://supabase.io)
 - [Vercel](https://vercel.com)
 
 Backend için:
+- [Supabase](https://supabase.io)
 - [Prisma](https://prisma.io)
 - [Deno](https://deno.land)
-- [Ekspres](https://expressjs.com)
 
 ## Nasıl Katkıda Bulunabilirsin?
 
