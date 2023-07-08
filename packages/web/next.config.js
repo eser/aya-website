@@ -30,6 +30,7 @@ const nextConfig = {
     // mdxRs: true,
     // runtime: "experimental-edge",
     // esmExternals: true,
+    // serverActions: true,
   },
 
   // webpack: (config, { isServer }) => {

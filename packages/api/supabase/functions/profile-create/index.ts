@@ -7,6 +7,13 @@ import {
   // type ProfilePageList,
 } from "@types/profile-get-result.ts";
 
+// TODO(@eser):
+// 1. schema validation via zod
+// 2. generate cuid ids if id fields are not given
+// 3. insert profile entity with its translation entities (Profile and ProfileTx records)
+// 4. insert related links, pages and stories with the profile and their respective translations
+// 5. return inserted entities
+
 /*
 
 {
