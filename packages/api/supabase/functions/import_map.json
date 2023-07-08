@@ -1,8 +1,9 @@
 {
   "imports": {
-    "@std/": "https://deno.land/std@0.192.0/",
+    "@cuid": "https://esm.sh/@paralleldrive/cuid2",
     "@hex/": "https://deno.land/x/hex/src/",
-    "@cuid": "npm:@paralleldrive/cuid2",
+    "@std/": "https://deno.land/std@0.192.0/",
+    "@supabase": "https://esm.sh/@supabase/supabase-js@2",
     "@zod": "https://deno.land/x/zod/mod.ts",
     "@types/": "../../../types/src/"
   }

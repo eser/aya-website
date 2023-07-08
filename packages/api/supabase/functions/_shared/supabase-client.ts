@@ -1,7 +1,4 @@
-import {
-  createClient,
-  type SupabaseClient,
-} from "https://esm.sh/@supabase/supabase-js@2";
+import { createClient, type SupabaseClient } from "@supabase";
 
 const getSupabaseClientFromRequest = (req: Request) => {
   const supabaseClient = createClient(
