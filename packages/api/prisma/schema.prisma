@@ -100,7 +100,6 @@ model Profile {
   id                           String                 @id @default(cuid())
   type                         ProfileType
   slug                         String                 @unique
-  email                        String                 @unique
   profilePictureUri            String?
 
   title                        String // TODO(@eser) will be removed

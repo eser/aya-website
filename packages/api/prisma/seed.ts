@@ -60,7 +60,6 @@ const main = async () => {
     create: {
       type: "Individual",
       slug: "eser",
-      email: "eser@ozvataf.com",
       title: "Eser Ozvataf",
       description: "founder of acik yazilim • streamer • generalist",
       profilePictureUri:
