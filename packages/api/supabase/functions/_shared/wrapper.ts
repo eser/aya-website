@@ -65,12 +65,21 @@ const getMockDependencies = (): Dependencies => {
   // };
   const mockUser = null;
 
+  let insertedData: unknown = null;
+
   const mockSupabaseClient = {
     from: () => mockSupabaseClient,
     select: () => mockSupabaseClient,
-    insert: () => mockSupabaseClient,
+    insert: (data: unknown) => {
+      insertedData = data;
+      return mockSupabaseClient;
+    },
     update: () => mockSupabaseClient,
     delete: () => mockSupabaseClient,
+    limit: () => mockSupabaseClient,
+    maybeSingle: () => {
+      return { data: insertedData };
+    },
     auth: {
       getUser: () => Promise.resolve({ data: { user: mockUser } }),
       signIn: () => Promise.resolve({ data: mockUser, error: null }),

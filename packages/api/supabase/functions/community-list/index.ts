@@ -1,8 +1,9 @@
-import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type CommunityListResult,
   type ProfileList,
 } from "@types/community-list-result.ts";
+
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 
 const fn = async (req: Request, { supabase }: Dependencies) => {
   const { lang = config.defaultLanguage } = await req.json();

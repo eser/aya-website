@@ -1,11 +1,16 @@
-import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
+import { createId } from "@cuid";
+import { z } from "@zod";
 import {
+  // type ProfileLinkList,
+  // type ProfilePageList,
   type Profile,
   // type ProfileGetComposition,
   type ProfileGetResult,
-  // type ProfileLinkList,
-  // type ProfilePageList,
-} from "@types/profile-get-result.ts";
+  // type ProfileType,
+  // FIXME(@eser) only works with relative paths?
+} from "../../../../types/src/profile-get-result.ts"; // from "@types/profile-get-result.ts";
+
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 
 // TODO(@eser):
 // 1. schema validation via zod
@@ -62,21 +67,32 @@ import {
 }
 */
 
+const profileSchema = z.object({
+  id: z.string().cuid2().optional(),
+  type: z.enum(["Individual", "Organization", "Product"]),
+  slug: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string(),
+  profilePictureUri: z.string().url().nullable(),
+});
+
 const fn = async (req: Request, { supabase }: Dependencies) => {
   const { profile /* , lang = config.defaultLanguage */ }: {
     profile: Profile;
     lang?: string;
   } = await req.json();
 
+  const profileValidated = await profileSchema.parseAsync(profile);
+
   const profileQueryResponse = await supabase
     .from("Profile")
     .insert({
-      id: profile.id,
-      type: profile.type,
-      slug: profile.slug,
-      title: profile.title,
-      description: profile.description,
-      profilePictureUri: profile.profilePictureUri,
+      id: profileValidated.id ?? createId(),
+      type: profileValidated.type,
+      slug: profileValidated.slug,
+      title: profileValidated.title,
+      description: profileValidated.description,
+      profilePictureUri: profileValidated.profilePictureUri,
     })
     .select()
     .limit(1)
@@ -90,6 +106,7 @@ const fn = async (req: Request, { supabase }: Dependencies) => {
       profile: profileInserted,
       links: [],
       pages: [],
+      // stories: [],
     },
   };
 

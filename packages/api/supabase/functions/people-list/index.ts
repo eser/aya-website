@@ -1,8 +1,9 @@
-import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type PeopleListResult,
   type ProfileList,
 } from "@types/people-list-result.ts";
+
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 
 const fn = async (req: Request, { supabase }: Dependencies) => {
   const { lang = config.defaultLanguage } = await req.json();

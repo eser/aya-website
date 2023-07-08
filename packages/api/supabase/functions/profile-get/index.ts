@@ -1,4 +1,3 @@
-import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 import {
   type Profile,
   // type ProfileGetComposition,
@@ -6,6 +5,8 @@ import {
   type ProfileLinkList,
   type ProfilePageList,
 } from "@types/profile-get-result.ts";
+
+import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 
 const fn = async (req: Request, { supabase }: Dependencies) => {
   const { slug, lang = config.defaultLanguage } = await req.json();
