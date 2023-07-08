@@ -2,9 +2,9 @@ import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
 import { type NextRequest, NextResponse } from "next/server";
+import { type Database } from "types/src/supabase-database-types.ts";
 
 import { languages } from "@/shared/i18n/languages.ts";
-import { type Database } from "@/shared/supabase/database-types.ts";
 
 const getSupabaseSession = async (req: NextRequest, res: NextResponse) => {
   const supabase = createMiddlewareClient<Database>({ req, res });

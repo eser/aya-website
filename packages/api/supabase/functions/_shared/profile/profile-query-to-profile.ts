@@ -1,0 +1,26 @@
+import { type Profile } from "@types/profile.ts";
+import { type Database } from "@types/supabase-database-types.ts";
+
+type ProfileTableRow = Database["public"]["Tables"]["Profile"]["Row"];
+type ProfileTxTableRow = Database["public"]["Tables"]["ProfileTx"]["Row"];
+
+interface ProfileQueryResult extends ProfileTableRow {
+  ProfileTx: Array<ProfileTxTableRow>;
+}
+
+const profileQueryToProfile = (source: ProfileQueryResult): Profile | null => {
+  if (source === null) {
+    return null;
+  }
+
+  return {
+    id: source.id,
+    type: source.type,
+    slug: source.slug,
+    title: source.ProfileTx[0]?.titleTx ?? source.title,
+    description: source.ProfileTx[0]?.descriptionTx ?? source.description,
+    profilePictureUri: source.profilePictureUri,
+  };
+};
+
+export { profileQueryToProfile };
