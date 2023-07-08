@@ -89,34 +89,38 @@ const profileCreate = async (
 ) => {
   const profileValidated = await profileSchema.parseAsync(profile);
 
+  const profileRow = {
+    id: profileValidated.id ?? createId(),
+    type: profileValidated.type,
+    slug: profileValidated.slug,
+    title: "",
+    description: "",
+    profilePictureUri: profileValidated.profilePictureUri,
+  };
+
   const profileQueryResponse = await supabase
     .from("Profile")
-    .insert({
-      id: profileValidated.id ?? createId(),
-      type: profileValidated.type,
-      slug: profileValidated.slug,
-      title: "",
-      description: "",
-      profilePictureUri: profileValidated.profilePictureUri,
-    })
+    .insert(profileRow)
     .select()
     .limit(1)
     .maybeSingle();
   // .returns<Profile>();
 
+  const profileTxRows = Object.entries(profileValidated.translations).map(
+    ([langCode, translation]) => {
+      return {
+        id: createId(),
+        profileId: profileQueryResponse.data.id,
+        languageCode: langCode,
+        titleTx: translation.title,
+        descriptionTx: translation.description,
+      };
+    },
+  );
+
   await supabase
     .from("ProfileTx")
-    .insert(
-      Object.entries(profileValidated.translations).map(
-        ([langCode, translation]) => {
-          return {
-            languageCode: langCode,
-            titleTx: translation.title,
-            descriptionTx: translation.description,
-          };
-        },
-      ),
-    );
+    .insert(profileTxRows);
 
   const result: ProfileGetResult = {
     payload: {

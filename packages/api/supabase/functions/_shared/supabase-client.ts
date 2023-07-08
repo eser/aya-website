@@ -1,19 +1,31 @@
 import { createClient, type SupabaseClient } from "@supabase";
 
-const getSupabaseClientFromRequest = (req: Request) => {
+const getSupabaseClient = (
+  url?: string,
+  anonKey?: string,
+  authorizationHeader?: string,
+) => {
   const supabaseClient = createClient(
     // Supabase API URL - env var exported by default.
-    Deno.env.get("SUPABASE_URL") ?? "",
+    url ?? Deno.env.get("SUPABASE_URL") ?? "",
     // Supabase API ANON KEY - env var exported by default.
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+    anonKey ?? Deno.env.get("SUPABASE_ANON_KEY") ?? "",
     // Create client with Auth context of the user that called the function.
     // This way your row-level-security (RLS) policies are applied.
     {
-      global: { headers: { Authorization: req.headers.get("Authorization")! } },
+      global: { headers: { Authorization: authorizationHeader! } },
     },
   );
 
   return supabaseClient;
 };
 
-export { getSupabaseClientFromRequest, type SupabaseClient };
+const getSupabaseClientFromRequest = (req: Request) => {
+  return getSupabaseClient(
+    undefined,
+    undefined,
+    req.headers.get("Authorization") ?? undefined,
+  );
+};
+
+export { getSupabaseClient, getSupabaseClientFromRequest, type SupabaseClient };
