@@ -80,20 +80,24 @@
   }
 
   h1 {
-    @apply font-serif scroll-m-20 text-4xl font-extrabold lg:text-5xl my-8 first:mt-0;
+    @apply font-serif scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0;
     /*  className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl" */
   }
 
   h2 {
-    @apply font-serif scroll-m-20 pb-2 text-3xl font-semibold transition-colors mt-8 first:mt-0 mb-4;
+    @apply font-serif scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4;
   }
 
   h3 {
-    @apply font-serif scroll-m-20 text-2xl font-semibold mt-6 first:mt-0 mb-4;
+    @apply font-serif scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4;
   }
 
   h4 {
-    @apply font-serif scroll-m-20 text-xl font-semibold mt-4 first:mt-0 mb-2;
+    @apply font-serif scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2;
+  }
+
+  hr {
+    border: 1px inset;
   }
 
   p {

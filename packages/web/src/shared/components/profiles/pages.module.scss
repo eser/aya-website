@@ -1,5 +1,5 @@
 .content {
   & a {
-    @apply hover:underline;
+    @apply text-link hover:text-link-foreground;
   }
 }
