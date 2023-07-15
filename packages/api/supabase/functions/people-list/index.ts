@@ -1,7 +1,7 @@
 import {
   type PeopleListResult,
   type ProfileList,
-} from "@types/people-list-result.ts";
+} from "@shared/people-list-result.ts";
 
 import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 

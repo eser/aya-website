@@ -119,7 +119,9 @@ const NewsCard = (props: NewsCardProps) => {
             className="rounded-md object-cover"
           />
         </AspectRatio>
-        <MDXRemote source={post.contentMarkdown} />
+        <article className="prose lg:prose-xl">
+          <MDXRemote source={post.contentMarkdown} />
+        </article>
       </CardContent>
     </Card>
   );

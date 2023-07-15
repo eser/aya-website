@@ -3,7 +3,7 @@ import { z } from "@zod";
 import {
   type ProfileGetResult,
   // FIXME(@eser) only works with relative paths?
-} from "../../../../types/src/profile-get-result.ts"; // from "@types/profile-get-result.ts";
+} from "../../../../shared/src/profile-get-result.ts"; // from "@shared/profile-get-result.ts";
 
 import { type SupabaseClient } from "../_shared/supabase-client.ts";
 
@@ -93,7 +93,7 @@ const profileCreate = async (
     id: profileValidated.id ?? createId(),
     type: profileValidated.type,
     slug: profileValidated.slug,
-    title: "",
+    title: ,
     description: "",
     profilePictureUri: profileValidated.profilePictureUri,
   };

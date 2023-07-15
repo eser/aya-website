@@ -4,7 +4,7 @@ import {
   type ProfileGetResult,
   type ProfileLinkList,
   type ProfilePageList,
-} from "@types/profile-get-result.ts";
+} from "@shared/profile-get-result.ts";
 
 import { profileQueryToProfile } from "../_shared/profile/profile-query-to-profile.ts";
 import { type SupabaseClient } from "../_shared/supabase-client.ts";

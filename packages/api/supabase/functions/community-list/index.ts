@@ -1,7 +1,7 @@
 import {
   type CommunityListResult,
   type ProfileList,
-} from "@types/community-list-result.ts";
+} from "@shared/community-list-result.ts";
 
 import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 

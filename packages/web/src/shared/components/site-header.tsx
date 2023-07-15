@@ -7,6 +7,8 @@ import { ThemeToggle } from "@/shared/components/theme-toggle.tsx";
 import { GitHubLogin } from "@/shared/components/github-login.tsx";
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
 
+import styles from "./site.module.css";
+
 const mainNav: NavItem[] = [
   {
     title: "Haberler",
@@ -36,7 +38,7 @@ interface SiteHeaderProps {
 
 const SiteHeader = (props: SiteHeaderProps) => {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-b-muted bg-background">
+    <header className={styles["site-header"]}>
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav items={mainNav} placeholders={props.placeholders} />
         <div className="flex flex-1 items-center justify-end space-x-4">

@@ -1,4 +1,4 @@
-import { type ProfileGetComposition } from "types/src/profile-get-result.ts";
+import { type ProfileGetComposition } from "shared/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { cn } from "@/shared/lib/cn.ts";
@@ -48,14 +48,14 @@ const ProfilePages = async (props: ProfilePagesProps) => {
       <aside className="-mx-4 lg:w-1/5">
         <SidebarNav items={sidebarNavItems} />
       </aside>
-      <div className={cn("flex-1", styles.content)}>
+      <article className={cn("flex-1 prose lg:prose-xl", styles.content)}>
         {mdxSource !== undefined && (
           <>
             {/* {mdxSource.frontmatter.title} */}
             {mdxSource.content}
           </>
         )}
-      </div>
+      </article>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import {
   type ProductsListResult,
   type ProfileList,
-} from "@types/products-list-result.ts";
+} from "@shared/products-list-result.ts";
 
 import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   type CommunityListResult,
   type Profile,
-} from "types/src/community-list-result.ts";
+} from "shared/src/community-list-result.ts";
 import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 

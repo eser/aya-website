@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useState } from "react";
-import { type Database } from "types/src/supabase-database-types.ts";
+import { type Database } from "shared/src/supabase-database-types.ts";
 
 import {
   createClientSupabaseClient,

@@ -1,5 +1,5 @@
 {
-  "name": "types",
+  "name": "shared",
   "version": "1.0.0",
   "scripts": {
     "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/ && pnpm install",

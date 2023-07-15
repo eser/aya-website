@@ -1,5 +1,5 @@
-import { type Profile } from "@types/profile.ts";
-import { type Database } from "@types/supabase-database-types.ts";
+import { type Profile } from "@shared/profile.ts";
+import { type Database } from "@shared/supabase-database-types.ts";
 
 type ProfileTableRow = Database["public"]["Tables"]["Profile"]["Row"];
 type ProfileTxTableRow = Database["public"]["Tables"]["ProfileTx"]["Row"];

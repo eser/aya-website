@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   type ProductsListResult,
   type Profile,
-} from "types/src/products-list-result.ts";
+} from "shared/src/products-list-result.ts";
 import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 

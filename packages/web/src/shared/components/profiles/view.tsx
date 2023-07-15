@@ -1,4 +1,4 @@
-import { type ProfileGetResult } from "types/src/profile-get-result.ts";
+import { type ProfileGetResult } from "shared/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
