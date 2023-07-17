@@ -89,11 +89,13 @@ const profileCreate = async (
 ) => {
   const profileValidated = await profileSchema.parseAsync(profile);
 
+  const defaultTranslation = Object.values(profileValidated.translations).at(0);
+
   const profileRow = {
     id: profileValidated.id ?? createId(),
     type: profileValidated.type,
     slug: profileValidated.slug,
-    title: ,
+    title: defaultTranslation?.title ?? "",
     description: "",
     profilePictureUri: profileValidated.profilePictureUri,
   };

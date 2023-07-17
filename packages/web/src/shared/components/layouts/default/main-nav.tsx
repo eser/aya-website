@@ -1,10 +1,8 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { siteConfig } from "@/shared/config.ts";
 import { cn } from "@/shared/lib/cn.ts";
 import { replacePlaceholders } from "@/shared/lib/replace-placeholders.ts";
-import { Icons } from "@/shared/components/icons.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   DropdownMenu,
@@ -13,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu.tsx";
+import { Logo } from "./logo.tsx";
 
 interface NavItem {
   title: string;
@@ -54,10 +53,7 @@ const MainNav = (props: MainNavProps) => {
         href="/"
         className="hidden items-center space-x-2 md:flex"
       >
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">
-          {siteConfig.name}
-        </span>
+        <Logo />
       </Link>
       <nav className="hidden gap-6 md:flex">
         {navItems.map(
@@ -84,17 +80,14 @@ const MainNav = (props: MainNavProps) => {
             asChild
           >
             <div>
-              <Icons.logo className="h-6 w-6" />
-              <span className="inline-block font-bold">
-                {siteConfig.name}
-              </span>
+              <Logo />
             </div>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="start"
           sideOffset={24}
-          className="w-[300px] overflow-scroll"
+          className="w-[300px]"
         >
           <DropdownMenuItem asChild>
             <Link href="/">

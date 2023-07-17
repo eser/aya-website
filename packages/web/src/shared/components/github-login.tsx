@@ -26,7 +26,7 @@ const GitHubLogin = () => {
     <Button
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onClick={onClick}
-      className="flex items-center justify-center gap-2"
+      className="cursor-pointer ml-4"
       asChild
     >
       <div>
