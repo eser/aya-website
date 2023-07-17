@@ -38,6 +38,7 @@
   "scripts": {
     "adr": "adr-tool",
     "dev": "turbo run dev",
+    "cleanup": "turbo run cleanup",
     "typecheck": "turbo run typecheck",
     "build": "turbo run build",
     "lint": "turbo run lint",
