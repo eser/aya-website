@@ -48,7 +48,7 @@ const ProfilePages = async (props: ProfilePagesProps) => {
       <aside className="-mx-4 lg:w-1/5">
         <SidebarNav items={sidebarNavItems} />
       </aside>
-      <article className={cn("flex-1 prose lg:prose-xl", styles.content)}>
+      <article className={cn("flex-1 prose", styles.content)}>
         {mdxSource !== undefined && (
           <>
             {/* {mdxSource.frontmatter.title} */}

@@ -117,4 +117,7 @@
   strong {
     @apply font-medium text-primary;
   }
+
+  .prose {
+  }
 }

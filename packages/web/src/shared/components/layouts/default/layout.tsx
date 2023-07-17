@@ -1,5 +1,5 @@
-import { SiteHeader } from "./site-header.tsx";
-import { SiteFooter } from "./site-footer.tsx";
+import { Header } from "./header.tsx";
+import { Footer } from "./footer.tsx";
 import { ResponsiveIndicator } from "./responsive-indicator.tsx";
 
 import "./layout.css";
@@ -12,9 +12,9 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <SiteHeader placeholders={props.placeholders} />
+      <Header placeholders={props.placeholders} />
       <main className="flex-1">{props.children}</main>
-      <SiteFooter placeholders={props.placeholders} />
+      <Footer />
       <ResponsiveIndicator />
     </div>
   );

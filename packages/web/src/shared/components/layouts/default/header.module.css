@@ -1,0 +1,7 @@
+.header {
+  @apply sticky top-0 z-40 w-full border-b border-b-muted bg-background;
+
+  .inner-container {
+    @apply container flex h-16 items-center;
+  }
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { cn } from "@/shared/lib/cn.ts";
-import { buttonVariants } from "@/shared/components/ui/button.tsx";
+import { Button } from "@/shared/components/ui/button.tsx";
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
@@ -23,19 +23,22 @@ const SidebarNav = (
       {...props}
     >
       {items.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
+        <Button
+          variant="ghost"
+          size="default"
+          asChild
           className={cn(
-            buttonVariants({ variant: "ghost" }),
-            item.isActive
-              ? "bg-muted hover:bg-muted"
-              : "hover:bg-transparent",
+            item.isActive ? "bg-muted hover:bg-muted" : "hover:bg-transparent",
             "justify-start font-serif text-lg hover:text-link-foreground",
           )}
         >
-          {item.title}
-        </Link>
+          <Link
+            key={item.href}
+            href={item.href}
+          >
+            {item.title}
+          </Link>
+        </Button>
       ))}
     </nav>
   );

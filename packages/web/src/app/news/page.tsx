@@ -99,7 +99,14 @@ const NewsCard = (props: NewsCardProps) => {
   const { post } = props;
 
   const dateAdded = new Date(post.dateAdded);
-  const dateFormatterOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" };
+  const dateFormatterOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  };
   const dateFormatter = new Intl.DateTimeFormat("tr-TR", dateFormatterOptions);
   const formattedDate = dateFormatter.format(dateAdded);
 
@@ -119,7 +126,7 @@ const NewsCard = (props: NewsCardProps) => {
             className="rounded-md object-cover"
           />
         </AspectRatio>
-        <article className="prose lg:prose-xl">
+        <article className="prose">
           <MDXRemote source={post.contentMarkdown} />
         </article>
       </CardContent>

@@ -6,7 +6,7 @@ import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 
-import { buttonVariants } from "@/shared/components/ui/button.tsx";
+import { Button } from "@/shared/components/ui/button.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -74,22 +74,24 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
           </div>
         </div>
         <div className="flex gap-4">
-          <Link
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-            href={`/about/`}
-            rel="noreferrer"
-            className={buttonVariants({ size: "lg" })}
-          >
-            Hakkında
-          </Link>
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={siteConfig.links.github}
-            className={buttonVariants({ variant: "outline", size: "lg" })}
-          >
-            GitHub
-          </Link>
+          <Button size="lg" asChild>
+            <Link
+              // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+              href={`/about/`}
+              rel="noreferrer"
+            >
+              Hakkında
+            </Link>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.github}
+            >
+              GitHub
+            </Link>
+          </Button>
         </div>
       </section>
     </Layout>

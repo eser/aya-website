@@ -27,11 +27,14 @@ const GitHubLogin = () => {
       // eslint-disable-next-line @typescript-eslint/no-misused-promises
       onClick={onClick}
       className="flex items-center justify-center gap-2"
+      asChild
     >
-      {auth.isLoading}
-      {isLoggedIn
-        ? <span>{auth.session?.user.user_metadata.full_name}</span>
-        : <span>GitHub ile Giriş Yap</span>}
+      <div>
+        {auth.isLoading}
+        {isLoggedIn
+          ? <span>{auth.session?.user.user_metadata.full_name}</span>
+          : <span>GitHub ile Giriş Yap</span>}
+      </div>
     </Button>
   );
 };
