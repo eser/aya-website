@@ -2,10 +2,10 @@ import Link from "next/link";
 
 import { siteConfig } from "@/shared/config.ts";
 import { Icons } from "@/shared/components/icons.tsx";
-import { MainNav, type NavItem } from "@/shared/components/main-nav.tsx";
-import { ThemeToggle } from "@/shared/components/theme-toggle.tsx";
 import { GitHubLogin } from "@/shared/components/github-login.tsx";
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
+import { ThemeToggle } from "./theme-toggle.tsx";
+import { MainNav, type NavItem } from "./main-nav.tsx";
 
 import styles from "./site.module.css";
 

@@ -1,6 +1,6 @@
 import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
-import { Layout } from "@/shared/components/layout.tsx";
+import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { ProfileList } from "./profile-list.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata

@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
-import { Layout } from "@/shared/components/layout.tsx";
+import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 
 import { buttonVariants } from "@/shared/components/ui/button.tsx";
 

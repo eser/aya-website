@@ -1,7 +1,7 @@
 "use client"; // Error components must be Client components
 
 import { useEffect } from "react";
-import { Layout } from "@/shared/components/layout.tsx";
+import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 
 const Error = ({

@@ -2,6 +2,8 @@ import { SiteHeader } from "./site-header.tsx";
 import { SiteFooter } from "./site-footer.tsx";
 import { ResponsiveIndicator } from "./responsive-indicator.tsx";
 
+import "./layout.css";
+
 interface LayoutProps {
   placeholders: Record<string, string>;
   children: React.ReactNode;
