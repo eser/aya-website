@@ -86,11 +86,11 @@ const MainNav = (props: MainNavProps) => {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="start"
-          sideOffset={24}
+          sideOffset={15}
           className="w-[300px]"
         >
           <DropdownMenuItem asChild>
-            <Link href="/">
+            <Link href="/" className="no-underline">
               Ana Sayfa
             </Link>
           </DropdownMenuItem>
@@ -101,6 +101,7 @@ const MainNav = (props: MainNavProps) => {
                 <DropdownMenuItem key={index} asChild>
                   <Link
                     href={replacePlaceholders(item.href, props.placeholders)}
+                    className="no-underline"
                   >
                     {item.title}
                   </Link>
