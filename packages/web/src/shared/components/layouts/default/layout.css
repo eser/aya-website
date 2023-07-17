@@ -31,7 +31,9 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* --background: 200.63 43.24% 14.51%; */
+    /* --background: 222.2 84% 4.9%; */
+    --background: 215 27.91% 16.86%;
     --foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -39,13 +41,13 @@
     --popover-foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
+    --border: 222.2 47.4% 11.2%;
     --input: 217.2 32.6% 17.5%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --link: 223 28% 57%;
+    --link: 198.63 88.66% 48.43%;
     --link-foreground: 209 73% 53%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
@@ -59,23 +61,23 @@
   }
 
   h1 {
-    @apply font-serif;
+    @apply font-serif text-4xl;
     /*  scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
     /*  className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl" */
   }
 
   h2 {
-    @apply font-serif;
+    @apply font-serif text-3xl;
     /*  scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
   }
 
   h3 {
-    @apply font-serif;
+    @apply font-serif text-2xl;
     /*  scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
   }
 
   h4 {
-    @apply font-serif;
+    @apply font-serif text-xl;
     /*  scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2 */
   }
 
@@ -112,8 +114,8 @@
   }
 
   a {
-    @apply text-link no-underline underline-offset-4;
-    /*  font-medium hover:text-link-foreground  */
+    @apply text-link hover:text-link-foreground underline underline-offset-4;
+    /*  font-medium   */
   }
 
   strong {

@@ -1,11 +1,11 @@
 .header {
-  @apply sticky top-0 z-40 w-full border-b-2 border-b-foreground bg-accent;
+  @apply sticky top-0 z-40 w-full bg-accent border-0 border-b-2 border-solid border-b-border;
 
   & .inner-container {
     @apply container flex h-16 items-center;
 
     & a {
-      @apply text-foreground;
+      @apply text-foreground no-underline;
     }
 
     & .extension {

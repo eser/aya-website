@@ -126,7 +126,7 @@ const NewsCard = (props: NewsCardProps) => {
             className="rounded-md object-cover"
           />
         </AspectRatio>
-        <article className="prose">
+        <article className="leading-7">
           <MDXRemote source={post.contentMarkdown} />
         </article>
       </CardContent>

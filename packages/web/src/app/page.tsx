@@ -69,21 +69,20 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
             Açık Yazılım Ağı <br className="hidden sm:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <div className="max-w-[980px] text-lg sm:text-xl">
+          <div className="max-w-[980px] text-lg leading-8 sm:text-xl sm:leading-9">
             <MDXRemote source={introText} />
           </div>
         </div>
         <div className="flex gap-4">
-          <Button size="lg" asChild>
+          <Button size="lg" className="no-underline" asChild>
             <Link
-              // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-              href={`/about/`}
+              href="/about/"
               rel="noreferrer"
             >
               Hakkında
             </Link>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="secondary" className="no-underline" size="lg" asChild>
             <Link
               target="_blank"
               rel="noreferrer"

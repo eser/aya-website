@@ -14,7 +14,7 @@ const Header = (props: HeaderProps) => {
     <header className={styles.header}>
       <div className={styles["inner-container"]}>
         <MainNav placeholders={props.placeholders} />
-        <div className={styles["extension"]}>
+        <div className={styles.extension}>
           <ExternalLinks placeholders={props.placeholders} />
           <ThemeToggle />
           <GitHubLogin />

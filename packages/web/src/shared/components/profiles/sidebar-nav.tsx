@@ -28,8 +28,8 @@ const SidebarNav = (
           size="default"
           asChild
           className={cn(
-            item.isActive ? "bg-muted hover:bg-muted" : "hover:bg-transparent",
-            "justify-start font-serif text-lg hover:text-link-foreground",
+            item.isActive ? "bg-border hover:bg-border" : "hover:bg-transparent",
+            "justify-start font-serif text-lg hover:text-link-foreground no-underline",
           )}
         >
           <Link

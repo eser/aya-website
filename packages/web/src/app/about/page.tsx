@@ -39,7 +39,7 @@ const AboutPage = (/* props: AboutPageProps */) => {
           <h1>
             Hakkında
           </h1>
-          <div className="max-w-[980px] text-lg sm:text-xl">
+          <div className="max-w-[980px] text-lg leading-8 sm:text-xl sm:leading-9">
             Açık Yazılım Ağı, temelleri 2015&apos;de{" "}
             <a href="https://github.com/eser">Eser Özvataf</a> tarafından{" "}
             <a href="https://github.com/acikkaynak">github.com/acikkaynak</a>

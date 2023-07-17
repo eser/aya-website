@@ -40,7 +40,33 @@ const GuidePage = (/* props: GuidePageProps */) => {
             Rehber
           </h1>
           <div className="max-w-[980px] text-lg sm:text-xl">
-            Sayfa henüz hazırlık aşamasında.
+            <h2>Açık Kaynak Yazılım</h2>
+            <ul>
+              <li><a href="">Açık Kaynak Yazılım Nedir?</a></li>
+              <li><a href="">Özgür Yazılım ve Açık Kaynak arasındaki farklar</a></li>
+              <li><a href="">Lisanslar</a></li>
+            </ul>
+
+            <h2>Açık Kaynak Geliştirme</h2>
+            <ul>
+              <li><a href="">Sürüm Kontrol Sistemleri</a></li>
+              <li><a href="">GitHub Platformu</a></li>
+            </ul>
+
+            <h2>Katılım</h2>
+            <ul>
+              <li><a href="">Açık Kaynak projelerde katılım tanımlaması</a></li>
+              <li><a href="">Nasıl katılım sağlarım?</a></li>
+              <li><a href="">GitHub üzerinden katılım sağlamak</a></li>
+            </ul>
+
+            <h2>Organizasyon</h2>
+            <ul>
+              <li><a href="">Açık Kaynak projeme katılımcı nasıl bulabilirim?</a></li>
+              <li><a href="">Katılım fıkrım var ama ingilizce eksiğim var</a></li>
+              <li><a href="">Katılım fikrim var ama teknik eksiğim var</a></li>
+              <li><a href="">Katılım fikrim var ama fikir danışmaya ihtiyacım var</a></li>
+            </ul>
           </div>
         </div>
       </section>
