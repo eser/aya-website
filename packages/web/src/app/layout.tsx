@@ -3,7 +3,7 @@ import "server-only";
 // import { siteConfig } from "@/shared/config.ts";
 import { languages } from "@/shared/i18n/languages.ts";
 
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { SupabaseProvider } from "@/shared/supabase/supabase-provider.tsx";
 import { SupabaseAuthProvider } from "@/shared/supabase/supabase-auth-provider.tsx";
 
@@ -23,7 +23,7 @@ interface RootLayoutProps {
 const DEFAULT_LANG = languages[0] ?? { code: "tr", dir: "ltr" };
 
 const Layout = async (props: RootLayoutProps) => {
-  const { supabase } = useSupabaseServer();
+  const { supabase } = getSupabaseServer();
   const session = await supabase.auth.getSession();
 
   return (

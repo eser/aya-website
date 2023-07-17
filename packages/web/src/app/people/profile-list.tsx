@@ -3,14 +3,14 @@ import {
   type PeopleListResult,
   type Profile,
 } from "shared/src/people-list-result.ts";
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
 // interface ProfileListProps {
 // }
 
 const ProfileList = async (/* props: ProfileListProps */) => {
-  const { supabase } = useSupabaseServer();
+  const { supabase } = getSupabaseServer();
 
   const peopleListResponse = await supabase.functions.invoke<PeopleListResult>(
     "people-list",

@@ -12,7 +12,7 @@ const getSupabaseSession = async (req: NextRequest, res: NextResponse) => {
   await supabase.auth.getSession();
 };
 
-const getLocale = (req: NextRequest): string | undefined => {
+const _getLocale = (req: NextRequest): string | undefined => {
   const availableLanguages = languages.map((language) =>
     language.code as string
   );

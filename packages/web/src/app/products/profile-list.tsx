@@ -3,14 +3,14 @@ import {
   type ProductsListResult,
   type Profile,
 } from "shared/src/products-list-result.ts";
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
 // interface ProfileListProps {
 // }
 
 const ProfileList = async (/* props: ProfileListProps */) => {
-  const { supabase } = useSupabaseServer();
+  const { supabase } = getSupabaseServer();
 
   const productsListResponse = await supabase.functions.invoke<
     ProductsListResult

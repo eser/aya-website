@@ -1,9 +1,9 @@
 import { createServerSupabaseClient } from "./supabase-server.ts";
 
-const useSupabaseServer = () => {
+const getSupabaseServer = () => {
   const supabase = createServerSupabaseClient();
 
   return { supabase };
 };
 
-export { useSupabaseServer };
+export { getSupabaseServer };

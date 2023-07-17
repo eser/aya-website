@@ -1,7 +1,7 @@
 import { type ProfileGetResult } from "shared/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { ProfileHeading } from "./heading.tsx";
 import { ProfilePages } from "./pages.tsx";
 
@@ -11,7 +11,7 @@ interface ProfileViewProps {
 }
 
 const ProfileView = async (props: ProfileViewProps) => {
-  const { supabase } = useSupabaseServer();
+  const { supabase } = getSupabaseServer();
 
   const [profileSlug, profilePageSlug] = props.slugs;
 

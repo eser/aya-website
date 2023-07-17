@@ -3,14 +3,14 @@ import {
   type CommunityListResult,
   type Profile,
 } from "shared/src/community-list-result.ts";
-import { useSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
 // interface ProfileListProps {
 // }
 
 const ProfileList = async (/* props: ProfileListProps */) => {
-  const { supabase } = useSupabaseServer();
+  const { supabase } = getSupabaseServer();
 
   const communityListResponse = await supabase.functions.invoke<
     CommunityListResult
