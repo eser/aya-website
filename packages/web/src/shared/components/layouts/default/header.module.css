@@ -1,7 +1,15 @@
 .header {
-  @apply sticky top-0 z-40 w-full border-b border-b-muted bg-background;
+  @apply sticky top-0 z-40 w-full border-b-2 border-b-foreground bg-accent;
 
-  .inner-container {
+  & .inner-container {
     @apply container flex h-16 items-center;
+
+    & a {
+      @apply text-foreground;
+    }
+
+    & .extension {
+      @apply flex-1 flex;
+    }
   }
 }

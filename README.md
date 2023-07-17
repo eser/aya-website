@@ -32,6 +32,47 @@ Backend için:
 - [Prisma](https://prisma.io)
 - [Deno](https://deno.land)
 
+## Projeyi Ayağa Kaldırma
+
+GitHub repository'sini klonlayın:
+
+```bash
+$ git clone git@github.com:acikkaynak/aya-website.git
+```
+
+Proje dizinine gidin:
+
+```bash
+$ cd aya-website
+```
+
+Gerekli paketleri yükleyin:
+
+```bash
+$ pnpm install
+```
+
+API klasörüne gidip Supabase'i konfigure edin:
+
+```bash
+$ cd packages/api
+$ npx supabase start
+
+Started supabase local development setup.
+
+         API URL: http://localhost:54321
+     GraphQL URL: http://localhost:54321/graphql/v1
+          DB URL: postgresql://postgres:postgres@localhost:54322/postgres
+      Studio URL: http://localhost:54323
+    Inbucket URL: http://localhost:54324
+      JWT secret: super-secret-jwt-token-with-at-least-32-characters-long
+        anon key: aaa.bbb.ccc_ddd0
+service_role key: xxx.yyy.zzz-www
+
+```
+
+Hem `packages/api` hem de `packages/web` dizinlerindeki `.env` dosyalarını `.env.local` olarak kopyalayın ve gerekli değişiklikleri yapın.
+
 ## Nasıl Katkıda Bulunabilirsin?
 
 Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issulara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, Github Issues veya Discord üzerinden yardım istemekten çekinmeyin.

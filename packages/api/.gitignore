@@ -8,5 +8,6 @@ node_modules/
 # output
 dist/
 
-# environment files
-.env
+# local API keys and secrets
+.env.local
+.env.*.local
