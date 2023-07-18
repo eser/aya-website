@@ -74,7 +74,7 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
           </div>
         </div>
         <div className="flex gap-4">
-          <Button size="lg" className="no-underline" asChild>
+          <Button variant="safe" size="lg" asChild>
             <Link
               href="/about/"
               rel="noreferrer"
@@ -82,7 +82,7 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
               Hakkında
             </Link>
           </Button>
-          <Button variant="secondary" className="no-underline" size="lg" asChild>
+          <Button variant="secondary" size="lg" asChild>
             <Link
               target="_blank"
               rel="noreferrer"

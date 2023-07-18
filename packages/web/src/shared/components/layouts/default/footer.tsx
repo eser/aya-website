@@ -2,19 +2,15 @@ import Link from "next/link";
 
 import { Separator } from "@/shared/components/ui/separator.tsx";
 
-// interface FooterProps {
-//   placeholders: Record<string, string>;
-// }
+import styles from "./footer.module.css";
 
-const Footer = (/* props: FooterProps */) => {
+const Footer = () => {
   return (
-    <footer className="py-6 md:px-8 md:py-0">
-      <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-        <div className="flex h-5 items-center space-x-4 text-sm">
-          <Link href="/about/">Hakkında</Link>
-          <Separator orientation="vertical" />
-          <Link href="/policies/">Kurallar</Link>
-        </div>
+    <footer className={styles.footer}>
+      <div>
+        <Link href="/about/">Hakkında</Link>
+        <Separator className={styles.div} orientation="vertical" decorative={true} />
+        <Link href="/policies/">Kurallar</Link>
       </div>
     </footer>
   );

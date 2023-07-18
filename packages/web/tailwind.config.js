@@ -32,11 +32,15 @@ module.exports = {
         },
         link: {
           DEFAULT: "hsl(var(--link))",
-          foreground: "hsl(var(--link-foreground))",
+          hover: "hsl(var(--link-hover))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        safe: {
+          DEFAULT: "hsl(var(--safe))",
+          foreground: "hsl(var(--safe-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",

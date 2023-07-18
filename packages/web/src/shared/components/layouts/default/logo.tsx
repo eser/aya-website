@@ -1,16 +1,21 @@
 import { siteConfig } from "@/shared/config.ts";
 import { Icons } from "@/shared/components/icons.tsx";
+import { cn } from "@/shared/lib/cn.ts";
 
-const Logo = () => {
+import styles from "./logo.module.css";
+
+const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <>
-      <Icons.logoOnLight className="h-6 w-6 dark:hidden inline-block" />
-      <Icons.logoOnDark className="h-6 w-6 hidden dark:inline-block" />
+    <div
+      className={cn(
+        styles.container,
+        props.className,
+      )}
+    >
+      <Icons.logo className="h-6 w-6" />
 
-      <span className="inline-block font-bold">
-        {siteConfig.name}
-      </span>
-    </>
+      <span className="text-base font-bold">{siteConfig.name}</span>
+    </div>
   );
 };
 

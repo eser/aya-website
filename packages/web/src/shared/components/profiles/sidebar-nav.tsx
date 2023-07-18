@@ -24,12 +24,14 @@ const SidebarNav = (
     >
       {items.map((item) => (
         <Button
-          variant="ghost"
+          variant="link"
           size="default"
           asChild
           className={cn(
-            item.isActive ? "bg-border hover:bg-border" : "hover:bg-transparent",
-            "justify-start font-serif text-lg hover:text-link-foreground no-underline",
+            item.isActive
+              ? "bg-border hover:bg-border"
+              : "bg-transparent hover:bg-transparent",
+            "justify-start font-serif text-lg text-foreground hover:no-underline",
           )}
         >
           <Link

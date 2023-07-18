@@ -12,13 +12,11 @@ interface HeaderProps {
 const Header = (props: HeaderProps) => {
   return (
     <header className={styles.header}>
-      <div className={styles["inner-container"]}>
+      <div>
         <MainNav placeholders={props.placeholders} />
-        <div className={styles.extension}>
-          <ExternalLinks placeholders={props.placeholders} />
-          <ThemeToggle />
-          <GitHubLogin />
-        </div>
+        <ExternalLinks />
+        <ThemeToggle />
+        <GitHubLogin />
       </div>
     </header>
   );

@@ -13,6 +13,8 @@ import {
 } from "@/shared/components/ui/dropdown-menu.tsx";
 import { Logo } from "./logo.tsx";
 
+import styles from "./main-nav.module.css";
+
 interface NavItem {
   title: string;
   href?: string;
@@ -48,14 +50,11 @@ interface MainNavProps {
 
 const MainNav = (props: MainNavProps) => {
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link
-        href="/"
-        className="hidden items-center space-x-2 md:flex"
-      >
-        <Logo />
-      </Link>
-      <nav className="hidden gap-6 md:flex">
+    <nav>
+      <div className={styles["nav-links"]}>
+        <Link href="/">
+          <Logo />
+        </Link>
         {navItems.map(
           (item, index) =>
             item.href && (
@@ -63,54 +62,51 @@ const MainNav = (props: MainNavProps) => {
                 key={index}
                 href={replacePlaceholders(item.href, props.placeholders)}
                 className={cn(
-                  "flex items-center text-lg font-semibold sm:text-sm",
-                  item.disabled && "cursor-not-allowed opacity-80",
+                  item.disabled && styles.disabled,
                 )}
               >
                 {item.title}
               </Link>
             ),
         )}
-      </nav>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            className="-ml-4 flex items-center space-x-2 text-base hover:bg-transparent focus:ring-0 md:hidden cursor-pointer"
-            asChild
-          >
-            <div>
+      </div>
+      <div className={styles["nav-dropdown"]}>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              asChild
+            >
               <Logo />
-            </div>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent
-          align="start"
-          sideOffset={15}
-          className="w-[300px]"
-        >
-          <DropdownMenuItem asChild>
-            <Link href="/" className="no-underline">
-              Ana Sayfa
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          {navItems.map(
-            (item, index) =>
-              item.href && (
-                <DropdownMenuItem key={index} asChild>
-                  <Link
-                    href={replacePlaceholders(item.href, props.placeholders)}
-                    className="no-underline"
-                  >
-                    {item.title}
-                  </Link>
-                </DropdownMenuItem>
-              ),
-          )}
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            sideOffset={14}
+            className={styles["nav-dropdown-content"]}
+          >
+            <DropdownMenuItem asChild>
+              <Link href="/">
+                Ana Sayfa
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            {navItems.map(
+              (item, index) =>
+                item.href && (
+                  <DropdownMenuItem key={index} asChild>
+                    <Link
+                      href={replacePlaceholders(item.href, props.placeholders)}
+                    >
+                      {item.title}
+                    </Link>
+                  </DropdownMenuItem>
+                ),
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    </nav>
   );
 };
 

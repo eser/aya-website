@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    /* --background: 228 33.33% 97.06%; */
     --background: 0 0% 100%;
     --foreground: 0 0% 37%;
     --muted: 210 40% 96.1%;
@@ -21,9 +22,11 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --link: 223 28% 47%;
-    --link-foreground: 209 73% 43%;
-    --accent: 210 40% 96.1%;
+    --link-hover: 209 73% 43%;
+    --accent: 210 40% 95.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
+    --safe: 117.45 52.81% 82.55%;
+    --safe-foreground: 158.18 57.89% 26.08%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --ring: 215 20.2% 65.1%;
@@ -48,9 +51,11 @@
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --link: 198.63 88.66% 48.43%;
-    --link-foreground: 209 73% 53%;
+    --link-hover: 209 73% 53%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
+    --safe: 117.45 52.81% 82.55%;
+    --safe-foreground: 158.18 57.89% 26.08%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --ring: 217.2 32.6% 17.5%;
@@ -114,7 +119,7 @@
   }
 
   a {
-    @apply text-link hover:text-link-foreground underline underline-offset-4;
+    @apply text-link hover:text-link-hover underline underline-offset-4;
     /*  font-medium   */
   }
 
