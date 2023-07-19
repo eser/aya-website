@@ -39,7 +39,7 @@ const GuidePage = (/* props: GuidePageProps */) => {
           <h1>
             Rehber
           </h1>
-          <div className="max-w-[980px] text-lg md:text-xl">
+          <div className="max-w-[980px]">
             <h2>Açık Kaynak Yazılım</h2>
             <ul>
               <li><a href="">Açık Kaynak Yazılım Nedir?</a></li>

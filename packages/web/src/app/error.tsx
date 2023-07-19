@@ -29,7 +29,7 @@ const Error = ({
             Bir hata oluştu
           </h1>
 
-          <div className="max-w-[980px] text-lg md:text-xl">
+          <div className="max-w-[980px]">
             <Button
               onClick={
                 // Attempt to recover by trying to re-render the segment

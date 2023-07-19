@@ -65,13 +65,13 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
     <Layout placeholders={placeholders}>
       <section className="container grid items-center">
         <div className="flex max-w-[980px] flex-col items-start">
-          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
+          <h1 className="hero">
             Açık Yazılım Ağı <br className="hidden md:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <div className="max-w-[980px] text-md leading-7 md:text-lg md:leading-8">
+          <article>
             <MDXRemote source={introText} />
-          </div>
+          </article>
         </div>
         <div className="flex gap-4">
           <Button variant="safe" size="lg" asChild>

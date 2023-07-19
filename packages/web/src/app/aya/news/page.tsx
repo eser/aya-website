@@ -126,7 +126,7 @@ const NewsCard = (props: NewsCardProps) => {
             className="rounded-md object-cover"
           />
         </AspectRatio>
-        <article className="leading-7">
+        <article>
           <MDXRemote source={post.contentMarkdown} />
         </article>
       </CardContent>
@@ -154,9 +154,7 @@ const NewsPage = async (/* props: NewsPageProps */) => {
           <h1>
             Haberler
           </h1>
-          <div className="max-w-[980px] text-lg md:text-xl">
-            {data.map((post) => <NewsCard post={post} />)}
-          </div>
+          {data.map((post) => <NewsCard post={post} />)}
         </div>
       </section>
     </Layout>

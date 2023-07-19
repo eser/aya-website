@@ -39,7 +39,7 @@ const ProductsPage = (/* props: ProductsPageProps */) => {
         <h1>
           Üretimler
         </h1>
-        <div className="max-w-[980px] text-lg md:text-xl">
+        <div className="max-w-[980px]">
           <ProductList />
         </div>
       </section>

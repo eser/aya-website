@@ -38,7 +38,7 @@ const PoliciesPage = (/* props: PoliciesPageProps */) => {
         <h1>
           Kurallar
         </h1>
-        <div className="max-w-[980px] text-lg md:text-xl">
+        <div className="max-w-[980px]">
           Sayfa henüz hazırlık aşamasında.
         </div>
       </section>
