@@ -23,14 +23,14 @@ const ProfileList = async (/* props: ProfileListProps */) => {
 
   return (
     <>
-      <h1 className="my-0">
+      <h1>
         Merkezler
       </h1>
       <div className="max-w-[980px] text-lg sm:text-xl">
         <Conditional
           test={profiles.length > 0}
           then={
-            <ul className="my-0 ml-6 list-disc [&>li]:mt-2">
+            <ul className="list-disc">
               {profiles.map((profile: Profile) => (
                 <li key={profile.id}>
                   <Link href={`/${profile.slug}`}>{profile.title}</Link>

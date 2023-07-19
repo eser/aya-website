@@ -149,7 +149,7 @@ const NewsPage = async (/* props: NewsPageProps */) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+      <section className="container grid items-center">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1>
             Haberler
