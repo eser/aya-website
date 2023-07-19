@@ -55,7 +55,7 @@ const Layout = async (props: RootLayoutProps) => {
 };
 
 // FIXME(@eser) see: https://github.com/vercel/next.js/issues/49373
-const dynamic = "force-static";
-const revalidate = 60;
+const dynamic = "force-dynamic";
+// const revalidate = 60;
 
-export { dynamic, Layout, Layout as default, revalidate };
+export { dynamic, Layout, Layout as default };
