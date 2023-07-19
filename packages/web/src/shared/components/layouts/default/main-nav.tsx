@@ -35,16 +35,8 @@ const navItems: NavItem[] = [
     href: "/community/",
   },
   {
-    title: "Kişiler",
-    href: "/people/",
-  },
-  {
     title: "Üretimler",
     href: "/products/",
-  },
-  {
-    title: "Merkezler",
-    href: "/venues/",
   },
 ];
 

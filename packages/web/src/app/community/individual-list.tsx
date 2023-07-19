@@ -6,10 +6,10 @@ import {
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
-// interface ProfileListProps {
+// interface IndividualListProps {
 // }
 
-const ProfileList = async (/* props: ProfileListProps */) => {
+const IndividualList = async (/* props: IndividualListProps */) => {
   const { supabase } = getSupabaseServer();
 
   const individualListResponse = await supabase.functions.invoke<IndividualListResult>(
@@ -17,7 +17,7 @@ const ProfileList = async (/* props: ProfileListProps */) => {
     { body: JSON.stringify({}) },
   );
 
-  const profiles = individualListResponse.data?.payload ?? [];
+  const individuals = individualListResponse.data?.payload ?? [];
 
   return (
     <>
@@ -26,10 +26,10 @@ const ProfileList = async (/* props: ProfileListProps */) => {
       </h1>
       <div className="max-w-[980px] text-lg sm:text-xl">
         <Conditional
-          test={profiles.length > 0}
+          test={individuals.length > 0}
           then={
             <ul className="list-disc">
-              {profiles.map((profile: Profile) => (
+              {individuals.map((profile: Profile) => (
                 <li key={profile.id}>
                   <Link href={`/${profile.slug}`}>{profile.title}</Link>
                 </li>
@@ -47,4 +47,4 @@ const ProfileList = async (/* props: ProfileListProps */) => {
   );
 };
 
-export { ProfileList };
+export { IndividualList };

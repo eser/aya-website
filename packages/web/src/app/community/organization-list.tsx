@@ -1,37 +1,37 @@
 import Link from "next/link";
 import {
-  type VenueListResult,
+  type OrganizationListResult,
   type Profile,
-} from "shared/src/venue-list-result.ts";
+} from "shared/src/organization-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
-// interface ProfileListProps {
+// interface OrganizationListProps {
 // }
 
-const ProfileList = async (/* props: ProfileListProps */) => {
+const OrganizationList = async (/* props: OrganizationListProps */) => {
   const { supabase } = getSupabaseServer();
 
-  const venueListResponse = await supabase.functions.invoke<
-    VenueListResult
+  const organizationListResponse = await supabase.functions.invoke<
+    OrganizationListResult
   >(
-    "venue-list",
+    "organization-list",
     { body: JSON.stringify({}) },
   );
 
-  const profiles = venueListResponse.data?.payload ?? [];
+  const organizations = organizationListResponse.data?.payload ?? [];
 
   return (
     <>
       <h1>
-        Merkezler
+        Organizasyonlar
       </h1>
       <div className="max-w-[980px] text-lg sm:text-xl">
         <Conditional
-          test={profiles.length > 0}
+          test={organizations.length > 0}
           then={
             <ul className="list-disc">
-              {profiles.map((profile: Profile) => (
+              {organizations.map((profile: Profile) => (
                 <li key={profile.id}>
                   <Link href={`/${profile.slug}`}>{profile.title}</Link>
                 </li>
@@ -49,4 +49,4 @@ const ProfileList = async (/* props: ProfileListProps */) => {
   );
 };
 
-export { ProfileList };
+export { OrganizationList };
