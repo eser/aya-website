@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div>
-        <Link href="/about/">Hakkında</Link>
+        <Link href="/aya/about/">Hakkında</Link>
         <Separator className={styles.div} orientation="vertical" decorative={true} />
-        <Link href="/policies/">Kurallar</Link>
+        <Link href="/aya/policies/">Kurallar</Link>
       </div>
     </footer>
   );
