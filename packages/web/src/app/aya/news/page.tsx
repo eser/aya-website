@@ -150,11 +150,11 @@ const NewsPage = async (/* props: NewsPageProps */) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
+        <div className="flex max-w-[980px] flex-col items-start">
           <h1>
             Haberler
           </h1>
-          <div className="max-w-[980px] text-lg sm:text-xl">
+          <div className="max-w-[980px] text-lg md:text-xl">
             {data.map((post) => <NewsCard post={post} />)}
           </div>
         </div>

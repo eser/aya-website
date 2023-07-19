@@ -39,7 +39,9 @@ const ProductsPage = (/* props: ProductsPageProps */) => {
         <h1>
           Üretimler
         </h1>
-        <ProductList />
+        <div className="max-w-[980px] text-lg md:text-xl">
+          <ProductList />
+        </div>
       </section>
     </Layout>
   );

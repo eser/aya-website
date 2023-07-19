@@ -66,36 +66,37 @@
   }
 
   h1 {
-    @apply font-serif text-4xl;
-    /*  scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
-    /*  className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl" */
+    @apply font-serif text-4xl my-6;
+    /* scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
+    /* text-3xl sm:text-3xl md:text-5xl lg:text-6xl */
   }
 
   h2 {
-    @apply font-serif text-3xl;
-    /*  scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
+    @apply font-serif text-3xl my-4;
+    /* scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
   }
 
   h3 {
-    @apply font-serif text-2xl;
-    /*  scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
+    @apply font-serif text-2xl my-2;
+    /* scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
   }
 
   h4 {
-    @apply font-serif text-xl;
-    /*  scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2 */
+    @apply font-serif text-xl my-0;
+    /* scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2 */
   }
 
   h5 {
-    @apply font-serif;
+    @apply font-serif my-0;
   }
 
   h6 {
-    @apply font-serif;
+    @apply font-serif my-0;
   }
 
   p {
-    /*  leading-7 mb-6 */
+    @apply mt-0;
+    /* leading-7 mb-6 */
 
     /* &.lead {
       @apply text-xl text-muted-foreground;
@@ -115,12 +116,13 @@
   }
 
   ul {
-    /* @apply my-6 ml-6 list-disc [&>li]:mt-2; */
+    @apply my-6 mx-0 px-5 list-disc;
+    /* [&>li]:mt-2; */
   }
 
   a {
     @apply text-link hover:text-link-hover underline underline-offset-4;
-    /*  font-medium   */
+    /* font-medium */
   }
 
   strong {

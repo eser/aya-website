@@ -34,14 +34,12 @@ const PoliciesPage = (/* props: PoliciesPageProps */) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
-          <h1>
-            Kurallar
-          </h1>
-          <div className="max-w-[980px] text-lg sm:text-xl">
-            Sayfa henüz hazırlık aşamasında.
-          </div>
+      <section className="container">
+        <h1>
+          Kurallar
+        </h1>
+        <div className="max-w-[980px] text-lg md:text-xl">
+          Sayfa henüz hazırlık aşamasında.
         </div>
       </section>
     </Layout>

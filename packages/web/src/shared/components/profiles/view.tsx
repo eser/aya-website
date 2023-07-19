@@ -34,7 +34,7 @@ const ProfileView = async (props: ProfileViewProps) => {
         <h1>
           Profile
         </h1>
-        <div className="max-w-[980px] text-lg sm:text-xl">
+        <div className="max-w-[980px] text-lg md:text-xl">
           Profile &quot;{props.slugs[0] ?? "-"}&quot; not found.
         </div>
       </>

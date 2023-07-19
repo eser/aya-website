@@ -24,12 +24,12 @@ const Error = ({
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
+        <div className="flex max-w-[980px] flex-col items-start">
           <h1>
             Bir hata oluştu
           </h1>
 
-          <div className="max-w-[980px] text-lg sm:text-xl">
+          <div className="max-w-[980px] text-lg md:text-xl">
             <Button
               onClick={
                 // Attempt to recover by trying to re-render the segment

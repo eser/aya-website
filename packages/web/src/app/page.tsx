@@ -64,12 +64,12 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center">
-        <div className="flex max-w-[980px] flex-col items-start gap-2">
+        <div className="flex max-w-[980px] flex-col items-start">
           <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">
-            Açık Yazılım Ağı <br className="hidden sm:inline" />
+            Açık Yazılım Ağı <br className="hidden md:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <div className="max-w-[980px] text-md leading-7 sm:text-lg sm:leading-8">
+          <div className="max-w-[980px] text-md leading-7 md:text-lg md:leading-8">
             <MDXRemote source={introText} />
           </div>
         </div>
