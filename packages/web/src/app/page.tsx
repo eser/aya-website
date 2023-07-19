@@ -76,7 +76,7 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
         <div className="flex gap-4">
           <Button variant="safe" size="lg" asChild>
             <Link
-              href="/about/"
+              href="/aya/about/"
               rel="noreferrer"
             >
               Hakkında
