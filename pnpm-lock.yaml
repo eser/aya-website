@@ -61,6 +61,42 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
 
+  packages/cli:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.4.2
+        version: 20.4.2
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.1.0
+        version: 6.1.0(@typescript-eslint/parser@6.1.0)(eslint@8.45.0)(typescript@5.1.6)
+      '@typescript-eslint/parser':
+        specifier: ^6.1.0
+        version: 6.1.0(eslint@8.45.0)(typescript@5.1.6)
+      eslint:
+        specifier: ^8.45.0
+        version: 8.45.0
+      eslint-plugin-unicorn:
+        specifier: ^48.0.0
+        version: 48.0.0(eslint@8.45.0)
+      shared:
+        specifier: workspace:^
+        version: link:../shared
+      supabase:
+        specifier: ^1.77.9
+        version: 1.77.9
+      tsx:
+        specifier: ^3.12.7
+        version: 3.12.7
+      typescript:
+        specifier: ^5.1.6
+        version: 5.1.6
+      vite-tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0(typescript@5.1.6)
+      vitest:
+        specifier: ^0.33.0
+        version: 0.33.0(jsdom@22.1.0)(sass@1.63.6)
+
   packages/shared:
     devDependencies:
       typescript:

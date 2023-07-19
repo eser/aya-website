@@ -1,0 +1,28 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "scripts": {
+    "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/",
+    "watch": "tsx watch ./src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "format:write": "deno fmt",
+    "format:check": "deno fmt --check",
+    "test:run": "vitest run",
+    "test": "vitest watch"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-unicorn": "^48.0.0",
+    "supabase": "^1.77.9",
+    "tsx": "^3.12.7",
+    "shared": "workspace:^",
+    "typescript": "^5.1.6",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  }
+}
