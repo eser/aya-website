@@ -7,6 +7,8 @@ import {
 } from "@shared/profile-get-result.ts";
 
 import { profileQueryToProfile } from "../_shared/profile/profile-query-to-profile.ts";
+import { profilePageQueryToProfilePage } from "../_shared/profile/profile-page-query-to-profile-page.ts";
+import { profileLinkQueryToProfileLink } from "../_shared/profile/profile-link-query-to-profile-link.ts";
 import { type SupabaseClient } from "../_shared/supabase-client.ts";
 
 const profileGet = async (
@@ -62,8 +64,8 @@ const profileGet = async (
         .order("order", { ascending: true }),
     ]);
 
-  const links = profileLinksQueryResponse.data as ProfileLinkList;
-  const pages = profilePagesQueryResponse.data as ProfilePageList;
+  const links = profileLinksQueryResponse.data?.map(x => profileLinkQueryToProfileLink(x)!);
+  const pages = profilePagesQueryResponse.data?.map(x => profilePageQueryToProfilePage(x)!);
 
   const result: ProfileGetResult = {
     payload: {

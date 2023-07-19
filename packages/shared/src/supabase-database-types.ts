@@ -61,33 +61,27 @@ export interface Database {
         Row: {
           createdAt: string
           deletedAt: string | null
-          description: string
           id: string
           profilePictureUri: string | null
           slug: string
-          title: string
           type: Database["public"]["Enums"]["ProfileType"]
           updatedAt: string | null
         }
         Insert: {
           createdAt?: string
           deletedAt?: string | null
-          description: string
           id: string
           profilePictureUri?: string | null
           slug: string
-          title: string
           type: Database["public"]["Enums"]["ProfileType"]
           updatedAt?: string | null
         }
         Update: {
           createdAt?: string
           deletedAt?: string | null
-          description?: string
           id?: string
           profilePictureUri?: string | null
           slug?: string
-          title?: string
           type?: Database["public"]["Enums"]["ProfileType"]
           updatedAt?: string | null
         }
@@ -97,42 +91,36 @@ export interface Database {
         Row: {
           createdAt: string
           deletedAt: string | null
-          description: string
           iconKey: string | null
           iconSet: string | null
           id: string
           order: number
           profileId: string
           slug: string
-          title: string
           updatedAt: string | null
           uri: string
         }
         Insert: {
           createdAt?: string
           deletedAt?: string | null
-          description: string
           iconKey?: string | null
           iconSet?: string | null
           id: string
           order: number
           profileId: string
           slug: string
-          title: string
           updatedAt?: string | null
           uri: string
         }
         Update: {
           createdAt?: string
           deletedAt?: string | null
-          description?: string
           iconKey?: string | null
           iconSet?: string | null
           id?: string
           order?: number
           profileId?: string
           slug?: string
-          title?: string
           updatedAt?: string | null
           uri?: string
         }
@@ -236,7 +224,6 @@ export interface Database {
       }
       ProfilePage: {
         Row: {
-          content: string
           createdAt: string
           deletedAt: string | null
           id: string
@@ -244,11 +231,9 @@ export interface Database {
           profileId: string
           publishedAt: string | null
           slug: string
-          title: string
           updatedAt: string | null
         }
         Insert: {
-          content: string
           createdAt?: string
           deletedAt?: string | null
           id: string
@@ -256,11 +241,9 @@ export interface Database {
           profileId: string
           publishedAt?: string | null
           slug: string
-          title: string
           updatedAt?: string | null
         }
         Update: {
-          content?: string
           createdAt?: string
           deletedAt?: string | null
           id?: string
@@ -268,7 +251,6 @@ export interface Database {
           profileId?: string
           publishedAt?: string | null
           slug?: string
-          title?: string
           updatedAt?: string | null
         }
         Relationships: [
@@ -329,7 +311,6 @@ export interface Database {
       ProfileStory: {
         Row: {
           category: Database["public"]["Enums"]["ProfileStoryCategory"]
-          content: string
           createdAt: string
           deletedAt: string | null
           id: string
@@ -337,12 +318,10 @@ export interface Database {
           profileId: string
           publishedAt: string | null
           slug: string
-          title: string
           updatedAt: string | null
         }
         Insert: {
           category: Database["public"]["Enums"]["ProfileStoryCategory"]
-          content: string
           createdAt?: string
           deletedAt?: string | null
           id: string
@@ -350,12 +329,10 @@ export interface Database {
           profileId: string
           publishedAt?: string | null
           slug: string
-          title: string
           updatedAt?: string | null
         }
         Update: {
           category?: Database["public"]["Enums"]["ProfileStoryCategory"]
-          content?: string
           createdAt?: string
           deletedAt?: string | null
           id?: string
@@ -363,7 +340,6 @@ export interface Database {
           profileId?: string
           publishedAt?: string | null
           slug?: string
-          title?: string
           updatedAt?: string | null
         }
         Relationships: [
@@ -469,11 +445,9 @@ export interface Database {
       }
       User: {
         Row: {
-          bio: string
           createdAt: string
           deletedAt: string | null
           email: string
-          fullname: string
           githubHandle: string
           id: string
           lastSeenAt: string | null
@@ -482,11 +456,9 @@ export interface Database {
           updatedAt: string | null
         }
         Insert: {
-          bio: string
           createdAt?: string
           deletedAt?: string | null
           email: string
-          fullname: string
           githubHandle: string
           id: string
           lastSeenAt?: string | null
@@ -495,11 +467,9 @@ export interface Database {
           updatedAt?: string | null
         }
         Update: {
-          bio?: string
           createdAt?: string
           deletedAt?: string | null
           email?: string
-          fullname?: string
           githubHandle?: string
           id?: string
           lastSeenAt?: string | null
@@ -572,7 +542,7 @@ export interface Database {
         | "Sponsor"
         | "Follower"
       ProfileStoryCategory: "Status" | "Announcement" | "News"
-      ProfileType: "Individual" | "Organization" | "Product"
+      ProfileType: "Individual" | "Organization" | "Product" | "Venue"
     }
     CompositeTypes: {
       [_ in never]: never

@@ -5,8 +5,8 @@ import { type ProfilePage, type ProfilePageList } from "./profile-page.ts";
 
 interface ProfileGetComposition {
   profile: Profile;
-  links: ProfileLinkList;
-  pages: ProfilePageList;
+  links: ProfileLinkList | undefined;
+  pages: ProfilePageList | undefined;
   // stories: ProfileStoryList;
 }
 

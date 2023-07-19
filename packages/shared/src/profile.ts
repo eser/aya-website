@@ -1,4 +1,4 @@
-type ProfileType = "Individual" | "Organization" | "Product";
+type ProfileType = "Individual" | "Organization" | "Product" | "Venue";
 
 type Profile = {
   id: string;

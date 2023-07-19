@@ -2,6 +2,7 @@ type ProfileLink = {
   id: string;
   slug: string;
   title: string;
+  description: string;
   uri: string;
 
   iconSet: string | null;

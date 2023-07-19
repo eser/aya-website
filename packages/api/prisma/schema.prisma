@@ -53,8 +53,6 @@ model User {
   githubHandle                 String
   twitterHandle                String
 
-  fullname                     String // TODO(@eser) will be removed
-  bio                          String // TODO(@eser) will be removed
   languages                    UserTx[]
 
   lastSeenAt                   DateTime?
@@ -103,8 +101,6 @@ model Profile {
   slug                         String                 @unique
   profilePictureUri            String?
 
-  title                        String // TODO(@eser) will be removed
-  description                  String // TODO(@eser) will be removed
   languages                    ProfileTx[]
 
   links                        ProfileLink[]
@@ -144,8 +140,6 @@ model ProfileLink {
   uri                          String
   order                        Int
 
-  title                        String // TODO(@eser) will be removed
-  description                  String // TODO(@eser) will be removed
   languages                    ProfileLinkTx[]
 
   profile                      Profile                @relation(fields: [profileId], references: [id])
@@ -184,8 +178,6 @@ model ProfilePage {
   order                        Int
   publishedAt                  DateTime?
 
-  title                        String // TODO(@eser) will be removed
-  content                      String // TODO(@eser) will be removed
   languages                    ProfilePageTx[]
 
   profile                      Profile                @relation(fields: [profileId], references: [id])
@@ -231,8 +223,6 @@ model ProfileStory {
   isFeatured                   Boolean                @default(false)
   publishedAt                  DateTime?
 
-  title                        String // TODO(@eser) will be removed
-  content                      String // TODO(@eser) will be removed
   languages                    ProfileStoryTx[]
 
   profile                      Profile                @relation(fields: [profileId], references: [id])
