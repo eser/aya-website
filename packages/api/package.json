@@ -12,7 +12,7 @@
     "db:local:generate": "dotenv -e .env.local -- prisma generate",
     "db:local:push": "dotenv -e .env.local -- prisma db push --skip-generate",
     "db:local:seed": "dotenv -e .env.local -- prisma db seed",
-    "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/ && pnpm install",
+    "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/",
     "dev": "supabase start && supabase functions serve",
     "deploy": "supabase functions deploy",
     "start": "",
@@ -29,12 +29,12 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@edge-runtime/vm": "^3.0.3",
+    "@edge-runtime/vm": "^3.0.4",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.2",
     "dotenv-cli": "^7.2.1",
-    "esbuild": "^0.18.13",
+    "esbuild": "^0.18.14",
     "prisma": "^5.0.0",
     "tsx": "^3.12.7",
     "shared": "workspace:^",

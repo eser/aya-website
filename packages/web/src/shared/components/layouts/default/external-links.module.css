@@ -6,7 +6,7 @@
   @apply flex-1 flex justify-end;
 
   & a {
-    @apply hidden lg:flex;
+    @apply hidden xl:flex;
 
     &.disabled {
       @apply cursor-not-allowed opacity-80;
