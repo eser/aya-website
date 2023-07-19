@@ -1,33 +1,33 @@
 import Link from "next/link";
 import {
-  type OrganizationListResult,
+  type ProductListResult,
   type Profile,
-} from "shared/src/organization-list-result.ts";
+} from "shared/src/product-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
-// interface OrganizationListProps {
+// interface ProductListProps {
 // }
 
-const OrganizationList = async (/* props: OrganizationListProps */) => {
+const ProductList = async (/* props: ProductListProps */) => {
   const { supabase } = getSupabaseServer();
 
-  const organizationListResponse = await supabase.functions.invoke<
-    OrganizationListResult
+  const productListResponse = await supabase.functions.invoke<
+    ProductListResult
   >(
-    "organization-list",
+    "product-list",
     { body: JSON.stringify({}) },
   );
 
-  const organizations = organizationListResponse.data?.payload ?? [];
+  const products = productListResponse.data?.payload ?? [];
 
   return (
     <div className="max-w-[980px] text-lg sm:text-xl">
       <Conditional
-        test={organizations.length > 0}
+        test={products.length > 0}
         then={
           <ul className="list-disc">
-            {organizations.map((profile: Profile) => (
+            {products.map((profile: Profile) => (
               <li key={profile.id}>
                 <Link href={`/${profile.slug}`}>{profile.title}</Link>
               </li>
@@ -44,4 +44,4 @@ const OrganizationList = async (/* props: OrganizationListProps */) => {
   );
 };
 
-export { OrganizationList };
+export { ProductList };

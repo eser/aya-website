@@ -37,13 +37,20 @@ const CommunityPage = (/* props: CommunityPageProps */) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid grid-cols-2 items-start">
-        <div>
-          <OrganizationList />
-          <VenueList />
-        </div>
-        <div>
-          <IndividualList />
+      <section className="container">
+        <h1>Topluluk</h1>
+        <div className="grid grid-cols-2 items-start">
+          <div>
+            <h2>Organizasyonlar</h2>
+            <OrganizationList />
+
+            <h2>Merkezler</h2>
+            <VenueList />
+          </div>
+          <div>
+            <h2>Kişiler</h2>
+            <IndividualList />
+          </div>
         </div>
       </section>
     </Layout>

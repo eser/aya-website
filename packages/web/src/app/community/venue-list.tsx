@@ -22,30 +22,25 @@ const VenueList = async (/* props: VenueListProps */) => {
   const venues = venueListResponse.data?.payload ?? [];
 
   return (
-    <>
-      <h1>
-        Merkezler
-      </h1>
-      <div className="max-w-[980px] text-lg sm:text-xl">
-        <Conditional
-          test={venues.length > 0}
-          then={
-            <ul className="list-disc">
-              {venues.map((profile: Profile) => (
-                <li key={profile.id}>
-                  <Link href={`/${profile.slug}`}>{profile.title}</Link>
-                </li>
-              ))}
-            </ul>
-          }
-          else={
-            <p>
-              Liste boş.
-            </p>
-          }
-        />
-      </div>
-    </>
+    <div className="max-w-[980px] text-lg sm:text-xl">
+      <Conditional
+        test={venues.length > 0}
+        then={
+          <ul className="list-disc">
+            {venues.map((profile: Profile) => (
+              <li key={profile.id}>
+                <Link href={`/${profile.slug}`}>{profile.title}</Link>
+              </li>
+            ))}
+          </ul>
+        }
+        else={
+          <p>
+            Liste boş.
+          </p>
+        }
+      />
+    </div>
   );
 };
 

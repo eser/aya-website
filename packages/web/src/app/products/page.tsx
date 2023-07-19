@@ -1,7 +1,7 @@
 import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
-import { ProfileList } from "./profile-list.tsx";
+import { ProductList } from "./product-list.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -35,8 +35,11 @@ const ProductsPage = (/* props: ProductsPageProps */) => {
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center">
-        <ProfileList />
+      <section className="container">
+        <h1>
+          Üretimler
+        </h1>
+        <ProductList />
       </section>
     </Layout>
   );
