@@ -42,6 +42,10 @@ const navItems: NavItem[] = [
     title: "Üretimler",
     href: "/products/",
   },
+  {
+    title: "Merkezler",
+    href: "/venues/",
+  },
 ];
 
 interface MainNavProps {

@@ -94,6 +94,7 @@ enum ProfileType {
   // ContentPlatform
   // SoftwareProject
   Product
+  Venue
 }
 
 model Profile {

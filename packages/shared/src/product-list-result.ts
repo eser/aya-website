@@ -1,6 +1,6 @@
 import { type ResultType } from "./result-type.ts";
 import { type Profile, type ProfileList } from "./profile.ts";
 
-type PeopleListResult = ResultType<ProfileList>;
+type ProductListResult = ResultType<ProfileList>;
 
-export { type PeopleListResult, type Profile, type ProfileList };
+export { type ProductListResult, type Profile, type ProfileList };

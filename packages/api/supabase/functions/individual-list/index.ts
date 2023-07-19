@@ -1,10 +1,10 @@
 import { config, type Dependencies, wrapper } from "../_shared/wrapper.ts";
-import { productList } from "./mod.ts";
+import { individualList } from "./mod.ts";
 
 const fn = async (req: Request, deps: Dependencies) => {
   const { lang = config.defaultLanguage }: { lang?: string } = await req.json();
 
-  const result = await productList(deps.supabase, lang);
+  const result = await individualList(deps.supabase, lang);
 
   return result;
 };

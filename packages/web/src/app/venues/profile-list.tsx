@@ -1,8 +1,8 @@
 import Link from "next/link";
 import {
-  type OrganizationListResult,
+  type VenueListResult,
   type Profile,
-} from "shared/src/organization-list-result.ts";
+} from "shared/src/venue-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
@@ -12,19 +12,19 @@ import { Conditional } from "@/shared/components/conditional.tsx";
 const ProfileList = async (/* props: ProfileListProps */) => {
   const { supabase } = getSupabaseServer();
 
-  const organizationListResponse = await supabase.functions.invoke<
-    OrganizationListResult
+  const venueListResponse = await supabase.functions.invoke<
+    VenueListResult
   >(
-    "organization-list",
+    "venue-list",
     { body: JSON.stringify({}) },
   );
 
-  const profiles = organizationListResponse.data?.payload ?? [];
+  const profiles = venueListResponse.data?.payload ?? [];
 
   return (
     <>
       <h1 className="my-0">
-        Topluluk
+        Merkezler
       </h1>
       <div className="max-w-[980px] text-lg sm:text-xl">
         <Conditional

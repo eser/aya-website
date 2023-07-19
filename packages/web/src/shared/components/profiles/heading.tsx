@@ -26,7 +26,7 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
             className="rounded-full mr-4"
           />
         </Conditional>
-        {props.item.profile.titleTx ?? props.item.profile.title}
+        {props.item.profile.title}
       </h1>
       <h2 className="text-lg sm:text-xl my-0 font-sans">
         {props.item.profile.description}

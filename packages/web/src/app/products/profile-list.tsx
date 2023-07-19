@@ -1,8 +1,8 @@
 import Link from "next/link";
 import {
-  type ProductsListResult,
+  type ProductListResult,
   type Profile,
-} from "shared/src/products-list-result.ts";
+} from "shared/src/product-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
@@ -12,14 +12,14 @@ import { Conditional } from "@/shared/components/conditional.tsx";
 const ProfileList = async (/* props: ProfileListProps */) => {
   const { supabase } = getSupabaseServer();
 
-  const productsListResponse = await supabase.functions.invoke<
-    ProductsListResult
+  const productListResponse = await supabase.functions.invoke<
+    ProductListResult
   >(
-    "products-list",
+    "product-list",
     { body: JSON.stringify({}) },
   );
 
-  const profiles = productsListResponse.data?.payload ?? [];
+  const profiles = productListResponse.data?.payload ?? [];
 
   return (
     <>

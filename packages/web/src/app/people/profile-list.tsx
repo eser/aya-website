@@ -1,8 +1,8 @@
 import Link from "next/link";
 import {
-  type PeopleListResult,
+  type IndividualListResult,
   type Profile,
-} from "shared/src/people-list-result.ts";
+} from "shared/src/individual-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
@@ -12,12 +12,12 @@ import { Conditional } from "@/shared/components/conditional.tsx";
 const ProfileList = async (/* props: ProfileListProps */) => {
   const { supabase } = getSupabaseServer();
 
-  const peopleListResponse = await supabase.functions.invoke<PeopleListResult>(
-    "people-list",
+  const individualListResponse = await supabase.functions.invoke<IndividualListResult>(
+    "individual-list",
     { body: JSON.stringify({}) },
   );
 
-  const profiles = peopleListResponse.data?.payload ?? [];
+  const profiles = individualListResponse.data?.payload ?? [];
 
   return (
     <>
