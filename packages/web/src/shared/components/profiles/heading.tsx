@@ -15,7 +15,7 @@ interface ProfileHeadingProps {
 const ProfileHeading = (props: ProfileHeadingProps) => {
   return (
     <>
-      <h1 className="flex flex-row items-center my-0">
+      <div className="flex flex-row items-center">
         <Conditional test={props.item.profile.profilePictureUri !== null}>
           <Image
             src={props.item.profile.profilePictureUri}
@@ -26,11 +26,13 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
             className="rounded-full mr-4"
           />
         </Conditional>
-        {props.item.profile.title}
-      </h1>
-      <h2 className="text-lg sm:text-xl my-0 font-sans">
-        {props.item.profile.description}
-      </h2>
+        <div className="flex flex-col">
+          <h1 className="my-0 leading-tight">{props.item.profile.title}</h1>
+          <h2 className="text-xs md:text-sm lg:text-base my-0 font-sans">
+            {props.item.profile.description}
+          </h2>
+        </div>
+      </div>
       <Conditional test={props.item.links.length > 0}>
         <div className="flex flex-row">
           {props.item.links.map((link) => (
