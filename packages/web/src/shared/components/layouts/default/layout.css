@@ -15,7 +15,9 @@
     --popover-foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-    --border: 214.3 31.8% 91.4%;
+    /* --border: 210 40% 95.1%; */
+    --border: 0 0% 90.98%;
+    --border-shadow: 0 0% 72.78%;
     --input: 214.3 31.8% 91.4%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -23,7 +25,8 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
     --link: 223 28% 47%;
     --link-hover: 209 73% 43%;
-    --accent: 210 40% 95.1%;
+    /* --accent: 214.3 31.8% 91.4%; */
+    --accent: 214.3 31.8% 91.4%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --safe: 117.45 52.81% 82.55%;
     --safe-foreground: 158.18 57.89% 26.08%;
@@ -45,6 +48,7 @@
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --border: 222.2 47.4% 11.2%;
+    --border-shadow: 222.2 47.4% 8.96%;
     --input: 217.2 32.6% 17.5%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
