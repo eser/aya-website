@@ -97,9 +97,9 @@ const seedProfileEserLive = async (
           data: [
             {
               languageCode: languageTrCode,
-              titleTx: "Introduction",
+              titleTx: "Bilgi",
               contentTx: `---
-title: Introduction
+title: Bilgi
 date: 2022-08-21
 ---
 
@@ -127,13 +127,11 @@ Bir süredir “live coding”in ötesine geçme hedefiyle başladığım sohbet
           data: [
             {
               languageCode: languageTrCode,
-              titleTx: "Configuration",
+              titleTx: "Geliştirme Ortamı",
               contentTx: `---
-title: Configuration
+title: Geliştirme Ortamı
 date: 2022-08-21
 ---
-
-## Tercih Ettiğim Geliştirme Ortamı:
 
 **Editor:** Visual Studio Code
 **Tema:** [One Dark Pro Monokai Darker Theme](https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker)
