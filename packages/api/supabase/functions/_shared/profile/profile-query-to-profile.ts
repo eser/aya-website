@@ -17,8 +17,8 @@ const profileQueryToProfile = (source: ProfileQueryResult): Profile | null => {
     id: source.id,
     type: source.type,
     slug: source.slug,
-    title: source.ProfileTx[0]?.titleTx ?? "(untranslated)",
-    description: source.ProfileTx[0]?.descriptionTx ?? "(untranslated)",
+    title: source.ProfileTx?.[0]?.titleTx ?? "(untranslated)",
+    description: source.ProfileTx?.[0]?.descriptionTx ?? "(untranslated)",
     profilePictureUri: source.profilePictureUri,
   };
 };

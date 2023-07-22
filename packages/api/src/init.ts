@@ -4,6 +4,7 @@ import {
 } from "./supabase/functions/_shared/supabase-client.ts";
 import { profileCreate } from "./supabase/functions/profile-create/mod.ts";
 import { profileGet } from "./supabase/functions/profile-get/mod.ts";
+import { profileRemove } from "./supabase/functions/profile-remove/mod.ts";
 
 const init = async () => {
   const env = await loadEnv();

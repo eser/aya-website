@@ -29,6 +29,33 @@ const seedProfileAya = async (
     },
   });
 
+  const profileLinkWebsite = await prisma.profileLink.upsert({
+    where: {
+      profileId_slug: { profileId: profileAya.id, slug: "website" },
+    },
+    update: {},
+    create: {
+      profile: { connect: { id: profileAya.id } },
+      slug: "website",
+      uri: "https://acikyazilimagi.com",
+      iconSet: null,
+      iconKey: null,
+      order: 1,
+
+      languages: {
+        createMany: {
+          data: [
+            {
+              languageCode: languageTrCode,
+              titleTx: "Website",
+              descriptionTx: "Website",
+            },
+          ],
+        },
+      },
+    },
+  });
+
   const profilePageIndex = await prisma.profilePage.upsert({
     where: { profileId_slug: { profileId: profileAya.id, slug: "index" } },
     update: {},
@@ -201,6 +228,7 @@ Bugün discord sunucumuzda 24,000'i aşkın gönüllü bilişim sektörü çalı
 
   return {
     profileAya,
+    profileLinkWebsite,
     profilePageIndex,
     profilePageStories,
     profilePageGuide,

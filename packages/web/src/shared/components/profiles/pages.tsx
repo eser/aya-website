@@ -7,6 +7,8 @@ import {
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { cn } from "@/shared/lib/cn.ts";
 import { mdx } from "@/shared/lib/mdx.ts";
+
+import { Card, Cards } from "./widgets/cards.tsx";
 import { SidebarNav } from "./sidebar-nav.tsx";
 
 import styles from "./pages.module.scss";
@@ -107,7 +109,8 @@ const ProfilePages = async (props: ProfilePagesProps) => {
   const mdxSource = await mdx(
     activePage.content,
     {
-      Hello: () => <strong>Hello</strong>,
+      Cards: Cards,
+      Card: Card,
     },
   );
 

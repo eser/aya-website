@@ -747,7 +747,6 @@ date: 2022-08-21
 İsmim Eser Özvataf, mühendislik yönetimi, kültürel dönüşüm, organizasyon
 çevikliği, çevik liderlik, ürün odaklı geliştirme, çözüm mimarisi, IT süreç
 yönetimi ve DevOps eksenli konularla ilgilenmekteyim.
-<Hello />
 
 Yazılım geliştirme yolculuğuma programcı titriyle başladım. Geride bıraktığım 18
 yılda birçok geçiş dönemi yaşadım ve deneyimler biriktirdim. Setur'da Yazılım
