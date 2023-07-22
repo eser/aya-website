@@ -73,6 +73,29 @@ service_role key: xxx.yyy.zzz-www
 
 Hem `packages/api` hem de `packages/web` dizinlerindeki `.env` dosyalarını `.env.local` olarak kopyalayın ve gerekli değişiklikleri yapın.
 
+
+## Proje Yönetimi
+
+Şu anda projeye ait bir yönetim panelimiz bulunmamakta. İşlemleri bu nedenle CLI
+üzerinden yapmaktayız. Sisteminizde `deno` kurulu ise, aşağıdaki komutlar
+aracılığı ile CLI'a erişebilirsiniz:
+
+```bash
+$ cd packages/api
+$ deno task cli
+```
+
+CLI üzerinden `env` ve `supabase` nesnelerine erişebilirsiniz.
+
+### Örnekler:
+
+Profil getirme:
+
+```js
+await profileGet(supabase, "eser", "tr");
+```
+
+
 ## Nasıl Katkıda Bulunabilirsin?
 
 Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issulara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, Github Issues veya Discord üzerinden yardım istemekten çekinmeyin.

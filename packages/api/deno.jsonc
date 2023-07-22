@@ -1,3 +1,6 @@
 {
-  "importMap": "./supabase/functions/import_map.json"
+  "importMap": "./supabase/functions/import_map.json",
+  "tasks": {
+    "cli": "deno repl -A --eval-file=./src/init.ts"
+  }
 }
