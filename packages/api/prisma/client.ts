@@ -26,4 +26,6 @@ const getPrismaClient = () => {
   return prisma;
 };
 
-export { getDatabaseUrl, getPrismaClient };
+type PrismaClientType = ReturnType<typeof getPrismaClient>;
+
+export { getDatabaseUrl, getPrismaClient, type PrismaClientType };

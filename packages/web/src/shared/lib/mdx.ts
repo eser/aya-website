@@ -1,9 +1,21 @@
-import { compileMDX } from "next-mdx-remote/rsc";
+import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc";
 
-const mdx = async (source: string) => {
+const mdx = async (
+  source: string,
+  components?: MDXRemoteProps["components"],
+) => {
   const result = await compileMDX({
     source: source,
-    options: { parseFrontmatter: true },
+    options: {
+      mdxOptions: {
+        remarkPlugins: [],
+        rehypePlugins: [],
+        format: "mdx",
+      },
+
+      parseFrontmatter: true,
+    },
+    components: components,
   });
 
   return result;
