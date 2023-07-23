@@ -83,10 +83,10 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
         <div className="flex gap-4">
           <Button variant="bright" size="lg" asChild>
             <Link
-              href="/aya/about/"
+              href="/aya/"
               rel="noreferrer"
             >
-              Hakkında
+              Bilgi
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>
