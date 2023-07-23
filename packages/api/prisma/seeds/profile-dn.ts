@@ -87,16 +87,16 @@ Belirlenen her ortak nokta, bir alt-topluluk anlamına gelir ve kendine ait ait 
 ## Alt-Topluluklar
 
 <Cards>
-  <Card category="konum" title="DN İzmir" description="İzmir yerel geliştirici topluluğu." telegramUri="https://t.me/devizmir" />
+  <Card category="konum" title="DN İzmir" description="İzmir yerel geliştirici topluluğu." href="https://t.me/devizmir" />
   <Card category="konum" title="DN İstanbul" description="İstanbul yerel geliştirici topluluğu." />
-  <Card category="profesyonel" title="DN JavaScript" description="JavaScript ve ilintili teknolojiler ile ilgili geliştirici topluluğu." telegramUri="https://t.me/jstanbulGroup" />
-  <Card category="profesyonel" title="DN Açık Kaynak" description="Açık kaynak geliştirme ile ilgili geliştirici topluluğu." telegramUri="https://t.me/acikkaynak" />
-  <Card category="hobi" title="DN Mekanik" description="Mekanik klavye ile ilgilenenler topluluğu." telegramUri="https://t.me/mechistanbul" />
-  <Card category="hobi" title="DN Bilim Kurgu/Fantastik Sevenler" description="Bilim kurgu ve fantastik edebiyat eserleri ile ilgilenenler topluluğu." telegramUri="https://t.me/bilimkurguyazilim" />
-  <Card category="hobi" title="DN Oyuncular" description="Video oyunlar ile ilgilenenler topluluğu." telegramUri="https://t.me/oyunyazilim" />
-  <Card category="hobi" title="DN Kahve Demleyenler" description="Kahveler ile ilgilenenler topluluğu." telegramUri="https://t.me/kahveciyazilimcilar" />
-  <Card category="hobi" title="DN İçki Tadanlar" description="Alkollü içkiler ile ilgilenenler topluluğu." telegramUri="https://t.me/ickiyazilim" />
-  <Card category="hobi" title="DN Fotograf Çekenler" description="Fotoğrafçılık ile ilgilenenler topluluğu." telegramUri="https://t.me/fotoyazilim" />
+  <Card category="profesyonel" title="DN JavaScript" description="JavaScript ve ilintili teknolojiler ile ilgili geliştirici topluluğu." href="https://t.me/jstanbulGroup" />
+  <Card category="profesyonel" title="DN Açık Kaynak" description="Açık kaynak geliştirme ile ilgili geliştirici topluluğu." href="https://t.me/acikkaynak" />
+  <Card category="hobi" title="DN Mekanik" description="Mekanik klavye ile ilgilenenler topluluğu." href="https://t.me/mechistanbul" />
+  <Card category="hobi" title="DN Bilim Kurgu/Fantastik Sevenler" description="Bilim kurgu ve fantastik edebiyat eserleri ile ilgilenenler topluluğu." href="https://t.me/bilimkurguyazilim" />
+  <Card category="hobi" title="DN Oyuncular" description="Video oyunlar ile ilgilenenler topluluğu." href="https://t.me/oyunyazilim" />
+  <Card category="hobi" title="DN Kahve Demleyenler" description="Kahveler ile ilgilenenler topluluğu." href="https://t.me/kahveciyazilimcilar" />
+  <Card category="hobi" title="DN İçki Tadanlar" description="Alkollü içkiler ile ilgilenenler topluluğu." href="https://t.me/ickiyazilim" />
+  <Card category="hobi" title="DN Fotograf Çekenler" description="Fotoğrafçılık ile ilgilenenler topluluğu." href="https://t.me/fotoyazilim" />
 </Cards>`,
             },
           ],

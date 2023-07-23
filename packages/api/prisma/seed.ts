@@ -6,6 +6,7 @@ import { seedProfileAya } from "./seeds/profile-aya.ts";
 import { seedProfileDn } from "./seeds/profile-dn.ts";
 import { seedProfileEser } from "./seeds/profile-eser.ts";
 import { seedProfileEserLive } from "./seeds/profile-eser.live.ts";
+import { seedProfileGonulluIo } from "./seeds/profile-gonullu.io.ts";
 import { seedProfileHex } from "./seeds/profile-hex.ts";
 import { seedUsers } from "./seeds/users.ts";
 
@@ -22,6 +23,7 @@ const main = async () => {
     prisma,
     languageTr.code,
   );
+  const { profileGonulluIo } = await seedProfileGonulluIo(prisma, languageTr.code);
   const { profileHex } = await seedProfileHex(prisma, languageTr.code);
 
   await prisma.$disconnect();

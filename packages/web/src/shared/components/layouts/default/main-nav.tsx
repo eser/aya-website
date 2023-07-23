@@ -23,14 +23,6 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: "Haberler",
-    href: "/aya/stories/",
-  },
-  {
-    title: "Rehber",
-    href: "/aya/guide/",
-  },
-  {
     title: "Topluluk",
     href: "/community/",
   },

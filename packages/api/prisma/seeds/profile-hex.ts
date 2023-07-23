@@ -80,6 +80,7 @@ title: Bilgi
 date: 2022-08-21
 layout: default
 ---
+
 ✖️ **hex** is an ecosystem delivering practices, philosophy and portability.
 
 hex consists of a set of **component**s that are designed to be used together.

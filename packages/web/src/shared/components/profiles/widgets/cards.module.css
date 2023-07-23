@@ -3,7 +3,7 @@
 }
 
 .card {
-  @apply no-underline;
+  @apply no-underline min-h-[12rem];
 
   & > .inner {
     @apply w-full h-full flex flex-col bg-card text-card-foreground rounded-l-lg rounded-br-lg border border-slate-200 shadow-md;

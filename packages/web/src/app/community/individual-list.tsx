@@ -1,9 +1,9 @@
-import Link from "next/link";
 import {
   type IndividualListResult,
   type Profile,
 } from "shared/src/individual-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
 // interface IndividualListProps {
 // }
@@ -29,13 +29,17 @@ const IndividualList = async (/* props: IndividualListProps */) => {
   }
 
   return (
-    <ul>
+    <Cards>
       {individuals.map((profile: Profile) => (
-        <li key={profile.id}>
-          <Link href={`/${profile.slug}`}>{profile.title}</Link>
-        </li>
+        <Card
+          key={profile.id}
+          category="kişi"
+          title={profile.title}
+          description={profile.description}
+          href={`/${profile.slug}`}
+        />
       ))}
-    </ul>
+    </Cards>
   );
 };
 

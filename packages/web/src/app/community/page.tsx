@@ -39,24 +39,20 @@ const CommunityPage = (/* props: CommunityPageProps */) => {
     <Layout placeholders={placeholders}>
       <section className="container">
         <h1>Topluluk</h1>
-        <div className="grid md:grid-cols-2 items-start">
-          <div>
-            <h2>Organizasyonlar</h2>
-            <div className="max-w-[980px]">
-              <OrganizationList />
-            </div>
 
-            <h2>Merkezler</h2>
-            <div className="max-w-[980px]">
-              <VenueList />
-            </div>
-          </div>
-          <div>
-            <h2>Kişiler</h2>
-            <div className="max-w-[980px]">
-              <IndividualList />
-            </div>
-          </div>
+        <h2>Organizasyonlar</h2>
+        <div className="max-w-[980px]">
+          <OrganizationList />
+        </div>
+
+        <h2>Kişiler</h2>
+        <div className="max-w-[980px]">
+          <IndividualList />
+        </div>
+
+        <h2>Merkezler</h2>
+        <div className="max-w-[980px]">
+          <VenueList />
         </div>
       </section>
     </Layout>

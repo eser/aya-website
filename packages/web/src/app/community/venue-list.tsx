@@ -1,9 +1,9 @@
-import Link from "next/link";
 import {
   type Profile,
   type VenueListResult,
 } from "shared/src/venue-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
 // interface VenueListProps {
 // }
@@ -29,13 +29,17 @@ const VenueList = async (/* props: VenueListProps */) => {
   }
 
   return (
-    <ul>
+    <Cards>
       {venues.map((profile: Profile) => (
-        <li key={profile.id}>
-          <Link href={`/${profile.slug}`}>{profile.title}</Link>
-        </li>
+        <Card
+          key={profile.id}
+          category="merkez"
+          title={profile.title}
+          description={profile.description}
+          href={`/${profile.slug}`}
+        />
       ))}
-    </ul>
+    </Cards>
   );
 };
 

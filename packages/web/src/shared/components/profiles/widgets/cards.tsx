@@ -1,7 +1,7 @@
 import styles from "./cards.module.css";
 
 interface CardsProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Cards = (props: CardsProps) => {
@@ -16,13 +16,13 @@ interface CardProps {
   category: string;
   title: string;
   description: string;
-  telegramUri?: string;
-  children: React.ReactNode;
+  href?: string;
+  children?: React.ReactNode;
 }
 
 const Card = (props: CardProps) => {
   return (
-    <a className={styles.card} href={props.telegramUri}>
+    <a className={styles.card} href={props.href}>
       <div className={styles.inner}>
         <div className={styles.tags}>
           {props.category}
@@ -36,11 +36,6 @@ const Card = (props: CardProps) => {
         <p className={styles.description}>
           {props.description}
         </p>
-        <div className={`${styles.links} buttons`}>
-          <div className="button">
-            Katıl
-          </div>
-        </div>
       </div>
     </a>
   );

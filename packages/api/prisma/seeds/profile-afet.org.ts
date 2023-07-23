@@ -83,7 +83,6 @@ Afet anında, öncesinde ve sonrasında kullanılmak üzere bağımsız gönüll
 
 ## Projelerimiz
 
-- [acikkaynak/acikkaynak-website](https://github.com/acikkaynak/acikkaynak-website)
 - [acikkaynak/deprem-yardim-data](https://github.com/acikkaynak/deprem-yardim-data)
 - [acikkaynak/deprem-yardim-frontend](https://github.com/acikkaynak/deprem-yardim-frontend)
 - [acikkaynak/deprem-yardim-backend-go](https://github.com/acikkaynak/deprem-yardim-backend-go)

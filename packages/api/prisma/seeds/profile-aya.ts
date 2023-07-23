@@ -79,6 +79,7 @@ title: Bilgi
 date: 2022-08-21
 layout: default
 ---
+
 Bu sayfa henüz hazırlık aşamasında.`,
             },
           ],
@@ -107,6 +108,7 @@ title: Rehber
 date: 2022-08-21
 layout: default
 ---
+
 ## Açık Kaynak Yazılım
 
 - [Açık Kaynak Yazılım Nedir?](.)
@@ -157,6 +159,7 @@ title: Kurallar
 date: 2022-08-21
 layout: default
 ---
+
 Bu sayfa henüz hazırlık aşamasında.`,
             },
           ],
@@ -185,6 +188,7 @@ title: Hakkında
 date: 2022-08-21
 layout: default
 ---
+
 Açık Yazılım Ağı, temelleri 2015'de <Profile slug="eser">Eser Özvataf</Profile> tarafından [github.com/acikkaynak](https://github.com/acikkaynak) adresinde atılmış ([ilk commit](https://github.com/eser/acikkaynak-arsiv/commit/183ddec51161b6a353c513bd42afa3b41abe6766)), internet üzerinden örgütlenen bir açık kaynak topluluğu organizasyonudur.
 
 Geçmişteki çalışmalarımız daha çok yazılım ekosistemine yönelik araç, topluluk ve siteler üretmek, bunların tanıtımını ve sürdürülebilirliğini sağlamak, açık kaynak bilinçlenmesini sağlamak için içerik üretiminde bulunmak olmuş olsa da; bize belirgin bir öğrenim ve deneyim kazandırmış, sonraki çalışmalarımıza ışık tutmuştur.

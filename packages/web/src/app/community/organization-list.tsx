@@ -1,9 +1,9 @@
-import Link from "next/link";
 import {
   type OrganizationListResult,
   type Profile,
 } from "shared/src/organization-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
 // interface OrganizationListProps {
 // }
@@ -29,13 +29,17 @@ const OrganizationList = async (/* props: OrganizationListProps */) => {
   }
 
   return (
-    <ul>
+    <Cards>
       {organizations.map((profile: Profile) => (
-        <li key={profile.id}>
-          <Link href={`/${profile.slug}`}>{profile.title}</Link>
-        </li>
+        <Card
+          key={profile.id}
+          category="organizasyon"
+          title={profile.title}
+          description={profile.description}
+          href={`/${profile.slug}`}
+        />
       ))}
-    </ul>
+    </Cards>
   );
 };
 

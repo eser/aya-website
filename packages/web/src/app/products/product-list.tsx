@@ -1,9 +1,9 @@
-import Link from "next/link";
 import {
   type ProductListResult,
   type Profile,
 } from "shared/src/product-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
 // interface ProductListProps {
 // }
@@ -29,13 +29,17 @@ const ProductList = async (/* props: ProductListProps */) => {
   }
 
   return (
-    <ul>
+    <Cards>
       {products.map((profile: Profile) => (
-        <li key={profile.id}>
-          <Link href={`/${profile.slug}`}>{profile.title}</Link>
-        </li>
+        <Card
+          key={profile.id}
+          category="ürün"
+          title={profile.title}
+          description={profile.description}
+          href={`/${profile.slug}`}
+        />
       ))}
-    </ul>
+    </Cards>
   );
 };
 
