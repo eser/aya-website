@@ -33,4 +33,4 @@ For Backend:
 
 ## How to Contribute
 
-We welcome contributions from everyone. To start please [read our contributing guide](CONTRIBUTING.md). If you want to help you can check out our [issues](https://github.com/acikkaynak/aya-website/issues). If you have any questions, feel free to join our [Discord server](https://discord.gg/itdepremyardim). If you are stuck at any point, feel free to ask for help on Github Issues or Discord.
+We welcome contributions from everyone. To start please [read our contributing guide](CONTRIBUTING.md). If you want to help you can check out our [issues](https://github.com/acikkaynak/aya-website/issues). If you have any questions, feel free to join our [Discord server](https://discord.gg/itdepremyardim). If you are stuck at any point, feel free to ask for help on GitHub Issues or Discord.
