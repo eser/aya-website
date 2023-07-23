@@ -82,12 +82,56 @@ layout: default
 
 ## Açık Yazılım Ağı Nedir?
 
-<Profile slug="aya/about">Hakkında</Profile> bölümünden detaylı bilgiye ulaşabilirsiniz.
+Kişilerin, toplulukların, firmaların, resmi kurumların ve sivil toplum kuruluşlarının
+iletişimini ve iş birliğini kolaylaştırmayı sağlayarak ekosistem oluşmasına öncülük eden
+bir inisiyatifiz. Organizasyon yapımıza Meta-Topluluk ismini veriyoruz.
+
+<Profile slug="aya/about">Hakkında</Profile> bölümünden daha detaylı bilgiye
+ulaşabilirsiniz.
+
+
+## Meta-Topluluk Nedir?
+
+Diğer kişi, topluluk ve kurumları da çatısı altına alarak devamlılığını ve etkinliğini
+destekleyici şekilde "şemsiye" görevi gören organizasyonlar meta-topluluk olarak
+tanımlanabilir.
+
+
+## Hedef Kitlesi Kimlerdir?
+
+Bilişim sektörüne temas eden, Türkiye'deki ve Türkçe konuşan herkes odaklandığımız hedef
+kitlesinin içinde yer alıyor.
+
+
+## Amaçlarımız Nelerdir?
+
+- Geliştirici ekosistemine etkinlik, proje ve içerik katkısı sağlamak,
+- Geliştiricilerin bireysel gelişimlerini üretimlerini desteklemek, motivasyonlarını
+  arttırmak,
+- Geliştirici ekosistemindeki engelleri ortadan kaldırmak,
+- Toplulukların oluşumuna ve devamlılığına katkı sağlamak,
+- Toplulukların bilinirliliği ve faaliyet görünürlülüğünü arttırmak,
+- Toplulukların birbirleri arasında iletişimlerinin ve geçişkenliklerinin artmasını
+  sağlamak,
+- Proje, paydaş ve toplulukları bir araya getirerek güç birliği yapılmasını sağlamak,
+- Toplulukların sponsor, konuşmacı, yer v.b. lojistik eksikliklerini ortadan kaldırmak,
+- Yeni kişi, kuruluş ve toplulukların ekosisteme dahiliyetlerini sağlamak,
+- Aynı kitleye aynı faaliyetleri gösteren topluluklar yerine birbirlerini tamamlayan
+  topluluklar oluşturmak,
+- Yalnızca yeni başlayanların değil, her seviyede geliştiricinin topluluklara dahil
+  olmasını ve istifade etmesini sağlamak,
+- Hedeflenen mecralarda rutin periyodlarda içerik, proje ve etkinlik üretilmesini
+  sağlamak,
+- Herhangi bir sosyal sorumluluk gereksinimi anında bilgi sistemleri ve mühendislik
+  pratiklerini uygulayarak, açık kaynaklı çözümlerle yaşadığımız topluma katkı
+  sağlanması için öncü olmak,
 
 
 ## Nasıl Katılabiliriz?
 
-<Profile slug="aya/policies">Kurallar</Profile> bölümünde prensip ve kriterlerimiz yer almaktadır. Bunları karşıladığınız sürece kendinizi Açık Yazılım Ağı'nın bir parçası olarak tanıtabilir ve hareket edebilirsiniz.`,
+<Profile slug="aya/policies">Kurallar</Profile> bölümünde prensip ve kriterlerimiz yer
+almaktadır. Bunları karşıladığınız sürece kendinizi Açık Yazılım Ağı'nın bir parçası
+olarak tanıtabilir ve hareket edebilirsiniz.`,
             },
           ],
         },
@@ -288,7 +332,7 @@ Türkiye'de Sanayi Bakanlığı girişimleri ile oluşturulan Türkiye Açık Ka
 
 Şubat 2023'de Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem felaketi sonrasında ise “yazılımcılara ekosistemine yönelik araç, topluluk ve siteler üretimi” çalışmalarımızın kapsamı ve kitlesi <Profile slug="afet.org" /> projemiz ile birlikte genişlemiş, birçok kişi, topluluk ve kurumun katkılarına çatı oluşturması ile birlikte bugünkü bilişim meta-topluluğu kimliğine kavuşmuştur. Detaylar için [Açık Yazılım Ağı blog yazısını](https://eser.dev/acik-yazilim-agi) okuyabilirsiniz.
 
-Bugün 24,000'i aşkın bilişim sektörü ilgisine temas eden bir meta-topluluk olarak; herhangi bir sosyal sorumluluk gereksinimi anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak, açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlanması için çalışmalarımızı sürdürüyoruz.`,
+Bugün 24,000'i aşkın bilişim sektörü ilgisine temas eden bir meta-topluluk olarak; sosyal yönü ağır basan konularda bilgi sistemleri, mühendislik ve açık kaynak pratiklerinin bize verdiği bakış açılarını da uygulayarak, içinde bulunduğumuz ekosistem ve topluma katkı sağlamak için çalışmalarımızı sürdürüyoruz.`,
             },
           ],
         },
