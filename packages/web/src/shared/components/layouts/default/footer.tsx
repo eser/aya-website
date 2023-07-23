@@ -10,8 +10,6 @@ const Footer = () => {
       <div>
         <Link href="/aya/">açık yazılım ağı</Link>
         <Separator className={styles.div} orientation="vertical" decorative={true} />
-        <Link href="/aya/stories/">Haberler</Link>
-        <Separator className={styles.div} orientation="vertical" decorative={true} />
         <Link href="/aya/policies/">Kurallar</Link>
         <Separator className={styles.div} orientation="vertical" decorative={true} />
         <Link href="/aya/about/">Hakkında</Link>

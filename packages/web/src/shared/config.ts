@@ -12,7 +12,7 @@ interface SiteConfig {
 const siteConfig: SiteConfig = {
   name: "Açık Yazılım Ağı",
   title: "AYA | Açık Yazılım Ağı",
-  description: "açık yazılım ağı, bilişim meta-topluluğu.",
+  description: "Bilişim Meta-Topluluğu",
   links: {
     twitter: "https://twitter.com/acikyazilimagi",
     instagram: "https://www.instagram.com/acikyazilimagi/",

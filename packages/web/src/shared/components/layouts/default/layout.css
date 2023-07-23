@@ -28,6 +28,8 @@
     /* --accent: 214.3 31.8% 91.4%; */
     --accent: 214.3 31.8% 91.4%;
     --accent-foreground: 222.2 47.4% 11.2%;
+    --bright: 49 99% 67%;
+    --bright-foreground: 280 62% 17%;
     --safe: 117.45 52.81% 82.55%;
     --safe-foreground: 158.18 57.89% 26.08%;
     --destructive: 0 84.2% 60.2%;
@@ -52,12 +54,14 @@
     --input: 217.2 32.6% 17.5%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 222.2 47.4% 11.2%;
     --secondary-foreground: 210 40% 98%;
     --link: 198.63 88.66% 48.43%;
     --link-hover: 209 73% 53%;
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
+    --bright: 49 99% 67%;
+    --bright-foreground: 280 62% 17%;
     --safe: 117.45 52.81% 82.55%;
     --safe-foreground: 158.18 57.89% 26.08%;
     --destructive: 0 62.8% 30.6%;
@@ -132,6 +136,29 @@
 
     & > li {
       @apply text-start;
+    }
+  }
+
+  article,
+  aside,
+  /* section, */
+  main,
+  .flex {
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6,
+    & > p,
+    & > ul,
+    & > ol,
+    & > blockquote,
+    & > code,
+    & > pre {
+      &:first-child {
+        @apply mt-0;
+      }
     }
   }
 

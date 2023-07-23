@@ -42,7 +42,7 @@ const IndexPage = async (/* props: IndexPageProps */) => {
   };
 
   const introText =
-    `**açık yazılım ağı** olarak bilişim sektörüne temas eden gönüllü
+    `**Açık Yazılım Ağı** olarak bilişim sektörüne temas eden gönüllü
 ve profesyonellere 2015'den bu yana yapmış olduğumuz çalışmalarla bir
 çatı sağlamaya çalışıyoruz. Meta-topluluk ismini vermiş olduğumuz bu
 çatı altında kişilerin, toplulukların, firmaların, resmi kurumların ve
@@ -55,7 +55,7 @@ projeler yapmak, bu alanda içerik sağlamak vb. alanlarda katkılarda
 bulunduk. <Profile slug="afet.org" />, <Profile slug="gonullu.io" />
 vb. örnek topluluk projelerimiz toplumsal etkiler bıraktı.
 
-Bugün ise bu web sitesi altında kendini **açık yazılım ağı**'nın bir
+Bugün ise bu web sitesi altında kendini **Açık Yazılım Ağı**'nın bir
 parçası olarak gören tüm unsurların kendi eforlarını
 görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.
 Her geçen gün dünden daha iyi olmaya çalışma ve ekosistemin önünde
@@ -87,7 +87,7 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
           </article>
         </div>
         <div className="flex gap-4">
-          <Button variant="safe" size="lg" asChild>
+          <Button variant="bright" size="lg" asChild>
             <Link
               href="/aya/about/"
               rel="noreferrer"
