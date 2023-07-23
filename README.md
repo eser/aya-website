@@ -9,9 +9,9 @@ Açık kaynak yazılımı ve açık kaynak verilerine ortak ilgi duyan bireylerd
 
 Depremin ardından, etkilenenlere destek olma ve aileleri ile sevdiklerini yeniden bir araya getirme sürecine yardım etme acil ihtiyacını fark ettik. Bu amaç doğrultusunda, bireyler arasındaki arama ve bağlantıyı kolaylaştırmayı hedefleyen yenilikçi araçlar ve çözümler geliştirmek için yola çıktık.
 
-Yorulmak bilmeyen işbirliği ve kolektif çabalar sayesinde topluluğumuz ilham verici bir büyüklüğe ulaştı ve 24.000 kişiden oluşan bir topluluk haline geldik. Birlikte, aileleri yeniden bir araya getirmeye, umudu geri kazandırmaya ve depremden etkilenenlere teselli sunmaya yardımcı olmak için teknolojinin gücünden yararlanarak araçlarımızı sürekli olarak geliştiriyoruz ve genişletiyoruz.
+Yorulmak bilmeyen iş birliği ve kolektif çabalar sayesinde topluluğumuz ilham verici bir büyüklüğe ulaştı ve 24.000 kişiden oluşan bir topluluk haline geldik. Birlikte, aileleri yeniden bir araya getirmeye, umudu geri kazandırmaya ve depremden etkilenenlere teselli sunmaya yardımcı olmak için teknolojinin gücünden yararlanarak araçlarımızı sürekli olarak geliştiriyoruz ve genişletiyoruz.
 
-İlerlemeye devam ederken, taahhüdümüzden sapmadan devam ediyoruz. Araçlarımızı geliştirmeye, açık kaynak projelere aktif olarak katkıda bulunmaya ve bilgi paylaşımı ve işbirliğinin geliştiği destekleyici bir ortamı teşvik etmeye çalışıyoruz. Açık kaynak topluluğunun bir parçası olmaktan gurur duyuyoruz ve sizlerle olan yolculuğumuza dört gözle devam etmek için sabırsızlanıyoruz.
+İlerlemeye devam ederken, taahhüdümüzden sapmadan devam ediyoruz. Araçlarımızı geliştirmeye, açık kaynak projelere aktif olarak katkıda bulunmaya ve bilgi paylaşımı ve iş birliğinin geliştiği destekleyici bir ortamı teşvik etmeye çalışıyoruz. Açık kaynak topluluğunun bir parçası olmaktan gurur duyuyoruz ve sizlerle olan yolculuğumuza dört gözle devam etmek için sabırsızlanıyoruz.
 
 ## Görevimiz
 

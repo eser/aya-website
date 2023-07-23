@@ -1,3 +1,7 @@
 .astronaut-layer {
-  @apply absolute hidden md:inline-block max-w-[200px] lg:max-w-[300px] xl:max-w-[400px] end-0;
+  @apply absolute hidden xl:inline-block end-0 z-0;
+}
+
+.content {
+  @apply z-10;
 }
