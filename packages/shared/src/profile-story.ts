@@ -5,10 +5,11 @@ type ProfileStory = {
   slug: string;
   category: ProfileStoryCategory;
   isFeatured: boolean;
-  publishedAt: string | null;
 
   title: string;
   content: string;
+
+  publishedAt: string | null;
 };
 
 type ProfileStoryList = Array<ProfileStory>;

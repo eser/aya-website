@@ -15,6 +15,9 @@ const seedProfileAfetOrg = async (
       profilePictureUri:
         "https://alejxsvqroubkwwyfwdn.supabase.co/storage/v1/object/public/profile-pictures/afetorg.png",
 
+      showStories: true,
+      showMembers: true,
+
       languages: {
         createMany: {
           data: [

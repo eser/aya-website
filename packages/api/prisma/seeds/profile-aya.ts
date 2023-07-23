@@ -15,7 +15,10 @@ const seedProfileAya = async (
       profilePictureUri:
         "https://alejxsvqroubkwwyfwdn.supabase.co/storage/v1/object/public/profile-pictures/aya.png",
 
-      languages: {
+        showStories: true,
+        showMembers: true,
+
+        languages: {
         createMany: {
           data: [
             {
@@ -84,41 +87,13 @@ Bu sayfa henüz hazırlık aşamasında.`,
     },
   });
 
-  const profilePageStories = await prisma.profilePage.upsert({
-    where: { profileId_slug: { profileId: profileAya.id, slug: "stories" } },
-    update: {},
-    create: {
-      profile: { connect: { id: profileAya.id } },
-      slug: "stories",
-      order: 2,
-      publishedAt: now,
-
-      languages: {
-        createMany: {
-          data: [
-            {
-              languageCode: languageTrCode,
-              titleTx: "Haberler",
-              contentTx: `---
-title: Haberler
-date: 2022-08-21
-layout: default
----
-Bu sayfa henüz hazırlık aşamasında.`,
-            },
-          ],
-        },
-      },
-    },
-  });
-
   const profilePageGuide = await prisma.profilePage.upsert({
     where: { profileId_slug: { profileId: profileAya.id, slug: "guide" } },
     update: {},
     create: {
       profile: { connect: { id: profileAya.id } },
       slug: "guide",
-      order: 3,
+      order: 2,
       publishedAt: now,
 
       languages: {
@@ -168,7 +143,7 @@ layout: default
     create: {
       profile: { connect: { id: profileAya.id } },
       slug: "policies",
-      order: 4,
+      order: 3,
       publishedAt: now,
 
       languages: {
@@ -196,7 +171,7 @@ Bu sayfa henüz hazırlık aşamasında.`,
     create: {
       profile: { connect: { id: profileAya.id } },
       slug: "about",
-      order: 5,
+      order: 4,
       publishedAt: now,
 
       languages: {
@@ -230,7 +205,6 @@ Bugün discord sunucumuzda 24,000'i aşkın gönüllü bilişim sektörü çalı
     profileAya,
     profileLinkWebsite,
     profilePageIndex,
-    profilePageStories,
     profilePageGuide,
     profilePageAbout,
     profilePagePolicies,

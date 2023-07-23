@@ -7,6 +7,9 @@ type Profile = {
   title: string;
   description: string;
   profilePictureUri: string | null;
+
+  showStories: boolean,
+  showMembers: boolean,
 };
 
 type ProfileList = Array<Profile>;

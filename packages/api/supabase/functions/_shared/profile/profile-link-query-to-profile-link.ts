@@ -25,6 +25,8 @@ const profileLinkQueryToProfileLink = (
 
     iconSet: source.iconSet,
     iconKey: source.iconKey,
+
+    order: source.order,
   };
 };
 

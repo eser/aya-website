@@ -20,6 +20,8 @@ const profileQueryToProfile = (source: ProfileQueryResult): Profile | null => {
     title: source.ProfileTx?.[0]?.titleTx ?? "(untranslated)",
     description: source.ProfileTx?.[0]?.descriptionTx ?? "(untranslated)",
     profilePictureUri: source.profilePictureUri,
+    showStories: source.showStories,
+    showMembers: source.showMembers,
   };
 };
 

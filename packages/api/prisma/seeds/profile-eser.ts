@@ -15,7 +15,10 @@ const seedProfileEser = async (
       profilePictureUri:
         "https://alejxsvqroubkwwyfwdn.supabase.co/storage/v1/object/public/profile-pictures/eser.png",
 
-      languages: {
+        showStories: true,
+        showMembers: false,
+
+        languages: {
         createMany: {
           data: [
             {

@@ -101,6 +101,9 @@ model Profile {
   slug                         String                 @unique
   profilePictureUri            String?
 
+  showStories                  Boolean                @default(false)
+  showMembers                  Boolean                @default(false)
+
   languages                    ProfileTx[]
 
   links                        ProfileLink[]

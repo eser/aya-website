@@ -63,6 +63,8 @@ export interface Database {
           deletedAt: string | null
           id: string
           profilePictureUri: string | null
+          showMembers: boolean
+          showStories: boolean
           slug: string
           type: Database["public"]["Enums"]["ProfileType"]
           updatedAt: string | null
@@ -72,6 +74,8 @@ export interface Database {
           deletedAt?: string | null
           id: string
           profilePictureUri?: string | null
+          showMembers?: boolean
+          showStories?: boolean
           slug: string
           type: Database["public"]["Enums"]["ProfileType"]
           updatedAt?: string | null
@@ -81,6 +85,8 @@ export interface Database {
           deletedAt?: string | null
           id?: string
           profilePictureUri?: string | null
+          showMembers?: boolean
+          showStories?: boolean
           slug?: string
           type?: Database["public"]["Enums"]["ProfileType"]
           updatedAt?: string | null

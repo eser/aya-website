@@ -1,7 +1,6 @@
 import {
   type ProfileGetComposition,
   type ProfilePage,
-  type ProfilePageList,
 } from "shared/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
@@ -13,28 +12,76 @@ import { SidebarNav } from "./sidebar-nav.tsx";
 
 import styles from "./pages.module.scss";
 
-const INDEX_PAGE_SLUG = "index";
+const PAGE_SLUG_INDEX = "index";
+const PAGE_SLUG_STORIES = "stories";
+const PAGE_SLUG_MEMBERS = "members";
+
+const getOrder = (profile: ProfilePage) => {
+  switch (profile.slug) {
+    case PAGE_SLUG_INDEX:
+      return -3;
+    case PAGE_SLUG_STORIES:
+      return -2;
+    case PAGE_SLUG_MEMBERS:
+      return -1;
+    default:
+      return profile.order;
+  }
+};
+
+const sortFn = (a: ProfilePage, b: ProfilePage) => {
+  const aOrder = getOrder(a);
+  const bOrder = getOrder(b);
+
+  if (aOrder < bOrder) {
+    return -1;
+  }
+
+  if (aOrder > bOrder) {
+    return 1;
+  }
+
+  return 0;
+};
 
 // Component: PageList
 interface PageListProps {
   prefix: string;
-  activeSlug: string;
-  pages: ProfilePageList;
+  activePageSlug: string;
+  item: ProfileGetComposition;
 }
 
 const PageList = (props: PageListProps) => {
-  const sidebarNavItems = props.pages.map(
+  const sorted = props.item.pages?.slice(0) ?? [];
+
+  if (props.item.profile.showStories) {
+    sorted.push({
+      slug: PAGE_SLUG_STORIES,
+      title: "Güncellemeler",
+    });
+  }
+
+  if (props.item.profile.showMembers) {
+    sorted.push({
+      slug: PAGE_SLUG_MEMBERS,
+      title: "Üyeler",
+    });
+  }
+
+  sorted.sort(sortFn);
+
+  const sidebarNavItems = sorted.map(
     (page) => {
       let href = props.prefix;
 
-      if (page.slug !== INDEX_PAGE_SLUG) {
+      if (page.slug !== PAGE_SLUG_INDEX) {
         href += `${page.slug}/`;
       }
 
       return {
         href: href,
         title: page.title,
-        isActive: page.slug === props.activeSlug,
+        isActive: page.slug === props.activePageSlug,
       };
     },
   );
@@ -45,7 +92,7 @@ const PageList = (props: PageListProps) => {
 // Component: PageContent
 interface PageContentProps {
   item: ProfileGetComposition;
-  activePage: ProfilePage;
+  activePageSlug: string;
   source: Awaited<ReturnType<typeof mdx>> | undefined;
 }
 
@@ -65,8 +112,8 @@ const PageContentDefault = (props: PageContentProps) => {
       <aside className="-mx-4 lg:w-1/5">
         <PageList
           prefix={`/${props.item.profile.slug}/`}
-          activeSlug={props.activePage.slug}
-          pages={props.item.pages ?? []}
+          activePageSlug={props.activePageSlug}
+          item={props.item}
         />
       </aside>
       <article className={cn("flex-1", styles.content)}>
@@ -96,18 +143,25 @@ interface ProfilePagesProps {
 }
 
 const ProfilePages = async (props: ProfilePagesProps) => {
-  const activePageSlug = props.pageSlug ?? INDEX_PAGE_SLUG;
+  const activePageSlug = props.pageSlug ?? PAGE_SLUG_INDEX;
 
-  const activePage = props.item.pages?.find(
-    (page) => page.slug === activePageSlug,
-  );
+  let activePageContent;
 
-  if (activePage === undefined) {
-    return null;
+  if (activePageSlug === PAGE_SLUG_STORIES) {
+    activePageContent = "Güncellemeler sayfası henüz hazırlık aşamasında.";
+  } else if (activePageSlug === PAGE_SLUG_MEMBERS) {
+    activePageContent = "Üyeler sayfası henüz hazırlık aşamasında.";
+  } else {
+    const activePage = props.item.pages?.find(
+      (page) => page.slug === activePageSlug,
+    );
+
+    activePageContent = activePage?.content ??
+      "Bu sayfa henüz hazırlık aşamasında.";
   }
 
   const mdxSource = await mdx(
-    activePage.content,
+    activePageContent,
     {
       Cards: Cards,
       Card: Card,
@@ -115,7 +169,11 @@ const ProfilePages = async (props: ProfilePagesProps) => {
   );
 
   return (
-    <PageContent item={props.item} activePage={activePage} source={mdxSource} />
+    <PageContent
+      item={props.item}
+      activePageSlug={activePageSlug}
+      source={mdxSource}
+    />
   );
 };
 

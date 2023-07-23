@@ -13,6 +13,9 @@ Deno.test("create user with all fields", async () => {
     slug: "eser",
     profilePictureUri: null, // TODO
 
+    showStories: true,
+    showMembers: false,
+
     translations: {
       "tr": {
         // id: createId(), // TODO

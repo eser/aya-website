@@ -21,6 +21,8 @@ const profilePageQueryToProfilePage = (
     slug: source.slug,
     title: source.ProfilePageTx[0]?.titleTx ?? "(untranslated)",
     content: source.ProfilePageTx[0]?.contentTx ?? "(untranslated)",
+    order: source.order,
+    publishedAt: source.publishedAt,
   };
 };
 

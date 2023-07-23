@@ -15,7 +15,10 @@ const seedProfileDn = async (
       profilePictureUri:
         "https://alejxsvqroubkwwyfwdn.supabase.co/storage/v1/object/public/profile-pictures/dn.png",
 
-      languages: {
+        showStories: true,
+        showMembers: true,
+
+        languages: {
         createMany: {
           data: [
             {
@@ -102,39 +105,10 @@ Belirlenen her ortak nokta, bir alt-topluluk anlamına gelir ve kendine ait ait 
     },
   });
 
-  const profilePageStories = await prisma.profilePage.upsert({
-    where: { profileId_slug: { profileId: profileDn.id, slug: "stories" } },
-    update: {},
-    create: {
-      profile: { connect: { id: profileDn.id } },
-      slug: "stories",
-      order: 2,
-      publishedAt: now,
-
-      languages: {
-        createMany: {
-          data: [
-            {
-              languageCode: languageTrCode,
-              titleTx: "Haberler",
-              contentTx: `---
-title: Haberler
-date: 2022-08-21
-layout: default
----
-Bu sayfa henüz hazırlık aşamasında.`,
-            },
-          ],
-        },
-      },
-    },
-  });
-
   return {
     profileDn,
     profileLinkWebsite,
     profilePageIndex,
-    profilePageStories,
   };
 };
 

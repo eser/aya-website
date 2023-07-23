@@ -70,6 +70,9 @@ const profileSchema = z.object({
   // description: z.string(),
   profilePictureUri: z.string().url().nullable(),
 
+  showStories: z.boolean().optional(),
+  showMembers: z.boolean().optional(),
+
   translations: z.record(
     z.string().length(2),
     z.object({
@@ -95,9 +98,13 @@ const profileCreate = async (
     id: profileValidated.id ?? createId(),
     type: profileValidated.type,
     slug: profileValidated.slug,
+    profilePictureUri: profileValidated.profilePictureUri,
+
+    showStories: profileValidated.showStories ?? false,
+    showMembers: profileValidated.showMembers ?? false,
+
     title: defaultTranslation?.title ?? "",
     description: defaultTranslation?.description ?? "",
-    profilePictureUri: profileValidated.profilePictureUri,
   };
 
   const profileQueryResponse = await supabase

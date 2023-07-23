@@ -7,6 +7,8 @@ type ProfileLink = {
 
   iconSet: string | null;
   iconKey: string | null;
+
+  order: number;
 };
 
 type ProfileLinkList = Array<ProfileLink>;

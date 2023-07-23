@@ -3,6 +3,8 @@ type ProfilePage = {
   slug: string;
   title: string;
   content: string;
+  order: number;
+  publishedAt: string | null;
 };
 
 type ProfilePageList = Array<ProfilePage>;

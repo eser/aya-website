@@ -21,10 +21,11 @@ const profileStoryQueryToProfileStory = (
     slug: source.slug,
     category: source.category,
     isFeatured: source.isFeatured,
-    publishedAt: source.publishedAt,
 
     title: source.ProfileStoryTx[0]?.titleTx ?? "(untranslated)",
     content: source.ProfileStoryTx[0]?.contentTx ?? "(untranslated)",
+
+    publishedAt: source.publishedAt,
   };
 };
 
