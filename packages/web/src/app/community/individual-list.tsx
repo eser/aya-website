@@ -33,6 +33,7 @@ const IndividualList = async (/* props: IndividualListProps */) => {
       {individuals.map((profile: Profile) => (
         <Card
           key={profile.id}
+          imageUri={profile.profilePictureUri}
           category="kişi"
           title={profile.title}
           description={profile.description}

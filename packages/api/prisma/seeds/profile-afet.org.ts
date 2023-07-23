@@ -79,9 +79,22 @@ title: Bilgi
 date: 2022-08-21
 ---
 
-Afet anında, öncesinde ve sonrasında kullanılmak üzere bağımsız gönüllüler ile açık kaynak olarak geliştirilen teknolojiler resmi kurumların ve sivil toplum kuruluşların erişimi için afet.org'da.
+**afet.org** projesi olarak afet anında, öncesinde ve sonrasında kullanılmak üzere resmi kurumların ve sivil toplum kuruluşların erişimi için açık kaynaklı çözümler geliştiriyoruz.
 
-## Projelerimiz
+
+## Kısa Geçmiş
+
+Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem sonrası zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal medya ağlarımızdaki çağrımız kısa süre içerisinde yankı bulmasını sağlayarak alanında uzman binlerce profesyonelin gönüllü olarak projemize katılmasını sağladık. Deprem sonrası hayati önem taşıyan sorunları çözebilecek teknolojileri sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi kurum ve sivil toplum kuruşu ile irtibatta kaldık ve dış hizmet sağlayıcı olarak hareket ettik. Birçok kurumsal firmadan insan ve altyapı desteği aldık.
+
+Bu proje geliştirilirken bir discord sunucusunda 24,000'i aşkın gönüllü bilişim sektörü çalışanı olarak buluştuk; herhangi bir sosyal sorumluluk gereksinimi anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak, açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için çalıştık.
+
+
+## Amacımız
+
+Açık kaynak olarak geliştirmiş olduğumuz çözümleri GPDR/KVKK vb. yasal kısıtlamalara karşın en verimli çalışacak şekilde, dünyanın herhangi bir noktasında herhangi bir afette kullanılabilir bir ürün haline getirmek.
+
+
+## Repositorylerimiz
 
 - [acikkaynak/deprem-yardim-data](https://github.com/acikkaynak/deprem-yardim-data)
 - [acikkaynak/deprem-yardim-frontend](https://github.com/acikkaynak/deprem-yardim-frontend)

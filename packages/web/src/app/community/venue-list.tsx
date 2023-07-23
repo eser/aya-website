@@ -33,6 +33,7 @@ const VenueList = async (/* props: VenueListProps */) => {
       {venues.map((profile: Profile) => (
         <Card
           key={profile.id}
+          imageUri={profile.profilePictureUri}
           category="merkez"
           title={profile.title}
           description={profile.description}

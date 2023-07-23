@@ -1,3 +1,7 @@
+import Image from "next/image";
+
+import { Conditional } from "@/shared/components/conditional.tsx";
+
 import styles from "./cards.module.css";
 
 interface CardsProps {
@@ -13,7 +17,8 @@ const Cards = (props: CardsProps) => {
 };
 
 interface CardProps {
-  category: string;
+  category?: string;
+  imageUri?: string | null;
   title: string;
   description: string;
   href?: string;
@@ -24,12 +29,22 @@ const Card = (props: CardProps) => {
   return (
     <a className={styles.card} href={props.href}>
       <div className={styles.inner}>
-        <div className={styles.tags}>
-          {props.category}
-        </div>
-        {/* <div className={styles["image-placeholder"]}>
-          {props.title}
-        </div> */}
+        <Conditional test={props.category !== undefined}>
+          <div className={styles.tags}>
+            {props.category}
+          </div>
+        </Conditional>
+        <Conditional test={props.imageUri !== undefined && props.imageUri !== null}>
+          <div className={styles.image}>
+            <Image
+              src={props.imageUri}
+              width={220}
+              height={220}
+              alt={props.title}
+              loading="lazy"
+            />
+          </div>
+        </Conditional>
         <h5 className={styles.title}>
           {props.title}
         </h5>

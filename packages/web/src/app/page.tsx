@@ -41,27 +41,22 @@ const IndexPage = async (/* props: IndexPageProps */) => {
   };
 
   const introText =
-    `Bizler bilişim sektöründe halihazırda profesyonel olarak yer alan
-gönüllüleriz. 2015'den bu yana yapmış olduğumuz çalışmalarla
-kişilerin, firmaların, resmi kurumların ve sivil toplum
-kuruluşlarının kullanımına yönelik açık kaynak kodlu teknolojilerin
-geliştirilmesine öncülük ediyoruz.
+    `**açık yazılım ağı** olarak bilişim sektörüne temas eden gönüllü
+ve profesyonellere 2015'den bu yana yapmış olduğumuz çalışmalarla bir
+çatı sağlamaya çalışıyoruz. Meta-topluluk ismini vermiş olduğumuz bu
+çatı altında kişilerin, toplulukların, firmaların, resmi kurumların ve
+sivil toplum kuruluşlarının iletişimini ve iş birliğini
+kolaylaştırmayı sağlayarak ekosistem oluşmasına öncülük ediyoruz.
 
-Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem sonrası
-zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
-medya ağlarımızdaki çağrımız kısa süre içerisinde yankı
-bulmasını sağlayarak alanında uzman binlerce profesyonelin gönüllü
-olarak <Profile slug="afet.org" /> projemize katılmasını sağladık.
-Deprem sonrası hayati önem taşıyan sorunları çözebilecek teknolojileri
-sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi kurum ve sivil
-toplum kuruşu ile irtibatta kaldık ve dış hizmet sağlayıcı olarak
-hareket ettik. Birçok kurumsal firmadan insan ve altyapı desteği aldık.
+Bugüne kadar kişi ve kurumları açık kaynak geliştirmeye motive etmek,
+farkındalık oluşturmak ve bu alanda içerik sağlamak vb. alanlarda
+katkılarda bulunduk. <Profile slug="afet.org" />,
+<Profile slug="gonullu.io" /> vb. örnek topluluk projelerimiz toplumsal
+etkiler bıraktı.
 
-Bugün discord sunucumuzda 24,000'i aşkın gönüllü bilişim
-sektörü çalışanı olarak; herhangi bir sosyal sorumluluk gereksinimi
-anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak,
-açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
-çalışıyoruz.`;
+Bugün ise bu web sitesi altında kendini **açık yazılım ağı**'nın bir
+parçası olarak gören tüm unsurların kendi eforlarını
+görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.`;
 
   const mdxSource = await mdx(
     introText,

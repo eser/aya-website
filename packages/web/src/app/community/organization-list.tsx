@@ -33,6 +33,7 @@ const OrganizationList = async (/* props: OrganizationListProps */) => {
       {organizations.map((profile: Profile) => (
         <Card
           key={profile.id}
+          imageUri={profile.profilePictureUri}
           category="organizasyon"
           title={profile.title}
           description={profile.description}

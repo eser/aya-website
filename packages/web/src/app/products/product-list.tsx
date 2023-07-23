@@ -33,7 +33,8 @@ const ProductList = async (/* props: ProductListProps */) => {
       {products.map((profile: Profile) => (
         <Card
           key={profile.id}
-          category="ürün"
+          imageUri={profile.profilePictureUri}
+          category="üretim"
           title={profile.title}
           description={profile.description}
           href={`/${profile.slug}`}

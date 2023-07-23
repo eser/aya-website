@@ -79,9 +79,20 @@ title: Bilgi
 date: 2022-08-21
 ---
 
-Bu sayfa henüz hazırlık aşamasında.
+**gonullu.io** projesi olarak sivil toplum gönüllülüğü gereken anlarda kullanılmak üzere resmi kurumların ve sivil toplum kuruluşların erişimi için açık kaynaklı çözümler geliştiriyoruz.
 
-## Projelerimiz
+
+## Kısa Geçmiş
+
+<Profile slug="afet.org" /> projemizde edindiğimiz tecrübeleri ve teknolojileri kullanarak, genel seçimlerde gönüllü gözlemci organizasyonu konusunda sivil toplum kuruluşlarına altyapı sağladık.
+
+
+## Amacımız
+
+Açık kaynak olarak geliştirmiş olduğumuz çözümleri GPDR/KVKK vb. yasal kısıtlamalara karşın en verimli çalışacak şekilde, dünyanın herhangi bir noktasında herhangi bir gönüllü organizasyonunda kullanılabilir bir ürün haline getirmek.
+
+
+## Repositorylerimiz
 
 - [acikkaynak/musahit-harita-frontend](https://github.com/acikkaynak/musahit-harita-frontend)
 - [acikkaynak/musahit-harita-backend](https://github.com/acikkaynak/musahit-harita-backend)`,
