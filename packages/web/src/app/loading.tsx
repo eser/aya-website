@@ -1,6 +1,10 @@
+import { Astronaut } from "@/shared/components/profiles/widgets/astronaut";
+
 const Loading = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen">
+      <Astronaut />
+
       Yükleniyor...
     </div>
   );

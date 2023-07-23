@@ -1,0 +1,24 @@
+.astronaut {
+  animation: float 2s infinite ease-in;
+
+  & > img {
+    @apply object-contain;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
