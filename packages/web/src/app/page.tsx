@@ -1,12 +1,14 @@
 import Link from "next/link";
 // import Image from "next/image";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { mdx } from "@/shared/lib/mdx.ts";
 
 import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 
 import { Button } from "@/shared/components/ui/button.tsx";
+
+import { components } from "@/shared/components/profiles/widgets/mod.ts";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -33,7 +35,7 @@ const metadata = {
 //   };
 // }
 
-const IndexPage = (/* props: IndexPageProps */) => {
+const IndexPage = async (/* props: IndexPageProps */) => {
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
@@ -49,7 +51,7 @@ Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem sonrası
 zaten mesleki anlamda çok fazla paylaşımlarda bulunduğumuz sosyal
 medya ağlarımızdaki çağrımız kısa süre içerisinde yankı
 bulmasını sağlayarak alanında uzman binlerce profesyonelin gönüllü
-olarak [afet.org](https://afet.org) projemize katılmasını sağladık.
+olarak <Profile slug="afet.org" /> projemize katılmasını sağladık.
 Deprem sonrası hayati önem taşıyan sorunları çözebilecek teknolojileri
 sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi kurum ve sivil
 toplum kuruşu ile irtibatta kaldık ve dış hizmet sağlayıcı olarak
@@ -61,6 +63,11 @@ anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak,
 açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
 çalışıyoruz.`;
 
+  const mdxSource = await mdx(
+    introText,
+    components,
+  );
+
   return (
     <Layout placeholders={placeholders}>
       <section className="container grid items-center">
@@ -70,7 +77,7 @@ açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için
             Bilişim Meta-Topluluğu
           </h1>
           <article>
-            <MDXRemote source={introText} />
+            {mdxSource?.content}
           </article>
         </div>
         <div className="flex gap-4">

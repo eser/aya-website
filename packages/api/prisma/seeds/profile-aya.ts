@@ -185,13 +185,13 @@ title: Hakkında
 date: 2022-08-21
 layout: default
 ---
-Açık Yazılım Ağı, temelleri 2015'de [Eser Özvataf](https://github.com/eser) tarafından [github.com/acikkaynak](https://github.com/acikkaynak) adresinde atılmış ([ilk commit](https://github.com/eser/acikkaynak-arsiv/commit/183ddec51161b6a353c513bd42afa3b41abe6766)), internet üzerinden örgütlenen bir açık kaynak topluluğu organizasyonudur.
+Açık Yazılım Ağı, temelleri 2015'de <Profile slug="eser">Eser Özvataf</Profile> tarafından [github.com/acikkaynak](https://github.com/acikkaynak) adresinde atılmış ([ilk commit](https://github.com/eser/acikkaynak-arsiv/commit/183ddec51161b6a353c513bd42afa3b41abe6766)), internet üzerinden örgütlenen bir açık kaynak topluluğu organizasyonudur.
 
 Geçmişteki çalışmalarımız daha çok yazılım ekosistemine yönelik araç, topluluk ve siteler üretmek, bunların tanıtımını ve sürdürülebilirliğini sağlamak, açık kaynak bilinçlenmesini sağlamak için içerik üretiminde bulunmak olmuş olsa da; bize belirgin bir öğrenim ve deneyim kazandırmış, sonraki çalışmalarımıza ışık tutmuştur.
 
 Türkiye'de Sanayi Bakanlığı girişimleri ile oluşturulan Türkiye Açık Kaynak Platformu'nun topluluklar tarafında da destekler vererek, üniversiteler ve firmalar ile bir araya gelmiş; Türkiye'deki açık kaynak ekosisteminin tüm paydaşları ile zemin etüdünü yapma fırsatı bulmuştur. Bu süreç içerisinde “açık kaynak rehberi oluşturma”, “kurumlar içi açık kaynak”, “açık kaynak vakfı oluşturma” konuları üzerine çalışmalarda bulunarak belirli bir literatür oluşturulmasına katkıda bulunmuştur.
 
-Şubat 2023'de Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem felaketi sonrasında ise “yazılımcılara ekosistemine yönelik araç, topluluk ve siteler üretimi” çalışmalarımızın kapsamı ve kitlesi [afet.org](https://afet.org) projemiz ile birlikte genişlemiş ve bugünkü organizasyon kimliğine kavuşmuştur.
+Şubat 2023'de Kahramanmaraş'ta gerçekleşen ve 10 ili etkileyen deprem felaketi sonrasında ise “yazılımcılara ekosistemine yönelik araç, topluluk ve siteler üretimi” çalışmalarımızın kapsamı ve kitlesi <Profile slug="afet.org" /> projemiz ile birlikte genişlemiş ve bugünkü organizasyon kimliğine kavuşmuştur.
 
 Bugün discord sunucumuzda 24,000'i aşkın gönüllü bilişim sektörü çalışanı olarak; herhangi bir sosyal sorumluluk gereksinimi anında bilgi sistemleri ve mühendislik pratiklerini uygulayarak, açık kaynaklı çözümlerle yaşadığımız topluma katkı sağlamak için çalışıyoruz.`,
             },
