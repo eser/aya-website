@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 // import Image from "next/image";
 import { mdx } from "@/shared/lib/mdx.ts";
@@ -5,10 +6,10 @@ import { mdx } from "@/shared/lib/mdx.ts";
 import { siteConfig } from "@/shared/config.ts";
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
-
 import { Button } from "@/shared/components/ui/button.tsx";
-
 import { components } from "@/shared/components/profiles/widgets/mod.ts";
+
+import styles from "./page.module.css";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 const metadata = {
@@ -69,6 +70,14 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
     <Layout placeholders={placeholders}>
       <section className="container grid items-center">
         <div className="flex max-w-[980px] flex-col items-start">
+          <div className={styles.astronaut}>
+            <Image
+              src="/astronaut.svg"
+              width={400}
+              height={400}
+              alt="cute little astronaut"
+            />
+          </div>
           <h1 className="hero">
             Açık Yazılım Ağı <br className="hidden md:inline" />
             Bilişim Meta-Topluluğu
