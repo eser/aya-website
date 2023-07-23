@@ -30,6 +30,8 @@ const forbiddenSlugs: string[] = [
   "config",
   "contact",
   "dashboard",
+  "element",
+  "elements",
   "events",
   "faq",
   "feed",

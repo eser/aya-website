@@ -55,7 +55,7 @@ bulunduk. <Profile slug="afet.org" />, <Profile slug="gonullu.io" />
 vb. örnek topluluk projelerimiz toplumsal etkiler bıraktı.
 
 Bugün ise bu web sitesi altında kendini **Açık Yazılım Ağı**'nın bir
-parçası olarak gören tüm unsurların kendi eforlarını
+parçası olarak gören tüm bileşenlerimizin kendi eforlarını
 görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.
 Her geçen gün dünden daha iyi olmaya çalışma ve ekosistemin önünde
 olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;

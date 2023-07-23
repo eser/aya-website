@@ -15,6 +15,7 @@ const seedProfileAya = async (
       profilePictureUri:
         "https://alejxsvqroubkwwyfwdn.supabase.co/storage/v1/object/public/profile-pictures/aya.png",
 
+        isHidden: true,
         showStories: true,
         showMembers: true,
 

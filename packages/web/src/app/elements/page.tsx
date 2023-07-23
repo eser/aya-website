@@ -24,13 +24,13 @@ const metadata = {
   },
 };
 
-// interface CommunityPageProps {
+// interface ElementsPageProps {
 //   params: {
 //     // lang: Language;
 //   };
 // }
 
-const CommunityPage = (/* props: CommunityPageProps */) => {
+const ElementsPage = (/* props: ElementsPageProps */) => {
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
@@ -38,7 +38,7 @@ const CommunityPage = (/* props: CommunityPageProps */) => {
   return (
     <Layout placeholders={placeholders}>
       <section className="container">
-        <h1>Topluluk</h1>
+        <h1>Bileşenler</h1>
 
         <h2>Organizasyonlar</h2>
         <div className="max-w-[980px]">
@@ -59,4 +59,4 @@ const CommunityPage = (/* props: CommunityPageProps */) => {
   );
 };
 
-export { CommunityPage, CommunityPage as default, metadata };
+export { ElementsPage, ElementsPage as default, metadata };

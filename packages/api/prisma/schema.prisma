@@ -101,6 +101,7 @@ model Profile {
   slug                         String                 @unique
   profilePictureUri            String?
 
+  isHidden                     Boolean                @default(false)
   showStories                  Boolean                @default(false)
   showMembers                  Boolean                @default(false)
 
