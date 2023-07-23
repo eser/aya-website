@@ -48,15 +48,17 @@ ve profesyonellere 2015'den bu yana yapmış olduğumuz çalışmalarla bir
 sivil toplum kuruluşlarının iletişimini ve iş birliğini
 kolaylaştırmayı sağlayarak ekosistem oluşmasına öncülük ediyoruz.
 
-Bugüne kadar kişi ve kurumları açık kaynak geliştirmeye motive etmek,
-farkındalık oluşturmak ve bu alanda içerik sağlamak vb. alanlarda
-katkılarda bulunduk. <Profile slug="afet.org" />,
-<Profile slug="gonullu.io" /> vb. örnek topluluk projelerimiz toplumsal
-etkiler bıraktı.
+Bugüne kadar kişi, topluluk ve kurumları açık kaynak geliştirmeye
+motive etmek, farkındalık oluşturmak, bir araya getirmek, birlikte
+projeler yapmak, bu alanda içerik sağlamak vb. alanlarda katkılarda
+bulunduk. <Profile slug="afet.org" />, <Profile slug="gonullu.io" />
+vb. örnek topluluk projelerimiz toplumsal etkiler bıraktı.
 
 Bugün ise bu web sitesi altında kendini **açık yazılım ağı**'nın bir
 parçası olarak gören tüm unsurların kendi eforlarını
-görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.`;
+görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.
+Her geçen gün dünden daha iyi olmaya çalışma ve ekosistemin önünde
+olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
 
   const mdxSource = await mdx(
     introText,
