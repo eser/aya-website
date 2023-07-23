@@ -98,4 +98,4 @@ await profileGet(supabase, "eser", "tr");
 
 ## Nasıl Katkıda Bulunabilirsin?
 
-Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issulara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, Github Issues veya Discord üzerinden yardım istemekten çekinmeyin.
+Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issue'lara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, GitHub Issues veya Discord üzerinden yardım istemekten çekinmeyin.
