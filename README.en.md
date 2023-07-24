@@ -81,6 +81,7 @@ Copy the `.env` files in both `packages/api` and `packages/web` directories as `
 While you're still in `packages/api` directory, initialize the database and load some example data:
 
 ```bash
+$ pnpm db:generate:proxy
 $ pnpm db:generate
 $ pnpm db:push
 $ pnpm db:seed
