@@ -23,8 +23,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: "Topluluk",
-    href: "/community/",
+    title: "Bileşenler",
+    href: "/elements/",
   },
   {
     title: "Üretimler",

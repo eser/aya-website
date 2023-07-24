@@ -55,7 +55,7 @@ bulunduk. <Profile slug="afet.org" />, <Profile slug="gonullu.io" />
 vb. örnek topluluk projelerimiz toplumsal etkiler bıraktı.
 
 Bugün ise bu web sitesi altında kendini **Açık Yazılım Ağı**'nın bir
-parçası olarak gören tüm unsurların kendi eforlarını
+parçası olarak gören tüm bileşenlerimizin kendi eforlarını
 görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.
 Her geçen gün dünden daha iyi olmaya çalışma ve ekosistemin önünde
 olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
@@ -70,13 +70,13 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
       <section className="container grid items-center">
         <div className="flex max-w-[980px] flex-col items-start">
           <div className={styles["astronaut-layer"]}>
-            <Astronaut />
+            <Astronaut width={400} height={400} />
           </div>
           <h1 className="hero">
             Açık Yazılım Ağı <br className="hidden md:inline" />
             Bilişim Meta-Topluluğu
           </h1>
-          <article>
+          <article className={styles.content}>
             {mdxSource?.content}
           </article>
         </div>

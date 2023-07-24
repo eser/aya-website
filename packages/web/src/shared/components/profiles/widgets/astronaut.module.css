@@ -1,8 +1,11 @@
-.astronaut {
-  animation: float 2s infinite ease-in;
+.container {
+  & .stars {
+    @apply absolute;
+  }
 
-  & > img {
-    @apply object-contain;
+  & .astronaut {
+    @apply object-contain p-[50px];
+    animation: float 2s infinite ease-in;
   }
 }
 

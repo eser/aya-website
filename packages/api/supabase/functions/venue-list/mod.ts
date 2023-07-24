@@ -11,6 +11,7 @@ const venueList = async (supabase: SupabaseClient, lang: string) => {
     .from("Profile")
     .select("*, ProfileTx(*)")
     .eq("type", "Venue")
+    .eq("isHidden", false)
     .eq("ProfileTx.languageCode", lang)
     .is("deletedAt", null)
     .is("ProfileTx.deletedAt", null);
