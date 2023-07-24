@@ -78,21 +78,21 @@ service_role key: xxx.yyy.zzz-www
 
 Copy the `.env` files in both `packages/api` and `packages/web` directories as `.env.local` and make the necessary changes.
 
-For Frontend, go to `packages/web` folder and configure Next.js:
+While you're still in `packages/api` directory, initialize the database and load some example data:
 
 ```bash
-$ cd packages/web
-$ npm run dev
+$ pnpm db:generate
+$ pnpm db:push
+$ pnpm db:seed
 ```
 
-Initialize the database and load some example data:
+Son olarak, ana dizine geri dönün ve projeyi geliştirme modunda başlatın:
 
 ```bash
-$ cd packages/api
-$ npm run db:generate
-$ npm run db:push
-$ npm run db:seed
+$ cd ../..
+$ pnpm dev
 ```
+
 
 ## Project Management
 
