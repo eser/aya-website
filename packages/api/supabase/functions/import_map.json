@@ -5,6 +5,7 @@
     "@std/": "https://deno.land/std@0.195.0/",
     "@supabase": "https://esm.sh/@supabase/supabase-js@2.29.0",
     "@zod": "https://deno.land/x/zod@v3.21.4/mod.ts",
-    "@shared/": "../../../shared/src/"
+    "@shared/": "../../../shared/src/",
+    "@functions/": "./"
   }
 }

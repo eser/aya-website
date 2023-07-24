@@ -25,4 +25,4 @@ const profileQueryToProfile = (source: ProfileQueryResult): Profile | null => {
   };
 };
 
-export { profileQueryToProfile };
+export { profileQueryToProfile, type ProfileQueryResult };
