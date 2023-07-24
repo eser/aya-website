@@ -38,7 +38,7 @@
   "scripts": {
     "adr": "adr-tool",
     "dev": "turbo run dev",
-    "cleanup": "turbo run cleanup && rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/",
+    "cleanup": "turbo run cleanup && rm -rf pnpm-lock.yaml yarn.lock package-lock.json deno.lock node_modules/",
     "typecheck": "turbo run typecheck",
     "build": "turbo run build",
     "lint": "turbo run lint",

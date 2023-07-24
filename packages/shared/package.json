@@ -2,7 +2,7 @@
   "name": "shared",
   "version": "1.0.0",
   "scripts": {
-    "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json node_modules/",
+    "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json deno.lock node_modules/",
     "typecheck": "tsc --noEmit",
     "format:write": "deno fmt",
     "format:check": "deno fmt --check"

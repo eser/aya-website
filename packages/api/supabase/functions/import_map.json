@@ -1,10 +1,10 @@
 {
   "imports": {
-    "@cuid": "https://esm.sh/@paralleldrive/cuid2",
-    "@hex/": "https://deno.land/x/hex/src/",
-    "@std/": "https://deno.land/std@0.192.0/",
-    "@supabase": "https://esm.sh/@supabase/supabase-js@2",
-    "@zod": "https://deno.land/x/zod/mod.ts",
+    "@cuid": "https://esm.sh/@paralleldrive/cuid2@2.2.1",
+    "@hex/": "https://deno.land/x/hex@0.6.5/src/",
+    "@std/": "https://deno.land/std@0.195.0/",
+    "@supabase": "https://esm.sh/@supabase/supabase-js@2.29.0",
+    "@zod": "https://deno.land/x/zod@v3.21.4/mod.ts",
     "@shared/": "../../../shared/src/"
   }
 }
