@@ -1,5 +1,6 @@
-import { isCuid, createId } from "@cuid";
-import { assert, assertExists, assertThrows } from "@std/testing/asserts.ts";
+import { createId, isCuid } from "@cuid";
+import { ZodError } from "@zod";
+import { assert, assertExists, assertRejects } from "@std/assert/mod.ts";
 
 import { getSupabaseClientMock } from "../_shared/supabase-client-mock.ts";
 import { profileCreate } from "./mod.ts";
@@ -78,9 +79,11 @@ Deno.test("create user with invalid profilePictureUri", async () => {
 
   const supabase = getSupabaseClientMock();
 
-  await assertThrows(async () => {
-    await profileCreate(supabase, profile, "tr");
-  });
+  await assertRejects<ZodError>(
+    () => profileCreate(supabase, profile, "tr"),
+    ZodError,
+    "Invalid url",
+  );
 });
 
 Deno.test("create user with invalid translation", async () => {
@@ -101,7 +104,9 @@ Deno.test("create user with invalid translation", async () => {
 
   const supabase = getSupabaseClientMock();
 
-  await assertThrows(async () => {
-    await profileCreate(supabase, profile, "tr");
-  });
+  await assertRejects<ZodError>(
+    () => profileCreate(supabase, profile, "tr"),
+    ZodError,
+    "Expected string, received number",
+  );
 });
