@@ -86,7 +86,7 @@ $ pnpm db:push
 $ pnpm db:seed
 ```
 
-Son olarak, ana dizine geri dönün ve projeyi geliştirme modunda başlatın:
+Lastly, go back to project root and start project in development mode:
 
 ```bash
 $ cd ../..
