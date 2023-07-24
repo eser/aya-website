@@ -1,43 +1,45 @@
-# Contributing to [aya-website](https://github.com/acikkaynak/aya-website)
+# [aya-website](https://github.com/acikkaynak/aya-website)'a katkıda bulunma
 
-👍🎉 First off, thanks for taking the time to contribute! 🎉👍
+👍🎉 Öncelikle, katkıda bulunmak için zaman ayırdığınız için teşekkürler! 🎉👍
 
-The following is a set of guidelines for contributing to aya-website and its
-packages, which are hosted in GitHub. These are mostly guidelines, not rules.
-Use your best judgment, and feel free to propose changes to this document in
-a pull request.
+Aşağıda GitHub'da yer alan aya-website ve paketlerine katkıda bulunmaya bir dizi
+yönlendirme bulacaksınız. Bunlar çoğunlukla yönlendirmelerdir, katı kurallar
+değil. Muhakeme yeteneğinizi kullanmaktan çekinmeyin ve bu belgedeki yönergelere
+dahi bir pull request ile değişiklik önermekten geri durmayın.
 
-## What should I know before I get started?
+## Başlamadan önce ne bilmeliyim?
 
-### Code of Conduct
+### Davranış Kuralları
 
-This project and everyone participating in it is governed by the
-[Code of Conduct](https://acikyazilimagi.com/aya/policies). By
-participating, you are expected to uphold this code. Please
-report unacceptable behavior to
-[info@acikyazilim.com](mailto:info@acikyazilim.com).
+Bu proje ve katılımcıları
+[Katkıcı Ahdi Topluluk Sözleşmesi](https://acikyazilimagi.com/aya/policies)ne
+uymakla mükelleftir. Katkı sağladığınız an bu kuralları kabul etmiş
+sayılırsınız. Lütfen yönergede tarif edilen tolere edilemeyecek davranışları
+[info@acikyazilim.com](mailto:info@acikyazilim.com) adresine bildirin.
 
-### Technical Requirements
+### Teknik Gereklilikler
 
-Just React, Next, JavaScript, Web Development Essentials and Git.
+Yalnızca React, Next, JavaScript, Web Geliştirme Temelleri ve Git.
 
-### Conventions
+### Konvansiyonlar
 
-Using Deno Formatter should be fine for now. Also you need to run `pnpm lint`
-before committing your changes.
+Şimdilik Deno Formatter'ı kullanabilirsiniz. Aynı zamanda değişikliklerinizi
+commit etmeden önce pnpm lint çalıştırmanız gerekmektedir.
 
-### Design Decisions
+### Tasarım Kararları
 
-To make a significant decision in how we maintain the project and what we can or
-cannot support, please open a new topic as an issue to discuss the suggested
-design first.
+Projenin nasıl yürütüleceği ve neyi destekleyebileceğimiz veya
+destekleyemeyeceğimiz konusunda önemli bir karar vermek için, önerilen tasarımı
+önce tartışmak üzere yeni bir konu açın.
 
-## How Can I Contribute?
+## Nasıl Katkıda Bulunabilirim?
 
-It is publicly open for any contribution. Reporting bugs, suggesting
-enhancements, bugfixes, new features and extra modules are welcome.
+Her türlü katkıya açığız. Hata bildirimi, yeni özellikler önerme, hata
+düzeltmeleri, yeni özellikler geliştirme ve ek modüllerin başımızın üzerinde
+yeri var.
 
-- To contribute to code: Fork the repo, push your changes to your fork, and
-  submit a pull request.
-- To report a bug: If something does not work, please report it using
-  [GitHub Issues](https://github.com/acikkaynak/aya-website/issues).
+- Koda katkıda bulunmak için: Repo'yu forklayın, değişikliklerinizi forkunuza
+  gönderin ve bir pull request gönderin.
+- Bir hatayı bildirmek için: Bir şey çalışmıyorsa, lütfen bunu
+  [GitHub Issues](https://github.com/acikkaynak/aya-website/issues) üzerinden
+  bildirin.
