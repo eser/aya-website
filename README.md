@@ -30,7 +30,12 @@ Frontend için:
 Backend için:
 - [Supabase](https://supabase.io)
 - [Prisma](https://prisma.io)
-- [Deno](https://deno.land)
+
+Önceden kurulu olması gerekenler:
+- [Deno](https://deno.land) (önerilen v1.35.2)
+- [Node.js](https://nodejs.org) (önerilen v19.0.0)
+- [PNPM](https://pnpm.io/) (önerilen v8.6.10)
+- [Git](https://git-scm.com/) (önerilen v2.41.0)
 
 ## Projeyi Ayağa Kaldırma
 
@@ -99,3 +104,8 @@ await profileGet(supabase, "eser", "tr");
 ## Nasıl Katkıda Bulunabilirsin?
 
 Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek isterseniz [issue'lara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız, GitHub Issues veya Discord üzerinden yardım istemekten çekinmeyin.
+
+
+## Lisans
+
+Apache 2.0, detaylar için [LICENSE](LICENSE) dosyasını inceleyebilirsiniz.

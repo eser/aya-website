@@ -1,6 +1,7 @@
 # AYA - Open Source Network
 [![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
-![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)
+[![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)](https://github.com/acikkaynak/aya-website/issues)
+
 
 (For Turkish please click [here](README.md))
 
@@ -20,7 +21,7 @@ We are actively engaged in utilizing open-source solutions, applying information
 
 These are the technologies we use to build our projects:
 
-For Web:
+For Frontend:
 - [Next.js](https://nextjs.org)
 - [Shadcn](https://shadcn/ui)
 - [Supabase](https://supabase.io)
@@ -29,7 +30,74 @@ For Web:
 For Backend:
 - [Supabase](https://supabase.io)
 - [Prisma](https://prisma.io)
-- [Deno](https://deno.land)
+
+Prerequisites:
+- [Deno](https://deno.land) (recommended v1.35.2)
+- [Node.js](https://nodejs.org) (recommended v19.0.0)
+- [PNPM](https://pnpm.io/) (recommended v8.6.10)
+- [Git](https://git-scm.com/) (recommended v2.41.0)
+
+## Setting Up the Project
+
+Clone the GitHub repository:
+
+```bash
+$ git clone git@github.com:acikkaynak/aya-website.git
+```
+
+Navigate to the project directory:
+
+```bash
+$ cd aya-website
+```
+
+Install necessary packages:
+
+```bash
+$ pnpm install
+```
+
+Go to the API folder and configure Supabase:
+
+```bash
+$ cd packages/api
+$ npx supabase start
+
+Started supabase local development setup.
+
+         API URL: http://localhost:54321
+     GraphQL URL: http://localhost:54321/graphql/v1
+          DB URL: postgresql://postgres:postgres@localhost:54322/postgres
+      Studio URL: http://localhost:54323
+    Inbucket URL: http://localhost:54324
+      JWT secret: super-secret-jwt-token-with-at-least-32-characters-long
+        anon key: aaa.bbb.ccc_ddd0
+service_role key: xxx.yyy.zzz-www
+
+```
+
+Copy the `.env` files in both `packages/api` and `packages/web` directories as `.env.local` and make the necessary changes.
+
+
+## Project Management
+
+Currently, we do not have a management panel for the project. For this reason, we perform operations through the CLI. If `deno` is installed on your system, you can access the CLI through the following commands:
+
+```bash
+$ cd packages/api
+$ deno task cli
+```
+
+You can access `env` and `supabase` objects through the CLI.
+
+### Examples:
+
+Getting a profile:
+
+```js
+await profileGet(supabase, "eser", "tr");
+```
+
 
 ## How to Contribute
 

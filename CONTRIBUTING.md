@@ -12,8 +12,9 @@ a pull request.
 ### Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to
-uphold this code. Please report unacceptable behavior to
+[Code of Conduct](https://acikyazilimagi.com/aya/policies). By
+participating, you are expected to uphold this code. Please
+report unacceptable behavior to
 [info@acikyazilim.com](mailto:info@acikyazilim.com).
 
 ### Technical Requirements
@@ -22,7 +23,7 @@ Just React, Next, JavaScript, Web Development Essentials and Git.
 
 ### Conventions
 
-Using Deno Formatter should be fine for now. Also you need to run `turbo lint`
+Using Deno Formatter should be fine for now. Also you need to run `pnpm lint`
 before committing your changes.
 
 ### Design Decisions
