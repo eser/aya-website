@@ -6,7 +6,7 @@
   },
   "scripts": {
     "generate": "pnpm run db:generate",
-    "db:generate": "dotenv -e .env.local -- prisma generate --data-proxy",
+    "db:generate": "dotenv -e .env.local -- prisma generate",
     "db:push": "dotenv -e .env.local -- prisma db push --skip-generate",
     "db:seed": "dotenv -e .env.local -- prisma db seed",
     "cleanup": "rm -rf pnpm-lock.yaml yarn.lock package-lock.json deno.lock node_modules/",
