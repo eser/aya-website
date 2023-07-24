@@ -1,6 +1,6 @@
 # AYA - Açık Yazılım Ağı
 [![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
-![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)
+[![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)](https://github.com/acikkaynak/aya-website/issues)
 
 
 (For English please click [here](README.en.md))
