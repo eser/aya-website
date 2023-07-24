@@ -78,6 +78,21 @@ service_role key: xxx.yyy.zzz-www
 
 Hem `packages/api` hem de `packages/web` dizinlerindeki `.env` dosyalarını `.env.local` olarak kopyalayın ve gerekli değişiklikleri yapın.
 
+Web klasörüne gidip NexJS'i konfigüre edin:
+
+```bash
+$ cd packages/web
+$ npm run dev
+```
+
+Veritabanınızdaki tabloları oluşturun ve bir kaç örnek veri ekleyin:
+
+```bash
+$ cd packages/api
+$ npm run db:generate
+$ npm run db:push
+$ npm run db:seed
+```
 
 ## Proje Yönetimi
 
