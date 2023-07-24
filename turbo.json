@@ -6,7 +6,6 @@
     },
     "build": {
       "outputs": [".next/**", "!.next/cache/**", "dist/**"]
-      // "dependsOn": ["typecheck"]
     },
     "cleanup": {
       "outputs": []
