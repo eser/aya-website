@@ -61,7 +61,7 @@ API klasörüne gidip Supabase'i konfigure edin:
 
 ```bash
 $ cd packages/api
-$ npx supabase start
+$ pnpx supabase start
 
 Started supabase local development setup.
 
@@ -73,26 +73,25 @@ Started supabase local development setup.
       JWT secret: super-secret-jwt-token-with-at-least-32-characters-long
         anon key: aaa.bbb.ccc_ddd0
 service_role key: xxx.yyy.zzz-www
-
 ```
 
 Hem `packages/api` hem de `packages/web` dizinlerindeki `.env` dosyalarını `.env.local` olarak kopyalayın ve gerekli değişiklikleri yapın.
 
-Web klasörüne gidip NexJS'i konfigüre edin:
+Halen `packages/api` klasöründeyken gidip veritabanınızdaki tabloları oluşturun ve birkaç örnek veri ekleyin:
 
 ```bash
-$ cd packages/web
-$ npm run dev
+$ pnpm db:generate
+$ pnpm db:push
+$ pnpm db:seed
 ```
 
-Veritabanınızdaki tabloları oluşturun ve bir kaç örnek veri ekleyin:
+Lastly, go back to project root and start project in development mode:
 
 ```bash
-$ cd packages/api
-$ npm run db:generate
-$ npm run db:push
-$ npm run db:seed
+$ cd ../..
+$ pnpm dev
 ```
+
 
 ## Proje Yönetimi
 

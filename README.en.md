@@ -61,7 +61,7 @@ Go to the API folder and configure Supabase:
 
 ```bash
 $ cd packages/api
-$ npx supabase start
+$ pnpx supabase start
 
 Started supabase local development setup.
 
@@ -78,7 +78,7 @@ service_role key: xxx.yyy.zzz-www
 
 Copy the `.env` files in both `packages/api` and `packages/web` directories as `.env.local` and make the necessary changes.
 
-Go to web folder and configure NextJS:
+For Frontend, go to `packages/web` folder and configure Next.js:
 
 ```bash
 $ cd packages/web
@@ -116,4 +116,9 @@ await profileGet(supabase, "eser", "tr");
 
 ## How to Contribute
 
-We welcome contributions from everyone. To start please [read our contributing guide](CONTRIBUTING.md). If you want to help you can check out our [issues](https://github.com/acikkaynak/aya-website/issues). If you have any questions, feel free to join our [Discord server](https://discord.gg/itdepremyardim). If you are stuck at any point, feel free to ask for help on GitHub Issues or Discord.
+We welcome contributions from everyone. To start please [read our contributing guide](CONTRIBUTING.en.md). If you want to help you can check out our [issues](https://github.com/acikkaynak/aya-website/issues). If you have any questions, feel free to join our [Discord server](https://discord.gg/itdepremyardim). If you are stuck at any point, feel free to ask for help on GitHub Issues or Discord.
+
+
+## License
+
+Apache 2.0, see [LICENSE](LICENSE) file for details.
