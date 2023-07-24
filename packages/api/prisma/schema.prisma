@@ -56,6 +56,9 @@ model User {
   languages                    UserTx[]
 
   lastSeenAt                   DateTime?
+
+  individualProfile            Profile?               @relation(fields: [individualProfileId], references: [id])
+  individualProfileId          String?                @unique
   profileMemberships           ProfileMembership[]
 
   createdAt                    DateTime               @default(now())
@@ -100,6 +103,7 @@ model Profile {
   type                         ProfileType
   slug                         String                 @unique
   profilePictureUri            String?
+  individualProfileOwner       User?
 
   isHidden                     Boolean                @default(false)
   showStories                  Boolean                @default(false)

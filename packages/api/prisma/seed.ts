@@ -10,6 +10,7 @@ import { seedProfileGonulluIo } from "./seeds/profile-gonullu.io.ts";
 import { seedProfileHex } from "./seeds/profile-hex.ts";
 import { seedUsers } from "./seeds/users.ts";
 import { seedMembershipRelation } from "./seeds/membership-relation.ts";
+import { updateUserIndividualProfile } from "./seeds/update-user-individual-profile.ts";
 
 const main = async () => {
   const prisma = getPrismaClient();
@@ -35,6 +36,7 @@ const main = async () => {
   // profile: eser ozvataf
   const { profileEser } = await seedProfileEser(prisma, languageTr.code);
   await seedMembershipRelation(prisma, profileEser.id, userEser.id, "Owner");
+  await updateUserIndividualProfile(prisma, userEser.id, profileEser.id);
 
   // profile: eser.live
   const { profileEserLive } = await seedProfileEserLive(
