@@ -3,6 +3,7 @@ import { Icons } from "@/shared/components/icons.tsx";
 import { cn } from "@/shared/lib/cn.ts";
 
 import styles from "./logo.module.css";
+import { EasterEgg } from "./easter-egg.tsx";
 
 const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
   return (
@@ -14,7 +15,11 @@ const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
     >
       <Icons.logo className="h-6 w-6" />
 
-      <span className="text-base font-bold">{siteConfig.name}</span>
+      <span className="site-name text-base font-bold">
+        {siteConfig.name}
+      </span>
+
+      <EasterEgg />
     </div>
   );
 };
