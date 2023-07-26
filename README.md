@@ -80,7 +80,6 @@ Hem `packages/api` hem de `packages/web` dizinlerindeki `.env` dosyalarını `.e
 Halen `packages/api` klasöründeyken gidip veritabanınızdaki tabloları oluşturun ve birkaç örnek veri ekleyin:
 
 ```bash
-$ pnpm db:generate:proxy
 $ pnpm db:generate
 $ pnpm db:push
 $ pnpm db:seed
