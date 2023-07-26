@@ -2,16 +2,12 @@ import * as Regular from ".prisma/client";
 import * as Edge from ".prisma/client/edge";
 
 const getDatabaseConfiguration = () => {
-  if (typeof Deno !== "undefined") {
-    return [
-      Deno.env.get("DATABASE_URL"),
-      Deno.env.get("DATABASE_ON_EDGE")?.startsWith("prisma://") ?? false,
-    ];
-  }
+  const isDeno = typeof Deno !== "undefined";
+  const env = isDeno ? Deno.env.toObject() : process.env;
 
   return [
-    process.env.DATABASE_URL,
-    process.env.DATABASE_ON_EDGE?.startsWith("prisma://") ?? false,
+    env.DATABASE_URL,
+    env.DATABASE_ON_EDGE === "1" || env.DATABASE_URL?.startsWith("prisma://"),
   ];
 };
 
