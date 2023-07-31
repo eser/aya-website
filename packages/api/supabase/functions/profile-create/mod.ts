@@ -102,9 +102,6 @@ const profileCreate = async (
 
     showStories: profileValidated.showStories ?? false,
     showMembers: profileValidated.showMembers ?? false,
-
-    title: defaultTranslation?.title ?? "",
-    description: defaultTranslation?.description ?? "",
   };
 
   const profileQueryResponse = await supabase

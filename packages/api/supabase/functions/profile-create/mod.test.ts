@@ -1,9 +1,13 @@
+import { getSupabaseClient } from "@functions/_shared/supabase-client.ts";
 import { createId, isCuid } from "@cuid";
 import { ZodError } from "@zod";
 import { assert, assertExists, assertRejects } from "@std/assert/mod.ts";
 
 import { getSupabaseClientMock } from "../_shared/supabase-client-mock.ts";
 import { profileCreate } from "./mod.ts";
+import { profileRemove } from "../profile-remove/mod.ts";
+
+const supabase = getSupabaseClient();
 
 Deno.test("create user with all fields", async () => {
   const profileId = createId();
@@ -11,7 +15,7 @@ Deno.test("create user with all fields", async () => {
   const profile = {
     id: profileId,
     type: "Individual" as const,
-    slug: "eser",
+    slug: "eserCreatedWithAllFields",
     profilePictureUri: null, // TODO
 
     showStories: true,
@@ -19,19 +23,16 @@ Deno.test("create user with all fields", async () => {
 
     translations: {
       "tr": {
-        // id: createId(), // TODO
         title: "Eser Ozvataf",
         description: "aciklama",
       },
       "en": {
-        // id: createId(), // TODO
         title: "Eser Ozvataf",
         description: "description",
       },
     },
   };
 
-  const supabase = getSupabaseClientMock();
   const result = await profileCreate(supabase, profile, "tr");
 
   assertExists(result?.payload?.profile?.id);
@@ -40,21 +41,18 @@ Deno.test("create user with all fields", async () => {
 
 Deno.test("create user with missing optional fields", async () => {
   const profile = {
-    // id: createId(),
     type: "Individual" as const,
-    slug: "eser",
+    slug: "eserCreatedWithMissingOptionalFields",
     profilePictureUri: null, // TODO
 
     translations: {
       "tr": {
-        // id: createId(),
         title: "Eser Ozvataf",
         description: "aciklama",
       },
     },
   };
 
-  const supabase = getSupabaseClientMock();
   const result = await profileCreate(supabase, profile, "tr");
 
   assertExists(result?.payload?.profile?.id);
@@ -63,21 +61,17 @@ Deno.test("create user with missing optional fields", async () => {
 
 Deno.test("create user with invalid profilePictureUri", async () => {
   const profile = {
-    // id: createId(),
     type: "Individual" as const,
-    slug: "eser",
+    slug: "eserCreatedWithInvalidProfilePictureUri",
     profilePictureUri: "invalid-uri",
 
     translations: {
       "tr": {
-        // id: createId(),
         title: "Eser Ozvataf",
         description: "aciklama",
       },
     },
   };
-
-  const supabase = getSupabaseClientMock();
 
   await assertRejects<ZodError>(
     () => profileCreate(supabase, profile, "tr"),
@@ -90,7 +84,7 @@ Deno.test("create user with invalid translation", async () => {
   const profile = {
     // id: createId(),
     type: "Individual" as const,
-    slug: "eser",
+    slug: "eserCreatedWithInvalidTranslation",
     profilePictureUri: null, // TODO
 
     translations: {
@@ -102,11 +96,16 @@ Deno.test("create user with invalid translation", async () => {
     },
   };
 
-  const supabase = getSupabaseClientMock();
-
   await assertRejects<ZodError>(
     () => profileCreate(supabase, profile, "tr"),
     ZodError,
     "Expected string, received number",
   );
+});
+
+Deno.test("remove test users", async () => {
+  await profileRemove(supabase, "eserCreatedWithAllFields");
+  await profileRemove(supabase, "eserCreatedWithMissingOptionalFields");
+  await profileRemove(supabase, "eserCreatedWithInvalidProfilePictureUri");
+  await profileRemove(supabase, "eserCreatedWithInvalidProfilePictureUri");
 });
