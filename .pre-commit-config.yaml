@@ -1,43 +1,77 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: check-added-large-files
+        args: ["--maxkb=1024"]
       - id: check-case-conflict
       - id: check-executables-have-shebangs
       - id: check-json
-        exclude: ".eslintrc.json"
+        exclude: |
+          (?x)^(
+            tsconfig.json
+          )$
       - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
       - id: check-symlinks
       - id: check-toml
       - id: check-xml
       - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: destroyed-symlinks
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: forbid-new-submodules
       - id: mixed-line-ending
+        args: ["--fix=lf"]
+      - id: pretty-format-json
+        args: ["--autofix", "--no-ensure-ascii", "--no-sort-keys"]
+        exclude: |
+          (?x)^(
+            tsconfig.json
+          )$
+      - id: trailing-whitespace
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.31.1
+    hooks:
+      - id: typos
+        verbose: true
+        args:
+          - "--config"
+          - ".github/typos.toml"
+        exclude: |
+          (?x)^(
+            docs/.*|
+          )$
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: []
   - repo: local
     hooks:
-      # - id: local-precommit
-      #   name: local pre-commit tasks
-      #   description: Runs local pre-commit tasks.
-      #   entry: bash -c 'deno run -A pre-commit.ts; git add -u' --
-      #   always_run: true
-      #   pass_filenames: false
-      #   language: system
-      - id: lint-check
-        name: lint check
-        description: Lint JavaScript/TypeScript source code.
-        entry: yarn lint
-        types_or: [javascript, jsx, ts, tsx, json, markdown]
+      - id: local-precommit
+        name: local pre-commit tasks
+        description: Check formatting, linting, license headers, types and run tests.
+        entry: bash -c 'deno task ok; git add -u' --
+        # types_or: [javascript, jsx, ts, tsx, json, markdown]
+        always_run: true
         pass_filenames: false
         language: system
-      - id: test
-        name: test
-        description: Run tests using the test runner.
-        entry: yarn test
-        types_or: [javascript, jsx, ts, tsx, json]
-        pass_filenames: false
-        language: system
+      - id: kebab-case-files-only
+        name: kebab-case files only
+        entry: filenames must be kebab-case only
+        language: fail
+        files: '(?!\.test\.[jt]sx?$)[^a-z0-9.\/\[\]@-]'
+        exclude: |
+          (?x)^(
+            _etc/.*|
+            .github/.*|
+            .git/COMMIT_EDITMSG|
+            docs/.*|
+            Dockerfile|
+            LICENSE|
+            README.md
+          )$

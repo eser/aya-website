@@ -1,0 +1,25 @@
+{
+  "lock": true,
+  "nodeModulesDir": "auto",
+  "unstable": [
+    "cron",
+    "temporal"
+  ],
+  "exclude": [
+    "**/node_modules/*",
+    "**/.next/*"
+  ],
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "fmt": {
+    "lineWidth": 120
+  },
+  "tasks": {
+    "ok": "echo 'ok'"
+  }
+}

@@ -1,0 +1,84 @@
+# This workflow will build a deno project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Integrity Pipeline
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+*
+
+  pull_request:
+    types:
+      - opened
+      - edited # in case of base branch change
+      - synchronize
+      # - reopened
+      # - ready_for_review
+    branches:
+      - "**"
+
+  # schedule:
+  #   - cron: "18 21 * * 6"
+
+  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
+    inputs:
+      run_checks:
+        description: Run integrity checks
+        required: false
+        type: boolean
+
+concurrency:
+  group: ${{ github.ref }}-integrity
+  cancel-in-progress: true
+
+jobs:
+  integration:
+    name: Integration
+    runs-on: ${{ matrix.os }}
+
+    permissions:
+      contents: read # Needed to clone the repository
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          # - windows-latest
+          # - macOS-latest
+        deno-version:
+          - 2.2.12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Setup Deno ${{ matrix.deno-version }}
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: ${{ matrix.deno-version }}
+
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
+
+      # - name: Generate coverage report
+      #   run: deno task test:coverage-gen
+
+      # - name: Upload coverage
+      #   uses: codecov/codecov-action@v4
+      #   env:
+      #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      #   with:
+      #     name: ${{ matrix.os }}
+      #     files: ./cov_profile.lcov

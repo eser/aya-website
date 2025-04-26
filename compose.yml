@@ -1,0 +1,12 @@
+name: deno-next-showcase
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      target: runner
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

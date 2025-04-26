@@ -1,0 +1,124 @@
+@reference "../../../globals.css";
+
+html {
+  @apply text-[18px];
+}
+
+body {
+  @apply text-xs sm:text-sm md:text-base leading-loose min-h-screen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply break-words;
+}
+
+p {
+  @apply break-words;
+}
+
+a {
+  @apply break-words;
+}
+
+img {
+  @apply max-w-full	object-cover;
+}
+
+h1 {
+  @apply font-serif font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-0;
+  /* scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
+  /* text-3xl sm:text-3xl md:text-5xl lg:text-6xl */
+
+  &.hero {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-none my-10;
+  }
+}
+
+h2 {
+  @apply font-serif font-normal text-base sm:text-lg md:text-xl lg:text-2xl mt-4 mb-0;
+  /* scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
+}
+
+h3 {
+  @apply font-serif font-normal text-base md:text-lg lg:text-xl mt-2 mb-0;
+  /* scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
+}
+
+h4 {
+  @apply font-serif font-normal text-base lg:text-lg my-0;
+  /* scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2 */
+}
+
+h5 {
+  @apply font-serif font-normal text-base my-0;
+}
+
+h6 {
+  @apply font-serif font-normal text-base my-0;
+}
+
+p {
+  @apply mt-0 mb-4 text-justify;
+
+  /* &.lead {
+    @apply text-xl text-muted-foreground;
+  } */
+}
+
+blockquote {
+  /* @apply mt-6 border-l-2 pl-6 italic; */
+}
+
+code {
+  /* @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold; */
+}
+
+pre {
+  /* @apply mt-6 p-4 bg-muted rounded-md; */
+}
+
+ul,
+ol {
+  @apply mt-0 mb-4 mx-0 pl-10 pr-0 list-disc;
+
+  & > li {
+    @apply text-start;
+  }
+}
+
+article,
+aside,
+/* section, */
+main,
+.flex {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > p,
+  & > ul,
+  & > ol,
+  & > blockquote,
+  & > code,
+  & > pre {
+    &:first-child {
+      @apply mt-0;
+    }
+  }
+}
+
+a {
+  @apply text-accent-foreground hover:text-accent underline underline-offset-4;
+  /* font-medium */
+}
+
+strong {
+  @apply font-medium text-primary;
+}

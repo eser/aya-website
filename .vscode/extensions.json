@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "chdsbd.github-code-owners",
+    "denoland.vscode-deno",
+    "EditorConfig.EditorConfig",
+    "github.vscode-github-actions",
+    "ryanluker.vscode-coverage-gutters"
+  ]
+}

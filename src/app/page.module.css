@@ -1,0 +1,9 @@
+@reference "../shared/globals.css";
+
+.astronaut-layer {
+  @apply absolute hidden xl:inline-block end-0 z-0;
+}
+
+.content {
+  @apply z-10;
+}
