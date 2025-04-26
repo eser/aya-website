@@ -71,7 +71,7 @@ repos:
             .github/.*|
             .git/COMMIT_EDITMSG|
             docs/.*|
-            Dockerfile|
+            ops/docker/Dockerfile|
             LICENSE|
             README.md
           )$

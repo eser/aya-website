@@ -1,4 +1,9 @@
+# versions
+
 FROM denoland/deno:2.2.12 AS base
+
+# Create a minimal image base-debian12 or static-debian12
+# (see: https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images)
 
 # Rebuild the source code only when needed
 FROM base AS builder

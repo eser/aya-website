@@ -2,9 +2,12 @@ name: deno-next-showcase
 
 services:
   app:
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
     build:
-      context: ./
-      dockerfile: ./Dockerfile
+      context: ../../
+      dockerfile: ./ops/docker/Dockerfile
       target: runner
     environment:
       NODE_ENV: production

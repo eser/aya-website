@@ -52,6 +52,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
+  runtime: "nodejs",
   matcher: [
     /*
      * Match all request paths except for the ones starting with:
