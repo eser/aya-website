@@ -1,6 +1,6 @@
 import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc";
 
-const mdx = async (
+export const mdx = async (
   source: string,
   components?: MDXRemoteProps["components"],
 ) => {
@@ -20,5 +20,3 @@ const mdx = async (
 
   return result;
 };
-
-export { mdx };

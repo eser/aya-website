@@ -5,7 +5,7 @@ import { cn } from "@/shared/lib/cn.ts";
 import styles from "./logo.module.css";
 import { EasterEgg } from "./easter-egg.tsx";
 
-const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
+export const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
   return (
     <div
       className={cn(
@@ -23,5 +23,3 @@ const Logo = (props: React.HTMLAttributes<HTMLElement>) => {
     </div>
   );
 };
-
-export { Logo };

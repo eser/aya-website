@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import * as React from "react";
 import { siteConfig } from "@/shared/config.ts";
 import { useKonamiCode } from "@/shared/hooks/use-secret-code.ts";
 
-const EasterEgg = () => {
+export const EasterEgg = () => {
   const konami = useKonamiCode();
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (konami) {
       const targetElements = document.getElementsByClassName("site-name");
       if (targetElements[0] !== undefined) {
@@ -18,7 +18,5 @@ const EasterEgg = () => {
 
   return null;
 };
-
-export { EasterEgg };
 
 // siteConfig.fancyName

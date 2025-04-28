@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import * as React from "react";
 
 import { useSupabaseAuth } from "@/shared/supabase/use-supabase-auth";
 import { Button } from "@/shared/components/ui/button.tsx";
@@ -8,11 +8,11 @@ import { Button } from "@/shared/components/ui/button.tsx";
 import styles from "./github-login.module.css";
 
 // // eslint-disable-next-line @typescript-eslint/no-empty-function
-const GitHubLogin = () => {
+export const GitHubLogin = () => {
   const auth = useSupabaseAuth();
 
   const isLoggedIn = auth.session?.user !== undefined;
-  const onClick = useCallback(
+  const onClick = React.useCallback(
     async () => {
       if (isLoggedIn) {
         await auth.signOut();
@@ -40,5 +40,3 @@ const GitHubLogin = () => {
     </Button>
   );
 };
-
-export { GitHubLogin };

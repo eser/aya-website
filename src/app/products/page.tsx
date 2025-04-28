@@ -4,7 +4,7 @@ import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { ProductList } from "./product-list.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-const metadata = {
+export const metadata = {
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
@@ -16,7 +16,7 @@ const metadata = {
   },
 };
 
-const viewport = {
+export const viewport = {
   width: "device-width",
   initialScale: 1,
   // maximumScale: 1,
@@ -47,4 +47,4 @@ const ProductsPage = (/* props: ProductsPageProps */) => {
   );
 };
 
-export { metadata, viewport, ProductsPage, ProductsPage as default };
+export { ProductsPage as default };

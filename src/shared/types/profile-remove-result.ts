@@ -1,5 +1,3 @@
 import { type ResultType } from "./result-type.ts";
 
-type ProfileRemoveResult = ResultType<null>;
-
-export { type ProfileRemoveResult };
+export type ProfileRemoveResult = ResultType<null>;

@@ -1,13 +1,13 @@
 "use client";
 
-import { createContext, useState } from "react";
+import * as React from "react";
 import { useRouter } from "next/navigation";
 
 // import { type Session, useSupabase } from "./use-supabase.ts";
 
 type Session = unknown;
 
-interface SupabaseAuthContextState {
+export interface SupabaseAuthContextState {
   session: Session | null;
   isLoading: boolean;
 
@@ -23,7 +23,7 @@ const initialState: SupabaseAuthContextState = {
   signOut: () => Promise.resolve(),
 };
 
-const SupabaseAuthContext = createContext<SupabaseAuthContextState>(
+export const SupabaseAuthContext = React.createContext<SupabaseAuthContextState>(
   initialState,
 );
 
@@ -32,11 +32,13 @@ interface SupabaseAuthProviderProps {
   children: React.ReactNode;
 }
 
-const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
+export const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
   const router = useRouter();
   // const { supabase } = useSupabase();
-  const [isLoading, setIsLoading] = useState(true);
-  const [session, setSession] = useState<Session | null>(props.serverSession);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [session, setSession] = React.useState<Session | null>(
+    props.serverSession,
+  );
 
   // useEffect(() => {
   //   const authStateChangeEvent = supabase.auth.onAuthStateChange(
@@ -78,10 +80,4 @@ const SupabaseAuthProvider = (props: SupabaseAuthProviderProps) => {
       {props.children}
     </SupabaseAuthContext.Provider>
   );
-};
-
-export {
-  SupabaseAuthContext,
-  type SupabaseAuthContextState,
-  SupabaseAuthProvider,
 };

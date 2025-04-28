@@ -15,7 +15,7 @@ import { cn } from "@/shared/lib/cn.ts";
 
 import styles from "./theme-toggle.module.css";
 
-const ThemeToggle = () => {
+export const ThemeToggle = () => {
   const { setTheme } = useTheme();
 
   return (
@@ -61,5 +61,3 @@ const ThemeToggle = () => {
     </DropdownMenu>
   );
 };
-
-export { ThemeToggle };

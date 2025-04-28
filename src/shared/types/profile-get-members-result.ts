@@ -1,22 +1,13 @@
-import { type ResultType } from "./result-type.ts";
-import { type Profile, type ProfileType } from "./profile.ts";
-import {
-  type ProfileMembership,
-  type ProfileMembershipList,
-} from "./profile-membership.ts";
+import type { ResultType } from "./result-type.ts";
+import type { Profile } from "./profile.ts";
+import type { ProfileMembershipList } from "./profile-membership.ts";
 
-interface ProfileGetMembersComposition {
+export type { Profile, ProfileType } from "./profile.ts";
+export type { ProfileMembership, ProfileMembershipList } from "./profile-membership.ts";
+
+export interface ProfileGetMembersComposition {
   profile: Profile;
   members: ProfileMembershipList | undefined;
 }
 
-type ProfileGetMembersResult = ResultType<ProfileGetMembersComposition | null>;
-
-export {
-  type Profile,
-  type ProfileGetMembersComposition,
-  type ProfileGetMembersResult,
-  type ProfileMembership,
-  type ProfileMembershipList,
-  type ProfileType,
-};
+export type ProfileGetMembersResult = ResultType<ProfileGetMembersComposition | null>;

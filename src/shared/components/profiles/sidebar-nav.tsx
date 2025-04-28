@@ -11,7 +11,7 @@ interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
   }[];
 }
 
-const SidebarNav = (
+export const SidebarNav = (
   { className, items, ...props }: SidebarNavProps,
 ) => {
   return (
@@ -45,5 +45,3 @@ const SidebarNav = (
     </nav>
   );
 };
-
-export { SidebarNav };

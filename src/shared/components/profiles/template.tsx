@@ -41,7 +41,7 @@ const ProfileTemplateDefault = (props: ProfileTemplateProps) => {
   );
 };
 
-const ProfileTemplate = (props: ProfileTemplateProps) => {
+export const ProfileTemplate = (props: ProfileTemplateProps) => {
   switch (props.layout) {
     case "vanilla":
       return <ProfileTemplateVanilla {...props} />;
@@ -50,5 +50,3 @@ const ProfileTemplate = (props: ProfileTemplateProps) => {
       return <ProfileTemplateDefault {...props} />;
   }
 };
-
-export { ProfileTemplate };

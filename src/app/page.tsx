@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import Link from "next/link";
 import { mdx } from "@/shared/lib/mdx.ts";
 
@@ -11,7 +13,7 @@ import { components } from "@/shared/components/profiles/widgets/mod.ts";
 import styles from "./page.module.css";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-const metadata = {
+export const metadata: Metadata = {
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
@@ -23,7 +25,7 @@ const metadata = {
   },
 };
 
-const viewport = {
+export const viewport = {
   width: "device-width",
   initialScale: 1,
   // maximumScale: 1,
@@ -67,7 +69,7 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
 
   return (
     <Layout placeholders={placeholders}>
-      <section className="container grid items-center">
+      <section className="container mx-auto px-4 grid items-center">
         <div className="flex max-w-[980px] flex-col items-start">
           <div className={styles["astronaut-layer"]}>
             <Astronaut width={400} height={400} />
@@ -104,4 +106,4 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
   );
 };
 
-export { IndexPage, IndexPage as default, metadata, viewport };
+export { IndexPage as default };

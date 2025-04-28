@@ -11,7 +11,7 @@ interface AstronautProps {
   fill?: boolean | undefined;
 }
 
-const Astronaut = (props: AstronautProps) => {
+export const Astronaut = (props: AstronautProps) => {
   return (
     <div className={cn(styles.container, props.className)}>
       <Image
@@ -35,5 +35,3 @@ const Astronaut = (props: AstronautProps) => {
     </div>
   );
 };
-
-export { Astronaut };

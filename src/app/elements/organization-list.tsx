@@ -1,6 +1,6 @@
-import {
-  type OrganizationListResult,
-  type Profile,
+import type {
+  OrganizationListResult,
+  Profile,
 } from "shared/src/organization-list-result.ts";
 import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
 import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
@@ -8,7 +8,7 @@ import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 // interface OrganizationListProps {
 // }
 
-const OrganizationList = async (/* props: OrganizationListProps */) => {
+export const OrganizationList = async (/* props: OrganizationListProps */) => {
   const { supabase } = getSupabaseServer();
 
   const organizationListResponse = await supabase.functions.invoke<
@@ -43,5 +43,3 @@ const OrganizationList = async (/* props: OrganizationListProps */) => {
     </Cards>
   );
 };
-
-export { OrganizationList };

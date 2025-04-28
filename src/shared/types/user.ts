@@ -1,6 +1,6 @@
-import { type Profile } from "./profile.ts";
+import type { Profile } from "./profile.ts";
 
-type User = {
+export type User = {
   id: string;
   // email: string;
   fullname: string;
@@ -12,6 +12,4 @@ type User = {
   individualProfile: Profile | null;
 };
 
-type UserList = Array<User>;
-
-export { type User, type UserList };
+export type UserList = Array<User>;

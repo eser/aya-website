@@ -1,24 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import * as React from "react";
 
-const useInputEvent = () => {
-  const [key, setKey] = useState<string | null>(null);
+export const useInputEvent = () => {
+  const [key, setKey] = React.useState<string | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const keyDownHandler = (event: KeyboardEvent) => setKey(event.code);
     const keyUpHandler = () => setKey(null);
 
-    global.addEventListener("keydown", keyDownHandler);
-    global.addEventListener("keyup", keyUpHandler);
+    globalThis.addEventListener("keydown", keyDownHandler);
+    globalThis.addEventListener("keyup", keyUpHandler);
 
     return () => {
-      global.removeEventListener("keydown", keyDownHandler);
-      global.removeEventListener("keyup", keyUpHandler);
+      globalThis.removeEventListener("keydown", keyDownHandler);
+      globalThis.removeEventListener("keyup", keyUpHandler);
     };
   }, []);
 
   return key;
 };
-
-export { useInputEvent };

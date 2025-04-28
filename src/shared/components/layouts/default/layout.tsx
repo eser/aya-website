@@ -9,7 +9,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout = (props: LayoutProps) => {
+export const Layout = (props: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header placeholders={props.placeholders} />
@@ -19,5 +19,3 @@ const Layout = (props: LayoutProps) => {
     </div>
   );
 };
-
-export { Layout };

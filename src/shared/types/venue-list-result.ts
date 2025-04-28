@@ -1,6 +1,6 @@
-import { type ResultType } from "./result-type.ts";
-import { type Profile, type ProfileList } from "./profile.ts";
+import type { ResultType } from "./result-type.ts";
+import type { ProfileList } from "./profile.ts";
 
-type VenueListResult = ResultType<ProfileList>;
+export type { Profile, ProfileList } from "./profile.ts";
 
-export { type VenueListResult, type Profile, type ProfileList };
+export type VenueListResult = ResultType<ProfileList>;

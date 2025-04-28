@@ -1,17 +1,17 @@
 "use client"; // Error components must be Client components
 
-import { useEffect } from "react";
+import * as React from "react";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 
-const Error = ({
+export const Error = ({
   error,
   reset,
 }: {
   error: Error;
   reset: () => void;
 }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     // Log the error to an error reporting service
     // eslint-disable-next-line no-console
     console.error(error);
@@ -45,4 +45,4 @@ const Error = ({
   );
 };
 
-export { Error, Error as default };
+export { Error as default };

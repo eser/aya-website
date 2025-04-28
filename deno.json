@@ -3,12 +3,16 @@
   "nodeModulesDir": "auto",
   "unstable": [
     "cron",
-    "temporal"
+    "temporal",
+    "sloppy-imports"
   ],
   "exclude": [
     "**/node_modules/*",
     "**/.next/*"
   ],
+  "imports": {
+    "@/": "./src/"
+  },
   "lint": {
     "rules": {
       "tags": [
@@ -21,5 +25,13 @@
   },
   "tasks": {
     "ok": "echo 'ok'"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   }
 }

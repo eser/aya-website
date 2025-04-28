@@ -5,7 +5,7 @@ interface ConditionalProps {
   children?: React.ReactNode;
 }
 
-const Conditional = (props: ConditionalProps) => {
+export const Conditional = (props: ConditionalProps) => {
   if (props.test) {
     if (props.then) {
       return props.then;
@@ -20,5 +20,3 @@ const Conditional = (props: ConditionalProps) => {
 
   return null;
 };
-
-export { Conditional };

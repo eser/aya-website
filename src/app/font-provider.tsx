@@ -2,36 +2,41 @@
 
 import { Bree_Serif, Open_Sans } from "next/font/google";
 
-const fontSans = Open_Sans({
+const fontOpenSans = Open_Sans({
+  // weight: ["400", "700"],
+  // style: ["normal"],
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-open-sans",
   display: "block", // "swap",
+  preload: true,
 });
 
-const fontSerif = Bree_Serif({
+
+const fontBreeSerif = Bree_Serif({
+  weight: ["400"],
+  style: ["normal"],
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-bree-serif",
   display: "block", // "swap",
-  weight: "400",
+  preload: true,
 });
 
-// const fontMono = JetBrains_Mono({
+
+// const fontJetBrainsMono = JetBrains_Mono({
 //   subsets: ["latin"],
-//   variable: "--font-mono",
+//   variable: "--font-jetbrains-mono",
 //   display: "swap",
 // });
 
-const FontProvider = () => {
+export const FontProvider = () => {
   return (
     <style jsx global>
       {`
       :root {
-        --font-sans: ${fontSans.style.fontFamily};
-        --font-serif: ${fontSerif.style.fontFamily};
+        --font-sans: ${fontOpenSans.style.fontFamily};
+        --font-serif: ${fontBreeSerif.style.fontFamily};
       }
     `}
     </style>
   );
 };
-
-export { FontProvider };

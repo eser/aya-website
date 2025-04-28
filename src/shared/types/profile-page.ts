@@ -1,4 +1,4 @@
-type ProfilePage = {
+export type ProfilePage = {
   id: string;
   slug: string;
   title: string;
@@ -7,6 +7,4 @@ type ProfilePage = {
   publishedAt: string | null;
 };
 
-type ProfilePageList = Array<ProfilePage>;
-
-export { type ProfilePage, type ProfilePageList };
+export type ProfilePageList = Array<ProfilePage>;

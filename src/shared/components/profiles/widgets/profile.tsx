@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-interface ProfileProps {
+export interface ProfileProps {
   slug: string;
   children?: React.ReactNode;
 }
 
-const Profile = (props: ProfileProps) => {
+export const Profile = (props: ProfileProps) => {
   return (
     <Link
       href={`/${props.slug}/`}
@@ -15,5 +15,3 @@ const Profile = (props: ProfileProps) => {
     </Link>
   );
 };
-
-export { Profile, type ProfileProps };

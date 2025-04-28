@@ -1,6 +1,6 @@
-import {
-  type ProfileGetComposition,
-  type ProfilePage,
+import type {
+  ProfileGetComposition,
+  ProfilePage,
 } from "shared/src/profile-get-result.ts";
 import { SidebarNav } from "./sidebar-nav.tsx";
 
@@ -43,7 +43,7 @@ interface PageListProps {
   item: ProfileGetComposition;
 }
 
-const PageList = (props: PageListProps) => {
+export const PageList = (props: PageListProps) => {
   const sorted = props.item.pages?.slice(0) ?? [];
 
   if (props.item.profile.showStories) {
@@ -80,5 +80,3 @@ const PageList = (props: PageListProps) => {
 
   return <SidebarNav items={sidebarNavItems} />;
 };
-
-export { PageList };

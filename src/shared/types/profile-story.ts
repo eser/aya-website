@@ -1,6 +1,6 @@
-type ProfileStoryCategory = "Status" | "Announcement" | "News";
+export type ProfileStoryCategory = "Status" | "Announcement" | "News";
 
-type ProfileStory = {
+export type ProfileStory = {
   id: string;
   slug: string;
   category: ProfileStoryCategory;
@@ -12,6 +12,4 @@ type ProfileStory = {
   publishedAt: string | null;
 };
 
-type ProfileStoryList = Array<ProfileStory>;
-
-export { type ProfileStory, type ProfileStoryList };
+export type ProfileStoryList = Array<ProfileStory>;

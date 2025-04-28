@@ -42,7 +42,7 @@ repos:
           - ".github/typos.toml"
         exclude: |
           (?x)^(
-            docs/.*|
+            docs/.*
           )$
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v4.0.0

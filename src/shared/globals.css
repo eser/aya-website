@@ -21,18 +21,9 @@
 
 @import "tw-animate-css";
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    font-synthesis: none;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    @apply bg-background text-foreground subpixel-antialiased;
-  }
-}
-
 @custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 @theme inline {
   --color-background: var(--background);
@@ -206,3 +197,18 @@
   --destructive-foreground: 0 85.7% 97.3%;
   --ring: 217.2 32.6% 17.5%;
 } */
+
+/*
+  ---break---
+*/
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-synthesis: none;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-background text-foreground subpixel-antialiased;
+  }
+}

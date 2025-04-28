@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import * as React from "react";
 
 import { SupabaseAuthContext } from "./supabase-auth-provider.tsx";
 
-const useSupabaseAuth = () => {
-  const context = useContext(SupabaseAuthContext);
+export const useSupabaseAuth = () => {
+  const context = React.useContext(SupabaseAuthContext);
 
   if (context === undefined) {
     throw new Error(
@@ -13,5 +13,3 @@ const useSupabaseAuth = () => {
 
   return context;
 };
-
-export { useSupabaseAuth };

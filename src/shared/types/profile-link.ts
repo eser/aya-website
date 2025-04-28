@@ -1,4 +1,4 @@
-type ProfileLink = {
+export type ProfileLink = {
   id: string;
   slug: string;
   title: string;
@@ -11,6 +11,4 @@ type ProfileLink = {
   order: number;
 };
 
-type ProfileLinkList = Array<ProfileLink>;
-
-export { type ProfileLink, type ProfileLinkList };
+export type ProfileLinkList = Array<ProfileLink>;

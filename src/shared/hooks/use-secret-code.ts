@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import * as React from "react";
 import { useInputEvent } from "./use-input-event.ts";
 
-const useSecretCode = (secretCode: string[]) => {
-  const [count, setCount] = useState(0);
-  const [success, setSuccess] = useState(false);
+export const useSecretCode = (secretCode: string[]) => {
+  const [count, setCount] = React.useState(0);
+  const [success, setSuccess] = React.useState(false);
   const key = useInputEvent();
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (key == null) {
       return;
     }
@@ -41,6 +41,4 @@ const konamiCode = [
   "KeyA",
 ];
 
-const useKonamiCode = () => useSecretCode(konamiCode);
-
-export { useKonamiCode, useSecretCode };
+export const useKonamiCode = () => useSecretCode(konamiCode);

@@ -1,24 +1,17 @@
-import { type ResultType } from "./result-type.ts";
-import { type Profile, type ProfileType } from "./profile.ts";
-import { type ProfileLink, type ProfileLinkList } from "./profile-link.ts";
-import { type ProfilePage, type ProfilePageList } from "./profile-page.ts";
+import type { ResultType } from "./result-type.ts";
+import type { Profile } from "./profile.ts";
+import type { ProfileLinkList } from "./profile-link.ts";
+import type { ProfilePageList } from "./profile-page.ts";
 
-interface ProfileGetComposition {
+export type { Profile, ProfileType } from "./profile.ts";
+export type { ProfileLink, ProfileLinkList } from "./profile-link.ts";
+export type { ProfilePage, ProfilePageList } from "./profile-page.ts";
+
+export interface ProfileGetComposition {
   profile: Profile;
   links: ProfileLinkList | undefined;
   pages: ProfilePageList | undefined;
   // stories: ProfileStoryList;
 }
 
-type ProfileGetResult = ResultType<ProfileGetComposition | null>;
-
-export {
-  type Profile,
-  type ProfileGetComposition,
-  type ProfileGetResult,
-  type ProfileLink,
-  type ProfileLinkList,
-  type ProfilePage,
-  type ProfilePageList,
-  type ProfileType,
-};
+export type ProfileGetResult = ResultType<ProfileGetComposition | null>;

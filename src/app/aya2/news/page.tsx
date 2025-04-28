@@ -15,7 +15,7 @@ import {
 import { AspectRatio } from "@/shared/components/ui/aspect-ratio.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-const metadata = {
+export const metadata = {
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
@@ -27,7 +27,7 @@ const metadata = {
   },
 };
 
-const viewport = {
+export const viewport = {
   width: "device-width",
   initialScale: 1,
   // maximumScale: 1,
@@ -161,4 +161,4 @@ const NewsPage = async (/* props: NewsPageProps */) => {
   );
 };
 
-export { metadata, viewport, NewsPage, NewsPage as default };
+export { NewsPage as default };

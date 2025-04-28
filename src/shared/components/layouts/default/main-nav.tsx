@@ -36,7 +36,7 @@ interface MainNavProps {
   placeholders: Record<string, string>;
 }
 
-const MainNav = (props: MainNavProps) => {
+export const MainNav = (props: MainNavProps) => {
   return (
     <nav>
       <div className={styles["nav-links"]}>
@@ -97,5 +97,3 @@ const MainNav = (props: MainNavProps) => {
     </nav>
   );
 };
-
-export { MainNav };

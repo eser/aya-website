@@ -1,7 +1,7 @@
 import Negotiator from "negotiator";
 import picoMatch from "picomatch/posix.js";
 
-export function localeMatchFromRequest(req: Request, supportedLocales: string[], defaultLocale: string) {
+export function localeMatchFromRequest(req: Request, supportedLocales: readonly string[], defaultLocale: string) {
   const negotiatorRequest = {
     headers: {
       "accept-language": req.headers.get("accept-language") ?? undefined,
@@ -14,7 +14,7 @@ export function localeMatchFromRequest(req: Request, supportedLocales: string[],
   return localeMatch(locales, supportedLocales, defaultLocale);
 }
 
-export function localeMatch(locales: string[], supportedLocales: string[], defaultLocale: string) {
+export function localeMatch(locales: string[], supportedLocales: readonly string[], defaultLocale: string) {
   for (const locale of locales) {
     for (const supportedLocale of supportedLocales) {
       if (picoMatch.isMatch(locale, supportedLocale)) {

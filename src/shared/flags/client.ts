@@ -5,12 +5,6 @@ import {
 import { createUseFlagBag } from "@happykit/flags/context";
 import { type AppFlags, config } from "./config.ts";
 
-type InitialFlagState = GenericInitialFlagState<AppFlags>;
-const useFlags = createUseFlags<AppFlags>(config);
-const useFlagBag = createUseFlagBag<AppFlags>();
-
-export {
-  type InitialFlagState,
-  useFlags,
-  useFlagBag,
-};
+export type InitialFlagState = GenericInitialFlagState<AppFlags>;
+export const useFlags = createUseFlags<AppFlags>(config);
+export const useFlagBag = createUseFlagBag<AppFlags>();

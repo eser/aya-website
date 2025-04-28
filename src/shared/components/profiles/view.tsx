@@ -1,6 +1,4 @@
-import {
-  type ProfileGetComposition,
-} from "shared/src/profile-get-result.ts";
+import type { ProfileGetComposition } from "shared/src/profile-get-result.ts";
 
 // import { type Language } from "@/shared/i18n/languages.ts";
 import { mdx } from "@/shared/lib/mdx.ts";
@@ -23,7 +21,7 @@ interface ProfileViewProps {
   item: ProfileGetComposition | null;
 }
 
-const ProfileView = async (props: ProfileViewProps) => {
+export const ProfileView = async (props: ProfileViewProps) => {
   if (props.item === null) {
     return (
       <>
@@ -73,5 +71,3 @@ const ProfileView = async (props: ProfileViewProps) => {
     </ProfileTemplate>
   );
 };
-
-export { ProfileView };

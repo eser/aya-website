@@ -8,7 +8,7 @@ import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 // interface ProductListProps {
 // }
 
-const ProductList = async (/* props: ProductListProps */) => {
+export const ProductList = async (/* props: ProductListProps */) => {
   const { supabase } = getSupabaseServer();
 
   const productListResponse = await supabase.functions.invoke<
@@ -43,5 +43,3 @@ const ProductList = async (/* props: ProductListProps */) => {
     </Cards>
   );
 };
-
-export { ProductList };

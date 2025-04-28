@@ -4,11 +4,11 @@ import { Conditional } from "@/shared/components/conditional.tsx";
 
 import styles from "./cards.module.css";
 
-interface CardsProps {
+export interface CardsProps {
   children?: React.ReactNode;
 }
 
-const Cards = (props: CardsProps) => {
+export const Cards = (props: CardsProps) => {
   return (
     <div className={styles.cards}>
       {props.children}
@@ -16,7 +16,7 @@ const Cards = (props: CardsProps) => {
   );
 };
 
-interface CardProps {
+export interface CardProps {
   category?: string;
   imageUri?: string | null;
   title: string;
@@ -25,7 +25,7 @@ interface CardProps {
   children?: React.ReactNode;
 }
 
-const Card = (props: CardProps) => {
+export const Card = (props: CardProps) => {
   return (
     <a className={styles.card} href={props.href}>
       <div className={styles.inner}>
@@ -55,5 +55,3 @@ const Card = (props: CardProps) => {
     </a>
   );
 };
-
-export { Card, type CardProps, Cards, type CardsProps };

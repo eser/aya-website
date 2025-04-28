@@ -10,9 +10,9 @@ import {
   Youtube,
 } from "lucide-react";
 
-type Icon = LucideIcon;
+export type Icon = typeof LucideIcon;
 
-const Icons = {
+export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
@@ -64,7 +64,7 @@ const Icons = {
   ),
 };
 
-const getLinkIcon = (iconSet: string | null, iconKey: string | null) => {
+export const getLinkIcon = (iconSet: string | null, iconKey: string | null) => {
   if (iconSet === "lucide" && iconKey !== null) {
     const Icon = Icons[iconKey as keyof typeof Icons];
     return <Icon />;
@@ -72,5 +72,3 @@ const getLinkIcon = (iconSet: string | null, iconKey: string | null) => {
 
   return <Icons.link />;
 };
-
-export { getLinkIcon, type Icon, Icons };

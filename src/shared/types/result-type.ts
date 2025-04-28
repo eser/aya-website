@@ -1,8 +1,6 @@
-interface ResultType<T> {
+export interface ResultType<T> {
   payload: T;
   error?: {
     message: string;
   };
 }
-
-export { type ResultType };

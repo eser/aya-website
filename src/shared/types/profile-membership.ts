@@ -1,6 +1,6 @@
 import { type User } from "./user.ts";
 
-type ProfileMembershipRole =
+export type ProfileMembershipRole =
   | "Owner"
   | "Lead"
   | "Maintainer"
@@ -8,16 +8,10 @@ type ProfileMembershipRole =
   | "Sponsor"
   | "Follower";
 
-type ProfileMembership = {
+export type ProfileMembership = {
   id: string;
   role: ProfileMembershipRole;
   user: User | null;
 };
 
-type ProfileMembershipList = Array<ProfileMembership>;
-
-export {
-  type ProfileMembership,
-  type ProfileMembershipList,
-  type ProfileMembershipRole,
-};
+export type ProfileMembershipList = Array<ProfileMembership>;

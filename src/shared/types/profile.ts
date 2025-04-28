@@ -1,6 +1,6 @@
-type ProfileType = "Individual" | "Organization" | "Product" | "Venue";
+export type ProfileType = "Individual" | "Organization" | "Product" | "Venue";
 
-type Profile = {
+export type Profile = {
   id: string;
   type: ProfileType;
   slug: string;
@@ -12,6 +12,4 @@ type Profile = {
   showMembers: boolean,
 };
 
-type ProfileList = Array<Profile>;
-
-export { type Profile, type ProfileList, type ProfileType };
+export type ProfileList = Array<Profile>;

@@ -9,7 +9,7 @@ interface HeaderProps {
   placeholders: Record<string, string>;
 }
 
-const Header = (props: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div>
@@ -21,5 +21,3 @@ const Header = (props: HeaderProps) => {
     </header>
   );
 };
-
-export { Header };

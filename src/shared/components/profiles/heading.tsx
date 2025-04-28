@@ -12,7 +12,7 @@ interface ProfileHeadingProps {
   item: ProfileGetComposition;
 }
 
-const ProfileHeading = (props: ProfileHeadingProps) => {
+export const ProfileHeading = (props: ProfileHeadingProps) => {
   return (
     <>
       <div className="flex flex-row items-center">
@@ -50,5 +50,3 @@ const ProfileHeading = (props: ProfileHeadingProps) => {
     </>
   );
 };
-
-export { ProfileHeading };

@@ -1,13 +1,13 @@
-type LanguageKey = "tr" | "en";
+export type LanguageKey = "tr" | "en";
 
-interface Language {
+export type Language = {
   code: LanguageKey;
   name: string;
   flag: string;
   dir: "ltr" | "rtl";
-}
+};
 
-const languages: readonly Language[] = [
+export const languages: readonly Language[] = [
   {
     code: "tr",
     name: "Türkçe",
@@ -22,4 +22,4 @@ const languages: readonly Language[] = [
   },
 ];
 
-export { type Language, type LanguageKey, languages };
+export const fallbackLanguage: Language = languages[0];

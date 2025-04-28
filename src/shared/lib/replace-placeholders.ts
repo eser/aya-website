@@ -1,4 +1,4 @@
-const replacePlaceholders = (
+export const replacePlaceholders = (
   href: string,
   placeholders: Record<string, string>,
 ): string => {
@@ -7,5 +7,3 @@ const replacePlaceholders = (
     href,
   );
 };
-
-export { replacePlaceholders };

@@ -1,28 +1,32 @@
-interface SiteConfig {
+export type SiteConfig = {
   name: string;
   fancyName: string;
   title: string;
   description: string;
+  keywords: string[];
+
   links: {
-    twitter: string;
+    x: string;
     instagram: string;
     github: string;
   };
-}
+};
 
-const siteConfig: SiteConfig = {
+export const siteConfig: SiteConfig = {
   name: "Açık Yazılım Ağı",
   fancyName: "𝕒𝕔𝕀𝕜 𝕪𝕒𝕫𝕀𝕃𝕀𝕞 𝕒𝕘𝕀",
   title: "AYA | Açık Yazılım Ağı",
   description: "Bilişim Meta-Topluluğu",
+  keywords: ["Açık Yazılım Ağı", "Açık Kaynak", "Açık Veri"],
+
   links: {
-    twitter: "https://twitter.com/acikyazilimagi",
+    x: "https://twitter.com/acikyazilimagi",
     instagram: "https://www.instagram.com/acikyazilimagi/",
     github: "https://github.com/acikkaynak",
   },
 };
 
-const forbiddenSlugs: string[] = [
+export const forbiddenSlugs: readonly string[] = [
   "about",
   "admin",
   "api",
@@ -77,5 +81,3 @@ const forbiddenSlugs: string[] = [
   "verify",
   "wiki",
 ];
-
-export { forbiddenSlugs, siteConfig };
