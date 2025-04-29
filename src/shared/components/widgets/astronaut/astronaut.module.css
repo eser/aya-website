@@ -1,6 +1,8 @@
+@reference "../../../globals.css";
+
 .container {
   & .stars {
-    @apply absolute;
+    @apply absolute fill-border;
   }
 
   & .astronaut {

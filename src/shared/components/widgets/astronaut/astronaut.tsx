@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { cn } from "@/shared/lib/cn.ts";
 
+import { Stars } from "./stars.tsx";
 import styles from "./astronaut.module.css";
 
 type AstronautProps = {
@@ -16,15 +17,10 @@ type AstronautProps = {
 export const Astronaut = (props: AstronautProps) => {
   return (
     <div className={cn(styles.container, props.className)}>
-      <Image
+      <Stars
         className={styles.stars}
-        src="/stars.svg"
         width={props.width}
         height={props.height}
-        fill={props.fill}
-        loading="eager"
-        alt="stars"
-        priority
       />
       <Image
         className={styles.astronaut}
