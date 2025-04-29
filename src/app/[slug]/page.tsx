@@ -3,7 +3,7 @@ import * as React from "react";
 import type { Metadata } from "next";
 
 import { mdx } from "@/shared/lib/mdx.ts";
-import { fetcher } from "@/shared/modules/fetcher/fetcher.ts";
+import { backend } from "@/shared/modules/backend/backend.ts";
 import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/modules/i18n/languages.ts";
 
@@ -43,7 +43,7 @@ const IndexPage = async (props: IndexPageProps) => {
     slug: params.slug,
   };
 
-  const data = await fetcher(`/users/${params.slug}`);
+  const data = await backend.getUser(params.slug);
 
   const introText = `# ${data.name}
 

@@ -79,14 +79,14 @@ Currently, we do not have a management panel for the project. For this reason, w
 $ deno task cli
 ```
 
-You can access `env` and `registry` objects through the CLI.
+You can access `backend` object through the CLI.
 
 ### Examples:
 
 Getting a profile:
 
 ```js
-await profileGet(registry, "eser", "tr");
+await backend.getProfile("eser", "tr");
 ```
 
 ## How to Contribute

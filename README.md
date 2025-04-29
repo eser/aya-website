@@ -82,14 +82,14 @@ $ node --run dev
 $ deno task cli
 ```
 
-CLI üzerinden `env` ve `registry` nesnelerine erişebilirsiniz.
+CLI üzerinden `backend` nesnesine erişebilirsiniz.
 
 ### Örnekler:
 
 Profil getirme:
 
 ```js
-await profileGet(registry, "eser", "tr");
+await backend.getProfile("eser", "tr");
 ```
 
 ## Nasıl Katkıda Bulunabilirsin?

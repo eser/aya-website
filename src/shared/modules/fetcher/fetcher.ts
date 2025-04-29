@@ -1,7 +1,6 @@
-import process from "node:process";
-
 export async function fetcher(relativePath: string) {
-  const targetUrl = `${process.env.BACKEND_URI}${relativePath}`;
+  // deno-lint-ignore no-process-global
+  const targetUrl = `${process.env.NEXT_PUBLIC_BACKEND_URI}${relativePath}`;
 
   const request = await fetch(targetUrl);
 
