@@ -9,15 +9,16 @@ import { Button } from "@/shared/components/ui/button.tsx";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu.tsx";
 import { cn } from "@/shared/lib/cn.ts";
 
-import styles from "./theme-toggle.module.css";
+import styles from "./theme-switcher.module.css";
 
-export const ThemeToggle = () => {
-  const { setTheme } = useTheme();
+export const ThemeSwitcher = () => {
+  const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -46,18 +47,11 @@ export const ThemeToggle = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={15} forceMount>
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Icons.sun className={styles.icon} />
-          <span>Açık</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Icons.moon className={styles.icon} />
-          <span>Koyu</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Icons.laptop className={styles.icon} />
-          <span>Sistem</span>
-        </DropdownMenuItem>
+        <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
+          <DropdownMenuRadioItem value="default">Sistem</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="light">Açık</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="midnight">Koyu</DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

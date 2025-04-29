@@ -7,7 +7,7 @@
     @apply container mx-auto flex pl-3 pr-1 md:pl-4 md:pr-3 py-1 md:py-3 items-center;
 
     & a {
-      @apply text-foreground hover:text-accent no-underline;
+      @apply text-foreground hover:text-accent-foreground no-underline;
     }
   }
 }

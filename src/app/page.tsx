@@ -6,7 +6,7 @@ import Link from "next/link";
 import { mdx } from "@/shared/lib/mdx.ts";
 
 import { siteConfig } from "@/shared/config.ts";
-// import type { Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/modules/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";

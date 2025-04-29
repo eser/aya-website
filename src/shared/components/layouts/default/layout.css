@@ -1,15 +1,17 @@
 @reference "../../../globals.css";
 
-:root {
+@utility theme-light-variables {
+  color-scheme: light;
+
   --radius: 0.625rem;
-  --background: oklch(100% 0 0);
-  --foreground: oklch(33.69% 0.031 282.62);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.3369 0.031 282.62);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(78.73% 0.170 142.12);
-  --primary-foreground: oklch(100% 0 0);
+  --primary: oklch(0.7873 0.170 142.12);
+  --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -17,7 +19,7 @@
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.929 0.013 255.508); /* oklch(0.9747 0.046 133.5) */
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -35,8 +37,11 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
-.dark {
-  --background: oklch(0.129 0.042 264.695);
+@utility theme-midnight-variables {
+  color-scheme: dark;
+
+  --radius: 0.625rem;
+  --background: oklch(0.1664 0.044 267.63);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
@@ -51,7 +56,7 @@
   --accent: oklch(0.279 0.041 260.031);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(1 0 0 / 10%); /* oklch(0.2519 0.052 263.55) */
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.551 0.027 264.364);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -67,6 +72,28 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+:root {
+  @apply theme-light-variables;
+}
+
+html[data-theme="default"] {
+  /* @media (prefers-color-scheme: light) {
+    @apply theme-light-variables;
+  } */
+
+  @media (prefers-color-scheme: dark) {
+    @apply theme-midnight-variables;
+  }
+}
+
+html[data-theme="light"] {
+  /* @apply theme-light-variables; */
+}
+
+html[data-theme="midnight"] {
+  @apply theme-midnight-variables;
 }
 
 /* :root {
@@ -248,7 +275,7 @@ a:is(.button) {
 }
 
 a:not(.button) {
-  @apply text-accent-foreground hover:text-accent underline underline-offset-4;
+  @apply text-foreground hover:text-accent-foreground underline underline-offset-4;
   /* font-medium */
 }
 

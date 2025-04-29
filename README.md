@@ -1,7 +1,7 @@
 # AYA - Açık Yazılım Ağı
 
 [![Discord](https://img.shields.io/discord/1072074800622739476?color=7289da&logo=discord&logoColor=white)](https://discord.gg/itdepremyardim)
-[![GitHub issues](https://img.shields.io/github/issues/acikkaynak/aya-website)](https://github.com/acikkaynak/aya-website/issues)
+[![GitHub issues](https://img.shields.io/github/issues/eser/aya-website)](https://github.com/eser/aya-website/issues)
 
 (For English please click [here](README.en.md))
 
@@ -95,7 +95,7 @@ await profileGet(registry, "eser", "tr");
 ## Nasıl Katkıda Bulunabilirsin?
 
 Herkesten katkı bekliyoruz. Başlamak için lütfen [katkıda bulunma kılavuzumuzu](CONTRIBUTING.md) okuyun. Yardım etmek
-isterseniz [issue'lara](https://github.com/acikkaynak/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa
+isterseniz [issue'lara](https://github.com/eser/aya-website/issues) göz atabilirsiniz. Herhangi bir sorunuz varsa
 [Discord sunucumuza](https://discord.gg/itdepremyardim) katılmaktan çekinmeyin. Herhangi bir noktada takılırsanız,
 GitHub Issues veya Discord üzerinden yardım istemekten çekinmeyin.
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { GitHubLogin } from "@/shared/components/github-login.tsx";
-import { ThemeToggle } from "./theme-toggle.tsx";
+import { GitHubLogin } from "@/shared/modules/auth/github-login.tsx";
+import { ThemeSwitcher } from "./theme-switcher.tsx";
 import { MainNav } from "./main-nav.tsx";
 import { ExternalLinks } from "./external-links.tsx";
 
@@ -17,7 +17,7 @@ export const Header = (props: HeaderProps) => {
       <div>
         <MainNav placeholders={props.placeholders} />
         <ExternalLinks />
-        <ThemeToggle />
+        <ThemeSwitcher />
         <GitHubLogin />
       </div>
     </header>

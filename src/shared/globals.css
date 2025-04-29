@@ -21,9 +21,16 @@
 
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-/* @custom-variant dark (&:where(.dark, .dark *)); */
-/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+@custom-variant dark {
+  @media (prefers-color-scheme: dark) {
+    &:where([data-theme="default"], [data-theme="default"] *) {
+      @slot;
+    }
+  }
+  &:where([data-theme="midnight"], [data-theme="midnight"] *) {
+    @slot;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);

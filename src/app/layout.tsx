@@ -2,9 +2,9 @@ import "server-only";
 
 import * as React from "react";
 
-import { fallbackLanguage, type Language } from "@/shared/i18n/languages.ts";
+import { fallbackLanguage, type Language } from "@/shared/modules/i18n/languages.ts";
+import { ThemeProvider } from "@/shared/modules/themes/theme-provider.tsx";
 
-import { ThemeProvider } from "./theme-provider.tsx";
 import { Analytics } from "./analytics.tsx";
 
 import "../shared/globals.css";
@@ -30,10 +30,12 @@ const Layout = async (props: LayoutProps) => {
       <head />
       <body>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
+          storageKey="theme"
+          defaultTheme="default"
+          enableColorScheme={false}
           disableTransitionOnChange
+          themes={["default", "light", "midnight"]}
+          attribute="data-theme"
         >
           {props.children}
         </ThemeProvider>

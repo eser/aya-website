@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
   links: {
     x: "https://twitter.com/acikyazilimagi",
     instagram: "https://www.instagram.com/acikyazilimagi/",
-    github: "https://github.com/acikkaynak",
+    github: "https://github.com/acikyazilimagi",
   },
 };
 

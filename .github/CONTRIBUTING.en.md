@@ -1,4 +1,4 @@
-# Contributing to [aya-website](https://github.com/acikkaynak/aya-website)
+# Contributing to [aya-website](https://github.com/eser/aya-website)
 
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍
 

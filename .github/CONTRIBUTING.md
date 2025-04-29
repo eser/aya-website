@@ -1,4 +1,4 @@
-# [aya-website](https://github.com/acikkaynak/aya-website)'a katkıda bulunma
+# [aya-website](https://github.com/eser/aya-website)'a katkıda bulunma
 
 👍🎉 Öncelikle, katkıda bulunmak için zaman ayırdığınız için teşekkürler! 🎉👍
 
