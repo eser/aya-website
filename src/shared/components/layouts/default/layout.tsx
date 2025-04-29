@@ -4,10 +4,10 @@ import { ResponsiveIndicator } from "./responsive-indicator.tsx";
 
 import "./layout.css";
 
-interface LayoutProps {
+type LayoutProps = {
   placeholders: Record<string, string>;
   children: React.ReactNode;
-}
+};
 
 export const Layout = (props: LayoutProps) => {
   return (

@@ -1,5 +1,5 @@
 import { siteConfig } from "@/shared/config.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { OrganizationList } from "./organization-list.tsx";
 import { IndividualList } from "./individual-list.tsx";
@@ -24,11 +24,11 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-// interface ElementsPageProps {
+// type ElementsPageProps = {
 //   params: {
 //     // lang: Language;
 //   };
-// }
+// };
 
 const ElementsPage = (/* props: ElementsPageProps */) => {
   const placeholders: Record<string, string> = {

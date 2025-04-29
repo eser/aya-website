@@ -8,12 +8,12 @@ import { Button } from "@/shared/components/ui/button.tsx";
 
 import styles from "./external-links.module.css";
 
-interface NavItem {
+type NavItem = {
   title: string;
   href?: string;
   icon: React.ReactNode;
   disabled?: boolean;
-}
+};
 
 const navItems: NavItem[] = [
   {

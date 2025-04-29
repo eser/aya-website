@@ -12,3 +12,4 @@ node_modules/*
 .tool-versions
 LICENSE
 README.md
+README.en.md

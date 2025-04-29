@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export interface ProfileProps {
+export type ProfileProps = {
   slug: string;
   children?: React.ReactNode;
-}
+};
 
 export const Profile = (props: ProfileProps) => {
   return (

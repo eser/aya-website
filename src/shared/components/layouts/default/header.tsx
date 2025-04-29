@@ -5,9 +5,9 @@ import { ExternalLinks } from "./external-links.tsx";
 
 import styles from "./header.module.css";
 
-interface HeaderProps {
+type HeaderProps = {
   placeholders: Record<string, string>;
-}
+};
 
 export const Header = (props: HeaderProps) => {
   return (

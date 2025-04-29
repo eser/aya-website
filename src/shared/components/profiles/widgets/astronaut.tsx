@@ -4,12 +4,12 @@ import { cn } from "@/shared/lib/cn.ts";
 
 import styles from "./astronaut.module.css";
 
-interface AstronautProps {
+type AstronautProps = {
   className?: string | undefined;
   width?: number | `${number}` | undefined;
   height?: number | `${number}` | undefined;
   fill?: boolean | undefined;
-}
+};
 
 export const Astronaut = (props: AstronautProps) => {
   return (

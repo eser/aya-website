@@ -3,13 +3,13 @@ import Link from "next/link";
 import { cn } from "@/shared/lib/cn.ts";
 import { Button } from "@/shared/components/ui/button.tsx";
 
-interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
+type SidebarNavProps = React.HTMLAttributes<HTMLElement> & {
   items: {
     href: string;
     title: string;
     isActive?: boolean;
   }[];
-}
+};
 
 export const SidebarNav = (
   { className, items, ...props }: SidebarNavProps,
@@ -28,9 +28,7 @@ export const SidebarNav = (
           size="default"
           asChild
           className={cn(
-            item.isActive
-              ? "bg-border hover:bg-border"
-              : "bg-transparent hover:bg-transparent",
+            item.isActive ? "bg-border hover:bg-border" : "bg-transparent hover:bg-transparent",
             "justify-start font-serif text-lg text-foreground hover:no-underline",
           )}
         >

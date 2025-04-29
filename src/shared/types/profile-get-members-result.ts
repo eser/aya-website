@@ -5,9 +5,9 @@ import type { ProfileMembershipList } from "./profile-membership.ts";
 export type { Profile, ProfileType } from "./profile.ts";
 export type { ProfileMembership, ProfileMembershipList } from "./profile-membership.ts";
 
-export interface ProfileGetMembersComposition {
+export type ProfileGetMembersComposition = {
   profile: Profile;
   members: ProfileMembershipList | undefined;
-}
+};
 
 export type ProfileGetMembersResult = ResultType<ProfileGetMembersComposition | null>;

@@ -1,9 +1,9 @@
-// import { useSupabase } from "@/shared/supabase/use-supabase";
+// import { useRegistry } from "@/shared/registry/use-registry";
 
 const sitemap = () => {
-  // const { supabase } = useSupabase();
+  // const { registry } = useRegistry();
 
-  // const { data: posts } = await supabase.from("posts").select();
+  // const { data: posts } = await registry.from("posts").select();
 
   // TODO(@eser) implement this
 

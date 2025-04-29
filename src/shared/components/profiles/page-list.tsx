@@ -1,7 +1,4 @@
-import type {
-  ProfileGetComposition,
-  ProfilePage,
-} from "shared/src/profile-get-result.ts";
+import type { ProfileGetComposition, ProfilePage } from "@/shared/registry/profile-get-result.ts";
 import { SidebarNav } from "./sidebar-nav.tsx";
 
 const PAGE_SLUG_INDEX = "index";
@@ -37,11 +34,11 @@ const sortFn = (a: ProfilePage, b: ProfilePage) => {
 };
 
 // Component: PageList
-interface PageListProps {
+type PageListProps = {
   prefix: string;
   activePageSlug: string;
   item: ProfileGetComposition;
-}
+};
 
 export const PageList = (props: PageListProps) => {
   const sorted = props.item.pages?.slice(0) ?? [];

@@ -15,11 +15,11 @@ import { Logo } from "./logo.tsx";
 
 import styles from "./main-nav.module.css";
 
-interface NavItem {
+type NavItem = {
   title: string;
   href?: string;
   disabled?: boolean;
-}
+};
 
 const navItems: NavItem[] = [
   {
@@ -32,9 +32,9 @@ const navItems: NavItem[] = [
   },
 ];
 
-interface MainNavProps {
+type MainNavProps = {
   placeholders: Record<string, string>;
-}
+};
 
 export const MainNav = (props: MainNavProps) => {
   return (

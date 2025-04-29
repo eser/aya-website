@@ -4,9 +4,9 @@ import { Conditional } from "@/shared/components/conditional.tsx";
 
 import styles from "./cards.module.css";
 
-export interface CardsProps {
+type CardsProps = {
   children?: React.ReactNode;
-}
+};
 
 export const Cards = (props: CardsProps) => {
   return (
@@ -16,14 +16,14 @@ export const Cards = (props: CardsProps) => {
   );
 };
 
-export interface CardProps {
+export type CardProps = {
   category?: string;
   imageUri?: string | null;
   title: string;
   description: string;
   href?: string;
   children?: React.ReactNode;
-}
+};
 
 export const Card = (props: CardProps) => {
   return (

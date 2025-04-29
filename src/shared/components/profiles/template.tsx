@@ -1,12 +1,12 @@
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 
 // Component: ProfileTemplate
-interface ProfileTemplateProps {
+type ProfileTemplateProps = {
   layout: "default" | "vanilla";
   heading?: React.ReactNode;
   navigation?: React.ReactNode;
   children?: React.ReactNode;
-}
+};
 
 const ProfileTemplateVanilla = (props: ProfileTemplateProps) => {
   return (

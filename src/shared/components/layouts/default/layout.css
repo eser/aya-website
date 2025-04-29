@@ -26,7 +26,7 @@ a {
 }
 
 img {
-  @apply max-w-full	object-cover;
+  @apply max-w-full object-cover;
 }
 
 h1 {

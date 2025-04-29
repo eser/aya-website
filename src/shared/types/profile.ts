@@ -8,8 +8,8 @@ export type Profile = {
   description: string;
   profilePictureUri: string | null;
 
-  showStories: boolean,
-  showMembers: boolean,
+  showStories: boolean;
+  showMembers: boolean;
 };
 
 export type ProfileList = Array<Profile>;

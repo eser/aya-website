@@ -1,6 +1,6 @@
-import { type ProfileGetResult } from "shared/src/profile-get-result.ts";
+import type { ProfileGetResult } from "@/shared/registry/profile-get-result.ts";
 import { siteConfig } from "@/shared/config.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { ProfileView } from "@/shared/components/profiles/view.tsx";
 
@@ -23,12 +23,12 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-interface ProfilePageProps {
+type ProfilePageProps = {
   params: Awaited<{
     // lang: Language;
     slugs: [string, ...string[]];
   }>;
-}
+};
 
 const ProfilePage = async (props: ProfilePageProps) => {
   const placeholders: Record<string, string> = {

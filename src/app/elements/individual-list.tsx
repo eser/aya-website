@@ -1,17 +1,14 @@
-import type {
-  IndividualListResult,
-  Profile,
-} from "shared/src/individual-list-result.ts";
-import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import type { IndividualListResult, Profile } from "@/shared/registry/individual-list-result.ts";
+import { useRegistry } from "@/shared/registry/use-registry";
 import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
-// interface IndividualListProps {
-// }
+// type IndividualListProps = {
+// };
 
 export const IndividualList = async (/* props: IndividualListProps */) => {
-  const { supabase } = getSupabaseServer();
+  const { registry } = useRegistry();
 
-  const individualListResponse = await supabase.functions.invoke<
+  const individualListResponse = await registry.functions.invoke<
     IndividualListResult
   >(
     "individual-list",

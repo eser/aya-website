@@ -1,3 +1,4 @@
+import process from "node:process";
 export const ResponsiveIndicator = () => {
   if (process.env.NODE_ENV === "production") {
     return null;

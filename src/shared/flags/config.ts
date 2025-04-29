@@ -1,4 +1,5 @@
-import { type Configuration } from "@happykit/flags/config";
+import type { Configuration } from "@happykit/flags/config";
+import process from "node:process";
 
 // You can replace this with your exact flag types
 export type AppFlags = { [key: string]: boolean | number | string | null };

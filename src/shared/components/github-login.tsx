@@ -2,14 +2,14 @@
 
 import * as React from "react";
 
-import { useSupabaseAuth } from "@/shared/supabase/use-supabase-auth";
+import { useAuthProvider } from "../registry/use-auth-provider.ts";
 import { Button } from "@/shared/components/ui/button.tsx";
 
 import styles from "./github-login.module.css";
 
 // // eslint-disable-next-line @typescript-eslint/no-empty-function
 export const GitHubLogin = () => {
-  const auth = useSupabaseAuth();
+  const auth = useAuthProvider();
 
   const isLoggedIn = auth.session?.user !== undefined;
   const onClick = React.useCallback(
@@ -33,9 +33,7 @@ export const GitHubLogin = () => {
     >
       <div>
         {auth.isLoading}
-        {isLoggedIn
-          ? <span>{auth.session?.user.user_metadata.full_name}</span>
-          : <span>GitHub ile Giriş Yap</span>}
+        {isLoggedIn ? <span>{auth.session?.user.user_metadata.full_name}</span> : <span>GitHub ile Giriş Yap</span>}
       </div>
     </Button>
   );

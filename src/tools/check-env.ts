@@ -1,5 +1,6 @@
 import { loadEnvConfig } from "@next/env";
 import { z } from "zod";
+import process from "node:process";
 
 const getProjectDir = () => {
   const dir = new URL("../..", import.meta.url).pathname;
@@ -8,9 +9,8 @@ const getProjectDir = () => {
 };
 
 const envSchema = z.object({
-  NEXT_PUBLIC_SUPABASE_PROJECT_REF: z.string(),
-  NEXT_PUBLIC_SUPABASE_URL: z.string().url(),
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string(),
+  NEXT_PUBLIC_REGISTRY_PROJECT_REF: z.string(),
+  NEXT_PUBLIC_REGISTRY_URL: z.string().url(),
   NODE_ENV: z.enum(["development", "test", "production"]).optional(),
 });
 

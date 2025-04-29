@@ -1,5 +1,5 @@
 import { siteConfig } from "@/shared/config.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { ProductList } from "./product-list.tsx";
 
@@ -22,11 +22,11 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-// interface ProductsPageProps {
+// type ProductsPageProps = {
 //   params: {
 //     // lang: Language;
 //   };
-// }
+// };
 
 const ProductsPage = (/* props: ProductsPageProps */) => {
   const placeholders: Record<string, string> = {

@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { localeMatchFromRequest } from "./shared/lib/locale-matcher.ts";
 
-import { supportedLocales, fallbackLocale } from "@/shared/i18n/locales.ts";
+import { fallbackLocale, supportedLocales } from "@/shared/i18n/locales.ts";
 
 // const _getLocale = (req: NextRequest): string | undefined => {
 //   const availableLanguages = languages.map((language) =>

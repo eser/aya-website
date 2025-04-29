@@ -73,5 +73,6 @@ repos:
             docs/.*|
             ops/docker/Dockerfile|
             LICENSE|
-            README.md
+            README.md|
+            README.en.md
           )$

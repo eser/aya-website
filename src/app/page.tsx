@@ -4,7 +4,7 @@ import Link from "next/link";
 import { mdx } from "@/shared/lib/mdx.ts";
 
 import { siteConfig } from "@/shared/config.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/profiles/widgets/astronaut.tsx";
@@ -31,19 +31,18 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-// interface IndexPageProps {
+// type IndexPageProps = {
 //   params: {
 //     // lang: Language;
 //   };
-// }
+// };
 
 const IndexPage = async (/* props: IndexPageProps */) => {
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
 
-  const introText =
-    `**Açık Yazılım Ağı** olarak bilişim sektörüne temas eden gönüllü
+  const introText = `**Açık Yazılım Ağı** olarak bilişim sektörüne temas eden gönüllü
 ve profesyonellere 2015'den bu yana yapmış olduğumuz çalışmalarla bir
 çatı sağlamaya çalışıyoruz. Meta-topluluk ismini vermiş olduğumuz bu
 çatı altında kişilerin, toplulukların, firmaların, resmi kurumların ve

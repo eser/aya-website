@@ -1,17 +1,14 @@
-import type {
-  Profile,
-  VenueListResult,
-} from "shared/src/venue-list-result.ts";
-import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import type { Profile, VenueListResult } from "@/shared/registry/venue-list-result.ts";
+import { useRegistry } from "@/shared/registry/use-registry";
 import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
-// interface VenueListProps {
-// }
+// type VenueListProps = {
+// };
 
 export const VenueList = async (/* props: VenueListProps */) => {
-  const { supabase } = getSupabaseServer();
+  const { registry } = useRegistry();
 
-  const venueListResponse = await supabase.functions.invoke<
+  const venueListResponse = await registry.functions.invoke<
     VenueListResult
   >(
     "venue-list",

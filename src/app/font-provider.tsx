@@ -11,7 +11,6 @@ const fontOpenSans = Open_Sans({
   preload: true,
 });
 
-
 const fontBreeSerif = Bree_Serif({
   weight: ["400"],
   style: ["normal"],
@@ -20,7 +19,6 @@ const fontBreeSerif = Bree_Serif({
   display: "block", // "swap",
   preload: true,
 });
-
 
 // const fontJetBrainsMono = JetBrains_Mono({
 //   subsets: ["latin"],

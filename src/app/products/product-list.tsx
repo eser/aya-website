@@ -1,17 +1,14 @@
-import {
-  type ProductListResult,
-  type Profile,
-} from "shared/src/product-list-result.ts";
-import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import { type ProductListResult, type Profile } from "@/shared/registry/product-list-result.ts";
+import { useRegistry } from "@/shared/registry/use-registry";
 import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
-// interface ProductListProps {
-// }
+// type ProductListProps = {
+// };
 
 export const ProductList = async (/* props: ProductListProps */) => {
-  const { supabase } = getSupabaseServer();
+  const { registry } = useRegistry();
 
-  const productListResponse = await supabase.functions.invoke<
+  const productListResponse = await registry.functions.invoke<
     ProductListResult
   >(
     "product-list",

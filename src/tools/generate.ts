@@ -2,6 +2,7 @@ import { loadEnvConfig } from "@next/env";
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
+import process from "node:process";
 
 const getProjectDir = () => {
   const dir = new URL("../..", import.meta.url).pathname;
@@ -10,10 +11,10 @@ const getProjectDir = () => {
 };
 
 const generateCommand = () => {
-  const projectRef = process.env.NEXT_PUBLIC_SUPABASE_PROJECT_REF ?? "";
+  const projectRef = process.env.NEXT_PUBLIC_REGISTRY_PROJECT_REF ?? "";
 
   const command: [string, string[]] = [
-    "supabase",
+    "registry",
     [
       "gen",
       "types",
@@ -45,7 +46,7 @@ const main = () => {
   const command = generateCommand();
   const output = executeCommand(command);
 
-  const target = join(projectDir, "../shared/src/supabase-database-types.ts");
+  const target = join(projectDir, "../shared/src/registry-database-types.ts");
 
   writeOutput(target, output);
 

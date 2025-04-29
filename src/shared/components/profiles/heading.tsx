@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { type ProfileGetComposition } from "shared/src/profile-get-result.ts";
+import type { ProfileGetComposition } from "@/shared/registry/profile-get-result.ts";
 
 import { getLinkIcon } from "@/shared/components/icons.tsx";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Conditional } from "@/shared/components/conditional.tsx";
 
-interface ProfileHeadingProps {
+type ProfileHeadingProps = {
   // lang: Language;
   item: ProfileGetComposition;
-}
+};
 
 export const ProfileHeading = (props: ProfileHeadingProps) => {
   return (

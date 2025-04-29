@@ -1,9 +1,9 @@
-interface ConditionalProps {
+type ConditionalProps = {
   test: boolean;
   then?: React.ReactNode;
   else?: React.ReactNode;
   children?: React.ReactNode;
-}
+};
 
 export const Conditional = (props: ConditionalProps) => {
   if (props.test) {

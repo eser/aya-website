@@ -1,10 +1,7 @@
 // Inspired by react-hot-toast library
 import * as React from "react";
 
-import type {
-  ToastActionElement,
-  ToastProps,
-} from "@/shared/components/ui/toast";
+import type { ToastActionElement, ToastProps } from "@/shared/components/ui/toast";
 
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1000000;
@@ -51,9 +48,9 @@ type Action =
     toastId?: ToasterToast["id"];
   };
 
-interface State {
+type State = {
   toasts: ToasterToast[];
-}
+};
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
@@ -161,7 +158,7 @@ const toast = ({ ...props }: Toast) => {
       id: id,
       open: true,
       onOpenChange: (open) => {
-        if (!open) { dismiss(); }
+        if (!open) dismiss();
       },
     },
   });
@@ -190,8 +187,7 @@ const useToast = () => {
   return {
     ...state,
     toast: toast,
-    dismiss: (toastId?: string) =>
-      dispatch({ type: "DISMISS_TOAST", toastId: toastId }),
+    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId: toastId }),
   };
 };
 

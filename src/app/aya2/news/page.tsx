@@ -2,16 +2,10 @@ import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { siteConfig } from "@/shared/config.ts";
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/shared/components/ui/card.tsx";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/shared/components/ui/card.tsx";
 import { AspectRatio } from "@/shared/components/ui/aspect-ratio.tsx";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
@@ -33,14 +27,14 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-interface NewsPost {
+type NewsPost = {
   slug: string;
   dateAdded: string;
   coverImage: string;
   title: string;
   brief: string;
   contentMarkdown: string;
-}
+};
 
 const hashnodeApiEndpoint = "https://api.hashnode.com/";
 
@@ -91,9 +85,9 @@ const hashnodeGetPosts = async (
   return result.data.user.publication.posts as NewsPost[];
 };
 
-interface NewsCardProps {
+type NewsCardProps = {
   post: NewsPost;
-}
+};
 
 const NewsCard = (props: NewsCardProps) => {
   const { post } = props;
@@ -134,11 +128,11 @@ const NewsCard = (props: NewsCardProps) => {
   );
 };
 
-// interface NewsPageProps {
+// type NewsPageProps = {
 //   params: {
 //     // lang: Language;
 //   };
-// }
+// };
 
 const NewsPage = async (/* props: NewsPageProps */) => {
   const placeholders: Record<string, string> = {
@@ -154,7 +148,7 @@ const NewsPage = async (/* props: NewsPageProps */) => {
           <h1>
             Haberler
           </h1>
-          {data.map((post) => <NewsCard post={post} />)}
+          {data.map((post) => <NewsCard key={post.slug} post={post} />)}
         </div>
       </section>
     </Layout>

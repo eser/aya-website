@@ -1,17 +1,14 @@
-import type {
-  OrganizationListResult,
-  Profile,
-} from "shared/src/organization-list-result.ts";
-import { getSupabaseServer } from "@/shared/supabase/use-supabase-server.ts";
+import type { OrganizationListResult, Profile } from "@/shared/registry/organization-list-result.ts";
+import { useRegistry } from "@/shared/registry/use-registry";
 import { Card, Cards } from "@/shared/components/profiles/widgets/mod.ts";
 
-// interface OrganizationListProps {
-// }
+// type OrganizationListProps = {
+// };
 
 export const OrganizationList = async (/* props: OrganizationListProps */) => {
-  const { supabase } = getSupabaseServer();
+  const { registry } = useRegistry();
 
-  const organizationListResponse = await supabase.functions.invoke<
+  const organizationListResponse = await registry.functions.invoke<
     OrganizationListResult
   >(
     "organization-list",

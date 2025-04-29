@@ -1,6 +1,6 @@
-import type { ProfileGetComposition } from "shared/src/profile-get-result.ts";
+import type { ProfileGetComposition } from "@/shared/registry/profile-get-result.ts";
 
-// import { type Language } from "@/shared/i18n/languages.ts";
+// import type { Language } from "@/shared/i18n/languages.ts";
 import { mdx } from "@/shared/lib/mdx.ts";
 
 import { components } from "./widgets/mod.ts";
@@ -14,12 +14,12 @@ const PAGE_SLUG_STORIES = "stories";
 const PAGE_SLUG_MEMBERS = "members";
 
 // Component: ProfileView
-interface ProfileViewProps {
+type ProfileViewProps = {
   // lang: Language;
   slug: string;
   pathSlugs?: string[];
   item: ProfileGetComposition | null;
-}
+};
 
 export const ProfileView = async (props: ProfileViewProps) => {
   if (props.item === null) {
@@ -61,11 +61,13 @@ export const ProfileView = async (props: ProfileViewProps) => {
     <ProfileTemplate
       layout={mdxSource.frontmatter.layout ?? "default"}
       heading={<ProfileHeading item={props.item} />}
-      navigation={<PageList
-        prefix={`/${props.item.profile.slug}/`}
-        activePageSlug={activePageSlug}
-        item={props.item}
-      />}
+      navigation={
+        <PageList
+          prefix={`/${props.item.profile.slug}/`}
+          activePageSlug={activePageSlug}
+          item={props.item}
+        />
+      }
     >
       {mdxSource.content}
     </ProfileTemplate>
