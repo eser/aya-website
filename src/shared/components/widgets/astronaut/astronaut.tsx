@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import Image from "next/image";
 
 import { cn } from "@/shared/lib/cn.ts";
@@ -20,8 +22,9 @@ export const Astronaut = (props: AstronautProps) => {
         width={props.width}
         height={props.height}
         fill={props.fill}
-        loading="lazy"
+        loading="eager"
         alt="stars"
+        priority
       />
       <Image
         className={styles.astronaut}
@@ -29,8 +32,9 @@ export const Astronaut = (props: AstronautProps) => {
         width={props.width}
         height={props.height}
         fill={props.fill}
-        loading="lazy"
+        loading="eager"
         alt="cute little astronaut"
+        priority
       />
     </div>
   );

@@ -1,9 +1,10 @@
 import "server-only";
 
+import * as React from "react";
+
 import { fallbackLanguage, type Language } from "@/shared/i18n/languages.ts";
 
 import { ThemeProvider } from "./theme-provider.tsx";
-import { FontProvider } from "./font-provider.tsx";
 import { Analytics } from "./analytics.tsx";
 
 import "../shared/globals.css";
@@ -28,7 +29,6 @@ const Layout = async (props: LayoutProps) => {
     >
       <head />
       <body>
-        <FontProvider />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

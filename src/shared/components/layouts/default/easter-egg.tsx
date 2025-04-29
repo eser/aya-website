@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+
 import { siteConfig } from "@/shared/config.ts";
 import { useKonamiCode } from "@/shared/hooks/use-secret-code.ts";
 

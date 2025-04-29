@@ -1,4 +1,6 @@
-import { Astronaut } from "@/shared/components/profiles/widgets/astronaut.tsx";
+import * as React from "react";
+
+import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
 
 export const Loading = () => {
   return (

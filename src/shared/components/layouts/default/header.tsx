@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { GitHubLogin } from "@/shared/components/github-login.tsx";
 import { ThemeToggle } from "./theme-toggle.tsx";
 import { MainNav } from "./main-nav.tsx";

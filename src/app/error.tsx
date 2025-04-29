@@ -1,6 +1,7 @@
 "use client"; // Error components must be Client components
 
 import * as React from "react";
+
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 

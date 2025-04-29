@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+
 import { useInputEvent } from "./use-input-event.ts";
 
 export const useSecretCode = (secretCode: string[]) => {

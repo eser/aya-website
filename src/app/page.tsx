@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import type { Metadata } from "next";
 
 import Link from "next/link";
@@ -7,8 +9,8 @@ import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/i18n/languages.ts";
 import { Layout } from "@/shared/components/layouts/default/layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
-import { Astronaut } from "@/shared/components/profiles/widgets/astronaut.tsx";
-import { components } from "@/shared/components/profiles/widgets/mod.ts";
+import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
+import { components } from "@/shared/components/userland/userland.ts";
 
 import styles from "./page.module.css";
 
@@ -42,24 +44,22 @@ const IndexPage = async (/* props: IndexPageProps */) => {
     // lang: props.params.lang,
   };
 
-  const introText = `**Açık Yazılım Ağı** olarak bilişim sektörüne temas eden gönüllü
-ve profesyonellere 2015'den bu yana yapmış olduğumuz çalışmalarla bir
-çatı sağlamaya çalışıyoruz. Meta-topluluk ismini vermiş olduğumuz bu
-çatı altında kişilerin, toplulukların, firmaların, resmi kurumların ve
-sivil toplum kuruluşlarının iletişimini ve iş birliğini
-kolaylaştırmayı sağlayarak ekosistem oluşmasına öncülük ediyoruz.
+  const introText = `**Açık Yazılım Ağı (AYA)**, sosyal bir yarar
+oluşturmak motivasyonuyla nitelikli bilişim çözümleri üreten
+gönüllülerin bir araya gelmesine ve projeler gerçekleştirmesine
+imkan sağlayan bir platformdur.
 
-Bugüne kadar kişi, topluluk ve kurumları açık kaynak geliştirmeye
-motive etmek, farkındalık oluşturmak, bir araya getirmek, birlikte
-projeler yapmak, bu alanda içerik sağlamak vb. alanlarda katkılarda
-bulunduk. <Profile slug="afet.org" />, <Profile slug="gonullu.io" />
-vb. örnek topluluk projelerimiz toplumsal etkiler bıraktı.
+Bugüne kadar projelere yetkin ve uzman gönüllü desteği ve teknik
+kaynaklar sunarak kolektif bir şekilde gerçeklenmelerini sağladık.
+Bu projeler resmi kurumlar ve sivil toplum kuruluşları başta olmak
+üzere herkesin kullanımına ve denetimine açık, açık kaynak
+lisanslarına sahip bilişim çözümleri oldular. Bizim buradaki rolümüz
+hem gönüllülerin aralarındaki iletişime aracı olmak hem de kaynak
+yönetiminde koordinasyon sağlamak oldu.
 
-Bugün ise bu web sitesi altında kendini **Açık Yazılım Ağı**'nın bir
-parçası olarak gören tüm bileşenlerimizin kendi eforlarını
-görselleştirmelerine ve paylaşmalarına olanak sağlamak istiyoruz.
-Her geçen gün dünden daha iyi olmaya çalışma ve ekosistemin önünde
-olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
+Sosyal yarar gözeten ve kar amacı gütmeyen bir oluşum olarak AYA,
+bugün yoluna portföyünde bilişim projeleri barındıran **yazılım vakfı
+kimliğiyle** devam ediyor.`;
 
   const mdxSource = await mdx(
     introText,
@@ -73,21 +73,26 @@ olduğunu düşündüğümüz engelleri kaldırma çabamız devam ediyor.`;
           <div className={styles["astronaut-layer"]}>
             <Astronaut width={400} height={400} />
           </div>
-          <h1 className="hero">
-            Açık Yazılım Ağı <br className="hidden md:inline" />
-            Bilişim Meta-Topluluğu
-          </h1>
+          <div className={styles.hero}>
+            <h1>
+              Açık Yazılım Ağı
+            </h1>
+            <h2>
+              Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı
+            </h2>
+          </div>
+
           <article className={styles.content}>
             {mdxSource?.content}
           </article>
         </div>
         <div className="flex gap-4">
-          <Button variant="bright" size="lg" asChild>
+          <Button variant="default" size="lg" asChild>
             <Link
               href="/aya/"
               rel="noreferrer"
             >
-              Bilgi
+              Yazının devamı →
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>

@@ -1,20 +1,10 @@
+import * as React from "react";
+
 import Image from "next/image";
 
 import { Conditional } from "@/shared/components/conditional.tsx";
 
-import styles from "./cards.module.css";
-
-type CardsProps = {
-  children?: React.ReactNode;
-};
-
-export const Cards = (props: CardsProps) => {
-  return (
-    <div className={styles.cards}>
-      {props.children}
-    </div>
-  );
-};
+import styles from "./card.module.css";
 
 export type CardProps = {
   category?: string;

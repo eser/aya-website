@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { siteConfig } from "@/shared/config.ts";
 import { Icons } from "@/shared/components/icons.tsx";
 import { cn } from "@/shared/lib/cn.ts";

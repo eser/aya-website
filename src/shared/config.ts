@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
   name: "Açık Yazılım Ağı",
   fancyName: "𝕒𝕔𝕀𝕜 𝕪𝕒𝕫𝕀𝕃𝕀𝕞 𝕒𝕘𝕀",
   title: "AYA | Açık Yazılım Ağı",
-  description: "Bilişim Meta-Topluluğu",
+  description: "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
   keywords: ["Açık Yazılım Ağı", "Açık Kaynak", "Açık Veri"],
 
   links: {
