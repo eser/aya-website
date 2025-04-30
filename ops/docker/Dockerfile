@@ -1,12 +1,24 @@
 # versions
 
-FROM denoland/deno:2.2.12 AS base
+FROM denoland/deno:2.3.0 AS upstream-builder
+# FROM denoland/deno:distroless-2.3.0 AS upstream-runner
+FROM denoland/deno:2.3.0 AS upstream-runner
 
 # Create a minimal image base-debian12 or static-debian12
 # (see: https://github.com/GoogleContainerTools/distroless#why-should-i-use-distroless-images)
 
 # Rebuild the source code only when needed
-FROM base AS builder
+FROM upstream-builder AS builder
+
+# Install node.js 23
+RUN apt-get update && apt-get -y install --no-install-recommends \
+  curl \
+  ca-certificates
+
+RUN curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+RUN sh nodesource_setup.sh
+RUN apt-get install -y nodejs
+
 
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV DENO_DIR=./.deno_cache
@@ -17,7 +29,7 @@ WORKDIR /app
 COPY package.json deno.lock ./
 
 # Install dependencies
-RUN deno install
+RUN deno install --allow-scripts
 
 # Copy the rest of the application
 COPY . ./
@@ -25,7 +37,7 @@ COPY . ./
 RUN deno run -A build
 
 # Production image, copy all the files and run next
-FROM base AS runner
+FROM upstream-runner AS runner
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1

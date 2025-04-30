@@ -9,6 +9,7 @@ function registerBackend() {
     return;
   }
 
+  // @ts-expect-error globalThis is not typed
   globalThis.backend = backend;
 }
 

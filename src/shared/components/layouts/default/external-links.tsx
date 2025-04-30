@@ -23,9 +23,9 @@ const navItems: NavItem[] = [
     href: siteConfig.links.github,
   },
   {
-    title: "Twitter",
+    title: "X",
     icon: <Icons.twitter className={styles.icon} />,
-    href: siteConfig.links.twitter,
+    href: siteConfig.links.x,
   },
   {
     title: "Instagram",

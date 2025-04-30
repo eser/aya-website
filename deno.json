@@ -4,7 +4,8 @@
   "unstable": [
     "cron",
     "temporal",
-    "sloppy-imports"
+    "sloppy-imports",
+    "unsafe-proto"
   ],
   "exclude": [
     "**/node_modules/*",

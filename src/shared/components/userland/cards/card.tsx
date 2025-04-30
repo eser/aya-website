@@ -27,7 +27,7 @@ export const Card = (props: CardProps) => {
         <Conditional test={props.imageUri !== undefined && props.imageUri !== null}>
           <div className={styles.image}>
             <Image
-              src={props.imageUri}
+              src={props.imageUri as string}
               width={220}
               height={220}
               alt={props.title}

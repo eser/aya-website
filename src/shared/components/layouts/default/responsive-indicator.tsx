@@ -1,8 +1,7 @@
 import * as React from "react";
 
-import process from "node:process";
-
 export const ResponsiveIndicator = () => {
+  // deno-lint-ignore no-process-global
   if (process.env.NODE_ENV === "production") {
     return null;
   }
