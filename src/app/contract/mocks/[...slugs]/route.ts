@@ -3,14 +3,15 @@ import mockdata from "@/app/contract/mocks/data.json" with { type: "json" };
 
 type RequestInfo = {
   params: Promise<{
-    entity: string[];
+    slugs: [string, ...Array<string | undefined>];
   }>;
 };
 
 export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
   const params = await info.params;
 
-  const entityName = params.entity[0];
+  const [entityName, identifier] = params.slugs;
+
   if (!(entityName in mockdata)) {
     return Response.json(
       {
@@ -28,16 +29,16 @@ export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
 
   let result: Result<unknown>;
 
-  if (params.entity.length === 1) {
+  if (identifier === undefined) {
     result = {
       data: entityDictionary,
     };
   } else {
-    if (!(params.entity[1] in entityDictionary)) {
+    if (!(identifier in entityDictionary)) {
       return Response.json(
         {
           data: null,
-          error: `Not found: ${params.entity[1]}`,
+          error: `Not found: ${identifier}`,
         } satisfies Result<unknown>,
         {
           status: 404,
@@ -46,7 +47,7 @@ export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
     }
 
     result = {
-      data: entityDictionary[params.entity[1]],
+      data: entityDictionary[identifier],
     };
   }
 

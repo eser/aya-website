@@ -3,17 +3,17 @@ import { generateFakeData } from "../data.ts";
 
 type RequestInfo = {
   params: Promise<{
-    entity: string[];
+    slugs: [string, ...Array<string | undefined>];
   }>;
 };
-
-const validEntities = ["profiles", "users", "stories"];
 
 export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
   const params = await info.params;
 
-  const entityName = params.entity[0];
-  if (!validEntities.includes(entityName)) {
+  const [entityName, identifier] = params.slugs;
+  const data = generateFakeData(entityName, identifier);
+
+  if (data === null) {
     return Response.json(
       {
         data: null,
@@ -25,17 +25,9 @@ export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
     );
   }
 
-  let result: Result<unknown>;
-
-  if (params.entity.length === 1) {
-    result = {
-      data: Array.from({ length: 10 }, () => generateFakeData(entityName)),
-    };
-  } else {
-    result = {
-      data: generateFakeData(entityName, params.entity[1]),
-    };
-  }
+  const result: Result<unknown> = {
+    data: data,
+  };
 
   return Promise.resolve(Response.json(result, {
     status: 200,
