@@ -1,4 +1,5 @@
 import * as React from "react";
+import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
 
@@ -43,11 +44,15 @@ const IndexPage = async (props: IndexPageProps) => {
     slug: params.slug,
   };
 
-  const data = await backend.getUser(params.slug);
+  const data = await backend.getProfile(params.slug);
 
-  const introText = `# ${data.name}
+  if (data === null) {
+    notFound();
+  }
 
-Hi, my name is ${data.name}. I'm working at ${data.company}.`;
+  const introText = `# ${data.title}
+
+${data.description}`;
 
   const mdxSource = await mdx(
     introText,

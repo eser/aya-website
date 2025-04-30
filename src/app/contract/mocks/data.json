@@ -1,0 +1,55 @@
+{
+  "users": {
+    "01JT1TWN9X9VZSKJWMBDNY7NGW": {
+      "id": "01JT1TWN9X9VZSKJWMBDNY7NGW",
+      "kind": "regular",
+      "first_name": "Eser",
+      "last_name": "Ozvataf",
+      "email": "eser@acikyazilim.com",
+      "phone": "403.504.0982 x281",
+      "github_handle": "eser",
+      "github_remote_id": "5f63761d-6bcc-4072-889a-81a7b21b28ef",
+      "bsky_handle": "eser",
+      "bsky_remote_id": "4218480d-bfff-4697-86b2-f18b0fd08b25",
+      "x_handle": "eser",
+      "x_remote_id": "fe0db924-35df-41e7-823a-24b8dda0d9ea",
+      "individual_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+      "created_at": "2024-10-17T23:27:04.036Z",
+      "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null
+    }
+  },
+  "profiles": {
+    "eser": {
+      "id": "01JT1TXYSDXZFET19492RH7YR5",
+      "kind": "individual",
+      "slug": "eser",
+      "profile_picture_uri": "https://avatars.githubusercontent.com/u/866558?v=4",
+      "title": "Eser Ozvataf",
+      "description": "Admiratio caste arca ager curvo reiciendis uterque pecco. Venia vel crinis nobis calcar delinquo auditor comparo. Absens rem atque statua.",
+      "show_stories": true,
+      "show_projects": true,
+      "show_members": true,
+      "created_at": "2024-10-17T23:27:04.036Z",
+      "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null
+    }
+  },
+  "stories": {
+    "celer-aranea-demo": {
+      "id": "01JT1YPYJJ9XZ549C6J9320KKZ",
+      "kind": "status",
+      "slug": "celer-aranea-demo",
+      "cover_picture_uri": "https://picsum.photos/seed/9dRpgsLT/1692/1081",
+      "title": "Compello creta aqua.",
+      "summary": "Alius vito aperte solio sol patria adduco patrocinor curatio vorago. Vivo dedico stips careo ante. Theologus articulus adhuc complectus cultellus.",
+      "content": "Confero balbus amicitia verus tamdiu turpis cubicularis reprehenderit demoror atrox. Delibero deduco adamo. Clamo blanditiis excepturi.\nDapifer acer admitto viriliter. Eaque officiis tamisium fugit. Bonus copiose templum censura conduco vir.\nDefluo distinctio texo tripudio trans cresco audeo amita correptius. Vilis conicio porro clibanus tabgo civis velut solvo. Venio animi crepusculum.",
+      "is_featured": false,
+      "published_at": "2024-06-28T12:59:07.514Z",
+      "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+      "created_at": "2025-01-25T15:53:54.197Z",
+      "updated_at": "2025-04-29T01:47:12.349Z",
+      "deleted_at": null
+    }
+  }
+}
