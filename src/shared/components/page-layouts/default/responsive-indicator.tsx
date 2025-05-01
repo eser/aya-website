@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const ResponsiveIndicator = () => {
+export function ResponsiveIndicator() {
   // deno-lint-ignore no-process-global
   if (process.env.NODE_ENV === "production") {
     return null;
@@ -18,4 +18,4 @@ export const ResponsiveIndicator = () => {
       <div className="hidden 2xl:block">2xl</div>
     </div>
   );
-};
+}

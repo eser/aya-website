@@ -7,7 +7,7 @@ export type ProfileProps = {
   children?: React.ReactNode;
 };
 
-export const Profile = (props: ProfileProps) => {
+export function Profile(props: ProfileProps) {
   return (
     <Link
       href={`/${props.slug}/`}
@@ -16,4 +16,4 @@ export const Profile = (props: ProfileProps) => {
       {props.children ?? props.slug}
     </Link>
   );
-};
+}

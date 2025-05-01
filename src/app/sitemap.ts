@@ -1,6 +1,6 @@
 // import { useRegistry } from "@/shared/registry/use-registry";
 
-const sitemap = () => {
+export function sitemap() {
   // const { registry } = useRegistry();
 
   // const { data: posts } = await registry.from("posts").select();
@@ -15,6 +15,6 @@ const sitemap = () => {
   // );
 
   return [];
-};
+}
 
 export { sitemap as default };

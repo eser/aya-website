@@ -34,6 +34,7 @@ export const viewport = {
 type IndexPageProps = {
   params: Promise<{
     slug: string;
+    pageslug: string;
   }>;
 };
 
@@ -46,7 +47,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const introText = `${data.description}`;
+  const introText = `subpage: ${params.pageslug}`;
 
   const mdxSource = await mdx(
     introText,
@@ -58,7 +59,6 @@ async function IndexPage(props: IndexPageProps) {
       <article className={styles.content}>
         {mdxSource?.content}
       </article>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
 }

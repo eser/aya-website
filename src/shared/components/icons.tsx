@@ -66,11 +66,11 @@ export const Icons = {
   ),
 };
 
-export const getLinkIcon = (iconSet: string | null, iconKey: string | null) => {
+export function getLinkIcon(iconSet: string | null, iconKey: string | null) {
   if (iconSet === "lucide" && iconKey !== null) {
     const Icon = Icons[iconKey as keyof typeof Icons];
     return <Icon />;
   }
 
   return <Icons.link />;
-};
+}

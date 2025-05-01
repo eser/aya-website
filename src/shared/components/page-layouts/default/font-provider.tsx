@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import { Bree_Serif, Open_Sans } from "next/font/google";
 
 const fontOpenSans = Open_Sans({
@@ -26,7 +28,7 @@ const fontBreeSerif = Bree_Serif({
 //   display: "swap",
 // });
 
-export const FontProvider = () => {
+export function FontProvider() {
   return (
     <style jsx global>
       {`
@@ -37,4 +39,4 @@ export const FontProvider = () => {
     `}
     </style>
   );
-};
+}

@@ -34,7 +34,7 @@ const navItems: NavItem[] = [
   },
 ];
 
-export const ExternalLinks = () => {
+export function ExternalLinks() {
   return (
     <div className={styles.container}>
       {navItems.map(
@@ -57,4 +57,4 @@ export const ExternalLinks = () => {
       )}
     </div>
   );
-};
+}

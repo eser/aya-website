@@ -15,7 +15,7 @@ export type CardProps = {
   children?: React.ReactNode;
 };
 
-export const Card = (props: CardProps) => {
+export function Card(props: CardProps) {
   return (
     <a className={styles.card} href={props.href}>
       <div className={styles.inner}>
@@ -44,4 +44,4 @@ export const Card = (props: CardProps) => {
       </div>
     </a>
   );
-};
+}

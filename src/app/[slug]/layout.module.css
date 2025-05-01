@@ -1,0 +1,27 @@
+@reference "../../shared/globals.css";
+
+.hero {
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none mt-8;
+  }
+
+  h2 {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl leading-none mb-8;
+  }
+}
+
+.nav {
+  @apply font-serif md:pt-2;
+
+  & > ul {
+    @apply space-y-2 md:space-y-4 lg:space-y-6 list-none p-0;
+
+    & > li {
+      @apply text-sm sm:text-base md:text-lg lg:text-xl leading-none;
+
+      & > a {
+        @apply text-muted-foreground hover:text-foreground no-underline;
+      }
+    }
+  }
+}

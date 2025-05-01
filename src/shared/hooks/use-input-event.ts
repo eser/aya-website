@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-export const useInputEvent = () => {
+export function useInputEvent() {
   const [key, setKey] = React.useState<string | null>(null);
 
   React.useEffect(() => {
@@ -19,4 +19,4 @@ export const useInputEvent = () => {
   }, []);
 
   return key;
-};
+}

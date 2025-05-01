@@ -6,7 +6,7 @@ import { Button } from "@/shared/components/ui/button.tsx";
 
 import styles from "./github-login.module.css";
 
-export const GitHubLogin = () => {
+export function GitHubLogin() {
   return (
     <Button
       className={styles.button}
@@ -17,4 +17,4 @@ export const GitHubLogin = () => {
       </div>
     </Button>
   );
-};
+}

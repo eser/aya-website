@@ -6,10 +6,10 @@ type CardsProps = {
   children?: React.ReactNode;
 };
 
-export const Cards = (props: CardsProps) => {
+export function Cards(props: CardsProps) {
   return (
     <div className={styles.cards}>
       {props.children}
     </div>
   );
-};
+}

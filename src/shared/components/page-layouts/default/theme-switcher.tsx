@@ -17,7 +17,7 @@ import { cn } from "@/shared/lib/cn.ts";
 
 import styles from "./theme-switcher.module.css";
 
-export const ThemeSwitcher = () => {
+export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -55,4 +55,4 @@ export const ThemeSwitcher = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
+}

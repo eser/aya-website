@@ -7,7 +7,7 @@ import { mdx } from "@/shared/lib/mdx.ts";
 
 import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/modules/i18n/languages.ts";
-import { Layout } from "@/shared/components/layouts/default/layout.tsx";
+import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
@@ -39,7 +39,7 @@ export const viewport = {
 //   };
 // };
 
-const IndexPage = async (/* props: IndexPageProps */) => {
+async function IndexPage(/* props: IndexPageProps */) {
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
@@ -67,7 +67,7 @@ kimliğiyle** devam ediyor.`;
   );
 
   return (
-    <Layout placeholders={placeholders}>
+    <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 grid items-center">
         <div className="flex max-w-[980px] flex-col items-start">
           <div className={styles["astronaut-layer"]}>
@@ -106,8 +106,8 @@ kimliğiyle** devam ediyor.`;
           </Button>
         </div>
       </section>
-    </Layout>
+    </PageLayout>
   );
-};
+}
 
 export { IndexPage as default };

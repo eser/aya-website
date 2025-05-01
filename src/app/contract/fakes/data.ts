@@ -42,7 +42,10 @@ export function generateFakeData(entity: string, identifier: string | undefined)
       show_members: faker.datatype.boolean(),
       created_at: faker.date.past(),
       updated_at: faker.date.recent(),
-      deleted_at: null,
+      // deleted_at: null,
+
+      links: [],
+      pages: [],
     } satisfies GetProfileData;
   }
 

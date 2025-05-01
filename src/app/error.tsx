@@ -2,48 +2,43 @@
 
 import * as React from "react";
 
-import { Layout } from "@/shared/components/layouts/default/layout.tsx";
+import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 
-export const Error = ({
-  error,
-  reset,
-}: {
+type ErrorPageProps = {
   error: Error;
   reset: () => void;
-}) => {
+};
+
+export function ErrorPage(props: ErrorPageProps) {
   React.useEffect(() => {
     // Log the error to an error reporting service
     // eslint-disable-next-line no-console
-    console.error(error);
-  }, [error]);
+    console.error(props.error);
+  }, [props.error]);
 
   const placeholders: Record<string, string> = {
     // lang: props.params.lang,
   };
 
   return (
-    <Layout placeholders={placeholders}>
-      <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-        <div className="flex max-w-[980px] flex-col items-start">
-          <h1>
-            Bir hata oluştu
-          </h1>
+    <PageLayout placeholders={placeholders}>
+      <section className="container mx-auto px-4 py-10 grid items-center">
+        <h1>
+          Bir hata oluştu
+        </h1>
 
-          <div className="max-w-[980px]">
-            <Button
-              onClick={
-                // Attempt to recover by trying to re-render the segment
-                () => reset()
-              }
-            >
-              Yeniden dene
-            </Button>
-          </div>
-        </div>
+        <Button
+          onClick={
+            // Attempt to recover by trying to re-render the segment
+            () => props.reset()
+          }
+        >
+          Yeniden dene
+        </Button>
       </section>
-    </Layout>
+    </PageLayout>
   );
-};
+}
 
-export { Error as default };
+export { ErrorPage as default };

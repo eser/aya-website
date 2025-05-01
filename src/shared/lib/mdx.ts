@@ -1,9 +1,9 @@
 import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc";
 
-export const mdx = async (
+export async function mdx(
   source: string,
   components?: MDXRemoteProps["components"],
-) => {
+) {
   const result = await compileMDX({
     source: source,
     options: {
@@ -19,4 +19,4 @@ export const mdx = async (
   });
 
   return result;
-};
+}

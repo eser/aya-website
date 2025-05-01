@@ -1,3 +1,5 @@
+import * as React from "react";
+
 type ConditionalProps = {
   test: boolean;
   then?: React.ReactNode;
@@ -5,7 +7,7 @@ type ConditionalProps = {
   children?: React.ReactNode;
 };
 
-export const Conditional = (props: ConditionalProps) => {
+export function Conditional(props: ConditionalProps) {
   if (props.test) {
     if (props.then) {
       return props.then;
@@ -19,4 +21,4 @@ export const Conditional = (props: ConditionalProps) => {
   }
 
   return null;
-};
+}

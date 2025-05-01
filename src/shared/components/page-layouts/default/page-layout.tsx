@@ -7,14 +7,14 @@ import { Footer } from "./footer.tsx";
 import { FontProvider } from "./font-provider.tsx";
 import { ResponsiveIndicator } from "./responsive-indicator.tsx";
 
-import "./layout.css";
+import "./page-layout.css";
 
-type LayoutProps = {
+type PageLayoutProps = {
   placeholders: Record<string, string>;
   children: React.ReactNode;
 };
 
-export const Layout = (props: LayoutProps) => {
+export function PageLayout(props: PageLayoutProps) {
   return (
     <>
       <FontProvider />
@@ -35,4 +35,4 @@ export const Layout = (props: LayoutProps) => {
       </ThemeProvider>
     </>
   );
-};
+}

@@ -11,7 +11,7 @@ type HeaderProps = {
   placeholders: Record<string, string>;
 };
 
-export const Header = (props: HeaderProps) => {
+export function Header(props: HeaderProps) {
   return (
     <header className={styles.header}>
       <div>
@@ -22,4 +22,4 @@ export const Header = (props: HeaderProps) => {
       </div>
     </header>
   );
-};
+}

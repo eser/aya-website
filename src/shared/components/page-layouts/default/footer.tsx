@@ -6,7 +6,7 @@ import { Separator } from "@/shared/components/ui/separator.tsx";
 
 import styles from "./footer.module.css";
 
-export const Footer = () => {
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
@@ -18,4 +18,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}

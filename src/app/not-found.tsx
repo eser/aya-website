@@ -2,20 +2,20 @@ import * as React from "react";
 
 // FIXME(@eser) adding layout there breaks the entire site
 
-// import { Layout } from "@/shared/components/layouts/default/layout.tsx";
+// import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 
-const NotFoundPage = () => {
+export function NotFoundPage() {
   // const placeholders: Record<string, string> = {
   //   // lang: props.params.lang,
   // };
 
   return (
-    // <Layout placeholders={placeholders}>
-    <section className="container mx-auto px-4 grid items-center">
+    // <PageLayout placeholders={placeholders}>
+    <section className="container mx-auto px-4 py-10 grid items-center">
       <h1>Not Found</h1>
     </section>
-    // </Layout>
+    // </PageLayout>
   );
-};
+}
 
 export { NotFoundPage as default };

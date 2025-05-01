@@ -5,7 +5,7 @@ import * as React from "react";
 import { siteConfig } from "@/shared/config.ts";
 import { useKonamiCode } from "@/shared/hooks/use-secret-code.ts";
 
-export const EasterEgg = () => {
+export function EasterEgg() {
   const konami = useKonamiCode();
 
   React.useEffect(() => {
@@ -18,6 +18,6 @@ export const EasterEgg = () => {
   }, [konami]);
 
   return null;
-};
+}
 
 // siteConfig.fancyName

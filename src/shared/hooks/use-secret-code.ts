@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { useInputEvent } from "./use-input-event.ts";
 
-export const useSecretCode = (secretCode: string[]) => {
+export function useSecretCode(secretCode: string[]) {
   const [count, setCount] = React.useState(0);
   const [success, setSuccess] = React.useState(false);
   const key = useInputEvent();
@@ -27,7 +27,7 @@ export const useSecretCode = (secretCode: string[]) => {
   }, [key]);
 
   return success;
-};
+}
 
 const konamiCode = [
   "ArrowUp",
@@ -42,4 +42,6 @@ const konamiCode = [
   "KeyA",
 ];
 
-export const useKonamiCode = () => useSecretCode(konamiCode);
+export function useKonamiCode() {
+  return useSecretCode(konamiCode);
+}

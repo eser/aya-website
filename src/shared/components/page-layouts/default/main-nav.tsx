@@ -37,7 +37,7 @@ type MainNavProps = {
   placeholders: Record<string, string>;
 };
 
-export const MainNav = (props: MainNavProps) => {
+export function MainNav(props: MainNavProps) {
   return (
     <nav>
       <div className={styles["nav-links"]}>
@@ -97,4 +97,4 @@ export const MainNav = (props: MainNavProps) => {
       </div>
     </nav>
   );
-};
+}

@@ -20,7 +20,7 @@ type LayoutProps = {
 };
 
 // deno-lint-ignore require-await
-const Layout = async (props: LayoutProps) => {
+async function Layout(props: LayoutProps) {
   return (
     <html
       lang={selectedLanguage.code}
@@ -35,6 +35,6 @@ const Layout = async (props: LayoutProps) => {
       </body>
     </html>
   );
-};
+}
 
 export { Layout as default };

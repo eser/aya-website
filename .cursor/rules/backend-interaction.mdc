@@ -1,0 +1,8 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Backend interaction
+
+Backend APIs are called from react server components by importing [backend.ts](mdc:src/shared/modules/backend/backend.ts). Each method of exported `backend` object calls respective API with returning correct return type.

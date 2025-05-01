@@ -13,10 +13,10 @@ function registerBackend() {
   globalThis.backend = backend;
 }
 
-export const RegisterBackend = () => {
+export function RegisterBackend() {
   React.useEffect(() => {
     registerBackend();
   }, []);
 
   return null;
-};
+}

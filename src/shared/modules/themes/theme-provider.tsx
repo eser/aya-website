@@ -6,6 +6,6 @@ import { ThemeProvider as NextThemesProvider, type ThemeProviderProps } from "ne
 
 // https://github.com/pacocoursey/next-themes/issues/152#issuecomment-1364280564
 
-export const ThemeProvider = (props: ThemeProviderProps) => {
+export function ThemeProvider(props: ThemeProviderProps) {
   return <NextThemesProvider {...props} />;
-};
+}

@@ -2,7 +2,7 @@
 
 .footer {
   & > :first-child {
-    @apply container mx-auto py-6 flex flex-col sm:flex-row gap-4 text-sm;
+    @apply container mx-auto px-4 py-6 flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm;
 
     & .div {
       @apply h-auto;

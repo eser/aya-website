@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
 
-export const Loading = () => {
+export function Loading() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <Astronaut width={400} height={400} />
@@ -10,6 +10,6 @@ export const Loading = () => {
       Yükleniyor...
     </div>
   );
-};
+}
 
 export { Loading as default };

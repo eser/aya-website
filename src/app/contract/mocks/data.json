@@ -32,7 +32,40 @@
       "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
-      "deleted_at": null
+      "links": [],
+      "pages": []
+    },
+    "aya": {
+      "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
+      "kind": "organization",
+      "slug": "aya",
+      "profile_picture_uri": null,
+      "title": "Açık Yazılım Ağı",
+      "description": "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
+      "show_stories": true,
+      "show_projects": true,
+      "show_members": true,
+      "created_at": "2024-10-17T23:27:04.036Z",
+      "updated_at": "2025-04-29T14:05:54.664Z",
+      "links": [],
+      "pages": [
+        {
+          "id": "01JT4GBETQSQ8V7F1RF8RQ987D",
+          "slug": "policies",
+          "cover_picture_uri": null,
+          "title": "Kurallar",
+          "summary": "Açık Yazılım Ağı'nın kuralları özet",
+          "published_at": "2024-10-17T23:27:04.036Z"
+        },
+        {
+          "id": "01JT4M4WJE1FFCC61MF9EZC9XH",
+          "slug": "about",
+          "cover_picture_uri": null,
+          "title": "Hakkında",
+          "summary": "Açık Yazılım Ağı'nın hakkında bilgi",
+          "published_at": "2024-10-17T23:27:04.036Z"
+        }
+      ]
     }
   },
   "stories": {

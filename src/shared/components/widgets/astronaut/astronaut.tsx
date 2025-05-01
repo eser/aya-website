@@ -14,7 +14,7 @@ type AstronautProps = {
   fill?: boolean | undefined;
 };
 
-export const Astronaut = (props: AstronautProps) => {
+export function Astronaut(props: AstronautProps) {
   return (
     <div className={cn(styles.container, props.className)}>
       <Stars
@@ -34,4 +34,4 @@ export const Astronaut = (props: AstronautProps) => {
       />
     </div>
   );
-};
+}
