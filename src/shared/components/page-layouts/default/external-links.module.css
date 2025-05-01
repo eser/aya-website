@@ -5,7 +5,7 @@
 }
 
 .container {
-  @apply flex-1 flex justify-end;
+  @apply flex justify-end;
 
   & a {
     @apply hidden xl:flex;

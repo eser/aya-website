@@ -1,5 +1,9 @@
 @reference "../../../globals.css";
 
+.nav {
+  @apply flex-1;
+}
+
 .nav-links {
   @apply hidden md:flex items-center gap-5;
 

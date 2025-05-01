@@ -274,7 +274,7 @@ a:is(.button) {
   @apply no-underline;
 }
 
-a:not(.button) {
+a:not([role="button"], [role="menuitem"]) {
   @apply text-foreground hover:text-accent-foreground underline underline-offset-4;
   /* font-medium */
 }

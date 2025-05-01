@@ -39,7 +39,7 @@ type MainNavProps = {
 
 export function MainNav(props: MainNavProps) {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <div className={styles["nav-links"]}>
         <Link href="/">
           <Logo />
