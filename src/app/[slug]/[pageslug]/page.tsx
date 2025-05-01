@@ -47,10 +47,21 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const introText = `subpage: ${params.pageslug}`;
+  const page = data.pages.find((page) => page.slug === params.pageslug);
+  if (page === undefined) {
+    notFound();
+  }
+
+  const pageData = await backend.getProfilePage(page.id);
+
+  if (pageData === null) {
+    notFound();
+  }
+
+  const contentText = `# ${pageData.title}\n\n${pageData.content}`;
 
   const mdxSource = await mdx(
-    introText,
+    contentText,
     components,
   );
 

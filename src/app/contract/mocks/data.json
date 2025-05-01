@@ -52,22 +52,56 @@
       "links": [],
       "pages": [
         {
+          "id": "01JT63GNX3TT2RBVHS4D48XJNT",
+          "slug": "processes",
+          "cover_picture_uri": null,
+          "title": "Süreçler",
+          "summary": "AYA’da süreçler nasıl işliyor?"
+        },
+        {
           "id": "01JT4GBETQSQ8V7F1RF8RQ987D",
           "slug": "policies",
           "cover_picture_uri": null,
           "title": "Kurallar",
-          "summary": "Açık Yazılım Ağı'nın kuralları özet",
-          "published_at": "2024-10-17T23:27:04.036Z"
+          "summary": "Açık Yazılım Ağı’nın kuralları özet"
         },
         {
           "id": "01JT4M4WJE1FFCC61MF9EZC9XH",
           "slug": "about",
           "cover_picture_uri": null,
           "title": "Hakkında",
-          "summary": "Açık Yazılım Ağı'nın hakkında bilgi",
-          "published_at": "2024-10-17T23:27:04.036Z"
+          "summary": "Açık Yazılım Ağı’nın hakkında bilgi"
         }
       ]
+    }
+  },
+  "profile-pages": {
+    "01JT63GNX3TT2RBVHS4D48XJNT": {
+      "id": "01JT63GNX3TT2RBVHS4D48XJNT",
+      "slug": "processes",
+      "cover_picture_uri": null,
+      "title": "Süreçler",
+      "summary": "AYA’da süreçler nasıl işliyor?",
+      "published_at": "2024-10-17T23:27:04.036Z",
+      "content": "## Genel Çatı\n\nAYA bir [yazılım vakfıdır](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz).\nBünyesinde birbirinden bağımsız ilerleyen projeler bulunur.\n\n\n## Projeler\n\nAYA’da projeler, projelerin atanan liderleri tarafından yürütülür. Her proje için proje\nliderinin tasarruflarıyla bir proje ekibi oluşturulur.\n\nAncak AYA’nın teşvik ettiği model, [kamp-us](https://github.com/kamp-us),\n[patika.dev](https://github.com/patikadev), [eser.live](https://eser.live)\nvb. önceden oluşturulmuş toplulukların projeleri yürütüyor olmasıdır.\n\nProje lideri projenin ihtiyaçlarına istinaden AYA’dan uzman kaynağı veya teknik ihtiyaçlar\ntalep edebilir. Bu talepler, AYA’nın kaynak havuzlarından karşılanır.\n\nYeni proje önerilerini [Proje Fikir Formu](https://forms.gle/MJFHKcp2yhTpjeod7) aracılığı\nile iletilmelidir.\n\n\n## Proje Ekibi\n\nHer proje ekibinde bir proje lideri bulunur. Projenin ekibinde kalıcı olarak yer alan ve\nkatkıda bulunan kimselere ise proje üyesi (maintainer) denir.\n\nAncak açık kaynak projelerinde olduğu gibi, AYA’da da proje katkıcısı (contributor) olmak\niçin proje ekibinde yer almak gerekmez. Dışarıdan gelen katkılar, proje ekibinin sabit\nüyeleri tarafından değerlendirilir ve projeye dahil edilmesine karar verilir.\n\nProje ekiplerinde yer almak için [Gönüllü Formu](https://forms.gle/o8SWkeGB5n4SdBnr8)\naracılığı uzman havuzumuzda bilgilerinizin yer almasını sağlamalısınız.\n\n\n## Proje Geliştirme Süreci\n\nProje geliştirme süreci, proje liderinin belirlediği süreçlere göre yürütülür. Her ekibin\nkendi otonom standartları olabilir. AYA’nın buradaki tek beklentisi projelerimiz için\nbelirlediğimiz temel kriterlere uyulmasıdır.\n\n### Temel Kriterlerimiz\n\n- Permissive veya CopyLeft bir lisans ile açık kaynak olarak yayınlanması,\n- Projenin herhangi bir alan adına bağlı olması durumunda bu alan adının\n  sahipliğinin devredilebilir olması,\n- İhtiyaç olduğunda projenin hızla devreye sokulabilmesi için gerekli eylem\n  planının hazır olması,\n- Veri tutmamak, herhangi bir yasal yükümlülüğü ihlal etmemek,\n- [Davranış Kodumuz](https://github.com/aya/policies)a uygun davranmak,\n\n### Proje Değerlendirmeleri\n\nProjelerin değerlendirilmesi AYA’nın kendi zaman uygunluğuna göre yapılır. Değerlendirme\nsonucunda projelerin kuluçkaya alınması, destek verilmesi ve mezun edilmesi gibi kararlar\nalınır."
+    },
+    "01JT4GBETQSQ8V7F1RF8RQ987D": {
+      "id": "01JT4GBETQSQ8V7F1RF8RQ987D",
+      "slug": "policies",
+      "cover_picture_uri": null,
+      "title": "Kurallar",
+      "summary": "Açık Yazılım Ağı’nın kuralları özet",
+      "published_at": "2024-10-17T23:27:04.036Z",
+      "content": "Kurallar"
+    },
+    "01JT4M4WJE1FFCC61MF9EZC9XH": {
+      "id": "01JT4M4WJE1FFCC61MF9EZC9XH",
+      "slug": "about",
+      "cover_picture_uri": null,
+      "title": "Hakkında",
+      "summary": "Açık Yazılım Ağı’nın hakkında bilgi",
+      "published_at": "2024-10-17T23:27:04.036Z",
+      "content": "**Açık Yazılım Ağı** (AYA), sosyal bir yarar oluşturmak motivasyonuyla nitelikli bilişim çözümleri\nüreten gönüllülerin bir araya gelmesine ve projeler gerçekleştirmesine imkan sağlayan bir platformdur.\n\nBugüne kadar projelere yetkin ve uzman gönüllü desteği ve teknik kaynaklar sunarak kolektif bir\nşekilde gerçeklenmelerini sağladık. Bu projeler resmi kurumlar ve sivil toplum kuruluşları başta olmak\nüzere herkesin kullanımına ve denetimine açık, açık kaynak lisanslarına sahip bilişim çözümleri\noldular. Bizim buradaki rolümüz hem gönüllülerin aralarındaki iletişime aracı olmak hem de kaynak\nyönetiminde koordinasyon sağlamak oldu.\n\nSosyal yarar gözeten ve kar amacı gütmeyen bir oluşum olarak AYA, bugün yoluna portföyünde bilişim\nprojeleri barındıran [yazılım vakfı kimliğiyle](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz)\ndevam ediyor.\n\n<iframe\n    className=\"w-full aspect-[16/9]\"\n    width=\"560\"\n    height=\"505\"\n    src=\"https://www.youtube.com/embed/mktym-FxWvg\"\n    title=\"Yazılımcı Günleri 2023 | ESER ÖZVATAF - AÇIK YAZILIM AĞI VE AFET HARİTA PROJESİ\"\n    frameBorder=\"0\"\n    allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n    allowFullScreen\n>\n</iframe>\n\n\n## Kısa Geçmişimiz\n\nGünümüzde yazılım geliştirme pratikleri konjonktürel olarak açık kaynak ve özgür yazılım\nanlayışlarını özümseyerek, uzmanların internet üzerinden birlikte bilişim çözümleri\ngeliştirebilmelerine elverişli bir noktaya gelmiştir.\n\nGitHub gibi mecralar üzerinde açık kaynaklı yazılım projeleri başlatabilmek ve mevcut projelere\nrahatlıkla katkılarda bulunabilmek mümkün. Gelinen bu nokta Mozilla, Linux Foundation, Apache\nFoundation, Cloud Native Computing Foundation vb. yazılım vakıflarının yıllarca süren\nçalışmalarının bir sonucu olarak görülebilir.\n\nÜlkemizde de geçmişte Linux Kullanıcı Derneği, Pardus vb. oluşumlar etrafında birçok açık kaynak\ntopluluğu oluşmuş, çeşitli çalışmalara öncülük etmişlerdir. Bunlardan biri olan ve 2015’de kurulan\n[Açık Kaynak İnisiyatifi](https://acikkaynak.github.io) GitHub üzerinden insanları bir araya getirmeyi planlamış,\naçık kaynak geliştirme alanında insanların birbiri ile iletişimde olmasını sağlamayı amaçlamıştır.\nAçık Kaynak İnisiyatifinin yürüttüğü bu çalışmalar hem açık kaynak gönüllüsü insanların birbiri ile\niletişımde olması, hem de bilgi birikimi oluşturmaları konusunda bayrağı ileri taşımıştır.\n\nŞubat 2023’te Kahramanmaraş’ta gerçekleşen ve 10 ili etkileyen deprem sonrası, Twitter üzerinde\nkoordine olan gönüllülerin oluşturduğu bir grup da buradaki bilgi birikimini kullanarak “deprem\nyardımı için” organize olmuş; kısa sürede çalışmaları GitHub ve Discord üzerinde koordine ederek,\n24.000’den fazla bilişim sektörü gönüllüsünü iletişimde tutan ve kaynak yönetimini üstlenen bir\nplatform oluşturmuştur.\n\nBir süre sonra **Açık Yazılım Ağı** olarak isimlendirdiğimiz bu oluşum, topluluk tarafından GitHub\nüzerinde 50’ye yakın proje çıktısı oluşturulmasına imkan sağladı; deprem sonrası hayati önem\ntaşıyan sorunları çözebilecek teknolojiler sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi\nkurum ve sivil toplum kuruluşu ile irtibat noktası olduk ve bilişim desteğinin sağlanmasında aracı\nolarak hareket ettik.\n\n\n## Amacımız\n\nTemel çerçevede kriz ve ihtiyaç anlarında sahada olan ve toplum yararına çalışan kurumların bilişim\nihtiyaçlarını karşılamak için bir araya geldik. Devamında, alandaki en faydalı katkıları\nsağlayabilecek insanları ve teknolojik kaynakları bir araya getirmeyi amaçlayarak yola çıktık.\n\nBöylece hem kaynakları verimli kullanmak, afet senaryoları gibi olası kriz anlarındaki kaosu en aza\nindirmek, hem de gönüllülerin çabalarını doğru yönlendirmek için bir platform sağlayabiliyorduk.\nAncak [bu süreçte](/aya/stories/20230217-acik-yazilim-agi-ve-6-subat) edindiğimiz deneyim bizlere gösterdi\nki, kriz anları hareket etmek için çok geç kalınmış anlar oluyor.\n\nBu nedenle amacımızı revize ederek, geçmişte [Açık Kaynak İnisiyatifi](https://acikkaynak.github.io)nin\noluşturduğu kapsamdan devam etmeye karar verdik. Bu kapsamda AYA’nın amacı;\n\n- Sosyal yarar oluşturacak bilişim çözümleri geliştirmeye yönelik farkındalık oluşturmak,\n- pratik ihtiyaçların karşılanması için bilgi birikimini ve teknik kaynakları bir araya getirerek\n  bilişim çözümlerin tasarlanmasına öncü olmak,\n- sürdürülebilir bir “açık kaynak ekosisteminin” oluşmasına ve açık kaynak projeler üretilmesine\n  katkıda bulunmak,\n- üretilen projelerin sahalarda kullanımı ve yaygınlaşmasını sağlamak,\n\nolarak belirledik.\n\n\n## Hedeflerimiz\n\nAçık kaynak ve özgür yazılım pratiklerinin sosyal yarar oluşturmak için kullanılmasına yönelik\nbir örnek teşkil etmek hedeflerimizin çatısını oluşturuyor.\n\nMevcut Hedeflerimiz,\n- Bilişim alanındaki gönüllü sayısını arttırmak,\n- Geliştiricilerin birbirleri ile iletişimini sağlamak,\n- Kolektif çalışma kültürünü geliştirmek,\n- Sosyal fayda üreten bilişim çözümlerinin üretimini teşvik etmek,\n- Toplum yararına çalışan kurumların ihtiyaçlarını karşılamak,\n- Sektörde en güncel ve geçerli pratiklerinin üretilen bilişim çözümlerinde uygulanmasını\n  sağlamak,\n- Yazılım sektöründe darboğaz oluştuğunda geliştiricilerin deneyim kazanmasını sağlayacak\n  projeler bulundurmak,\n\nolarak listelenebilir."
     }
   },
   "stories": {

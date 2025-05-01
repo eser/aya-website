@@ -42,7 +42,8 @@ repos:
           - ".github/typos.toml"
         exclude: |
           (?x)^(
-            docs/.*
+            docs/.*|
+            src/app/contract/mocks/data.json
           )$
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: v4.0.0
