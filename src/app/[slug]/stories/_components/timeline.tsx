@@ -12,7 +12,7 @@ const filterMapping: Record<string, string> = {
   "projects": "Proje",
   "publications": "Yayın",
   "public speaking": "Topluluğa Konuşma",
-  "career updates": "Kariyer Güncellmesi",
+  "career updates": "Kariyer Güncellemesi",
 };
 
 export type FilterKeyType = keyof typeof filterMapping;

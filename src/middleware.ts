@@ -32,6 +32,16 @@ import { fallbackLocale, supportedLocales } from "@/shared/modules/i18n/locales.
 export function middleware(req: NextRequest) {
   const response = NextResponse.next();
 
+  const host = req.headers.get("host")?.split(":", 1).at(0);
+  if (host === "eser.dev") {
+    const target = new URL(`/eser${req.nextUrl.pathname}`, req.nextUrl);
+    if (target.pathname.endsWith("/")) {
+      target.pathname = target.pathname.slice(0, -1);
+    }
+
+    return NextResponse.rewrite(target);
+  }
+
   const hasNextJsCookie = req.cookies.has("SITE_LOCALE");
 
   if (!hasNextJsCookie) {
