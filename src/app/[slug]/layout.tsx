@@ -51,6 +51,11 @@ async function Layout(props: LayoutProps) {
 
               <h2>
                 {data.slug}
+                {data.pronouns && (
+                  <>
+                    {` · ${data.pronouns}`}
+                  </>
+                )}
               </h2>
 
               <p>

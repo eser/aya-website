@@ -5,6 +5,7 @@ export type Profile = {
   kind: ProfileKind;
   slug: string;
   profile_picture_uri: string | null;
+  pronouns: string | null;
   title: string;
   description: string;
 
