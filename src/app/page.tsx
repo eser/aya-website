@@ -89,7 +89,7 @@ kimliğiyle** devam ediyor.`;
         <div className="flex gap-4">
           <Button variant="default" size="lg" asChild>
             <Link
-              href="/aya/"
+              href="/aya/about"
               rel="noreferrer"
             >
               Yazının devamı →

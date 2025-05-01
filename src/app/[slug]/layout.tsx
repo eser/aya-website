@@ -70,6 +70,23 @@ async function Layout(props: LayoutProps) {
                     Profil
                   </NextLink>
                 </li>
+
+                {data.show_stories && (
+                  <li>
+                    <NextLink href={`/${params.slug}/stories`}>
+                      Hikayeler
+                    </NextLink>
+                  </li>
+                )}
+
+                {data.show_projects && (
+                  <li>
+                    <NextLink href={`/${params.slug}/projects`}>
+                      Projeler
+                    </NextLink>
+                  </li>
+                )}
+
                 {data.pages && data.pages.map((page) => (
                   <li key={page.slug}>
                     <NextLink href={`/${params.slug}/${page.slug}`}>
