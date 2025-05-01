@@ -3,7 +3,8 @@ import * as React from "react";
 import { GitHubLogin } from "@/shared/modules/auth/github-login.tsx";
 import { ThemeSwitcher } from "./theme-switcher.tsx";
 import { MainNav } from "./main-nav.tsx";
-import { ExternalLinks } from "./external-links.tsx";
+import { SearchBar } from "./search-bar.tsx";
+// import { ExternalLinks } from "./external-links.tsx";
 
 import styles from "./header.module.css";
 
@@ -16,7 +17,8 @@ export function Header(props: HeaderProps) {
     <header className={styles.header}>
       <div>
         <MainNav placeholders={props.placeholders} />
-        <ExternalLinks />
+        <SearchBar />
+        {/* <ExternalLinks /> */}
         <ThemeSwitcher />
         <GitHubLogin />
       </div>
