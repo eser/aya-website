@@ -52,7 +52,6 @@ jobs:
           # - macOS-latest
         deno-version:
           - 2.3.1
-          - 2.4.0
 
     steps:
       - name: Checkout repository

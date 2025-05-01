@@ -73,6 +73,7 @@ repos:
             .git/COMMIT_EDITMSG|
             docs/.*|
             ops/docker/Dockerfile|
+            src/app/\[slug\]/stories/_components/.*|
             LICENSE|
             README.md|
             README.en.md

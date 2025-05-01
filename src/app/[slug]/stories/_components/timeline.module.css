@@ -1,0 +1,62 @@
+@reference "../../../../shared/globals.css";
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  @apply bg-accent;
+}
+
+.timelineItem {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 15px; /* (20px center - 4px width / 2) - 5px radius = 13px */
+  top: 29px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid white;
+  @apply bg-primary;
+}
+
+.timelineDate {
+  font-size: 0.9em;
+  color: #666;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.timelineContent {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  @apply bg-accent;
+}
+
+.timelineType {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1.1em;
+}
+
+.timelineText {
+  color: #444;
+}

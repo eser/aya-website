@@ -190,18 +190,18 @@ img {
 }
 
 h1 {
-  @apply font-serif font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-0;
+  @apply font-serif font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-8 mb-4;
   /* scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
   /* text-3xl sm:text-3xl md:text-5xl lg:text-6xl */
 }
 
 h2 {
-  @apply font-serif font-normal text-base sm:text-lg md:text-xl lg:text-2xl mt-4 mb-0;
+  @apply font-serif font-normal text-base sm:text-lg md:text-xl lg:text-2xl mt-4 mb-2;
   /* scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
 }
 
 h3 {
-  @apply font-serif font-normal text-base md:text-lg lg:text-xl mt-2 mb-0;
+  @apply font-serif font-normal text-base md:text-lg lg:text-xl mt-2 mb-1;
   /* scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
 }
 
@@ -244,29 +244,6 @@ ol {
 
   & > li {
     @apply text-start;
-  }
-}
-
-article,
-aside,
-/* section, */
-main,
-.flex {
-  & > h1,
-  & > h2,
-  & > h3,
-  & > h4,
-  & > h5,
-  & > h6,
-  & > p,
-  & > ul,
-  & > ol,
-  & > blockquote,
-  & > code,
-  & > pre {
-    &:first-child {
-      @apply mt-0;
-    }
   }
 }
 
