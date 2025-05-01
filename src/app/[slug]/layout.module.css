@@ -2,19 +2,23 @@
 
 .hero {
   h1 {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-none mt-8;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-none mt-0 mb-2;
   }
 
   h2 {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl leading-none mb-8;
+    @apply text-sm sm:text-base md:text-lg lg:text-xl font-sans font-light text-muted-foreground leading-none mt-0 mb-4;
+  }
+
+  p {
+    @apply text-sm font-sans font-normal leading-snug text-left mt-0 mb-4;
   }
 }
 
 .nav {
-  @apply font-serif md:pt-2;
+  @apply font-serif;
 
   & > ul {
-    @apply space-y-2 md:space-y-4 lg:space-y-6 list-none p-0;
+    @apply space-y-1 md:space-y-2 lg:space-y-3 list-none p-0;
 
     & > li {
       @apply text-sm sm:text-base md:text-lg lg:text-xl leading-none;

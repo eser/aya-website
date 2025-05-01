@@ -24,7 +24,7 @@ export function Astronaut(props: AstronautProps) {
       />
       <Image
         className={styles.astronaut}
-        src="/astronaut.svg"
+        src="/assets/astronaut.svg"
         width={props.width}
         height={props.height}
         fill={props.fill}

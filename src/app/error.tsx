@@ -11,10 +11,14 @@ type ErrorPageProps = {
 };
 
 export function ErrorPage(props: ErrorPageProps) {
+  const [reason, setReason] = React.useState<string | null>(null);
+
   React.useEffect(() => {
     // Log the error to an error reporting service
     // eslint-disable-next-line no-console
     console.error(props.error);
+
+    setReason(props.error.message);
   }, [props.error]);
 
   const placeholders: Record<string, string> = {
@@ -23,12 +27,19 @@ export function ErrorPage(props: ErrorPageProps) {
 
   return (
     <PageLayout placeholders={placeholders}>
-      <section className="container mx-auto px-4 py-10 grid items-center">
+      <section className="container mx-auto">
         <h1>
           Bir hata oluştu
         </h1>
 
+        {reason && (
+          <p>
+            {reason}
+          </p>
+        )}
+
         <Button
+          variant="outline"
           onClick={
             // Attempt to recover by trying to re-render the segment
             () => props.reset()

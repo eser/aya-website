@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
     ppr: true, // 'incremental',
     nodeMiddleware: true, // Enable Node.js middleware
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

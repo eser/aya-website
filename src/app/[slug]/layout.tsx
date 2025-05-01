@@ -1,8 +1,10 @@
-import * as React from "react";
+import NextImage from "next/image";
+import NextLink from "next/link";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import * as React from "react";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
+import type { GetProfileData } from "@/shared/modules/backend/profiles/get-profile.ts";
 
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 
@@ -21,7 +23,7 @@ async function Layout(props: LayoutProps) {
     slug: params.slug,
   };
 
-  const data = await backend.getProfile(params.slug);
+  const data: GetProfileData | null = await backend.getProfile(params.slug);
 
   if (data === null) {
     notFound();
@@ -29,37 +31,54 @@ async function Layout(props: LayoutProps) {
 
   return (
     <PageLayout placeholders={placeholders}>
-      <section className="container mx-auto px-4">
-        <div className={styles.hero}>
-          <h1>
-            {data.title}
-          </h1>
-          <h2>
-            {data.description}
-          </h2>
-        </div>
+      <section className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 items-start">
+          <aside className="flex flex-col gap-4">
+            {data.profile_picture_uri && (
+              <NextImage
+                src={data.profile_picture_uri}
+                alt={`${data.title}'s profile picture`}
+                width={280}
+                height={280}
+                className="rounded-full border"
+              />
+            )}
 
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start">
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <Link href={`/${params.slug}`}>
-                  Profil
-                </Link>
-              </li>
-              {data.pages?.map((page) => (
-                <li key={page.slug}>
-                  <Link href={`/${params.slug}/${page.slug}`}>
-                    {page.title}
-                  </Link>
+            <div className={styles.hero}>
+              <h1>
+                {data.title}
+              </h1>
+
+              <h2>
+                {data.slug}
+              </h2>
+
+              <p>
+                {data.description}
+              </p>
+            </div>
+
+            <nav className={styles.nav}>
+              <ul>
+                <li>
+                  <NextLink href={`/${params.slug}`}>
+                    Profil
+                  </NextLink>
                 </li>
-              ))}
-            </ul>
-          </nav>
+                {data.pages && data.pages.map((page) => (
+                  <li key={page.slug}>
+                    <NextLink href={`/${params.slug}/${page.slug}`}>
+                      {page.title}
+                    </NextLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
 
-          <div>
+          <main>
             {props.children}
-          </div>
+          </main>
         </div>
       </section>
     </PageLayout>
