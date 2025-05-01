@@ -1,7 +1,9 @@
 "use client";
 
 import * as React from "react";
+
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 import { Calendar, Settings, User, Users } from "lucide-react";
 
 import { cn } from "@/shared/lib/cn.ts";
@@ -21,6 +23,8 @@ export function SearchBar() {
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
 
+  const { setTheme } = useTheme();
+
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -38,7 +42,7 @@ export function SearchBar() {
       <Button
         variant="outline"
         className={cn(
-          "relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64",
+          "relative h-8 justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64",
         )}
         onClick={() => setOpen(true)}
       >
@@ -57,11 +61,6 @@ export function SearchBar() {
               <Calendar className="mr-2 h-4 w-4" />
               <span>Etkinlikler</span>
               <CommandShortcut>⌘E</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <Settings className="mr-2 h-4 w-4" />
-              <span>Ayarlar</span>
-              <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
@@ -83,6 +82,36 @@ export function SearchBar() {
             >
               <User className="mr-2 h-4 w-4" />
               <span>Eser Ozvataf</span>
+            </CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Tema">
+            <CommandItem
+              onSelect={() => {
+                setTheme("default");
+                setOpen(false);
+              }}
+            >
+              <Settings className="mr-2 h-4 w-4" />
+              <span>Tema: Sistem</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => {
+                setTheme("light");
+                setOpen(false);
+              }}
+            >
+              <Settings className="mr-2 h-4 w-4" />
+              <span>Tema: Açık</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => {
+                setTheme("midnight");
+                setOpen(false);
+              }}
+            >
+              <Settings className="mr-2 h-4 w-4" />
+              <span>Tema: Koyu</span>
             </CommandItem>
           </CommandGroup>
         </CommandList>
