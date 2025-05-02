@@ -42,7 +42,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.4.0-canary.17"
+    "next": "^15.4.0-canary.18"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.7.0",
@@ -98,7 +98,7 @@
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "jose": "^6.0.10",
-    "lucide-react": "^0.503.0",
+    "lucide-react": "^0.506.0",
     "modern-normalize": "^3.0.1",
     "negotiator": "^1.0.0",
     "next-mdx-remote": "^5.0.0",
@@ -108,7 +108,7 @@
     "react-day-picker": "^9.6.7",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.1",
-    "react-resizable-panels": "^2.1.9",
+    "react-resizable-panels": "^3.0.0",
     "react": "^19.1.0",
     "reading-time": "^1.5.0",
     "recharts": "^2.15.3",

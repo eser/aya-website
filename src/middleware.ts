@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { localeMatchFromRequest } from "./shared/lib/locale-matcher.ts";
 
 import { fallbackLocale, supportedLocales } from "@/shared/modules/i18n/locales.ts";
+import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
 
 // const _getLocale = (req: NextRequest): string | undefined => {
 //   const availableLanguages = languages.map((language) =>
@@ -29,17 +30,21 @@ import { fallbackLocale, supportedLocales } from "@/shared/modules/i18n/locales.
 //   return matchLocale(negotiatorLanguages, availableLanguages, defaultLanguage);
 // };
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const response = NextResponse.next();
 
   const host = req.headers.get("host")?.split(":", 1).at(0);
-  if (host === "eser.dev") {
-    const target = new URL(`/eser${req.nextUrl.pathname}`, req.nextUrl);
-    if (target.pathname.endsWith("/")) {
-      target.pathname = target.pathname.slice(0, -1);
-    }
+  if (host !== undefined && host !== "localhost" && host !== "acikyazilimagi.com") {
+    const customDomain = await getCustomDomain(host);
 
-    return NextResponse.rewrite(target);
+    if (customDomain !== null) {
+      const target = new URL(`/${customDomain.profile_slug}${req.nextUrl.pathname}`, req.nextUrl);
+      if (target.pathname.endsWith("/")) {
+        target.pathname = target.pathname.slice(0, -1);
+      }
+
+      return NextResponse.rewrite(target);
+    }
   }
 
   const hasNextJsCookie = req.cookies.has("SITE_LOCALE");

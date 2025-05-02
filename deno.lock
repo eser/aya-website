@@ -2,7 +2,7 @@
   "version": "5",
   "specifiers": {
     "npm:@faker-js/faker@^9.7.0": "9.7.0",
-    "npm:@happykit/flags@^3.3.0": "3.3.0_next@15.4.0-canary.17__babel-plugin-react-compiler@19.1.0-rc.1__react@19.1.0__react-dom@19.1.0___react@19.1.0_react@19.1.0_babel-plugin-react-compiler@19.1.0-rc.1_react-dom@19.1.0__react@19.1.0",
+    "npm:@happykit/flags@^3.3.0": "3.3.0_next@15.4.0-canary.18__babel-plugin-react-compiler@19.1.0-rc.1__react@19.1.0__react-dom@19.1.0___react@19.1.0_react@19.1.0_babel-plugin-react-compiler@19.1.0-rc.1_react-dom@19.1.0__react@19.1.0",
     "npm:@hookform/resolvers@^5.0.1": "5.0.1_react-hook-form@7.56.1__react@19.1.0_react@19.1.0",
     "npm:@next/env@^15.3.1": "15.3.1",
     "npm:@radix-ui/react-accessible-icon@^1.1.4": "1.1.4_@types+react@19.1.2_@types+react-dom@19.1.3__@types+react@19.1.2_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -54,19 +54,19 @@
     "npm:embla-carousel-react@^8.6.0": "8.6.0_react@19.1.0_embla-carousel@8.6.0",
     "npm:input-otp@^1.4.2": "1.4.2_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:jose@^6.0.10": "6.0.10",
-    "npm:lucide-react@0.503": "0.503.0_react@19.1.0",
+    "npm:lucide-react@0.506": "0.506.0_react@19.1.0",
     "npm:modern-normalize@^3.0.1": "3.0.1",
     "npm:negotiator@1": "1.0.0",
     "npm:next-mdx-remote@5": "5.0.0_react@19.1.0_@types+react@19.1.2",
     "npm:next-themes@~0.4.6": "0.4.6_react@19.1.0_react-dom@19.1.0__react@19.1.0",
-    "npm:next@15.4.0-canary.17": "15.4.0-canary.17_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
-    "npm:next@^15.4.0-canary.17": "15.4.0-canary.17_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
+    "npm:next@15.4.0-canary.18": "15.4.0-canary.18_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
+    "npm:next@^15.4.0-canary.18": "15.4.0-canary.18_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:picomatch@^4.0.2": "4.0.2",
     "npm:postcss@^8.5.3": "8.5.3",
     "npm:react-day-picker@^9.6.7": "9.6.7_react@19.1.0",
     "npm:react-dom@^19.1.0": "19.1.0_react@19.1.0",
     "npm:react-hook-form@^7.56.1": "7.56.1_react@19.1.0",
-    "npm:react-resizable-panels@^2.1.9": "2.1.9_react@19.1.0_react-dom@19.1.0__react@19.1.0",
+    "npm:react-resizable-panels@3": "3.0.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react@^19.1.0": "19.1.0",
     "npm:reading-time@^1.5.0": "1.5.0",
     "npm:recharts@^2.15.3": "2.15.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -168,7 +168,7 @@
     "@floating-ui/utils@0.2.9": {
       "integrity": "sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg=="
     },
-    "@happykit/flags@3.3.0_next@15.4.0-canary.17__babel-plugin-react-compiler@19.1.0-rc.1__react@19.1.0__react-dom@19.1.0___react@19.1.0_react@19.1.0_babel-plugin-react-compiler@19.1.0-rc.1_react-dom@19.1.0__react@19.1.0": {
+    "@happykit/flags@3.3.0_next@15.4.0-canary.18__babel-plugin-react-compiler@19.1.0-rc.1__react@19.1.0__react-dom@19.1.0___react@19.1.0_react@19.1.0_babel-plugin-react-compiler@19.1.0-rc.1_react-dom@19.1.0__react@19.1.0": {
       "integrity": "sha512-QyywkKYctdo0bnNf+bBd+3B/3Rsnjdaz+jtVA+jSqLxm0/lw51Z1+q2sEfc62MyNwQnY6w7eqajdwhuvH3VWAw==",
       "dependencies": [
         "nanoid@3.2.0",
@@ -370,46 +370,46 @@
     "@next/env@15.3.1": {
       "integrity": "sha512-cwK27QdzrMblHSn9DZRV+DQscHXRuJv6MydlJRpFSqJWZrTYMLzKDeyueJNN9MGd8NNiUKzDQADAf+dMLXX7YQ=="
     },
-    "@next/env@15.4.0-canary.17": {
-      "integrity": "sha512-k0dqCJhBYqPyRr/i+M9OYEtn9nJuZjJf9y6jVOkwl+xaEr4K6UmIBu6vVfoWitDwPLRj4NgKmHgkH75dPRxAQg=="
+    "@next/env@15.4.0-canary.18": {
+      "integrity": "sha512-BFGioHoYhB409WM66kLXCSiZuBaz2rQcMjg8tLGQVRiqDvWJD/8k7oloyqUnWD7OMjubhstFEleozzfh5SUbaw=="
     },
-    "@next/swc-darwin-arm64@15.4.0-canary.17": {
-      "integrity": "sha512-CX2ZV8DsLjbX6eYf0OhLMfjZnFykwzAcG6gnz9fJdU+l20YvYj5BlWAefSTLncQ6KWq/FLb8XU00PL8ThaGHPg==",
+    "@next/swc-darwin-arm64@15.4.0-canary.18": {
+      "integrity": "sha512-1u0Xt44VL4SRmxvX1miDEPETRrQ50GVSk95oWc9pQYdtLN3P54hMrTqcizXZLK2vwWyjf05JXVn75Eha1NNBhg==",
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
-    "@next/swc-darwin-x64@15.4.0-canary.17": {
-      "integrity": "sha512-J2cdOuAAxpVbjk6QRHPtq1hbDXuNIgCGB/G4HvKot71VIKXg/Fb1IaxwFiBYNl0zsRgH5CPO+AO9pUUGwpVPyQ==",
+    "@next/swc-darwin-x64@15.4.0-canary.18": {
+      "integrity": "sha512-fpt+t9tM1cBXuT1rBkFuawnav6uByBGOZLBr9RuV2+U1kOl2NpVa3J1eYE/Juq0B9ZQG5lIYPFM9a9cvELxXiw==",
       "os": ["darwin"],
       "cpu": ["x64"]
     },
-    "@next/swc-linux-arm64-gnu@15.4.0-canary.17": {
-      "integrity": "sha512-DKUs71Gi/leUH9RrMRamVfxXfOKdNGov7CH1KufeCyKIl9PNQQhP5GMgUk/19nvNmyFV7PjxIXRxElgBzRPtyQ==",
+    "@next/swc-linux-arm64-gnu@15.4.0-canary.18": {
+      "integrity": "sha512-/bq7ng86IGtubJT4RhXCL958nOV7gM8CcBnaYeZ/orBoZm0Fp2/Xc6YcAvxd/FnqGrIGP2X71eBg5UizwRuvWg==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@next/swc-linux-arm64-musl@15.4.0-canary.17": {
-      "integrity": "sha512-k4tjv818/f2DLmCZOkqTEsnqDpIUeKFb1gH9WnexjfAJLD2RXmb+hde8PDB64/Syf2RdytREdPZBnDs2okxrbQ==",
+    "@next/swc-linux-arm64-musl@15.4.0-canary.18": {
+      "integrity": "sha512-zV0VVEorX7XQg9IiWAnyXI9t24jIs6UYQk/jS1XdCw+FStSsP7tQ+NS6DVctyELh3ofWbtzzoI0KDMLkI8Ht0w==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@next/swc-linux-x64-gnu@15.4.0-canary.17": {
-      "integrity": "sha512-5vLVdcMKG2iMPTUu0E9aAvVBbEwKJeCA9CGb1hsQuEuTA3N3XntRHvZKj32POTE4jYJeb0DnxEZHli7SiyOBYw==",
+    "@next/swc-linux-x64-gnu@15.4.0-canary.18": {
+      "integrity": "sha512-xaxSv7ZyhuDB/oaUQemmbphKx9lkQv5+sLSFm7zgKMtph/R1uFPryDuk1QbHUmzjeL4Ol8tr8VpXm+yPQtc1+A==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@next/swc-linux-x64-musl@15.4.0-canary.17": {
-      "integrity": "sha512-N5YAd9chWQdLJayfkgZP+d/daTAWKa2jm0SPNhjZiez88fkoZlBU+GPLsozA7L3RdaqLGqDPrvavylt1Iw0L9Q==",
+    "@next/swc-linux-x64-musl@15.4.0-canary.18": {
+      "integrity": "sha512-K5p6CuaRk4hZRiYrM3oEomFu5tbLhwf3tkanGw5XHHmOiC6BuTvTuk+Qa172Up5GDHlqTBwqlI9qPEYyb0vxxQ==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@next/swc-win32-arm64-msvc@15.4.0-canary.17": {
-      "integrity": "sha512-URAe7qnVC8tarSBx/V/WDRP3xzkb8tr3m9gEjIYbBBVF64xlzrPshcPe5HIssGjL/5u3NRs9VxgsE9xZ7CcxKA==",
+    "@next/swc-win32-arm64-msvc@15.4.0-canary.18": {
+      "integrity": "sha512-3eG9I97ZPIH3MFcqvXyUuRQj9MHaTn6IPaV9izslmxuw9mlzjrteav1ssvbV/9KEuuwOrA3s1AwQ2RSJiirAwg==",
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "@next/swc-win32-x64-msvc@15.4.0-canary.17": {
-      "integrity": "sha512-kEFB4sX2/LM/OpFl08TrV7SIntFJKOh4RfvdUFQ++OTSHDLZz+G24FtRPHx6b6ULWWdNndkY2WfBMH9qy9RfBQ==",
+    "@next/swc-win32-x64-msvc@15.4.0-canary.18": {
+      "integrity": "sha512-1lSUmpTftPIOR01TARDfjUDVRL8Z13l/t2c/b8e7xjNiHUGwZ7bFZoYy/T2afd/1Hx7bBiNKd47X0Dk2OrUx2A==",
       "os": ["win32"],
       "cpu": ["x64"]
     },
@@ -2837,8 +2837,8 @@
       ],
       "bin": true
     },
-    "lucide-react@0.503.0_react@19.1.0": {
-      "integrity": "sha512-HGGkdlPWQ0vTF8jJ5TdIqhQXZi6uh3LnNgfZ8MHiuxFfX3RZeA79r2MW2tHAZKlAVfoNE8esm3p+O6VkIvpj6w==",
+    "lucide-react@0.506.0_react@19.1.0": {
+      "integrity": "sha512-/2znFFzlXcZKu0ANFCnxUOBV5I2e08m19PGtb6X+BcByRj8ODlGAl3wpe4LNVrDMLJ263JoIkZn7MOGK/5sXtw==",
       "dependencies": [
         "react"
       ]
@@ -3426,10 +3426,10 @@
         "react-dom"
       ]
     },
-    "next@15.4.0-canary.17_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
-      "integrity": "sha512-AH14xNNvz+6S33AB3TR+VHkS+cnhrzkNeh8TnYpSbtouQqhJtm0lTYjnQTGqa3cHGKMgLI1h13MU724HiJGbcg==",
+    "next@15.4.0-canary.18_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
+      "integrity": "sha512-xb+P5RWO2CJheXoNeeVYGbAFwUxxZ6o8VTIbKdK3FSWQ9aKgXUDZ1b2dD2RNlTY6HBNcaFw4QYpPt8GVUabzUw==",
       "dependencies": [
-        "@next/env@15.4.0-canary.17",
+        "@next/env@15.4.0-canary.18",
         "@swc/helpers",
         "babel-plugin-react-compiler",
         "caniuse-lite",
@@ -3692,8 +3692,8 @@
         "@types/react"
       ]
     },
-    "react-resizable-panels@2.1.9_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
-      "integrity": "sha512-z77+X08YDIrgAes4jl8xhnUu1LNIRp4+E7cv4xHmLOxxUPO/ML7PSrE813b90vj7xvQ1lcf7g2uA9GeMZonjhQ==",
+    "react-resizable-panels@3.0.0_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
+      "integrity": "sha512-UPFAMvU5UfXA4yGpqhjvY35zEC44ML0yRHjLvoK3nQrFFcU+mWUGMmURYsD3mp7P8oZdrKEwR++pFIexqSASlw==",
       "dependencies": [
         "react",
         "react-dom"
@@ -4481,18 +4481,18 @@
         "npm:embla-carousel-react@^8.6.0",
         "npm:input-otp@^1.4.2",
         "npm:jose@^6.0.10",
-        "npm:lucide-react@0.503",
+        "npm:lucide-react@0.506",
         "npm:modern-normalize@^3.0.1",
         "npm:negotiator@1",
         "npm:next-mdx-remote@5",
         "npm:next-themes@~0.4.6",
-        "npm:next@^15.4.0-canary.17",
+        "npm:next@^15.4.0-canary.18",
         "npm:picomatch@^4.0.2",
         "npm:postcss@^8.5.3",
         "npm:react-day-picker@^9.6.7",
         "npm:react-dom@^19.1.0",
         "npm:react-hook-form@^7.56.1",
-        "npm:react-resizable-panels@^2.1.9",
+        "npm:react-resizable-panels@3",
         "npm:react@^19.1.0",
         "npm:reading-time@^1.5.0",
         "npm:recharts@^2.15.3",

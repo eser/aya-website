@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker";
 
+import type { GetCustomDomainData } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
 import type { GetProfileData } from "@/shared/modules/backend/profiles/get-profile.ts";
 import type { GetProfilesData } from "@/shared/modules/backend/profiles/get-profiles.ts";
 import type { GetUserData } from "@/shared/modules/backend/users/get-user.ts";
@@ -9,6 +10,12 @@ import type { GetStoriesData } from "@/shared/modules/backend/stories/get-storie
 
 export function generateFakeData(entity: string, identifier: string | undefined) {
   const hasIdentifier = identifier !== undefined;
+
+  if (entity === "custom-domains" && hasIdentifier) {
+    return {
+      profile_slug: faker.lorem.slug(),
+    } satisfies GetCustomDomainData;
+  }
 
   if (entity === "profiles") {
     if (!hasIdentifier) {

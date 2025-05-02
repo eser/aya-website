@@ -1,4 +1,9 @@
 {
+  "custom-domains": {
+    "eser.dev": {
+      "profile_slug": "eser"
+    }
+  },
   "users": {
     "01JT1TWN9X9VZSKJWMBDNY7NGW": {
       "id": "01JT1TWN9X9VZSKJWMBDNY7NGW",
