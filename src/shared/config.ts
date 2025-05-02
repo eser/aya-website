@@ -13,6 +13,10 @@ export type SiteConfig = {
 
   host: string;
   backendUri: string;
+
+  features: {
+    login: boolean;
+  };
 };
 
 export const siteConfig: SiteConfig = {
@@ -32,6 +36,10 @@ export const siteConfig: SiteConfig = {
   host: process.env.NEXT_PUBLIC_HOST ?? "acikyazilimagi.com",
   // deno-lint-ignore no-process-global
   backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "http://localhost:3000/contract/mocks",
+
+  features: {
+    login: false,
+  },
 };
 
 export const forbiddenSlugs: readonly string[] = [

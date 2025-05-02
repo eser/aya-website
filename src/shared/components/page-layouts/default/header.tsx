@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { siteConfig } from "@/shared/config.ts";
+
 import { GitHubLogin } from "@/shared/modules/auth/github-login.tsx";
 import { ThemeSwitcher } from "./theme-switcher.tsx";
 import { MainNav } from "./main-nav.tsx";
@@ -20,7 +22,7 @@ export function Header(props: HeaderProps) {
         <SearchBar />
         {/* <ExternalLinks /> */}
         <ThemeSwitcher />
-        <GitHubLogin />
+        {siteConfig.features.login && <GitHubLogin />}
       </div>
     </header>
   );

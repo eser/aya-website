@@ -13,7 +13,7 @@ export function GitHubLogin() {
       asChild
     >
       <div>
-        <span>GitHub ile Giriş Yap</span>
+        <span>GitHub ile Giriş</span>
       </div>
     </Button>
   );
