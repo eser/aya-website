@@ -2,11 +2,11 @@
 
 import * as React from "react";
 
-import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Calendar, Settings, User, Users } from "lucide-react";
 
 import { cn } from "@/shared/lib/cn.ts";
+import { useNavigation } from "@/shared/modules/navigation/use-navigation.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   CommandDialog,
@@ -21,7 +21,8 @@ import {
 
 export function SearchBar() {
   const [open, setOpen] = React.useState(false);
-  const router = useRouter();
+
+  const navigation = useNavigation();
 
   const { setTheme } = useTheme();
 
@@ -67,7 +68,7 @@ export function SearchBar() {
           <CommandGroup heading="Profiller">
             <CommandItem
               onSelect={() => {
-                router.push("/aya");
+                navigation.push("/aya");
                 setOpen(false);
               }}
             >
@@ -76,7 +77,7 @@ export function SearchBar() {
             </CommandItem>
             <CommandItem
               onSelect={() => {
-                router.push("/eser");
+                navigation.push("/eser");
                 setOpen(false);
               }}
             >
