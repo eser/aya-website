@@ -23,10 +23,11 @@ export function SiteLink(props: SiteLinkProps) {
 
   if (navigationState.host !== null) {
     const profileLink = `/${navigationState.profile}`;
-    const profileLinkPrefix = `${profileLink}/`;
 
-    if (targetHref === profileLink || targetHref.startsWith(profileLinkPrefix)) {
-      targetHref = targetHref.slice(profileLinkPrefix.length);
+    if (targetHref === profileLink) {
+      targetHref = "/";
+    } else if (targetHref.startsWith(`${profileLink}/`)) {
+      targetHref = targetHref.slice(profileLink.length);
     } else {
       targetHref = `//${siteConfig.host}${targetHref}`;
     }
