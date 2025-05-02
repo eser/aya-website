@@ -10,6 +10,9 @@ export type SiteConfig = {
     instagram: string;
     github: string;
   };
+
+  host: string;
+  backendUri: string;
 };
 
 export const siteConfig: SiteConfig = {
@@ -24,6 +27,11 @@ export const siteConfig: SiteConfig = {
     instagram: "https://www.instagram.com/acikyazilimagi/",
     github: "https://github.com/acikyazilimagi",
   },
+
+  // deno-lint-ignore no-process-global
+  host: process.env.NEXT_PUBLIC_HOST ?? "acikyazilimagi.com",
+  // deno-lint-ignore no-process-global
+  backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "http://localhost:3000/contract/mocks",
 };
 
 export const forbiddenSlugs: readonly string[] = [

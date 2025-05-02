@@ -1,10 +1,14 @@
+import { siteConfig } from "@/shared/config.ts";
 import type { Result } from "./types.ts";
 
-export async function fetcher<T>(relativePath: string) {
-  // deno-lint-ignore no-process-global
-  const targetUrl = `${process.env.NEXT_PUBLIC_BACKEND_URI}${relativePath}`;
+export async function fetcher<T>(relativePath: string): Promise<T | null> {
+  const targetUrl = `${siteConfig.backendUri}${relativePath}`;
 
   const request = await fetch(targetUrl);
+
+  if (request.status === 404) {
+    return null;
+  }
 
   const result = await request.json() as Result<T>;
 

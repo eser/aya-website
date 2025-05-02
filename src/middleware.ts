@@ -1,5 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { localeMatchFromRequest } from "./shared/lib/locale-matcher.ts";
+
+import { siteConfig } from "@/shared/config.ts";
+import { localeMatchFromRequest } from "@/shared/lib/locale-matcher.ts";
 
 import { fallbackLocale, supportedLocales } from "@/shared/modules/i18n/locales.ts";
 import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
@@ -34,7 +36,7 @@ export async function middleware(req: NextRequest) {
   const response = NextResponse.next();
 
   const host = req.headers.get("host")?.split(":", 1).at(0);
-  if (host !== undefined && host !== "localhost" && host !== "acikyazilimagi.com") {
+  if (host !== undefined && host !== "localhost" && host !== siteConfig.host) {
     const customDomain = await getCustomDomain(host);
 
     if (customDomain !== null) {
