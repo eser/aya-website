@@ -4,6 +4,7 @@ export type Profile = {
   id: string;
   kind: ProfileKind;
   slug: string;
+  custom_domain: string | null;
   profile_picture_uri: string | null;
   pronouns: string | null;
   title: string;

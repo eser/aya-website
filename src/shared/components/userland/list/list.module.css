@@ -1,0 +1,5 @@
+@reference "../../../globals.css";
+
+.list {
+  @apply flex flex-col gap-12;
+}
