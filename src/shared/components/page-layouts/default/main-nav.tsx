@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import Link from "next/link";
-
 import { cn } from "@/shared/lib/cn.ts";
 import { replacePlaceholders } from "@/shared/lib/replace-placeholders.ts";
 import { Button } from "@/shared/components/ui/button.tsx";
@@ -12,6 +10,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
+
 import { Logo } from "./logo.tsx";
 
 import styles from "./main-nav.module.css";
@@ -41,13 +41,13 @@ export function MainNav(props: MainNavProps) {
   return (
     <nav className={styles.nav}>
       <div className={styles["nav-links"]}>
-        <Link href="/">
+        <SiteLink href="/">
           <Logo />
-        </Link>
+        </SiteLink>
         {navItems.map(
           (item, index) =>
             item.href && (
-              <Link
+              <SiteLink
                 key={index}
                 href={replacePlaceholders(item.href, props.placeholders)}
                 className={cn(
@@ -55,7 +55,7 @@ export function MainNav(props: MainNavProps) {
                 )}
               >
                 {item.title}
-              </Link>
+              </SiteLink>
             ),
         )}
       </div>
@@ -75,20 +75,20 @@ export function MainNav(props: MainNavProps) {
             className={styles["nav-dropdown-content"]}
           >
             <DropdownMenuItem asChild>
-              <Link href="/">
+              <SiteLink href="/">
                 Ana Sayfa
-              </Link>
+              </SiteLink>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             {navItems.map(
               (item, index) =>
                 item.href && (
                   <DropdownMenuItem key={index} asChild>
-                    <Link
+                    <SiteLink
                       href={replacePlaceholders(item.href, props.placeholders)}
                     >
                       {item.title}
-                    </Link>
+                    </SiteLink>
                   </DropdownMenuItem>
                 ),
             )}

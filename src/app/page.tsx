@@ -2,7 +2,6 @@ import * as React from "react";
 
 import type { Metadata } from "next";
 
-import Link from "next/link";
 import { mdx } from "@/shared/lib/mdx.ts";
 
 import { siteConfig } from "@/shared/config.ts";
@@ -10,6 +9,7 @@ import { siteConfig } from "@/shared/config.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
 
 import styles from "./page.module.css";
@@ -88,21 +88,21 @@ kimliğiyle** devam ediyor.`;
         </div>
         <div className="flex gap-4">
           <Button variant="default" size="lg" asChild>
-            <Link
+            <SiteLink
               href="/aya/about"
               rel="noreferrer"
             >
               Yazının devamı →
-            </Link>
+            </SiteLink>
           </Button>
           <Button variant="secondary" size="lg" asChild>
-            <Link
+            <SiteLink
               target="_blank"
               rel="noreferrer"
               href={siteConfig.links.github}
             >
               GitHub
-            </Link>
+            </SiteLink>
           </Button>
         </div>
       </section>

@@ -1,8 +1,7 @@
 import * as React from "react";
 
-import Link from "next/link";
-
 import { Separator } from "@/shared/components/ui/separator.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import styles from "./footer.module.css";
 
@@ -10,11 +9,11 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <Link href="/aya/">açık yazılım ağı</Link>
+        <SiteLink href="/aya/">açık yazılım ağı</SiteLink>
         <Separator className={styles.div} orientation="vertical" decorative />
-        <Link href="/aya/policies/">Kurallar</Link>
+        <SiteLink href="/aya/policies/">Kurallar</SiteLink>
         <Separator className={styles.div} orientation="vertical" decorative />
-        <Link href="/aya/about/">Hakkında</Link>
+        <SiteLink href="/aya/about/">Hakkında</SiteLink>
       </div>
     </footer>
   );

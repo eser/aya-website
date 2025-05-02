@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Link from "next/link";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 export type ProfileProps = {
   slug: string;
@@ -9,11 +9,11 @@ export type ProfileProps = {
 
 export function Profile(props: ProfileProps) {
   return (
-    <Link
+    <SiteLink
       href={`/${props.slug}/`}
       rel="noreferrer"
     >
       {props.children ?? props.slug}
-    </Link>
+    </SiteLink>
   );
 }

@@ -1,5 +1,4 @@
 import NextImage from "next/image";
-import NextLink from "next/link";
 import { notFound } from "next/navigation";
 import * as React from "react";
 
@@ -7,6 +6,7 @@ import { backend } from "@/shared/modules/backend/backend.ts";
 import type { GetProfileData } from "@/shared/modules/backend/profiles/get-profile.ts";
 
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import styles from "./layout.module.css";
 
@@ -66,32 +66,32 @@ async function Layout(props: LayoutProps) {
             <nav className={styles.nav}>
               <ul>
                 <li>
-                  <NextLink href={`/${params.slug}`}>
+                  <SiteLink href={`/${params.slug}`}>
                     Profil
-                  </NextLink>
+                  </SiteLink>
                 </li>
 
                 {data.show_stories && (
                   <li>
-                    <NextLink href={`/${params.slug}/stories`}>
+                    <SiteLink href={`/${params.slug}/stories`}>
                       Hikayeler
-                    </NextLink>
+                    </SiteLink>
                   </li>
                 )}
 
                 {data.show_projects && (
                   <li>
-                    <NextLink href={`/${params.slug}/projects`}>
+                    <SiteLink href={`/${params.slug}/projects`}>
                       Projeler
-                    </NextLink>
+                    </SiteLink>
                   </li>
                 )}
 
                 {data.pages && data.pages.map((page) => (
                   <li key={page.slug}>
-                    <NextLink href={`/${params.slug}/${page.slug}`}>
+                    <SiteLink href={`/${params.slug}/${page.slug}`}>
                       {page.title}
-                    </NextLink>
+                    </SiteLink>
                   </li>
                 ))}
               </ul>

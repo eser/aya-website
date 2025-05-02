@@ -33,9 +33,8 @@ import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-do
 // };
 
 export async function middleware(req: NextRequest) {
-  const response = NextResponse.next();
-
   const host = req.headers.get("host")?.split(":", 1).at(0);
+
   if (host !== undefined && host !== "localhost" && host !== siteConfig.host) {
     const customDomain = await getCustomDomain(host);
 
@@ -45,11 +44,18 @@ export async function middleware(req: NextRequest) {
         target.pathname = target.pathname.slice(0, -1);
       }
 
-      return NextResponse.rewrite(target);
+      const newResponse = NextResponse.rewrite(target);
+
+      newResponse.headers.set("x-custom-domain-host", host);
+      newResponse.headers.set("x-custom-domain-profile", customDomain.profile_slug);
+
+      return newResponse;
     }
   }
 
   const hasNextJsCookie = req.cookies.has("SITE_LOCALE");
+
+  const response = NextResponse.next();
 
   if (!hasNextJsCookie) {
     const locale = localeMatchFromRequest(req, supportedLocales, fallbackLocale);
@@ -71,7 +77,7 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    "/((?!_next/|favicon.ico).*)",
+    "/((?!_next/|favicon.ico|contract/).*)",
     // Optional: only run on root (/) URL
     // '/'
   ],
