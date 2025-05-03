@@ -45,20 +45,20 @@ async function Layout(props: LayoutProps) {
             )}
 
             <div className={styles.hero}>
-              <h1>
+              <h1 className={styles.title}>
                 {data.title}
               </h1>
 
-              <h2>
+              <div className={styles.subtitle}>
                 {data.slug}
                 {data.pronouns && (
                   <>
                     {` · ${data.pronouns}`}
                   </>
                 )}
-              </h2>
+              </div>
 
-              <p>
+              <p className={styles.description}>
                 {data.description}
               </p>
             </div>

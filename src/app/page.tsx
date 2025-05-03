@@ -2,7 +2,7 @@ import * as React from "react";
 
 import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.ts";
+import { mdx } from "@/shared/lib/mdx.tsx";
 
 import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/modules/i18n/languages.ts";
@@ -44,7 +44,7 @@ async function IndexPage(/* props: IndexPageProps */) {
     // lang: props.params.lang,
   };
 
-  const introText = `**Açık Yazılım Ağı (AYA)**, sosyal bir yarar
+  const contentText = `**AYA (Açık Yazılım Ağı)**, sosyal bir yarar
 oluşturmak motivasyonuyla nitelikli bilişim çözümleri üreten
 gönüllülerin bir araya gelmesine ve projeler gerçekleştirmesine
 imkan sağlayan bir platformdur.
@@ -62,27 +62,23 @@ bugün yoluna portföyünde bilişim projeleri barındıran **yazılım vakfı
 kimliğiyle** devam ediyor.`;
 
   const mdxSource = await mdx(
-    introText,
+    contentText,
     components,
   );
 
   return (
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 grid items-center">
-        <div className="flex max-w-[980px] flex-col items-start">
+        <div className="flex max-w-[980px] flex-col items-start pt-10">
           <div className={styles["astronaut-layer"]}>
             <Astronaut width={400} height={400} />
           </div>
-          <div className={styles.hero}>
-            <h1>
-              Açık Yazılım Ağı
-            </h1>
-            <h2>
-              Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı
-            </h2>
-          </div>
+          <article className="content">
+            <h1>Açık Yazılım Ağı</h1>
+            <h3>Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı</h3>
 
-          <article className={styles.content}>
+            <div className="mt-10" />
+
             {mdxSource?.content}
           </article>
         </div>

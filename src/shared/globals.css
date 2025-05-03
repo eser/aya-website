@@ -14,11 +14,7 @@
   - DO NOT use Tailwind CSS rules directly in your components
 */
 
-@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "modern-normalize/modern-normalize.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
-
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark {

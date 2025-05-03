@@ -3,14 +3,12 @@ import { notFound } from "next/navigation";
 
 // import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.ts";
+import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
 // import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/modules/i18n/languages.ts";
 
 import { components } from "@/shared/components/userland/userland.ts";
-
-import styles from "./page.module.css";
 
 // Metadata might be better handled primarily in layout.tsx now
 // export const metadata: Metadata = { ... };
@@ -52,7 +50,7 @@ Henüz içerik bulunmamaktadır.`;
   );
 
   return (
-    <article className={styles.content}>
+    <article className="content">
       {mdxSource?.content}
     </article>
   );

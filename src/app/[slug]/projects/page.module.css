@@ -1,5 +1,0 @@
-@reference "../../../shared/globals.css";
-
-.content {
-  @apply z-10;
-}

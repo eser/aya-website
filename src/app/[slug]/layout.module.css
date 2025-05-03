@@ -1,15 +1,15 @@
 @reference "../../shared/globals.css";
 
 .hero {
-  h1 {
-    @apply text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-none mt-0 mb-2;
+  .title {
+    @apply font-serif text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-none mt-0 mb-2;
   }
 
-  h2 {
+  .subtitle {
     @apply text-sm sm:text-base md:text-lg lg:text-xl font-sans font-light text-muted-foreground leading-none mt-0 mb-4;
   }
 
-  p {
+  .description {
     @apply text-sm font-sans font-normal leading-snug text-left mt-0 mb-4;
   }
 }

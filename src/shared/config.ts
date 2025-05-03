@@ -20,11 +20,11 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Açık Yazılım Ağı",
+  name: "AYA",
   fancyName: "𝕒𝕔𝕀𝕜 𝕪𝕒𝕫𝕀𝕃𝕀𝕞 𝕒𝕘𝕀",
-  title: "AYA | Açık Yazılım Ağı",
+  title: "AYA",
   description: "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
-  keywords: ["Açık Yazılım Ağı", "Açık Kaynak", "Açık Veri"],
+  keywords: ["AYA", "Açık Yazılım Ağı", "Açık Kaynak", "Açık Veri"],
 
   links: {
     x: "https://twitter.com/acikyazilimagi",

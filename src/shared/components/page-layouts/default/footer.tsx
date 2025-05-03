@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <SiteLink href="/aya/">açık yazılım ağı</SiteLink>
+        <SiteLink href="/aya/">AYA</SiteLink>
         <Separator className={styles.div} orientation="vertical" decorative />
         <SiteLink href="/aya/policies/">Kurallar</SiteLink>
         <Separator className={styles.div} orientation="vertical" decorative />

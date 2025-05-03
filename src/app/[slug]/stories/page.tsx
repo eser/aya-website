@@ -46,7 +46,7 @@ function IndexPage(_props: IndexPageProps) {
   // }
 
   return (
-    <article className={styles.content}>
+    <article className="content">
       <h1>Hikayeler</h1>
 
       <div className={styles["timeline-container"]}>

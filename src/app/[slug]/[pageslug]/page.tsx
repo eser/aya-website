@@ -3,14 +3,12 @@ import { notFound } from "next/navigation";
 
 import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.ts";
+import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { siteConfig } from "@/shared/config.ts";
 // import type { Language } from "@/shared/modules/i18n/languages.ts";
 
 import { components } from "@/shared/components/userland/userland.ts";
-
-import styles from "./page.module.css";
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
 export const metadata: Metadata = {
@@ -67,7 +65,7 @@ async function IndexPage(props: IndexPageProps) {
 
   return (
     <div className="flex max-w-[980px] flex-col items-start">
-      <article className={styles.content}>
+      <article className="content">
         {mdxSource?.content}
       </article>
     </div>

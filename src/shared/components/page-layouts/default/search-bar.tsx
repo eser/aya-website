@@ -73,7 +73,7 @@ export function SearchBar() {
               }}
             >
               <Users className="mr-2 h-4 w-4" />
-              <span>Açık Yazılım Ağı</span>
+              <span>AYA</span>
             </CommandItem>
             <CommandItem
               onSelect={() => {

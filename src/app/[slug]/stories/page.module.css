@@ -1,9 +1,5 @@
 @reference "../../../shared/globals.css";
 
-.content {
-  @apply z-10;
-}
-
 .timeline-container {
   @apply pt-2;
 }

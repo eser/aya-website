@@ -165,10 +165,32 @@ html {
 }
 
 body {
-  @apply text-xs sm:text-sm md:text-base leading-loose min-h-screen;
+  @apply min-h-screen;
 }
 
-h1,
+.content {
+  h1 {
+    @apply font-serif break-words text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-none mb-8;
+  }
+
+  h2 {
+    @apply font-serif break-words text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-none mb-6;
+  }
+
+  h3 {
+    @apply font-serif break-words text-base sm:text-lg md:text-xl lg:text-2xl leading-none mb-4;
+  }
+
+  ol, p, ul {
+    @apply break-words leading-loose mt-0 mb-4;
+  }
+
+  p {
+    @apply text-justify;
+  }
+}
+
+/* h1,
 h2,
 h3,
 h4,
@@ -190,52 +212,31 @@ img {
 }
 
 h1 {
-  @apply font-serif font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-0 mb-8;
-  /* scroll-m-20 text-4xl font-semibold lg:text-5xl my-8 first:mt-0 */
-  /* text-3xl sm:text-3xl md:text-5xl lg:text-6xl */
+  @apply font-serif font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
 }
 
 h2 {
-  @apply font-serif font-normal text-base sm:text-lg md:text-xl lg:text-2xl mt-0 mb-4;
-  /* scroll-m-20 pb-2 text-3xl font-medium transition-colors mt-8 first:mt-0 mb-4 */
+  @apply font-serif font-normal text-base sm:text-lg md:text-xl lg:text-2xl;
 }
 
 h3 {
-  @apply font-serif font-normal text-base md:text-lg lg:text-xl mt-0 mb-2;
-  /* scroll-m-20 text-2xl font-medium mt-6 first:mt-0 mb-4 */
+  @apply font-serif font-normal text-base md:text-lg lg:text-xl;
 }
 
 h4 {
-  @apply font-serif font-normal text-base lg:text-lg my-0;
-  /* scroll-m-20 text-xl font-medium mt-4 first:mt-0 mb-2 */
+  @apply font-serif font-normal text-base lg:text-lg;
 }
 
 h5 {
-  @apply font-serif font-normal text-base my-0;
+  @apply font-serif font-normal text-base;
 }
 
 h6 {
-  @apply font-serif font-normal text-base my-0;
+  @apply font-serif font-normal text-base;
 }
 
 p {
-  @apply mt-0 mb-4 text-justify;
-
-  /* &.lead {
-    @apply text-xl text-muted-foreground;
-  } */
-}
-
-blockquote {
-  /* @apply mt-6 border-l-2 pl-6 italic; */
-}
-
-code {
-  /* @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold; */
-}
-
-pre {
-  /* @apply mt-6 p-4 bg-muted rounded-md; */
+  @apply text-justify;
 }
 
 ul,
@@ -245,7 +246,7 @@ ol {
   & > li {
     @apply text-start;
   }
-}
+} */
 
 a:is(.button) {
   @apply no-underline;
@@ -253,7 +254,6 @@ a:is(.button) {
 
 a:not([role="button"], [role="menuitem"]) {
   @apply text-foreground hover:text-accent-foreground underline underline-offset-4;
-  /* font-medium */
 }
 
 strong {
