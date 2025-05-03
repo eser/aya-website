@@ -12,7 +12,7 @@ export function NotFoundPage() {
   return (
     // <PageLayout placeholders={placeholders}>
     <section className="container mx-auto px-4 py-10 grid items-center">
-      <h1>Not Found</h1>
+      <h1>Sayfa bulunamadı</h1>
     </section>
     // </PageLayout>
   );
