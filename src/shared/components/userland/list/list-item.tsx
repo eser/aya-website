@@ -45,7 +45,7 @@ export function ListItem(props: ListItemProps) {
           </h4>
           <div>
             <strong>{props.item.host}</strong>
-            {props.item.participants.length > 0 && <em>ve</em>}
+            {props.item.participants.length > 0 && <em>{` ve `}</em>}
             {props.item.participants.length > 0 && `${props.item.participants.join(", ")}`}
           </div>
         </div>

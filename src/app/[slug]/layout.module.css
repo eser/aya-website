@@ -18,10 +18,10 @@
   @apply font-serif;
 
   & > ul {
-    @apply space-y-1 md:space-y-2 lg:space-y-3 list-none p-0;
+    @apply space-y-2 md:space-y-3 lg:space-y-4 list-none p-0;
 
     & > li {
-      @apply text-sm sm:text-base md:text-lg lg:text-xl leading-none;
+      @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-none;
 
       & > a {
         @apply text-muted-foreground hover:text-foreground no-underline;

@@ -23,8 +23,8 @@ type IndexPageProps = {
 // Sample data - Replace with actual data fetching for the specific profile
 const stories: Story[] = [
   { id: 1, type: "statuses", date: "2024-07-26", content: "Updated my status with exciting news!" },
-  { id: 2, type: "projects", date: "2024-07-25", content: "Launched a new project: Project Phoenix." },
-  { id: 3, type: "publications", date: "2024-07-20", content: "Published a new article on Medium about React Hooks." },
+  { id: 2, type: "articles", date: "2024-07-25", content: "Published a new article on Medium about React Hooks." },
+  { id: 3, type: "content", date: "2024-07-20", content: "Recorded a new video on YouTube about Radix UI." },
   {
     id: 4,
     type: "career updates",
@@ -33,7 +33,7 @@ const stories: Story[] = [
   },
   { id: 5, type: "public speaking", date: "2024-07-10", content: "Gave a talk at the Local Tech Meetup." },
   { id: 6, type: "statuses", date: "2024-07-05", content: "Thinking about the next big thing..." },
-  { id: 7, type: "projects", date: "2024-07-01", content: "Completed milestone 1 for the ongoing project." },
+  { id: 7, type: "statuses", date: "2024-07-01", content: "Completed milestone 1 for the ongoing project." },
 ];
 
 function IndexPage(_props: IndexPageProps) {
@@ -47,7 +47,7 @@ function IndexPage(_props: IndexPageProps) {
 
   return (
     <article className={styles.content}>
-      <h2>Hikayeler</h2>
+      <h1>Hikayeler</h1>
 
       <div className={styles["timeline-container"]}>
         <Timeline stories={stories} />

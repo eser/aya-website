@@ -36,7 +36,7 @@
       "description": "Founder @acikyazilim • Streaming @ eser.live • Open Source, DevRel, DevOps and Agile Evangelist • Generalist",
       "show_stories": true,
       "show_projects": true,
-      "show_members": true,
+      "show_members": false,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
       "links": [],
@@ -51,7 +51,7 @@
       "title": "Açık Yazılım Ağı",
       "pronouns": null,
       "description": "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
-      "show_stories": true,
+      "show_stories": false,
       "show_projects": true,
       "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
@@ -106,7 +106,7 @@
       "title": "Kurallar",
       "summary": "Açık Yazılım Ağı’nın kuralları özet",
       "published_at": "2024-10-17T23:27:04.036Z",
-      "content": "Kurallar"
+      "content": "Henüz içerik bulunmamaktadır."
     },
     "01JT9JHFH5W605XCZ6X4EVZDPC": {
       "id": "01JT9JHFH5W605XCZ6X4EVZDPC",

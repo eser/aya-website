@@ -42,7 +42,9 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const contentText = "Henüz hazır olmayan içerik - Projeler";
+  const contentText = `# Projeler
+
+Henüz içerik bulunmamaktadır.`;
 
   const mdxSource = await mdx(
     contentText,

@@ -9,8 +9,8 @@ import styles from "./timeline.module.css";
 const filterMapping: Record<string, string> = {
   "all": "Tümü",
   "statuses": "Durum",
-  "projects": "Proje",
-  "publications": "Yayın",
+  "articles": "Makale",
+  "content": "İçerik",
   "public speaking": "Topluluğa Konuşma",
   "career updates": "Kariyer Güncellemesi",
 };
