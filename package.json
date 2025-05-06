@@ -44,7 +44,7 @@
     "lint": "biome lint --unsafe && deno lint",
     "lint:fix": "biome lint --unsafe --write && deno lint --fix",
     "format": "biome format && deno fmt --check",
-    "format:fix": "biome format --write && deno fmt"
+    "format:fix": "deno fmt"
   },
   "dependencies": {
     "next": "^15.4.0-canary.23"
