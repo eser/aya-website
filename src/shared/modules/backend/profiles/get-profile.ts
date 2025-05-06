@@ -13,8 +13,8 @@ export type GetProfileData = Omit<Profile, "deleted_at"> & {
   >[];
 };
 
-export async function getProfile(slug: string) {
-  const response = await fetcher<GetProfileData>(`/profiles/${slug}`);
+export async function getProfile(slug: string, locale: string) {
+  const response = await fetcher<GetProfileData>(`/profiles/${slug}?locale=${locale}`);
 
   return response;
 }

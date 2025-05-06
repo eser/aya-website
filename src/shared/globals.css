@@ -66,6 +66,25 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-float: float 2s ease-in infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(1rem);
+      -webkit-transform: translateY(1rem);
+    }
+
+    100% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+    }
+  }
 }
 
 @layer base {

@@ -1,11 +1,7 @@
 import * as React from "react";
-
 import Image from "next/image";
 
-import { cn } from "@/shared/lib/cn.ts";
-
 import { Stars } from "./stars.tsx";
-import styles from "./astronaut.module.css";
 
 type AstronautProps = {
   className?: string | undefined;
@@ -16,10 +12,10 @@ type AstronautProps = {
 
 export function Astronaut(props: AstronautProps) {
   return (
-    <div className={cn(styles.container, props.className)}>
-      <Stars className={styles.stars} width={props.width} height={props.height} />
+    <div className={props.className}>
+      <Stars className="absolute fill-border" width={props.width} height={props.height} />
       <Image
-        className={styles.astronaut}
+        className="object-contain p-[50px] animate-float"
         src="/assets/astronaut.svg"
         width={props.width}
         height={props.height}

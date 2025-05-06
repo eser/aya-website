@@ -83,9 +83,9 @@ const stories: Story[] = [
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  const _navigationState = await getNavigationState();
+  const navigationState = await getNavigationState();
 
-  const profileData = await backend.getProfile(params.slug);
+  const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
   if (profileData === null) {
     notFound();
   }
