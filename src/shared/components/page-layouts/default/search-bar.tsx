@@ -49,7 +49,7 @@ export function SearchBar() {
       >
         <span className="hidden lg:inline-flex">Genel arama...</span>
         <span className="inline-flex lg:hidden">Arama...</span>
-        <kbd className="pointer-events-none absolute right-[0.4rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+        <kbd className="pointer-events-none absolute right-[0.4rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded-sm border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>

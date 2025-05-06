@@ -1,3 +1,5 @@
+import * as flags from "flags/next";
+
 export type SiteConfig = {
   name: string;
   fancyName: string;
@@ -15,7 +17,8 @@ export type SiteConfig = {
   backendUri: string;
 
   features: {
-    login: boolean;
+    login: flags.Flag<boolean>;
+    // login: () => Promise<boolean>;
   };
 };
 
@@ -38,7 +41,14 @@ export const siteConfig: SiteConfig = {
   backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "http://localhost:3000/contract/mocks",
 
   features: {
-    login: false,
+    login: flags.flag({
+      key: "login",
+
+      decide() {
+        return false;
+      },
+    }),
+    // login: () => Promise.resolve(false),
   },
 };
 

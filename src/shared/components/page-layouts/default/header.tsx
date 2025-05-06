@@ -14,7 +14,9 @@ type HeaderProps = {
   placeholders: Record<string, string>;
 };
 
-export function Header(props: HeaderProps) {
+export async function Header(props: HeaderProps) {
+  const login = await siteConfig.features.login();
+
   return (
     <header className={styles.header}>
       <div>
@@ -22,7 +24,7 @@ export function Header(props: HeaderProps) {
         <SearchBar />
         {/* <ExternalLinks /> */}
         <ThemeSwitcher />
-        {siteConfig.features.login && <GitHubLogin />}
+        {login && <GitHubLogin />}
       </div>
     </header>
   );

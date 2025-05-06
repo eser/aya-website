@@ -2,6 +2,8 @@ import * as React from "react";
 
 import type { Metadata } from "next";
 
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+
 import { mdx } from "@/shared/lib/mdx.tsx";
 
 import { siteConfig } from "@/shared/config.ts";
@@ -88,7 +90,8 @@ kimliğiyle** devam ediyor.`;
               href="/aya/about"
               rel="noreferrer"
             >
-              Yazının devamı →
+              Yazının devamı
+              <ArrowRightIcon />
             </SiteLink>
           </Button>
           <Button variant="secondary" size="lg" asChild>
