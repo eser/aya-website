@@ -6,7 +6,9 @@ import { notFound } from "next/navigation";
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
 // import { siteConfig } from "@/shared/config.ts";
-// import type { Language } from "@/shared/modules/i18n/languages.ts";
+// import type { Locale } from "@/shared/modules/i18n/locales.ts";
+
+// import { useNavigation } from "@/shared/modules/navigation/use-navigation.tsx";
 
 import { components } from "@/shared/components/userland/userland.ts";
 
@@ -22,6 +24,8 @@ type IndexPageProps = {
 
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
+
+  // const navigation = useNavigation();
 
   // *** Remove data fetching here - Layout handles it ***
   // const data = await backend.getProfile(params.slug);
@@ -40,6 +44,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
+  // (Dil = ${navigation.state.locale.name})
   const contentText = `
   # Profil
 

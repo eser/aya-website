@@ -1,36 +1,9 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-import { siteConfig } from "@/shared/config.ts";
-import { localeMatchFromRequest } from "@/shared/lib/locale-matcher.ts";
+import { fallbackLocaleCode, siteConfig, supportedLocales } from "@/shared/config.ts";
+import * as localeMatcher from "@/shared/modules/i18n/locales.ts";
 
-import { fallbackLocale, supportedLocales } from "@/shared/modules/i18n/locales.ts";
 import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
-
-// const _getLocale = (req: NextRequest): string | undefined => {
-//   const availableLanguages = languages.map((language) =>
-//     language.code as string
-//   );
-//   const defaultLanguage = languages[0]?.code ?? "en";
-
-//   // Check if locale is set in cookie
-//   const cookieLocale = req.cookies.get("language")?.value;
-//   if (cookieLocale !== undefined && availableLanguages.includes(cookieLocale)) {
-//     return cookieLocale;
-//   }
-
-//   // Instantiate negotiator with request headers
-//   const negotiatorHeaders: Record<string, string> = {};
-//   // eslint-disable-next-line unicorn/no-array-for-each
-//   req.headers.forEach((value, key) => {
-//     negotiatorHeaders[key] = value;
-//   });
-
-//   const negotiator = new Negotiator({ headers: negotiatorHeaders });
-//   const negotiatorLanguages = negotiator.languages();
-
-//   // Use negotiator and intl-localematcher to get best locale
-//   return matchLocale(negotiatorLanguages, availableLanguages, defaultLanguage);
-// };
 
 export async function middleware(req: NextRequest) {
   const host = req.headers.get("host")?.split(":", 1).at(0);
@@ -53,16 +26,17 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  const hasNextJsCookie = req.cookies.has("SITE_LOCALE");
-
   const response = NextResponse.next();
 
-  if (!hasNextJsCookie) {
-    const locale = localeMatchFromRequest(req, supportedLocales, fallbackLocale);
-
-    response.cookies.set("SITE_LOCALE", locale);
-    console.log(`Setting visitor's locale to ${locale}`);
+  const localeState = localeMatcher.localeMatchFromRequest(req, Object.values(supportedLocales), fallbackLocaleCode);
+  if (localeState.updateCookie) {
+    response.cookies.set("SITE_LOCALE", localeState.localeCode);
+    //   console.log(` -> Setting visitor's locale: ${JSON.stringify(localeState)}`);
+    // } else {
+    //   console.log(` -> Visitor's locale already set: ${JSON.stringify(localeState)}`);
   }
+
+  response.headers.set("x-locale", localeState.localeCode);
 
   return response;
 }
@@ -77,7 +51,7 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    "/((?!_next/|favicon.ico|contract/).*)",
+    "/((?!_next/|favicon.ico|\\.|contract/|assets/).*)",
     // Optional: only run on root (/) URL
     // '/'
   ],

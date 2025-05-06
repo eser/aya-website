@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { useNavigation } from "@/shared/modules/navigation/use-navigation.tsx";
+import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export type SiteLinkProps = Omit<React.ComponentProps<typeof Link>, "href"> & {
 };
 
 export function SiteLink(props: SiteLinkProps) {
-  const navigation = useNavigation();
+  const navigation = useNavigationClient();
 
   const targetHref = navigation.validateHref(props.href);
 

@@ -4,22 +4,24 @@ import * as React from "react";
 
 import { headers } from "next/headers";
 
-import { fallbackLanguage, type Language } from "@/shared/modules/i18n/languages.ts";
+import { supportedLocales } from "@/shared/config.ts";
+import { type Locale } from "@/shared/modules/i18n/locales.ts";
 
-import { type NavigationContextState, NavigationProvider } from "@/shared/modules/navigation/navigation-provider.tsx";
+import {
+  type NavigationContextStateValues,
+  NavigationProvider,
+} from "@/shared/modules/navigation/navigation-provider.tsx";
 
 import { RegisterBackend } from "./register-backend.tsx";
 import { Analytics } from "./analytics.tsx";
 
 import "../shared/globals.css";
 
-const selectedLanguage: Language = fallbackLanguage;
-
 type LayoutProps = {
   children: React.ReactNode;
   // deno-lint-ignore ban-types
   params: {
-    // lang: Language;
+    // locale: Locale;
   };
 };
 
@@ -28,16 +30,20 @@ async function Layout(props: LayoutProps) {
 
   const host = headersList.get("x-custom-domain-host");
   const profile = headersList.get("x-custom-domain-profile");
+  const localeCode = headersList.get("x-locale")!;
 
-  const navigationState: NavigationContextState = {
+  const selectedLocale: Locale = supportedLocales[localeCode];
+
+  const navigationState: NavigationContextStateValues = {
     host: host,
     profile: profile,
+    locale: selectedLocale,
   };
 
   return (
     <html
-      lang={selectedLanguage.code}
-      dir={selectedLanguage.dir}
+      lang={selectedLocale.code}
+      dir={selectedLocale.dir}
       suppressHydrationWarning
     >
       <head />

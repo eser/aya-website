@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
 // import { siteConfig } from "@/shared/config.ts";
-// import type { Language } from "@/shared/modules/i18n/languages.ts";
+// import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
 import { components } from "@/shared/components/userland/userland.ts";
 

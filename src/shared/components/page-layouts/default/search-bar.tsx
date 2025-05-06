@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { Calendar, Settings, User, Users } from "lucide-react";
 
 import { cn } from "@/shared/lib/cn.ts";
-import { useNavigation } from "@/shared/modules/navigation/use-navigation.tsx";
+import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   CommandDialog,
@@ -22,7 +22,7 @@ import {
 export function SearchBar() {
   const [open, setOpen] = React.useState(false);
 
-  const navigation = useNavigation();
+  const navigation = useNavigationClient();
 
   const { setTheme } = useTheme();
 

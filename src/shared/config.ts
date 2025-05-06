@@ -1,4 +1,7 @@
 // import * as flags from "flags/next";
+
+import { type Locale } from "@/shared/modules/i18n/locales.ts";
+
 import * as flags from "./fake-flags-sdk.ts";
 
 export type SiteConfig = {
@@ -106,3 +109,24 @@ export const forbiddenSlugs: readonly string[] = [
   "verify",
   "wiki",
 ];
+
+export const supportedLocales: Record<string, Locale> = {
+  "tr": {
+    code: "tr",
+    matches: ["@(tr)?(-*)"],
+    name: "Türkçe",
+    flag: "🇹🇷",
+    dir: "ltr",
+  },
+  "en": {
+    code: "en",
+    matches: ["@(en)?(-*)"],
+    name: "English",
+    flag: "🇺🇸",
+    dir: "ltr",
+  },
+};
+
+export type SupportedLocaleCode = keyof typeof supportedLocales;
+
+export const fallbackLocaleCode: SupportedLocaleCode = "tr";

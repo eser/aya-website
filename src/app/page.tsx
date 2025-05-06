@@ -7,7 +7,7 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { mdx } from "@/shared/lib/mdx.tsx";
 
 import { siteConfig } from "@/shared/config.ts";
-// import type { Language } from "@/shared/modules/i18n/languages.ts";
+// import type { Locale } from "@/shared/modules/i18n/locales.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
@@ -37,13 +37,13 @@ export const viewport = {
 
 // type IndexPageProps = {
 //   params: {
-//     // lang: Language;
+//     // locale: Locale;
 //   };
 // };
 
 async function IndexPage(/* props: IndexPageProps */) {
   const placeholders: Record<string, string> = {
-    // lang: props.params.lang,
+    // locale: props.params.locale,
   };
 
   const contentText = `**AYA (Açık Yazılım Ağı)**, sosyal bir yarar

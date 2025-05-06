@@ -6,7 +6,7 @@ import * as React from "react";
 
 export function NotFoundPage() {
   // const placeholders: Record<string, string> = {
-  //   // lang: props.params.lang,
+  //   // locale: props.params.locale,
   // };
 
   return (

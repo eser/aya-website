@@ -1,15 +1,21 @@
 import * as React from "react";
 
+import { useRouter } from "next/navigation";
+
 import { siteConfig } from "@/shared/config.ts";
+
+import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
 import { NavigationContext } from "./navigation-provider.tsx";
 
-export function useNavigation() {
+export function useNavigationClient() {
   const state = React.useContext(NavigationContext);
 
   if (state === undefined) {
-    throw new Error("useNavigation must be used within a NavigationProvider");
+    throw new Error("useNavigationClient must be used within a NavigationProvider");
   }
+
+  const router = useRouter();
 
   const validateHref = (href: string) => {
     if (state.host === null) {
@@ -29,5 +35,13 @@ export function useNavigation() {
     return `//${siteConfig.host}${href}`;
   };
 
-  return { state, validateHref };
+  const push = (href: string) => {
+    router.push(validateHref(href));
+  };
+
+  const setLocale = (locale: Locale) => {
+    state.setLocale(locale);
+  };
+
+  return { state, validateHref, push, setLocale };
 }

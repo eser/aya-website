@@ -6,7 +6,7 @@ import * as React from "react";
 // import { backend } from "@/shared/modules/backend/backend.ts";
 import { type Story, Timeline } from "./_components/timeline.tsx";
 // import { siteConfig } from "@/shared/config.ts";
-// import type { Language } from "@/shared/modules/i18n/languages.ts";
+// import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
 import styles from "./page.module.css";
 
