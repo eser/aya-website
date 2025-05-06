@@ -8,9 +8,9 @@ import { backend } from "@/shared/modules/backend/backend.ts";
 // import { siteConfig } from "@/shared/config.ts";
 // import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
-// import { useNavigation } from "@/shared/modules/navigation/use-navigation.tsx";
-
 import { components } from "@/shared/components/userland/userland.ts";
+
+import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 
 // Metadata might be better handled primarily in layout.tsx now
 // export const metadata: Metadata = { ... };
@@ -25,7 +25,7 @@ type IndexPageProps = {
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  // const navigation = useNavigation();
+  const navigationState = await getNavigationState();
 
   // *** Remove data fetching here - Layout handles it ***
   // const data = await backend.getProfile(params.slug);
@@ -48,7 +48,7 @@ async function IndexPage(props: IndexPageProps) {
   const contentText = `
   # Profil
 
-  Henüz içerik bulunmamaktadır.
+  Henüz içerik bulunmamaktadır. (Dil = ${navigationState.locale.name})
   `;
 
   const mdxSource = await mdx(

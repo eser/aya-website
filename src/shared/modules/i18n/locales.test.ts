@@ -5,14 +5,14 @@ import { type Locale, localeMatch } from "./locales.ts";
 export const supportedLocales: readonly Locale[] = [
   {
     code: "tr",
-    matches: ["@(en)?(-*)"],
+    matches: ["@(tr)?(-*)"],
     name: "Türkçe",
     flag: "🇹🇷",
     dir: "ltr",
   },
   {
     code: "en",
-    matches: ["@(tr)?(-*)"],
+    matches: ["@(en)?(-*)"],
     name: "English",
     flag: "🇺🇸",
     dir: "ltr",

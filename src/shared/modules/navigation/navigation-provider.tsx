@@ -2,36 +2,18 @@
 
 import * as React from "react";
 
-import type { Locale } from "@/shared/modules/i18n/locales.ts";
-
-export type NavigationContextStateValues = {
-  host: string | null;
-  profile: string | null;
-  locale: Locale;
-};
-
-export type NavigationContextState = NavigationContextStateValues & {
-  setLocale: (locale: Locale) => void;
-};
+import { type NavigationState } from "./get-navigation-state.ts";
 
 export type NavigationProviderProps = {
-  state: NavigationContextStateValues;
+  state: NavigationState;
   children: React.ReactNode;
 };
 
-export const NavigationContext = React.createContext<NavigationContextState | undefined>(undefined);
+export const NavigationContext = React.createContext<NavigationState | undefined>(undefined);
 
 export function NavigationProvider(props: NavigationProviderProps) {
-  const [currentLocale, setCurrentLocale] = React.useState<Locale>(props.state.locale);
-
-  const contextValue = {
-    ...props.state,
-    locale: currentLocale,
-    setLocale: setCurrentLocale,
-  };
-
   return (
-    <NavigationContext.Provider value={contextValue}>
+    <NavigationContext.Provider value={props.state}>
       {props.children}
     </NavigationContext.Provider>
   );

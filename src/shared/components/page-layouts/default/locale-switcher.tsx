@@ -20,7 +20,7 @@ export function LocaleSwitcher() {
   const currentLocale = navigation.state.locale;
 
   const handleLocaleChange = (newLocaleCode: string) => {
-    navigation.setLocale(supportedLocales[newLocaleCode]);
+    navigation.setLocaleCode(newLocaleCode);
   };
 
   return (

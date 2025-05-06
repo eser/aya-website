@@ -2,15 +2,8 @@ import "server-only";
 
 import * as React from "react";
 
-import { headers } from "next/headers";
-
-import { supportedLocales } from "@/shared/config.ts";
-import { type Locale } from "@/shared/modules/i18n/locales.ts";
-
-import {
-  type NavigationContextStateValues,
-  NavigationProvider,
-} from "@/shared/modules/navigation/navigation-provider.tsx";
+import { NavigationProvider } from "@/shared/modules/navigation/navigation-provider.tsx";
+import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 
 import { RegisterBackend } from "./register-backend.tsx";
 import { Analytics } from "./analytics.tsx";
@@ -26,24 +19,12 @@ type LayoutProps = {
 };
 
 async function Layout(props: LayoutProps) {
-  const headersList = await headers();
-
-  const host = headersList.get("x-custom-domain-host");
-  const profile = headersList.get("x-custom-domain-profile");
-  const localeCode = headersList.get("x-locale")!;
-
-  const selectedLocale: Locale = supportedLocales[localeCode];
-
-  const navigationState: NavigationContextStateValues = {
-    host: host,
-    profile: profile,
-    locale: selectedLocale,
-  };
+  const navigationState = await getNavigationState();
 
   return (
     <html
-      lang={selectedLocale.code}
-      dir={selectedLocale.dir}
+      lang={navigationState.locale.code}
+      dir={navigationState.locale.dir}
       suppressHydrationWarning
     >
       <head />
