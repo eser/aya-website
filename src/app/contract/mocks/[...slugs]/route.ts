@@ -3,16 +3,34 @@ import mockdata from "@/app/contract/mocks/data.json" with { type: "json" };
 
 type RequestInfo = {
   params: Promise<{
-    slugs: [string, ...Array<string | undefined>];
+    slugs: [string, string, ...Array<string | undefined>];
   }>;
 };
+
+function getEntityDictionary(entityName: string, localeCode: string) {
+  const entityNameLocalized = `${entityName}.${localeCode}`;
+
+  if (entityNameLocalized in mockdata) {
+    // @ts-expect-error mockdata is not typed
+    return mockdata[entityNameLocalized];
+  }
+
+  if (entityName in mockdata) {
+    // @ts-expect-error mockdata is not typed
+    return mockdata[entityName];
+  }
+
+  return null;
+}
 
 export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
   const params = await info.params;
 
-  const [entityName, identifier] = params.slugs;
+  const [localeCode, entityName, identifier] = params.slugs;
 
-  if (!(entityName in mockdata)) {
+  const entityDictionary = getEntityDictionary(entityName, localeCode);
+
+  if (entityDictionary === null) {
     return Response.json(
       {
         data: null,
@@ -23,9 +41,6 @@ export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
       },
     );
   }
-
-  // @ts-expect-error mockdata is not typed
-  const entityDictionary = mockdata[entityName];
 
   let result: Result<unknown>;
 

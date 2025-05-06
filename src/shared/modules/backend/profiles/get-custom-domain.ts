@@ -5,7 +5,7 @@ export type GetCustomDomainData = {
 };
 
 export async function getCustomDomain(domain: string) {
-  const response = await fetcher<GetCustomDomainData>(`/custom-domains/${domain}`);
+  const response = await fetcher<GetCustomDomainData>(`/en/custom-domains/${domain}`);
 
   return response;
 }

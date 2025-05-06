@@ -5,7 +5,7 @@ import type { Story } from "./types.ts";
 export type GetStoriesData = Story[];
 
 export async function getStories(locale: string) {
-  const response = await fetcher<GetStoriesData>(`/stories?locale=${locale}`);
+  const response = await fetcher<GetStoriesData>(`/${locale}/stories`);
 
   return response;
 }

@@ -3,15 +3,15 @@ import { generateFakeData } from "../data.ts";
 
 type RequestInfo = {
   params: Promise<{
-    slugs: [string, ...Array<string | undefined>];
+    slugs: [string, string, ...Array<string | undefined>];
   }>;
 };
 
 export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
   const params = await info.params;
 
-  const [entityName, identifier] = params.slugs;
-  const data = generateFakeData(entityName, identifier);
+  const [localeCode, entityName, identifier] = params.slugs;
+  const data = generateFakeData(localeCode, entityName, identifier);
 
   if (data === null) {
     return Response.json(

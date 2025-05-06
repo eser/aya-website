@@ -8,7 +8,7 @@ import type { GetUsersData } from "@/shared/modules/backend/users/get-users.ts";
 import type { GetStoryData } from "@/shared/modules/backend/stories/get-story.ts";
 import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories.ts";
 
-export function generateFakeData(entity: string, identifier: string | undefined) {
+export function generateFakeData(_localeCode: string, entity: string, identifier: string | undefined) {
   const hasIdentifier = identifier !== undefined;
 
   if (entity === "custom-domains" && hasIdentifier) {
