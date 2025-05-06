@@ -29,7 +29,13 @@ export async function middleware(req: NextRequest) {
 
   const localeState = localeMatcher.localeMatchFromRequest(req, Object.values(supportedLocales), fallbackLocaleCode);
   if (localeState.updateCookie) {
-    response.cookies.set("SITE_LOCALE", localeState.localeCode);
+    response.cookies.set("SITE_LOCALE", localeState.localeCode, {
+      httpOnly: true,
+      secure: true,
+      // expires: expiresAt,
+      sameSite: "lax",
+      path: "/",
+    });
     //   console.log(` -> Setting visitor's locale: ${JSON.stringify(localeState)}`);
     // } else {
     //   console.log(` -> Visitor's locale already set: ${JSON.stringify(localeState)}`);
