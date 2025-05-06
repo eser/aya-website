@@ -61,7 +61,7 @@ type IconRefProps = {
 export type ButtonIconProps = IconProps | IconRefProps;
 
 export type ButtonProps =
-  & React.ComponentPropsWithRef<"button">
+  & React.ComponentProps<"button">
   & VariantProps<typeof buttonVariants>
   & ButtonIconProps
   & {
@@ -77,7 +77,6 @@ function Button({
   iconPlacement,
   role = "button",
   asChild = false,
-  ref,
   ...props
 }: ButtonProps) {
   const Comp = asChild ? Slot : "button";
@@ -87,7 +86,6 @@ function Button({
       data-slot="button"
       role={role}
       className={cn("button", buttonVariants({ variant, effect, size, className }))}
-      ref={ref}
       {...props}
     >
       {Icon &&

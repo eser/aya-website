@@ -1,4 +1,5 @@
-import * as flags from "flags/next";
+// import * as flags from "flags/next";
+import * as flags from "./fake-flags-sdk.ts";
 
 export type SiteConfig = {
   name: string;
@@ -18,7 +19,6 @@ export type SiteConfig = {
 
   features: {
     login: flags.Flag<boolean>;
-    // login: () => Promise<boolean>;
   };
 };
 
@@ -48,7 +48,6 @@ export const siteConfig: SiteConfig = {
         return false;
       },
     }),
-    // login: () => Promise.resolve(false),
   },
 };
 
