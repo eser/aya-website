@@ -111,14 +111,14 @@ export const forbiddenSlugs: readonly string[] = [
 ];
 
 export const supportedLocales: Record<string, Locale> = {
-  "tr": {
+  tr: {
     code: "tr",
     matches: ["@(tr)?(-*)"],
     name: "Türkçe",
     flag: "🇹🇷",
     dir: "ltr",
   },
-  "en": {
+  en: {
     code: "en",
     matches: ["@(en)?(-*)"],
     name: "English",

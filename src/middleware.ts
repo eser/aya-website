@@ -2,7 +2,6 @@ import { type NextRequest, NextResponse } from "next/server";
 
 import { fallbackLocaleCode, siteConfig, supportedLocales } from "@/shared/config.ts";
 import * as localeMatcher from "@/shared/modules/i18n/locales.ts";
-
 import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
 
 export async function middleware(req: NextRequest) {

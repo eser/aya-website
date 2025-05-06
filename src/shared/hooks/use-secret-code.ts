@@ -24,7 +24,7 @@ export function useSecretCode(secretCode: string[]) {
     if (count + 1 === secretCode.length) {
       setSuccess(true);
     }
-  }, [key]);
+  }, [key, count, secretCode.length, secretCode[count]]);
 
   return success;
 }

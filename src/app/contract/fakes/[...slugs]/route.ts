@@ -29,7 +29,9 @@ export async function GET(_req: Request, info: RequestInfo): Promise<Response> {
     data: data,
   };
 
-  return Promise.resolve(Response.json(result, {
-    status: 200,
-  }));
+  return Promise.resolve(
+    Response.json(result, {
+      status: 200,
+    }),
+  );
 }

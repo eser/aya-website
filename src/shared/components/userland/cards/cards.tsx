@@ -7,9 +7,5 @@ type CardsProps = {
 };
 
 export function Cards(props: CardsProps) {
-  return (
-    <div className={styles.cards}>
-      {props.children}
-    </div>
-  );
+  return <div className={styles.cards}>{props.children}</div>;
 }

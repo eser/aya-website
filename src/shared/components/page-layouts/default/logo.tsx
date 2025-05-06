@@ -9,17 +9,10 @@ import { EasterEgg } from "./easter-egg.tsx";
 
 export function Logo(props: React.HTMLAttributes<HTMLElement>) {
   return (
-    <div
-      className={cn(
-        styles.container,
-        props.className,
-      )}
-    >
+    <div className={cn(styles.container, props.className)}>
       <Icons.logo className="h-6 w-6" />
 
-      <span className="site-name text-base font-bold">
-        {siteConfig.name}
-      </span>
+      <span className="site-name text-base font-bold">{siteConfig.name}</span>
 
       <EasterEgg />
     </div>

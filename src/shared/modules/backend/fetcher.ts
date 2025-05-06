@@ -9,7 +9,7 @@ export async function fetcher<T>(relativePath: string): Promise<T | null> {
     return null;
   }
 
-  const result = await request.json() as Result<T>;
+  const result = (await request.json()) as Result<T>;
 
   if (result.error !== undefined && result.error !== null) {
     throw new Error(result.error);

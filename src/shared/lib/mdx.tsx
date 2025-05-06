@@ -2,10 +2,7 @@ import * as React from "react";
 
 import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc";
 
-export async function mdx(
-  source: string,
-  components?: MDXRemoteProps["components"],
-) {
+export async function mdx(source: string, components?: MDXRemoteProps["components"]) {
   const result = await compileMDX({
     source: source,
     options: {

@@ -17,6 +17,7 @@ import { Logo } from "./logo.tsx";
 import styles from "./main-nav.module.css";
 
 type NavItem = {
+  key: string;
   title: string;
   href?: string;
   disabled?: boolean;
@@ -24,10 +25,12 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
+    key: "elements",
     title: "Bileşenler",
     href: "/elements/",
   },
   {
+    key: "products",
     title: "Üretimler",
     href: "/products/",
   },
@@ -45,14 +48,12 @@ export function MainNav(props: MainNavProps) {
           <Logo />
         </SiteLink>
         {navItems.map(
-          (item, index) =>
+          (item, _index) =>
             item.href && (
               <SiteLink
-                key={index}
+                key={item.key}
                 href={replacePlaceholders(item.href, props.placeholders)}
-                className={cn(
-                  item.disabled && styles.disabled,
-                )}
+                className={cn(item.disabled && styles.disabled)}
               >
                 {item.title}
               </SiteLink>
@@ -62,33 +63,20 @@ export function MainNav(props: MainNavProps) {
       <div className={styles["nav-dropdown"]}>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              asChild
-            >
+            <Button variant="ghost" asChild>
               <Logo />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent
-            align="start"
-            sideOffset={14}
-            className={styles["nav-dropdown-content"]}
-          >
+          <DropdownMenuContent align="start" sideOffset={14} className={styles["nav-dropdown-content"]}>
             <DropdownMenuItem asChild>
-              <SiteLink href="/">
-                Ana Sayfa
-              </SiteLink>
+              <SiteLink href="/">Ana Sayfa</SiteLink>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             {navItems.map(
-              (item, index) =>
+              (item, _index) =>
                 item.href && (
-                  <DropdownMenuItem key={index} asChild>
-                    <SiteLink
-                      href={replacePlaceholders(item.href, props.placeholders)}
-                    >
-                      {item.title}
-                    </SiteLink>
+                  <DropdownMenuItem key={item.key} asChild>
+                    <SiteLink href={replacePlaceholders(item.href, props.placeholders)}>{item.title}</SiteLink>
                   </DropdownMenuItem>
                 ),
             )}

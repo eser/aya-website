@@ -20,27 +20,15 @@ export function Card(props: CardProps) {
     <a className={styles.card} href={props.href}>
       <div className={styles.inner}>
         <Conditional test={props.category !== undefined}>
-          <div className={styles.tags}>
-            {props.category}
-          </div>
+          <div className={styles.tags}>{props.category}</div>
         </Conditional>
         <Conditional test={props.imageUri !== undefined && props.imageUri !== null}>
           <div className={styles.image}>
-            <Image
-              src={props.imageUri as string}
-              width={220}
-              height={220}
-              alt={props.title}
-              loading="lazy"
-            />
+            <Image src={props.imageUri as string} width={220} height={220} alt={props.title} loading="lazy" />
           </div>
         </Conditional>
-        <h5 className={styles.title}>
-          {props.title}
-        </h5>
-        <p className={styles.description}>
-          {props.description}
-        </p>
+        <h5 className={styles.title}>{props.title}</h5>
+        <p className={styles.description}>{props.description}</p>
       </div>
     </a>
   );

@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
 
-import { supportedLocales } from "@/shared/config.ts";
+import { fallbackLocaleCode, supportedLocales } from "@/shared/config.ts";
 import { type Locale } from "@/shared/modules/i18n/locales.ts";
 
 export type NavigationState = {
@@ -14,7 +14,7 @@ export async function getNavigationState() {
 
   const host = headersList.get("x-custom-domain-host");
   const profile = headersList.get("x-custom-domain-profile");
-  const localeCode = headersList.get("x-locale")!;
+  const localeCode = headersList.get("x-locale") ?? fallbackLocaleCode;
 
   const selectedLocale: Locale = supportedLocales[localeCode];
 

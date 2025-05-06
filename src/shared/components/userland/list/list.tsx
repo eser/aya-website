@@ -7,9 +7,5 @@ export type ListProps = {
 };
 
 export function List(props: ListProps) {
-  return (
-    <section className={styles["list"]}>
-      {props.children}
-    </section>
-  );
+  return <section className={styles.list}>{props.children}</section>;
 }

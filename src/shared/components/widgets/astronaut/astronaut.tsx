@@ -17,11 +17,7 @@ type AstronautProps = {
 export function Astronaut(props: AstronautProps) {
   return (
     <div className={cn(styles.container, props.className)}>
-      <Stars
-        className={styles.stars}
-        width={props.width}
-        height={props.height}
-      />
+      <Stars className={styles.stars} width={props.width} height={props.height} />
       <Image
         className={styles.astronaut}
         src="/assets/astronaut.svg"

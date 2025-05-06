@@ -6,7 +6,6 @@ import { Header } from "./header.tsx";
 import { Footer } from "./footer.tsx";
 import { FontProvider } from "./font-provider.tsx";
 import { ResponsiveIndicator } from "./responsive-indicator.tsx";
-
 import "./page-layout.css";
 
 type PageLayoutProps = {

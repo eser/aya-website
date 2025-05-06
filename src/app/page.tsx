@@ -1,13 +1,11 @@
 import * as React from "react";
-
 import type { Metadata } from "next";
-
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-import { mdx } from "@/shared/lib/mdx.tsx";
-
 import { siteConfig } from "@/shared/config.ts";
-// import type { Locale } from "@/shared/modules/i18n/locales.ts";
+import { mdx } from "@/shared/lib/mdx.tsx";
+// import { backend } from "@/shared/modules/backend/backend.ts";
+import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
@@ -35,15 +33,11 @@ export const viewport = {
   // maximumScale: 1,
 };
 
-// type IndexPageProps = {
-//   params: {
-//     // locale: Locale;
-//   };
-// };
+async function IndexPage() {
+  const navigationState = await getNavigationState();
 
-async function IndexPage(/* props: IndexPageProps */) {
   const placeholders: Record<string, string> = {
-    // locale: props.params.locale,
+    locale: navigationState.locale.name,
   };
 
   const contentText = `**AYA (Açık Yazılım Ağı)**, sosyal bir yarar
@@ -63,10 +57,7 @@ Sosyal yarar gözeten ve kar amacı gütmeyen bir oluşum olarak AYA,
 bugün yoluna portföyünde bilişim projeleri barındıran **yazılım vakfı
 kimliğiyle** devam ediyor.`;
 
-  const mdxSource = await mdx(
-    contentText,
-    components,
-  );
+  const mdxSource = await mdx(contentText, components);
 
   return (
     <PageLayout placeholders={placeholders}>
@@ -86,20 +77,13 @@ kimliğiyle** devam ediyor.`;
         </div>
         <div className="flex gap-4">
           <Button variant="default" size="lg" asChild>
-            <SiteLink
-              href="/aya/about"
-              rel="noreferrer"
-            >
+            <SiteLink href="/aya/about" rel="noreferrer">
               Yazının devamı
               <ArrowRightIcon />
             </SiteLink>
           </Button>
           <Button variant="secondary" size="lg" asChild>
-            <SiteLink
-              target="_blank"
-              rel="noreferrer"
-              href={siteConfig.links.github}
-            >
+            <SiteLink target="_blank" rel="noreferrer" href={siteConfig.links.github}>
               GitHub
             </SiteLink>
           </Button>

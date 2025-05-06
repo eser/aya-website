@@ -9,10 +9,7 @@ export type ProfileProps = {
 
 export function Profile(props: ProfileProps) {
   return (
-    <SiteLink
-      href={`/${props.slug}/`}
-      rel="noreferrer"
-    >
+    <SiteLink href={`/${props.slug}/`} rel="noreferrer">
       {props.children ?? props.slug}
     </SiteLink>
   );

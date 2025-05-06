@@ -8,10 +8,7 @@ import styles from "./github-login.module.css";
 
 export function GitHubLogin() {
   return (
-    <Button
-      className={styles.button}
-      asChild
-    >
+    <Button className={styles.button} asChild>
       <div>
         <span>GitHub ile Giriş</span>
       </div>

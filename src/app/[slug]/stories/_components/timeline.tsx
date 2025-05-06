@@ -7,10 +7,10 @@ import { FilterBar } from "./filter-bar.tsx"; // Import the type
 import styles from "./timeline.module.css";
 
 const filterMapping: Record<string, string> = {
-  "all": "Tümü",
-  "statuses": "Durum",
-  "articles": "Makale",
-  "content": "İçerik",
+  all: "Tümü",
+  statuses: "Durum",
+  articles: "Makale",
+  content: "İçerik",
   "public speaking": "Topluluğa Konuşma",
   "career updates": "Kariyer Güncellemesi",
 };
@@ -43,9 +43,7 @@ export const Timeline: React.FC<TimelineProps> = ({ stories }) => {
             <div className={styles.timelineDot}></div>
             <time className={styles.timelineDate}>{new Date(story.date).toLocaleDateString("tr-TR")}</time>
             <div className={styles.timelineContent}>
-              <span className={styles.timelineType}>
-                {filterMapping[story.type]}
-              </span>
+              <span className={styles.timelineType}>{filterMapping[story.type]}</span>
               <p className={styles.timelineText}>{story.content}</p>
             </div>
           </li>

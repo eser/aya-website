@@ -1,18 +1,31 @@
 import * as React from "react";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-// import type { Metadata } from "next";
-
+import { siteConfig } from "@/shared/config.ts";
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
-// import { siteConfig } from "@/shared/config.ts";
-// import type { Locale } from "@/shared/modules/i18n/locales.ts";
-
+import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { components } from "@/shared/components/userland/userland.ts";
 
-// Metadata might be better handled primarily in layout.tsx now
-// export const metadata: Metadata = { ... };
-// export const viewport = { ... };
+// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
+  },
+  description: siteConfig.description,
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // maximumScale: 1,
+};
 
 type IndexPageProps = {
   params: Promise<{
@@ -23,19 +36,9 @@ type IndexPageProps = {
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  // *** Remove data fetching here - Layout handles it ***
-  // const data = await backend.getProfile(params.slug);
-  // if (data === null) {
-  //    notFound();
-  // }
+  const _navigationState = await getNavigationState();
 
-  // Get the description/content directly.
-  // We need a way to get *just* the description here.
-  // Option 1: Fetch it again (simple but slightly less efficient)
-  // Option 2: Modify backend.getProfile or have a separate function
-  // Option 3: Pass data down from layout (more complex with Server Components)
-  // Let's stick with Option 1 for now for simplicity, unless backend.getProfile is very slow.
-  const profileData = await backend.getProfile(params.slug); // Re-fetch for simplicity for now
+  const profileData = await backend.getProfile(params.slug);
   if (profileData === null) {
     notFound();
   }
@@ -44,16 +47,9 @@ async function IndexPage(props: IndexPageProps) {
 
 Henüz içerik bulunmamaktadır.`;
 
-  const mdxSource = await mdx(
-    contentText,
-    components,
-  );
+  const mdxSource = await mdx(contentText, components);
 
-  return (
-    <article className="content">
-      {mdxSource?.content}
-    </article>
-  );
+  return <article className="content">{mdxSource?.content}</article>;
 }
 
 export { IndexPage as default };

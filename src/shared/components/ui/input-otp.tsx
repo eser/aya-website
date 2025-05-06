@@ -16,10 +16,7 @@ function InputOTP({
   return (
     <OTPInput
       data-slot="input-otp"
-      containerClassName={cn(
-        "flex items-center gap-2 has-disabled:opacity-50",
-        containerClassName,
-      )}
+      containerClassName={cn("flex items-center gap-2 has-disabled:opacity-50", containerClassName)}
       className={cn("disabled:cursor-not-allowed", className)}
       {...props}
     />
@@ -27,13 +24,7 @@ function InputOTP({
 }
 
 function InputOTPGroup({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="input-otp-group"
-      className={cn("flex items-center", className)}
-      {...props}
-    />
-  );
+  return <div data-slot="input-otp-group" className={cn("flex items-center", className)} {...props} />;
 }
 
 function InputOTPSlot({
@@ -68,6 +59,8 @@ function InputOTPSlot({
 
 function InputOTPSeparator({ ...props }: React.ComponentProps<"div">) {
   return (
+    // biome-ignore lint/a11y/useFocusableInteractive: might be derived from props
+    // biome-ignore lint/a11y/useAriaPropsForRole: might be derived from props
     <div data-slot="input-otp-separator" role="separator" {...props}>
       <MinusIcon />
     </div>

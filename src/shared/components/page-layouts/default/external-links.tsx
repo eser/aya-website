@@ -10,6 +10,7 @@ import { Button } from "@/shared/components/ui/button.tsx";
 import styles from "./external-links.module.css";
 
 type NavItem = {
+  key: string;
   title: string;
   href?: string;
   icon: React.ReactNode;
@@ -18,16 +19,19 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
+    key: "github",
     title: "GitHub",
     icon: <Icons.github className={styles.icon} />,
     href: siteConfig.links.github,
   },
   {
+    key: "x",
     title: "X",
     icon: <Icons.twitter className={styles.icon} />,
     href: siteConfig.links.x,
   },
   {
+    key: "instagram",
     title: "Instagram",
     icon: <Icons.instagram className={styles.icon} />,
     href: siteConfig.links.instagram,
@@ -38,17 +42,10 @@ export function ExternalLinks() {
   return (
     <div className={styles.container}>
       {navItems.map(
-        (item, index) =>
+        (item, _index) =>
           item.href && (
-            <Button key={index} variant="ghost" size="sm" asChild>
-              <Link
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(
-                  item.disabled && styles.disabled,
-                )}
-              >
+            <Button key={item.key} variant="ghost" size="sm" asChild>
+              <Link href={item.href} target="_blank" rel="noreferrer" className={cn(item.disabled && styles.disabled)}>
                 {item.icon}
                 <span className={styles.description}>{item.title}</span>
               </Link>

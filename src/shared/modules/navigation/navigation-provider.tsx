@@ -12,9 +12,5 @@ export type NavigationProviderProps = {
 export const NavigationContext = React.createContext<NavigationState | undefined>(undefined);
 
 export function NavigationProvider(props: NavigationProviderProps) {
-  return (
-    <NavigationContext.Provider value={props.state}>
-      {props.children}
-    </NavigationContext.Provider>
-  );
+  return <NavigationContext.Provider value={props.state}>{props.children}</NavigationContext.Provider>;
 }
