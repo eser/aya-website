@@ -4,32 +4,37 @@ import { fallbackLocaleCode, siteConfig, supportedLocales } from "@/shared/confi
 import * as localeMatcher from "@/shared/modules/i18n/locales.ts";
 import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
 
-export async function middleware(req: NextRequest) {
+async function applyCustomDomainMiddleware(req: NextRequest, res: NextResponse): Promise<NextResponse> {
   const host = req.headers.get("host")?.split(":", 1).at(0);
 
-  if (host !== undefined && host !== "localhost" && host !== siteConfig.host) {
-    const customDomain = await getCustomDomain(host);
-
-    if (customDomain !== null) {
-      const target = new URL(`/${customDomain.profile_slug}${req.nextUrl.pathname}`, req.nextUrl);
-      if (target.pathname.endsWith("/")) {
-        target.pathname = target.pathname.slice(0, -1);
-      }
-
-      const newResponse = NextResponse.rewrite(target);
-
-      newResponse.headers.set("x-custom-domain-host", host);
-      newResponse.headers.set("x-custom-domain-profile", customDomain.profile_slug);
-
-      return newResponse;
-    }
+  if (host === undefined || host === "localhost" || host === siteConfig.host) {
+    return res;
   }
 
-  const response = NextResponse.next();
+  const customDomain = await getCustomDomain(host);
 
+  if (customDomain === null) {
+    return res;
+  }
+
+  const target = new URL(`/${customDomain.profile_slug}${req.nextUrl.pathname}`, req.nextUrl);
+  if (target.pathname.endsWith("/")) {
+    target.pathname = target.pathname.slice(0, -1);
+  }
+
+  const newResponse = NextResponse.rewrite(target);
+
+  newResponse.headers.set("x-custom-domain-host", host);
+  newResponse.headers.set("x-custom-domain-profile", customDomain.profile_slug);
+
+  return newResponse;
+}
+
+function applyLocaleMiddleware(req: NextRequest, res: NextResponse): NextResponse {
   const localeState = localeMatcher.localeMatchFromRequest(req, Object.values(supportedLocales), fallbackLocaleCode);
+
   if (localeState.updateCookie) {
-    response.cookies.set("SITE_LOCALE", localeState.localeCode, {
+    res.cookies.set("SITE_LOCALE", localeState.localeCode, {
       httpOnly: true,
       secure: true,
       // expires: expiresAt,
@@ -41,9 +46,19 @@ export async function middleware(req: NextRequest) {
     //   console.log(` -> Visitor's locale already set: ${JSON.stringify(localeState)}`);
   }
 
-  response.headers.set("x-locale", localeState.localeCode);
+  res.headers.set("x-locale", localeState.localeCode);
 
-  return response;
+  return res;
+}
+
+export async function middleware(req: NextRequest) {
+  let res = NextResponse.next();
+
+  res = await applyCustomDomainMiddleware(req, res);
+
+  res = applyLocaleMiddleware(req, res);
+
+  return res;
 }
 
 export const config = {
