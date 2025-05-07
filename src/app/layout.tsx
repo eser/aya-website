@@ -1,6 +1,6 @@
 import "server-only";
-import type { Metadata } from "next";
 import * as React from "react";
+import type { Metadata } from "next";
 
 import { siteConfig } from "@/shared/config.ts";
 import { NavigationProvider } from "@/shared/modules/navigation/navigation-provider.tsx";
@@ -40,7 +40,9 @@ async function Layout(props: LayoutProps) {
     <html lang={navigationState.locale.code} dir={navigationState.locale.dir} suppressHydrationWarning>
       <head />
       <body>
-        <NavigationProvider state={navigationState}>{props.children}</NavigationProvider>
+        <NavigationProvider state={navigationState}>
+          {props.children}
+        </NavigationProvider>
         <RegisterBackend />
         <Analytics />
       </body>

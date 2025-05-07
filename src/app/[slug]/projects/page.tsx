@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { components } from "@/shared/components/userland/userland.ts";
 
@@ -17,6 +18,8 @@ type IndexPageProps = {
 export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
   const params = await props.params;
 
+  const { t } = await getTranslations("Layout");
+
   const navigationState = await getNavigationState();
 
   const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
@@ -25,13 +28,15 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   }
 
   return {
-    title: `${profileData.title} - Projeler`,
+    title: `${profileData.title} - ${t("Projects")}`,
     description: profileData.description,
   };
 }
 
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
+
+  const { t } = await getTranslations("Layout");
 
   const navigationState = await getNavigationState();
 
@@ -40,9 +45,9 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const contentText = `# Projeler
+  const contentText = `# ${t("Projects")}
 
-Henüz içerik bulunmamaktadır.`;
+${t("Content not yet available.")}`;
 
   const mdxSource = await mdx(contentText, components);
 

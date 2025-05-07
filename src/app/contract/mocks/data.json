@@ -91,6 +91,73 @@
       ]
     }
   },
+  "profiles.en": {
+    "eser": {
+      "id": "01JT1TXYSDXZFET19492RH7YR5",
+      "kind": "individual",
+      "slug": "eser",
+      "custom_domain": "eser.dev",
+      "profile_picture_uri": "https://avatars.githubusercontent.com/u/866558?v=4",
+      "title": "Eser Ozvataf",
+      "pronouns": "he/him",
+      "description": "Founder @acikyazilim • Streaming @ eser.live • Open Source, DevRel, DevOps and Agile Evangelist • Generalist",
+      "custom_index_page_id": "01JTMX58GYYJV5NBDRCCDMP894",
+      "show_stories": true,
+      "show_projects": true,
+      "show_members": false,
+      "created_at": "2024-10-17T23:27:04.036Z",
+      "updated_at": "2025-04-29T14:05:54.664Z",
+      "links": [],
+      "pages": []
+    },
+    "aya": {
+      "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
+      "kind": "organization",
+      "slug": "aya",
+      "custom_domain": null,
+      "profile_picture_uri": "/assets/logo.png",
+      "title": "AYA",
+      "pronouns": null,
+      "description": "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
+      "custom_index_page_id": null,
+      "show_stories": false,
+      "show_projects": true,
+      "show_members": true,
+      "created_at": "2024-10-17T23:27:04.036Z",
+      "updated_at": "2025-04-29T14:05:54.664Z",
+      "links": [],
+      "pages": [
+        {
+          "id": "01JT63GNX3TT2RBVHS4D48XJNT",
+          "slug": "processes",
+          "cover_picture_uri": null,
+          "title": "Processes",
+          "summary": "How processes work at AYA?"
+        },
+        {
+          "id": "01JT4GBETQSQ8V7F1RF8RQ987D",
+          "slug": "policies",
+          "cover_picture_uri": null,
+          "title": "Policies",
+          "summary": "AYA Policies"
+        },
+        {
+          "id": "01JT9JHFH5W605XCZ6X4EVZDPC",
+          "slug": "press",
+          "cover_picture_uri": null,
+          "title": "In the Press",
+          "summary": "News about us in the press"
+        },
+        {
+          "id": "01JT4M4WJE1FFCC61MF9EZC9XH",
+          "slug": "about",
+          "cover_picture_uri": null,
+          "title": "About",
+          "summary": "Information about AYA"
+        }
+      ]
+    }
+  },
   "profile-pages": {
     "01JT63GNX3TT2RBVHS4D48XJNT": {
       "id": "01JT63GNX3TT2RBVHS4D48XJNT",

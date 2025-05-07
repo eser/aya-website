@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
@@ -18,6 +19,8 @@ type LayoutProps = {
 
 async function Layout(props: LayoutProps) {
   const params = await props.params;
+
+  const { t } = await getTranslations("Layout");
 
   const navigationState = await getNavigationState();
 
@@ -61,18 +64,18 @@ async function Layout(props: LayoutProps) {
             <nav className={styles.nav}>
               <ul>
                 <li>
-                  <SiteLink href={`/${params.slug}`}>Profil</SiteLink>
+                  <SiteLink href={`/${params.slug}`}>{t("Profile")}</SiteLink>
                 </li>
 
                 {profileData.show_stories && (
                   <li>
-                    <SiteLink href={`/${params.slug}/stories`}>Hikayeler</SiteLink>
+                    <SiteLink href={`/${params.slug}/stories`}>{t("Stories")}</SiteLink>
                   </li>
                 )}
 
                 {profileData.show_projects && (
                   <li>
-                    <SiteLink href={`/${params.slug}/projects`}>Projeler</SiteLink>
+                    <SiteLink href={`/${params.slug}/projects`}>{t("Projects")}</SiteLink>
                   </li>
                 )}
 

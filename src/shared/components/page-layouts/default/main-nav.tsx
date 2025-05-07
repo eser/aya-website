@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/shared/lib/cn.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { replacePlaceholders } from "@/shared/lib/replace-placeholders.ts";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
@@ -13,7 +14,6 @@ import {
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import { Logo } from "./logo.tsx";
-
 import styles from "./main-nav.module.css";
 
 type NavItem = {
@@ -23,24 +23,26 @@ type NavItem = {
   disabled?: boolean;
 };
 
-const navItems: NavItem[] = [
-  {
-    key: "elements",
-    title: "Bileşenler",
-    href: "/elements/",
-  },
-  {
-    key: "products",
-    title: "Üretimler",
-    href: "/products/",
-  },
-];
-
 type MainNavProps = {
   placeholders: Record<string, string>;
 };
 
-export function MainNav(props: MainNavProps) {
+export async function MainNav(props: MainNavProps) {
+  const { t } = await getTranslations("Layout");
+
+  const navItems: NavItem[] = [
+    {
+      key: "elements",
+      title: t("Elements"),
+      href: "/elements/",
+    },
+    {
+      key: "products",
+      title: t("Products"),
+      href: "/products/",
+    },
+  ];
+
   return (
     <nav className={styles.nav}>
       <div className={styles["nav-links"]}>
@@ -69,7 +71,7 @@ export function MainNav(props: MainNavProps) {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" sideOffset={14} className={styles["nav-dropdown-content"]}>
             <DropdownMenuItem asChild>
-              <SiteLink href="/">Ana Sayfa</SiteLink>
+              <SiteLink href="/">{t("Homepage")}</SiteLink>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             {navItems.map(

@@ -3,8 +3,8 @@ import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
-
 import { type Story, Timeline } from "./_components/timeline.tsx";
 import styles from "./page.module.css";
 
@@ -64,6 +64,8 @@ const stories: Story[] = [
 export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
   const params = await props.params;
 
+  const { t } = await getTranslations("Layout");
+
   const navigationState = await getNavigationState();
 
   const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
@@ -72,13 +74,15 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   }
 
   return {
-    title: `${profileData.title} - Hikayeler`,
+    title: `${profileData.title} - ${t("Stories")}`,
     description: profileData.description,
   };
 }
 
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
+
+  const { t } = await getTranslations("Layout");
 
   const navigationState = await getNavigationState();
 
@@ -90,7 +94,7 @@ async function IndexPage(props: IndexPageProps) {
   return (
     <>
       <div className="content">
-        <h2>Hikayeler</h2>
+        <h2>{t("Stories")}</h2>
       </div>
 
       <div className={styles["timeline-container"]}>

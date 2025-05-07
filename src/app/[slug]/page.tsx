@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { components } from "@/shared/components/userland/userland.ts";
 
@@ -33,6 +34,8 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
+  const { t } = await getTranslations("Layout");
+
   const navigationState = await getNavigationState();
 
   const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
@@ -47,10 +50,9 @@ async function IndexPage(props: IndexPageProps) {
 
     contentText = indexPageData?.content ?? "";
   } else {
-    contentText = `
-    # Profil
+    contentText = `# ${t("Profile")}
 
-    Henüz içerik bulunmamaktadır. (Dil = ${navigationState.locale.name})
+${t("Content not yet available.")} (Dil = ${navigationState.locale.name})
     `;
   }
 

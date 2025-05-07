@@ -1,9 +1,10 @@
 import * as React from "react";
+
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { siteConfig } from "@/shared/config.ts";
 import { mdx } from "@/shared/lib/mdx.tsx";
-// import { backend } from "@/shared/modules/backend/backend.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
@@ -15,6 +16,8 @@ import styles from "./page.module.css";
 
 async function IndexPage() {
   const navigationState = await getNavigationState();
+
+  const { t } = await getTranslations("Home");
 
   const placeholders: Record<string, string> = {
     locale: navigationState.locale.name,
@@ -58,7 +61,7 @@ kimliğiyle** devam ediyor.`;
         <div className="flex gap-4">
           <Button variant="default" size="lg" asChild>
             <SiteLink href="/aya/about" rel="noreferrer">
-              Yazının devamı
+              {t("Rest of the story")}
               <ArrowRightIcon />
             </SiteLink>
           </Button>
