@@ -43,12 +43,19 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  // (Dil = ${navigation.state.locale.name})
-  const contentText = `
-  # Profil
+  let contentText: string;
 
-  Henüz içerik bulunmamaktadır. (Dil = ${navigationState.locale.name})
-  `;
+  if (profileData.custom_index_page_id !== null) {
+    const indexPageData = await backend.getProfilePage(profileData.custom_index_page_id, navigationState.locale.code);
+
+    contentText = indexPageData?.content ?? "";
+  } else {
+    contentText = `
+    # Profil
+
+    Henüz içerik bulunmamaktadır. (Dil = ${navigationState.locale.name})
+    `;
+  }
 
   const mdxSource = await mdx(contentText, components);
 
