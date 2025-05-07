@@ -24,10 +24,12 @@
     "No results found.": "No results found.",
     "Suggestions": "Suggestions",
     "Events": "Events",
-    "Theme": "Theme",
+    "Profiles": "Profiles",
+    "Themes": "Themes",
     "Theme: System": "Theme: System",
     "Theme: Light": "Theme: Light",
-    "Theme: Midnight": "Theme: Midnight"
+    "Theme: Midnight": "Theme: Midnight",
+    "Localization": "Localization"
   },
   "Home": {
     "Rest of the story": "Rest of the story"

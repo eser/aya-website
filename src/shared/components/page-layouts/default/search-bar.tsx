@@ -22,11 +22,11 @@ import {
 export function SearchBar() {
   const [open, setOpen] = React.useState(false);
 
-  const { t } = useTranslations();
+  const { t, supportedLocales, localeCode } = useTranslations();
 
   const navigation = useNavigationClient();
 
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -60,14 +60,14 @@ export function SearchBar() {
         <CommandList>
           <CommandEmpty>{t("Search", "No results found.")}</CommandEmpty>
           <CommandGroup heading={t("Search", "Suggestions")}>
-            <CommandItem>
+            <CommandItem disabled>
               <Calendar className="mr-2 h-4 w-4" />
               <span>{t("Search", "Events")}</span>
               <CommandShortcut>⌘E</CommandShortcut>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
-          <CommandGroup heading="Profiller">
+          <CommandGroup heading={t("Search", "Profiles")}>
             <CommandItem
               onSelect={() => {
                 navigation.push("/aya");
@@ -88,12 +88,13 @@ export function SearchBar() {
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
-          <CommandGroup heading="Tema">
+          <CommandGroup heading={t("Search", "Themes")}>
             <CommandItem
               onSelect={() => {
                 setTheme("default");
                 setOpen(false);
               }}
+              disabled={theme === "default"}
             >
               <Settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: System")}</span>
@@ -103,6 +104,7 @@ export function SearchBar() {
                 setTheme("light");
                 setOpen(false);
               }}
+              disabled={theme === "light"}
             >
               <Settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: Light")}</span>
@@ -112,10 +114,27 @@ export function SearchBar() {
                 setTheme("midnight");
                 setOpen(false);
               }}
+              disabled={theme === "midnight"}
             >
               <Settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: Midnight")}</span>
             </CommandItem>
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading={t("Search", "Localization")}>
+            {Object.values(supportedLocales).map((locale) => (
+              <CommandItem
+                key={`locale-${locale.code}`}
+                onSelect={() => {
+                  navigation.setLocaleCode(locale.code);
+                  setOpen(false);
+                }}
+                disabled={locale.code === localeCode}
+              >
+                <span className="mr-2 h-4 w-4">{locale.flag}</span>
+                <span>{locale.name}</span>
+              </CommandItem>
+            ))}
           </CommandGroup>
         </CommandList>
       </CommandDialog>

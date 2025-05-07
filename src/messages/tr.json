@@ -24,10 +24,12 @@
     "No results found.": "Sonuç bulunamadı.",
     "Suggestions": "Öneriler",
     "Events": "Etkinlikler",
-    "Theme": "Tema",
+    "Profiles": "Profiller",
+    "Themes": "Temalar",
     "Theme: System": "Tema: Sistem",
     "Theme: Light": "Tema: Açık",
-    "Theme: Midnight": "Tema: Koyu"
+    "Theme: Midnight": "Tema: Koyu",
+    "Localization": "Yerelleştirme"
   },
   "Home": {
     "Rest of the story": "Hikayenin devamı"
