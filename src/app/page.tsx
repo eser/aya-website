@@ -1,5 +1,4 @@
 import * as React from "react";
-import type { Metadata } from "next";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { siteConfig } from "@/shared/config.ts";
@@ -13,25 +12,6 @@ import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
 
 import styles from "./page.module.css";
-
-// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
-  },
-  description: siteConfig.description,
-
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
-
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  // maximumScale: 1,
-};
 
 async function IndexPage() {
   const navigationState = await getNavigationState();

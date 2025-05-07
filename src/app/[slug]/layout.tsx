@@ -1,34 +1,13 @@
 import * as React from "react";
-import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import { siteConfig } from "@/shared/config.ts";
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import styles from "./layout.module.css";
-
-// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
-  },
-  description: siteConfig.description,
-
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
-
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  // maximumScale: 1,
-};
 
 type LayoutProps = {
   children: React.ReactNode;
