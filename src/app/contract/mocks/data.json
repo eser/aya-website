@@ -231,13 +231,17 @@
       {
         "id": "01JTP6P5EMKEDZRVE6Q7FPV0RZ",
         "kind": "status",
-        "slug": null,
+        "slug": "updated-my-status-with-exciting-news",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Updated my status with exciting news!",
         "summary": null,
-        "content": "Updated my status with exciting news!",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -246,13 +250,17 @@
       {
         "id": "01JTP6PAVP8CASA4ERJ8SHCTBT",
         "kind": "article",
-        "slug": null,
+        "slug": "published-a-new-article-on-medium-about-react-hooks",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Published a new article on Medium about React Hooks.",
         "summary": null,
-        "content": "Published a new article on Medium about React Hooks.",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -261,13 +269,17 @@
       {
         "id": "01JTP6PG3C8APK2GMHS3SPHZW1",
         "kind": "content",
-        "slug": null,
+        "slug": "recorded-a-new-video-on-youtube-about-radix-ui",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Recorded a new video on YouTube about Radix UI.",
         "summary": null,
-        "content": "Recorded a new video on YouTube about Radix UI.",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -276,13 +288,17 @@
       {
         "id": "01JTP6PMYJHTPBJMWF2H8BX4YW",
         "kind": "announcement",
-        "slug": null,
+        "slug": "started-a-new-role-as-senior-developer-at-tech-corp",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Started a new role as Senior Developer at Tech Corp.",
         "summary": null,
-        "content": "Started a new role as Senior Developer at Tech Corp.",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -291,13 +307,17 @@
       {
         "id": "01JTP6PT4R42HG7NXDNRR8YY6P",
         "kind": "presentation",
-        "slug": null,
+        "slug": "gave-a-talk-at-the-local-tech-meetup",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Gave a talk at the Local Tech Meetup.",
         "summary": null,
-        "content": "Gave a talk at the Local Tech Meetup.",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -306,13 +326,17 @@
       {
         "id": "01JTP6PZ6770WM3BR53NEKTJC7",
         "kind": "status",
-        "slug": null,
+        "slug": "thinking-about-the-next-big-thing",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Thinking about the next big thing...",
         "summary": null,
-        "content": "Thinking about the next big thing...",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
@@ -321,19 +345,62 @@
       {
         "id": "01JTP6Q5JWAEHBKNX345821SHA",
         "kind": "status",
-        "slug": null,
+        "slug": "completed-milestone-1-for-the-ongoing-project",
         "cover_picture_uri": null,
-        "title": null,
+        "title": "Completed milestone 1 for the ongoing project.",
         "summary": null,
-        "content": "Completed milestone 1 for the ongoing project.",
+        "content": null,
         "is_featured": false,
-        "author_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
         "published_at": "2024-10-17T23:27:04.036Z",
         "created_at": "2024-10-17T23:27:04.036Z",
         "updated_at": null,
         "deleted_at": null
       }
     ],
-    "01JT4FS0K93K4GG4Z40ZDFY3EQ": []
+    "01JT4FS0K93K4GG4Z40ZDFY3EQ": [
+      {
+        "id": "01JTPDFWHJ9KQN6NHCQAEGQWM7",
+        "kind": "article",
+        "slug": "20240107-vakif-kimligimiz-ve-sinirlarimiz",
+        "cover_picture_uri": null,
+        "title": "Vakıf Kimliğimiz ve Sınırlarımız",
+        "summary": "Yazılım Vakfı olmak, durduğumuz pozisyon ve sorumluluk tanımımız",
+        "content": "[Hakkımızda](/aya/about) bölümüne bir göz gezdirdiyseniz, AYA’nın kendini bir\n\"yazılım vakfı\" olarak tanımladığını fark etmişsinizdir.\n\nPeki “yazılım vakfı” olmak nedir?\n\nYazılım vakıfları, açık kaynak ve özgür yazılım projelerini desteklemek,\ngeliştirmek ve korumak amacıyla kurulan kar amacı gütmeyen organizasyonlardır.\n\nAYA özelinde, resmi kurumlar nezdinde bir resmiyetimiz bulunmadığı için\n“gönüllülerin AYA ile bağlayıcı bir ilişkisi olmaksızın, ihtiyaç anları için bir\naraya gelip sosyal yarar için bilişim çözümleri üretmesi”ni sürdürülebilir\nkılmak adına bu organizasyon kimliğini benimsiyor ve bu sınırlarda kalmaya özen\ngösteriyoruz.\n\nÇalışma modelimizi belirleyen akışlarımıza [İşleyiş](/aya/processes) bölümünden\nulaşmanız mümkün. Zira yazının geri kalanında yazılım vakfı kimliğinin bizi\nnasıl konumladığı ve hangi sınırları çizdiğini açıklamaya çalışacağım.\n\n### Resmiyet ve Gönüllülük\n\nAYA internet üzerindeki “sanal topluluklardan” farklı değildir ve AYA’nın bir\nparçası olmak _özel durumlar hariç_ gönüllülük esası ile sağlanır. Nasıl\ninsanlar kendileri sosyal medya üzerinde \"çay sevenler topluluğu\" oluşturup buna\nistedikleri gibi girip çıkabiliyor veya kendilerini o grubun bir üyesi olarak\ntanıtabiliyorlarsa; AYA’da da herhangi bir resmi üyelik, üye takibi ve benzeri\nsüreç olmaksızın kişilerin benimseyebileceği veya reddedilebileceği bir\ngönüllülük yapısı vardır.\n\nGönüllülerimizin grup içinde ve dışındaki hareket ve söylemleri tamamen kendi\nbakış açılarını yansıtmakta, ve kendi sorumluluklarındadır.\n[AYA’nın web sitesi olan acikyazilimagi.com](https://acikyazilimagi.com)\nüzerindeki bilgiler haricinde kalan her türlü kaynak yanıltıcı olma riskine\nsahiptir.\n\n### Çalışmalarımızın Kapsamı\n\nAYA olarak çalışmalarımızın kapsamı her zaman STKlar/yetkili kurumlar/akredite\nkurumların bir alternatifi olmak yerine, tamamlayıcısı olmak yönünde oldu.\nBilişim dünyasında tekrar kullanılabilirliğin önemini vurgulayarak, üretilen\nçözümlerin dünyanın herhangi bir yerinde ve herhangi bir zamanda tekrar\nkullanılabilir kılınması ve açık kaynak olarak dünya hazinesine kazandırılması\ndışında bir amaç taşımadık.\n\nBu esaslarda AYA bir sağlayıcı, işletici veya yüklenici rolde değil, yarar\nsağlayacak akılcı mühendislik çözümlerinin geliştirilmesinde ve korunmasında\nkendine görev atfetmektedir.\n\n### Çözümlerin Hak Sahipliği\n\nAYA projeler ve proje grupları için bir “liman” görevi görür. Kendi tanınırlık\nve ağ avantajını kullanarak aslında Türkiye’de açık kaynak geliştirme yapmak\nisteyenler için bir platform sağlar.\n\nNasıl ki,\n\n- Bir hackathon esnasında yapılan projeler proje ekibine ait, ama hackathon\n  çıktıları ve hackathon esnasındaki kaynaklar organizasyona aitse,\n- [Docker Hub](https://hub.docker.com/) veya [GitHub](https://github.com/)\n  üzerinde yer alan projeleri bu platformlar barındırıyor olsalar dahi,\n  içeriklerinden kurum olarak sorumlu değilse,\n\nAYA da farklı bir konumda durmuyor. Odaklandığımız nokta insanların açık kaynak\ngeliştirmek için önlerinden birçok engeli kaldırmak. Bu sayede ekosisteme yeni\nprojeler ve açık kaynak gönüllüleri kazandırıyoruz.\n\n### Projeler ve Portföyümüz\n\nAYA, gönüllülük esasıyla geliştirilmek istenen projeleri “kuluçka programına”\nalarak onları desteklemeyi hedefler.\n\nKuluçkaya alınacak projeler için beklediğimiz temel kriterler\n[İşleyiş](/aya/processes) bölümünde yer almaktadır.\n\nKuluçkaya alınan projelere gerekli kaynakları sağlamak, projelerin gelişim\nsüreçlerine yardımcı olmak, ve belirli bir süre sonra bu projeleri “mezun”\nolmasını sağlamak AYA’nın temel modelini oluşturur.\n\nMezun projelerin GitHub üzerindeki varlıkları ve kontrolü\n[açık yazılıma ağı GitHub organizasyonuna](https://github.com/acikyazilimagi)\ntransfer edilir. Elbette ki açık kaynak geliştirme pratikleri doğrultusunda\nbunlardan herhangi bir an için kopya almak (fork) daima mümkündür.",
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
+          "slug": "aya",
+          "title": "AYA"
+        },
+        "published_at": "2024-01-07T00:00:00.000Z",
+        "created_at": "2024-01-07T00:00:00.000Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTPD2QQMAXPBGEERWSBRXRYE",
+        "kind": "article",
+        "slug": "20230217-acik-yazilim-agi-ve-6-subat",
+        "cover_picture_uri": null,
+        "title": "Açık Yazılım Ağı ve 6 Şubat",
+        "summary": "Nasıl toplandık, nasıl büyüdük ve bundan sonra ne olacak?",
+        "content": "6 Şubat 2023’de yaşadığımız coğrafyada elim bir olay gerçekleşti.\nKahramanmaraş’ta gerçekleşen ve en az 10 ilimizi daha etkileyen deprem felaketi\nsonucunda aynı coğrafyayı paylaştığımız insanlar kayıplar ve travmalar yaşadık.\n\nDaha önce herhangi bir arama-kurtarma eğitimi almamış, bölgeye gitmek istese\nyolda durdurulacak, örgütsüz ve bir şeyler yapmak için gönüllü olabilecek\ninsanların ilk aklına gelen şeyi gerçekleştirmek istedik: profesyoneli olduğumuz\nkonular üzerinden felaketten etkilenenlere yardımcı olmak.\n\nBu acı olay vesilesiyle, son kontrol ettiğimde nüfusu 23,950 kişiyi aşmış,\nyazılım alanında faaliyet gösteren gönüllüler olarak bir Discord sunucusunda bir\naraya geldik ve kendimizi Açık Yazılım Ağı olarak isimlendirmeye başladık.\n\n**Açıklama:** 6 Şubat’tan bu yana zamanı etkin kullanmak için hep kısa kısa\nyazdım, kimsenin zamanını fazladan tüketmemeye çalıştım. Discord’da dahi sahnede\nen az benim konuştuğumu, twitter’da oldukça az tweet attığımı\ngözlemlemişsinizdir. Bugün bu uzun yazıyı kaleme almamın nedeni insanların\nbundan sonrasına ilişkin özelden ilettikleri mesajları teker teker değil, toplu\nhalde yanıtlamak. Ve halen iletişim yapamadığımız konular, soru işaretleri varsa\naçık bir biçimde yanıtlamak için bu yazıyı yayınlıyorum.\n\n## Nasıl toplandık?\n\nHem daha önce topluluk adına birçok yayın yaptığım hem de mesai arkadaşım Furkan\nKılıç’ın Twitter’da yine yazılım ekosisteminden tanıdığım İrem Kömürcü ile\nmesajlaşmalarını gördüm, nasıl yardım edebileceklerini tartışıyorlardı. Ben\nşahsen henüz hiçbir haber takip edememiş, şirketin planlama toplantımıza\nhazırlanıyordum. Toplantımız esnasında bir yandan Twitter’daki mesajları göz\nucuyla okuyor, Furkan’ın ortaya attığı “bir ısı haritası oluşturalım” fikri için\naçılan Telegram grubunu takip etmeye çalışıyordum.\n\nToplantımız biter bitmez Discord’a geçtik. Furkan’la “benim genel yetkilendirme\nile ilgileneceğim, onların uygulamaya başlayacağı” ufak bir planlama yaptık.\n\nFurkan’ın “sosyal medya’da insanların ürettiği yardım çağrılarının ısı\nharitasını oluşturma fikri” o kadar temel bir doğruya dayanıyordu ki... makro\nölçekte ülkede yetkililer dışında kalan hiç kimsenin bölgeden haber alamaması,\nmikro ölçekte ise olayın canlılığı ile daha mahallesinde ne olduğunu\nkavrayamamış insanların hangi bölgede nasıl bir yoğunluk olduğunu\ngözlemleyebilmesi sağlanıyordu. Bu basit ama güçlü fikri “gelin birlikte\ngeliştirelim” çağrısı ile dalga dalga yayıldı. İnsanlar “IT Deprem Yardım”\nismiyle oluşturduğumuz Discord sunucusunda toparlanmaya başladılar.\n\n## Nasıl büyüdük?\n\nBilişim sektörüne temas eden herkese yaptığımız açık çağrı yanıt bulunca\nFurkan’la ilk stratejimiz, onun projeyle ilgilenmesi, benimse biraz daha genel\nresme bakıp yetkilendirmeleri yapmak, repository’leri açmam üzerine oldu.\n\nKendi adıma yapacaklarım zaten kafamda netti,\n[github.com/acikkaynak](https://github.com/acikkaynak) 2015 yılından bu yana\nvardı ve zaten tam da insanlarla birlikte geliştirme yapmaya hazırdı. Kendi\nçevremde, topluluktan tanıdığım arkadaşlarımızla da yürütülen ufak projelerde\nbenimsenen fikirsel altyapı birçok profesyonelin de bu çalışmalara dahil\nolabileceği bir zemine elverişliydi.\n\nFurkan ise frontend, backend, tasarım gibi ekipler oluşturup bu kişilerden\nbazılarını projelerde yetkilendirilmek için bana yönlendiriyordu.\n\nProjelerimizi o noktadan itibaren Apache 2.0 açık kaynak lisansı ile herkesçe\ndenetlenebilir, herkesin nezaretinde geliştirilen bir yapıya kavuşturduk. Veri\ndışında her konuda şeffaf olduk, verileri yalnızca STKlar/yetkili\nkurumlar/akredite kurumlar ile paylaşacak şekilde bir ilke belirledik. Bu bizim\nsüreç boyunca hassasiyetle koruduğumuz temel iki ilkemizi oluşturdu.\n\nSon kontrol ettiğimde yalnızca discord sunucumuzda 24,000 kişi olmamıza az\nkalmıştı. Süreçte mutlaka küstürdüğümüz, kendini dahil olamamış hissederek\nuzaklaşan kişiler de olmuştur.\n\n![Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1676612473943/89951b44-d922-4e81-a0cb-9404d16c9701.png)\n\n## Açık kaynak olmasının anlamı nedir?\n\nProjelerin açık kaynak olmalı kriterini benimsedik çünkü başından bu yana\namacımız: yaptığımız iş denetlenebilir, gerektiğinde belirli sistemlere entegre\nedilebilir ve diğer insanların da az bir eforla bir ucundan tutabileceği şekilde\ngeliştirmeye açık olmalıydı.\n\nKurumsal bir şirkette bir projeye dahil olan birileri, belki 3. haftasının\nsonunda “süreçlere uygun” geliştirme yapmaya başlayabilir durumda oluyorsa bizde\nbu süre 5-6 dakikaya indi.\n\nO an “projeyi çıkartma” motivasyonuyla düşünemediğimiz ama sonradan da fark\nettiğimiz bir nokta ise; gün 1’den açık kaynak ilerleyerek aslında ileride\nbizden bağımsız bu sistemlerin herhangi bir ülkedeki başka herhangi bir\nSTKsının/yetkili kurumunun/akredite kurumunun bunları kullanabilmesini sağladık.\n\nAçık kaynak olarak geliştirdiği için artık bizim bu projelerin kaynak kodlarını\n“kapatma” veya başka bir yerde kullanılmasına engel olma şansımız yok. Bu\nanlamda projenin kaynak kodları kimsenin sahipliğinde veya tekelinde değil. Kötü\nbir vesileyle de olsa, bizim bu çalışmaları “gönüllüler” olarak yapıp, dünya\nbilgi hazinesine bağışlamış duruma geldik.\n\n## Ne tür projeler geliştiriliyor?\n\nİlk olarak **afetharita.com** ile çıktık. Daha sonra yeni fikirler geldikçe yine\naçık kaynak bir yazılım vakfı gibi (Apache Foundation, CloudNative Computing\nFoundation, Free Software Foundation, Linux Foundation, Mozilla Foundation v.s.)\ngelen projeleri değerlendirip, bunlara gönüllü ekipler kurup ilerlemelerinin\nönündeki engelleri kaldırmaya çalıştık.\n\nBugün üzerinde uğraştığımız projeleri [Projelerimiz](/projects) bölümü altından\ngörüntüleyebilirsiniz.\n\n## Denetim ve güvenlik ne aşamada?\n\nKonu açık kaynaklı geliştirme olunca akla gelen ilk sorulardan birisini\neleyelim: Hayır, herkes dilediğince müdahale edemiyor. Öncelikle proje liderleri\nprojelerde yetkili oluyor. Ancak herkes geliştirilen kodları okuyup, yeni\ndeğişiklik önerilerinde bulunabiliyorlar. Bunu bir meclis yapısı gibi\ndüşünebilirsiniz. Nasıl kanunlar herkese açıksa ve ve her kanun önerisi kabul\nedilmiyorsa, bu süreç de “öneriler” ile gidiyor. Projede yetkili olanlar da bu\nönerileri kabul edip, kendi şerhlerini düşüp projeye dahil etme veya etmeme\ntasarrufunda bulunabiliyorlar.\n\nYine süreçte gönüllü olarak gece gündüz çalışan bir altyapı ekibimiz oluştu ve\nonlar da bize süreç boyunca desteklerini esirgemeyen bulut sağlayıcılarla\nbirlikte güvenilir bir ortam sağlıyorlar.\n\nÖzellikle afetten sonraki 2. gün siber saldırıların da gelmesiyle yine sektörden\nçok deneyimli siber güvenlik firmalarının ve uzmanlarının destekleri ile hem kod\ntarafındaki hem de altyapı tarafındaki zaafiyetlerimizi belirli aralıklarla\nkontrol ettirdiğimiz bir yapıya kavuştuk.\n\n## Kimlerden destek aldık?\n\nNeredeyse herkesten!\n\nGün 0’da gönüllülerden.\n\nSaatler sonra bilinen bulut hizmetleri sağlayan tüm firmalar bize yardımcı\nolmaya çalıştı. Hiçbir hizmet talebimizde hayır denilmediği gibi, mevcut\nhizmetlerindeki limitleri bizler için kaldırdıkları oldu.\n\nProje ekiplerindeki insanların firmalarına haber vermesiyle birlikte firmalar da\nbize ulaşıp “nasıl yardımcı olacaklarını” sordular. Birçok firma çalışanlarının\naçık kaynaklı olarak katkıda bulunabilmelerini desteklediler. İlgili alanlarda\nnasıl destek verebilecekleri konusunda kafa yorduk ve iletişime her zaman açık\nhaldelerdi.\n\n## Sektörel kazanımlarımız neler oldu?\n\nBu afet durumu ile bir araya gelmenin ülkemize, coğrafyamıza çok fazla kayıp\nyaşattığı aşikar. **İşin sahadaki STKlara/yetkili kurumlara/akredite kurumlara\ngeri hizmet sağlamak kısımlarını dışarıda bırakarak** (diğer türlü haddimizi\naşıp, diğer kurumlarla yarıştığımız anlamı çıkabilir, o nedenle lütfen maruz\ngörün) Tüm bu kayıplarımızı aklımızda ve kalbimizde tutarak, yalnızca buradaki\nçalışma kapsamında **teknik** bir değerlendirme yapmamız gerekirse:\n\n- Bilişim sektöründeki kişiler twitter’daki hararetli tartışmaları,\n  küskünlükleri gerilerinde bırakarak, zor anlarda yardımlaşma ve dayanışma\n  zemininde bir araya gelip, birlikte çalışabildiklerini hissettiler\n\n- Sahaya nasıl yardım ulaştırabileceği konusunda sabahlara kadar tartışan\n  yüzlerce kişi hepimizin birbirine inancını tazeledi\n\n- İnsanlar açık kaynak geliştirme, bulut hizmetleri v.b. yeni çalışma\n  disiplinleri ile tanıştılar\n\n- Birçok organizasyonun seneler içinde alacağı yolu sektörün belirli\n  pratikleriyle 2-3 günde bir düzene getirebildik\n\n- Kaos gibi görünen bir yapıda çalışan, canlıda olan yazılımlar örebildik\n\n- Kurumlara, geçmişte birçok kez “hukuki” nedenlerle çekince ile yaklaştıkları\n  “açık kaynak geliştirmenin” çok kaygılanacak bir yönü olmadığını ispat ettik\n\n- Farklı kurumlar altındaki insanlar birbirleri ile çalıştılar, farklı\n  yaklaşımlar, farklı kültürler bir araya geldiler ve birbirlerini tanıyıp yeni\n  ilişkiler başlattılar\n\n- Yazılım alanında sürekli tartışan insanlar gibi görünüyorduk, hem kendimiz hem\n  de dış partiler potansiyelimizi gözlemleyebilmiş oldu\n\n- Kurumlara, medyaya, çevremize, bizden sonraki nesillere ve en çok da kendimize\n  ilham “influence” oluşturduk. Bir arkadaşımla yaptığım toplantıda 1-2 aydır\n  yazılım alanında kötü zamanlar geçirdiğini ama buradaki birlikle tekrar\n  doğduğunu konuştuk.\n\n  Dahası şöyle mesajlar aldık: “Hatay’da 12 yaşında öksüz kalan akrabam bana\n  _abi çocuklar için de bölüm ekleyelim bana bilgisayar alalım kod yazcam_ dedi,\n  _**afetcocuk.com**’u bana al_ diyor.”\n\n## Bundan sonra ne olacak?\n\nBunun bir kişisel bir de Açık Yazılım Ağı için yanıtı var.\n\nPlanlama esnasında naçizane belirli ilkeler etrafında kalmaya özen gösterdim,\nekipte koordinasyon tarafındaki diğer arkadaşlarımın da hemfikir olduğunu\ngördükçe mutlu oldum:\n\n- Yaptığımız çalışmalarda tekrarı önlemek ve odaklanmak,\n\n- Gönüllü olan kişilerin sırtından angarya işleri mümkün olduğunca kaldırmak,\n\n- Yasal zeminde kalmak,\n\n- Gönüllü olarak katkıda bulunan insanlarda kötü bir his oluşturmamak,\n\n- Taşıyabileceğimiz kadar yük kaldırmak,\n\n- Açık kaynak olarak devam etmek,\n\n- STKlara/yetkili kurumlara/akredite kurumlara destek vermeye devam etmek,\n\nPlan listesi olarak somutlaştırmak gerekirse,\n\n**Eser Özvataf olarak kişisel kısım:**\n\n- Açık Yazılım Ağı hızlı başladı. Kendi adıma, bunun bundan sonra daha\n  sürdürülebilir olması için çalışacağım\n\n- Ekipten ikna edebildiğim arkadaşları ara ara\n  [YouTube kanalım](https://eser.live)’a çağırıp Açık Yazılım Ağı için online\n  hackathon’lar düzenleyeceğim\n\n- Bazı kurumlardan destek alarak 2-3 ayda bir fiziksel Açık Yazılım Ağı\n  Hackathonları düzenleyip odak projeler çıkartarak, yalnızca afet anlarında\n  değil, sürekli bir açık kaynak bilinci oluşmasını sağlayacağım\n  (başarabilirsem)\n\n- Süreçte olduğu gibi, bundan sonra da kurumlar ile irtibatta olup ortak\n  projeler yapmak, açık kaynak projelere katkıda sağlamaya çalışmak, içlerinde\n  “Açık Kaynak Geliştirici” istihdam etmek için onları ikna etmeye çalışacağım\n\n- Apache Foundation, CloudNative Computing Foundation, Free Software Foundation,\n  Linux Foundation, Mozilla Foundation v.b. ne ise Türkiye’ye de bir yazılım\n  vakfı kazandırmaya çalışacağım (işin hukuki/resmi tarafına değil fikir ve çatı\n  kısmını inşa etmeye odaklı durumdayım)\n\n- Bu ve benzeri durumlar için gelecekte kişisel olmayan verileri paylaşmak için\n  nasıl bir veri platformu inşa ederiz’i planlamaya çalışacağım\n\n- Açık Yazılım Ağı’nın mevcut çözümlerinin “paketlenmesi” kısmında çalışmalarım\n  olacak\n\n- Açık Yazılım Ağı’nın portföyündeki yazılımları tanıtıp bunları kullanıcılara\n  ulaştıracağım\n\n- Açık Yazılım Ağı’nın çözebileceği potansiyel sorunlar, durumları keşfe\n  çıkacağım\n\n**Açık Yazılım Ağı kısmı:**\n\n- Bir “davranış kodu” ve “dahiliyet politikası” yayınlayacağız (bkz:\n  [https://github.com/mozilla/inclusion](https://github.com/mozilla/inclusion))\n\n- Süreç boyunca kendi mesai saatlerinde dahi gece/gündüz çalışan arkadaşlarla\n  iletişimi senkron iletişimden asenkron iletişime döndürülecek\n\n- Çok tekrar eden süreçler için akış yapıları kurgulayıp formlarla ilerlenecek\n\n  - Yeni proje formları\n\n  - Yeni katılımcı formları\n\n  - Kaynak ihtiyaçları\n\n  - İş talepleri\n\n  - Ve benzerleri...\n\n- Sürecin hukuki kısmı ile ilgili gereken yükümlülükler yerine getirilecek\n  (kişisel verileri yok etme v.b.). Bunun için bir deklarasyon çalışmamız\n  gelecek hafta başına kadar yayınlanacak\n\n- Projeler belirli portfolyolara oturtulacak. Bunun için web sitesi üzerinde\n  projelerimizin olduğu çalışmamız gelecek hafta başına kadar yayınlanacak\n\n- Projeler tek bir çözüm gibi paketlenecek, bir araya getirilecek\n\n- Paketlenen çözüm white-label ürünler olarak kurulabilir hale getirilecek (bir\n  wordpress benzeri blog kurar gibi düşünün)\n\n- Discord çatımızın altında yer alan kitle ile bağlantıda kalmanın yollarını\n  arayacağız\n\n**Kısacası** aslında “biz devam edeceğiz, KVKK, GPDR başta olmak üzere yasalara\nuyumlu bir şekilde, STKlara/yetkili kurumlara/akredite kurumlara çözümler\nsağlayacağız. projeler konusunda da odak sağlamak için birkaç gün içinde yeni\nbir yönelge yayınlayacağız”.\n\n## Bize nasıl destek olunabilir?\n\nÖncelikle gönüllü başladık ve servis sağlayıcı kurumların bizlere açtığı bazı\nhesaplar dışında hiçbir bağış, teşvik, fon v.b. ile ilerlemedik. Bir yazılım\ntopluluğunun ötesinde davranışlarımız olmadı.\n\nDolayısıyla bir yazılım topluluğunun temel ihtiyaçları olan bilinirlik, çevre\noluşturma, katılımlarla büyüme ihtiyaçlarımız halen devam ediyor. Özellikle\nprojede yer aldığını bildiğiniz insanları takip ederseniz zaten destek olmuş\nolacaksınız. İlk olarak Twitter, ikinci aşamada Instagram bu süreçte en net\nkitlesel aktarımın olduğu platformlar oldu. Bu kanallardan açık yazılım ağı\ngönüllülerini ve açık yazılım ağının kendisini takip edebilirsiniz. Ben bilhassa\nbu süreçte [kendi Twitter hesabım](https://twitter.com/eserozvataf)da\nyazmaktansa diğer arkadaşlarımızın tweetlerini dolaşıma sokmaya odaklandım\n(zaten birçoğumuzun tweet yazacak zamanımız olmadı).\n\nFarkındaysanız destek için sosyal medyaya yönlendirdim. Çünkü somut bir plan\nçıktığında Açık Yazılım Ağı’nın eylemlerini duyuracak bir kanal oluşturmaya\nihtiyacımız var. O nedenle iletişimde kalalım!\n\n## İletişim\n\nİlk günden itibaren sunucudaki moderasyonu tek kişi düzenlemeye çalıştığım an\nbile aklımda en kritik işlerden biri “iç iletişim” idi. Discord’un “sahne”\nözelliğini oluşturmak, ve o kısmı Furkan’a devrettiğimiz için periyodik\ngüncellemeler verme konusunda bayağı baskılamış olabilirim. Daha sonra bu\nDiscord içerisinde bir ritüel haline geldi.\n\nŞimdi iletişimi bir halka daha şeffaf, erişilebilir ve dışa dönük yapma zamanı.\n\nYukarıda da bahsettim, buradaki eforlara dair hem geri bildirimler almak hem de\ndaha net konuları aktarmak, hem işin başındaki insanlarla iletişimde bulunmak\niçin kendi adıma Açık Yazılım Ağı ile ilgilendiğim süreçte\n[https://eser.live](https://eser.live) adresinde yayında olmaya çalışacağım.\nEminim bu yayınlarda topluluktan birçok kişi bana katılacaktır, onların\ntaraflarını dinleyip bir yandan da neler yapabiliriz birlikte konuşmuş olacağız.\n\n## Kapanış ve kişisel öngörülerim\n\nKorkunç bir afet yaşadık. Birçoğumuz için bunun travmatik sonuçları olacak.\nAtlattığımız her badirede olduğu gibi biz her ne kadar eski hayatlarımıza dönmek\nistersek isteyelim, bir şeyler değişecek veya kendimizi aynı noktada bulmamak\niçin değişmek zorunda olacak.\n\nAçık kaynak ile tanıştığım yıllarda, okulunu henüz bitirmemiş alaylı bir\nyazılımcı olduğum ve çalışmaya devam ettiğim için “uzaktan çalışma”yı da pratik\nediyordum. Pandemi tüm dünyada birçok hasar bıraktı, uzaktan çalışma artık\ngaripsenmeyen bir pratik olarak hayatımıza girdi.\n\nAçık Yazılım Ağı da kötü bir vesileyle olsa da bizim açık kaynak’ın önemini ve\nbirlikte öreceğimiz sistemleri tanımak için değişimde rolü olan bir çark haline\ngelebilir. Yeter ki biz coğrafya olarak aynı kaderi tekrar yaşamamak için bir\nşeyler yapmak isteyelim.",
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
+          "slug": "aya",
+          "title": "AYA"
+        },
+        "published_at": "2023-02-17T00:00:00.000Z",
+        "created_at": "2023-02-17T00:00:00.000Z",
+        "updated_at": null,
+        "deleted_at": null
+      }
+    ]
   }
 }

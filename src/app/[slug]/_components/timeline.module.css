@@ -20,6 +20,8 @@
     }
 
     & > .box {
+      @apply block no-underline;
+
       & > .kind {
         @apply font-bold text-secondary-foreground mb-2 block text-[1.1em];
       }

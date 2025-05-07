@@ -108,7 +108,11 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       content: faker.lorem.paragraphs(),
       is_featured: faker.datatype.boolean(),
       published_at: faker.date.past(),
-      author_profile_id: identifier ?? faker.string.ulid(),
+      author_profile: {
+        id: identifier ?? faker.string.ulid(),
+        slug: faker.lorem.slug(),
+        title: faker.person.fullName(),
+      },
       created_at: faker.date.past(),
       updated_at: faker.date.recent(),
       deleted_at: null,

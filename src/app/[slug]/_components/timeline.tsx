@@ -2,14 +2,15 @@
 
 import * as React from "react";
 
-import type { Story } from "@/shared/modules/backend/stories/types.ts";
+import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories.ts";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import { FilterBar, type FilterKeyType } from "./filter-bar.tsx"; // Import the type
 import styles from "./timeline.module.css";
 
 export interface TimelineProps {
-  stories: Story[];
+  stories: GetStoriesData;
 }
 
 export function Timeline(props: TimelineProps) {
@@ -37,10 +38,10 @@ export function Timeline(props: TimelineProps) {
           <li key={story.id} className={styles.item}>
             <div className={styles.dot} />
             <time className={styles.date}>{new Date(story.published_at!).toLocaleDateString("tr-TR")}</time>
-            <div className={styles.box}>
+            <SiteLink className={styles.box} href={`/${story.author_profile.slug}/stories/${story.slug}`}>
               <span className={styles.kind}>{filterMapping[story.kind]}</span>
-              <p className={styles.content}>{story.content}</p>
-            </div>
+              <p className={styles.content}>{story.title}</p>
+            </SiteLink>
           </li>
         ))}
       </ul>

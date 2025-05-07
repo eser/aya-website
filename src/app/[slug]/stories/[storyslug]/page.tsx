@@ -10,7 +10,7 @@ import { components } from "@/shared/components/userland/userland.ts";
 type IndexPageProps = {
   params: Promise<{
     slug: string;
-    pageslug: string;
+    storyslug: string;
   }>;
 };
 
@@ -25,20 +25,20 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
-  const page = profileData.pages.find((page) => page.slug === params.pageslug);
-  if (page === undefined) {
+  const storiesData = await backend.getStories(profileData.id, locale.code);
+
+  if (storiesData === null) {
     notFound();
   }
 
-  const pageData = await backend.getProfilePage(page.id, locale.code);
-
-  if (pageData === null) {
+  const storyData = storiesData.find((story) => story.slug === params.storyslug);
+  if (storyData === undefined) {
     notFound();
   }
 
   return {
-    title: `${profileData.title} - ${pageData.title}`,
-    description: pageData.summary,
+    title: `${profileData.title} - ${storyData.title}`,
+    description: storyData.summary,
   };
 }
 
@@ -53,18 +53,18 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const page = profileData.pages.find((page) => page.slug === params.pageslug);
-  if (page === undefined) {
+  const storiesData = await backend.getStories(profileData.id, locale.code);
+
+  if (storiesData === null) {
     notFound();
   }
 
-  const pageData = await backend.getProfilePage(page.id, locale.code);
-
-  if (pageData === null) {
+  const storyData = storiesData.find((story) => story.slug === params.storyslug);
+  if (storyData === undefined) {
     notFound();
   }
 
-  const contentText = `# ${pageData.title}\n\n${pageData.content}`;
+  const contentText = `# ${storyData.title}\n\n${storyData.content}`;
 
   const mdxSource = await mdx(contentText, components);
 
