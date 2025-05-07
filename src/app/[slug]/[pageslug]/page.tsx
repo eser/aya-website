@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
-import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
 
 type IndexPageProps = {
@@ -18,9 +18,9 @@ type IndexPageProps = {
 export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
   const params = await props.params;
 
-  const navigationState = await getNavigationState();
+  const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
+  const profileData = await backend.getProfile(params.slug, locale.code);
   if (profileData === null) {
     notFound();
   }
@@ -30,7 +30,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
-  const pageData = await backend.getProfilePage(page.id, navigationState.locale.code);
+  const pageData = await backend.getProfilePage(page.id, locale.code);
 
   if (pageData === null) {
     notFound();
@@ -45,9 +45,9 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  const navigationState = await getNavigationState();
+  const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
+  const profileData = await backend.getProfile(params.slug, locale.code);
 
   if (profileData === null) {
     notFound();
@@ -58,7 +58,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const pageData = await backend.getProfilePage(page.id, navigationState.locale.code);
+  const pageData = await backend.getProfilePage(page.id, locale.code);
 
   if (pageData === null) {
     notFound();

@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
@@ -20,16 +19,14 @@ type LayoutProps = {
 async function Layout(props: LayoutProps) {
   const params = await props.params;
 
-  const { t } = await getTranslations();
-
-  const navigationState = await getNavigationState();
+  const { t, locale } = await getTranslations();
 
   const placeholders: Record<string, string> = {
-    locale: navigationState.locale.name,
+    locale: locale.name,
     slug: params.slug,
   };
 
-  const profileData = await backend.getProfile(params.slug, navigationState.locale.code);
+  const profileData = await backend.getProfile(params.slug, locale.code);
 
   if (profileData === null) {
     notFound();

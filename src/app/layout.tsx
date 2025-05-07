@@ -46,7 +46,7 @@ async function Layout(props: LayoutProps) {
   };
 
   return (
-    <html lang={navigationState.locale.code} dir={navigationState.locale.dir} suppressHydrationWarning>
+    <html lang={translationsState.locale.code} dir={translationsState.locale.dir} suppressHydrationWarning>
       <head />
       <body>
         <TranslationsProvider state={translationsStateValues}>

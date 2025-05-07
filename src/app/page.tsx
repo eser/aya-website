@@ -5,7 +5,6 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { siteConfig } from "@/shared/config.ts";
 import { mdx } from "@/shared/lib/mdx.tsx";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
@@ -15,12 +14,10 @@ import { components } from "@/shared/components/userland/userland.ts";
 import styles from "./page.module.css";
 
 async function IndexPage() {
-  const navigationState = await getNavigationState();
-
-  const { t } = await getTranslations();
+  const { t, locale } = await getTranslations();
 
   const placeholders: Record<string, string> = {
-    locale: navigationState.locale.name,
+    locale: locale.name,
   };
 
   const contentText = t("Home", "IntroText");
