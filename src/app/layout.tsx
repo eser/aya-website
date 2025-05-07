@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 
 import { siteConfig } from "@/shared/config.ts";
 import { NavigationProvider } from "@/shared/modules/navigation/navigation-provider.tsx";
+import { TranslationsProvider } from "@/shared/modules/i18n/translations-provider.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
-
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { RegisterBackend } from "./register-backend.tsx";
 import { Analytics } from "./analytics.tsx";
 import "../shared/globals.css";
@@ -36,13 +37,23 @@ type LayoutProps = {
 async function Layout(props: LayoutProps) {
   const navigationState = await getNavigationState();
 
+  const translationsState = await getTranslations();
+  const translationsStateValues = {
+    localeCode: translationsState.localeCode,
+    locale: translationsState.locale,
+    supportedLocales: translationsState.supportedLocales,
+    messages: translationsState.messages,
+  };
+
   return (
     <html lang={navigationState.locale.code} dir={navigationState.locale.dir} suppressHydrationWarning>
       <head />
       <body>
-        <NavigationProvider state={navigationState}>
-          {props.children}
-        </NavigationProvider>
+        <TranslationsProvider state={translationsStateValues}>
+          <NavigationProvider state={navigationState}>
+            {props.children}
+          </NavigationProvider>
+        </TranslationsProvider>
         <RegisterBackend />
         <Analytics />
       </body>

@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { siteConfig } from "@/shared/config.ts";
-import { Icons } from "@/shared/components/icons.tsx";
 import { cn } from "@/shared/lib/cn.ts";
+import { Icons } from "@/shared/components/icons.tsx";
 
 import styles from "./logo.module.css";
 import { EasterEgg } from "./easter-egg.tsx";

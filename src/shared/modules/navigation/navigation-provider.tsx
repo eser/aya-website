@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { type NavigationState } from "./get-navigation-state.ts";
+import type { NavigationState } from "./get-navigation-state.ts";
 
 export type NavigationProviderProps = {
   state: NavigationState;

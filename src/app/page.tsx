@@ -17,7 +17,7 @@ import styles from "./page.module.css";
 async function IndexPage() {
   const navigationState = await getNavigationState();
 
-  const { t } = await getTranslations("Home");
+  const { t } = await getTranslations();
 
   const placeholders: Record<string, string> = {
     locale: navigationState.locale.name,
@@ -61,7 +61,7 @@ kimliğiyle** devam ediyor.`;
         <div className="flex gap-4">
           <Button variant="default" size="lg" asChild>
             <SiteLink href="/aya/about" rel="noreferrer">
-              {t("Rest of the story")}
+              {t("Home", "Rest of the story")}
               <ArrowRightIcon />
             </SiteLink>
           </Button>

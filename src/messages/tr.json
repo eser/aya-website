@@ -3,14 +3,31 @@
     "Homepage": "Ana Sayfa",
     "Elements": "Bileşenler",
     "Products": "Üretimler",
-    "General search": "Genel arama",
-    "Search": "Arama",
     "Policies": "Kurallar",
     "About": "Hakkında",
     "Profile": "Profil",
     "Stories": "Hikayeler",
     "Projects": "Projeler",
-    "Content not yet available.": "Henüz içerik bulunmamaktadır."
+    "Content not yet available.": "Henüz içerik bulunmamaktadır.",
+    "Change theme": "Temayı değiştir",
+    "System": "Sistem",
+    "Light": "Açık",
+    "Midnight": "Koyu"
+  },
+  "Loading": {
+    "Loading...": "Yükleniyor..."
+  },
+  "Search": {
+    "General search": "Genel arama",
+    "Search": "Arama",
+    "Profile search...": "Profil arama...",
+    "No results found.": "Sonuç bulunamadı.",
+    "Suggestions": "Öneriler",
+    "Events": "Etkinlikler",
+    "Theme": "Tema",
+    "Theme: System": "Tema: Sistem",
+    "Theme: Light": "Tema: Açık",
+    "Theme: Midnight": "Tema: Koyu"
   },
   "Home": {
     "Rest of the story": "Hikayenin devamı"

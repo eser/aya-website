@@ -18,7 +18,7 @@ type IndexPageProps = {
 export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -28,7 +28,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   }
 
   return {
-    title: `${profileData.title} - ${t("Projects")}`,
+    title: `${profileData.title} - ${t("Layout", "Projects")}`,
     description: profileData.description,
   };
 }
@@ -36,7 +36,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -45,9 +45,9 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const contentText = `# ${t("Projects")}
+  const contentText = `# ${t("Layout", "Projects")}
 
-${t("Content not yet available.")}`;
+${t("Layout", "Content not yet available.")}`;
 
   const mdxSource = await mdx(contentText, components);
 

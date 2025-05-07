@@ -34,7 +34,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -50,9 +50,9 @@ async function IndexPage(props: IndexPageProps) {
 
     contentText = indexPageData?.content ?? "";
   } else {
-    contentText = `# ${t("Profile")}
+    contentText = `# ${t("Layout", "Profile")}
 
-${t("Content not yet available.")} (Dil = ${navigationState.locale.name})
+${t("Layout", "Content not yet available.")} (Dil = ${navigationState.locale.name})
     `;
   }
 

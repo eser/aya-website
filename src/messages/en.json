@@ -3,14 +3,31 @@
     "Homepage": "Homepage",
     "Elements": "Elements",
     "Products": "Products",
-    "General search": "General search",
-    "Search": "Search",
     "Policies": "Policies",
     "About": "About",
     "Profile": "Profile",
     "Stories": "Stories",
     "Projects": "Projects",
-    "Content not yet available.": "Content not yet available."
+    "Content not yet available.": "Content not yet available.",
+    "Change theme": "Change theme",
+    "System": "System",
+    "Light": "Light",
+    "Midnight": "Midnight"
+  },
+  "Loading": {
+    "Loading...": "Loading..."
+  },
+  "Search": {
+    "General search": "General search",
+    "Search": "Search",
+    "Profile search...": "Profile search...",
+    "No results found.": "No results found.",
+    "Suggestions": "Suggestions",
+    "Events": "Events",
+    "Theme": "Theme",
+    "Theme: System": "Theme: System",
+    "Theme: Light": "Theme: Light",
+    "Theme: Midnight": "Theme: Midnight"
   },
   "Home": {
     "Rest of the story": "Rest of the story"

@@ -20,7 +20,7 @@ type LayoutProps = {
 async function Layout(props: LayoutProps) {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -64,18 +64,18 @@ async function Layout(props: LayoutProps) {
             <nav className={styles.nav}>
               <ul>
                 <li>
-                  <SiteLink href={`/${params.slug}`}>{t("Profile")}</SiteLink>
+                  <SiteLink href={`/${params.slug}`}>{t("Layout", "Profile")}</SiteLink>
                 </li>
 
                 {profileData.show_stories && (
                   <li>
-                    <SiteLink href={`/${params.slug}/stories`}>{t("Stories")}</SiteLink>
+                    <SiteLink href={`/${params.slug}/stories`}>{t("Layout", "Stories")}</SiteLink>
                   </li>
                 )}
 
                 {profileData.show_projects && (
                   <li>
-                    <SiteLink href={`/${params.slug}/projects`}>{t("Projects")}</SiteLink>
+                    <SiteLink href={`/${params.slug}/projects`}>{t("Layout", "Projects")}</SiteLink>
                   </li>
                 )}
 

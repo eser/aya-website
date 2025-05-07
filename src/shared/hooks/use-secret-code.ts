@@ -9,22 +9,34 @@ export function useSecretCode(secretCode: string[]) {
   const [success, setSuccess] = React.useState(false);
   const key = useInputEvent();
 
+  // Store a reference to the current count to use inside the effect
+  const keyPressRef = React.useRef({ count, secretCode });
+
+  // Update the ref when dependencies change
+  React.useEffect(() => {
+    keyPressRef.current = { count, secretCode };
+  }, [count, secretCode]);
+
+  // Handle key presses without creating a circular dependency
   React.useEffect(() => {
     if (key == null) {
       return;
     }
 
-    if (key !== secretCode[count]) {
+    const { count: currentCount, secretCode: currentCode } = keyPressRef.current;
+
+    if (key !== currentCode[currentCount]) {
       setCount(0);
       return;
     }
 
-    setCount((state) => state + 1);
+    const newCount = currentCount + 1;
+    setCount(newCount);
 
-    if (count + 1 === secretCode.length) {
+    if (newCount === currentCode.length) {
       setSuccess(true);
     }
-  }, [key, count, secretCode.length, secretCode[count]]);
+  }, [key]); // Only depend on key changes
 
   return success;
 }

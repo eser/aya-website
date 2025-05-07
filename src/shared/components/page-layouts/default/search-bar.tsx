@@ -6,6 +6,7 @@ import { Calendar, Settings, User, Users } from "lucide-react";
 
 import { cn } from "@/shared/lib/cn.ts";
 import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
+import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   CommandDialog,
@@ -20,6 +21,8 @@ import {
 
 export function SearchBar() {
   const [open, setOpen] = React.useState(false);
+
+  const { t } = useTranslations();
 
   const navigation = useNavigationClient();
 
@@ -46,20 +49,20 @@ export function SearchBar() {
         )}
         onClick={() => setOpen(true)}
       >
-        <span className="hidden lg:inline-flex">Genel arama...</span>
-        <span className="inline-flex lg:hidden">Arama...</span>
+        <span className="hidden lg:inline-flex">{t("Search", "General search")}</span>
+        <span className="inline-flex lg:hidden">{t("Search", "Search")}</span>
         <kbd className="pointer-events-none absolute right-[0.4rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded-sm border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Profil ara..." />
+        <CommandInput placeholder={t("Search", "Profile search...")} />
         <CommandList>
-          <CommandEmpty>Sonuç bulunamadı.</CommandEmpty>
-          <CommandGroup heading="Öneriler">
+          <CommandEmpty>{t("Search", "No results found.")}</CommandEmpty>
+          <CommandGroup heading={t("Search", "Suggestions")}>
             <CommandItem>
               <Calendar className="mr-2 h-4 w-4" />
-              <span>Etkinlikler</span>
+              <span>{t("Search", "Events")}</span>
               <CommandShortcut>⌘E</CommandShortcut>
             </CommandItem>
           </CommandGroup>
@@ -93,7 +96,7 @@ export function SearchBar() {
               }}
             >
               <Settings className="mr-2 h-4 w-4" />
-              <span>Tema: Sistem</span>
+              <span>{t("Search", "Theme: System")}</span>
             </CommandItem>
             <CommandItem
               onSelect={() => {
@@ -102,7 +105,7 @@ export function SearchBar() {
               }}
             >
               <Settings className="mr-2 h-4 w-4" />
-              <span>Tema: Açık</span>
+              <span>{t("Search", "Theme: Light")}</span>
             </CommandItem>
             <CommandItem
               onSelect={() => {
@@ -111,7 +114,7 @@ export function SearchBar() {
               }}
             >
               <Settings className="mr-2 h-4 w-4" />
-              <span>Tema: Koyu</span>
+              <span>{t("Search", "Theme: Midnight")}</span>
             </CommandItem>
           </CommandGroup>
         </CommandList>

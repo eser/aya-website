@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { cn } from "@/shared/lib/cn.ts";
-import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { replacePlaceholders } from "@/shared/lib/replace-placeholders.ts";
+import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   DropdownMenu,
@@ -28,17 +28,17 @@ type MainNavProps = {
 };
 
 export async function MainNav(props: MainNavProps) {
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navItems: NavItem[] = [
     {
       key: "elements",
-      title: t("Elements"),
+      title: t("Layout", "Elements"),
       href: "/elements/",
     },
     {
       key: "products",
-      title: t("Products"),
+      title: t("Layout", "Products"),
       href: "/products/",
     },
   ];
@@ -71,7 +71,7 @@ export async function MainNav(props: MainNavProps) {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" sideOffset={14} className={styles["nav-dropdown-content"]}>
             <DropdownMenuItem asChild>
-              <SiteLink href="/">{t("Homepage")}</SiteLink>
+              <SiteLink href="/">{t("Layout", "Homepage")}</SiteLink>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             {navItems.map(

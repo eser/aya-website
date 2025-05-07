@@ -64,7 +64,7 @@ const stories: Story[] = [
 export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -74,7 +74,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   }
 
   return {
-    title: `${profileData.title} - ${t("Stories")}`,
+    title: `${profileData.title} - ${t("Layout", "Stories")}`,
     description: profileData.description,
   };
 }
@@ -82,7 +82,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
-  const { t } = await getTranslations("Layout");
+  const { t } = await getTranslations();
 
   const navigationState = await getNavigationState();
 
@@ -94,7 +94,7 @@ async function IndexPage(props: IndexPageProps) {
   return (
     <>
       <div className="content">
-        <h2>{t("Stories")}</h2>
+        <h2>{t("Layout", "Stories")}</h2>
       </div>
 
       <div className={styles["timeline-container"]}>
