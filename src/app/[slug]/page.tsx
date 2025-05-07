@@ -52,7 +52,7 @@ async function IndexPage(props: IndexPageProps) {
   } else {
     contentText = `# ${t("Layout", "Profile")}
 
-${t("Layout", "Content not yet available.")} (Dil = ${navigationState.locale.name})
+${t("Layout", "Content not yet available.")}
     `;
   }
 
