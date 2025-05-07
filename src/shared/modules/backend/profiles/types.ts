@@ -10,8 +10,6 @@ export type Profile = {
   title: string;
   description: string;
 
-  custom_index_page_id: string | null;
-  show_stories: boolean;
   show_projects: boolean;
   show_members: boolean;
 

@@ -1,0 +1,32 @@
+@reference "../../../shared/globals.css";
+
+.items {
+  @apply list-none p-0 m-0 relative;
+
+  &::before {
+    content: "";
+    @apply absolute left-5 top-0 bottom-0 w-1 bg-accent;
+  }
+
+  & > .item {
+    @apply mb-2.5 relative pl-[50px];
+
+    & > .dot {
+      @apply absolute left-[17px] top-[29px] w-3.5 h-3.5 rounded-full border-2 border-accent bg-primary;
+    }
+
+    & > .date {
+      @apply text-[0.9em] text-muted-foreground pt-5 mb-1.5 block;
+    }
+
+    & > .box {
+      & > .kind {
+        @apply font-bold text-secondary-foreground mb-2 block text-[1.1em];
+      }
+
+      & > .content {
+        @apply text-secondary-foreground;
+      }
+    }
+  }
+}

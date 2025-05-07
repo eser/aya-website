@@ -1,0 +1,5 @@
+@reference "../../shared/globals.css";
+
+.timeline-container {
+  @apply pt-2;
+}

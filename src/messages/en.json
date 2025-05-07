@@ -37,5 +37,13 @@
     "Rest of the story": "Rest of the story",
     "GitHub": "GitHub",
     "IntroText": "**AYA (means Open Source Network in Turkish)** is a platform enabling volunteers motivated by social good to collaborate and develop quality information technology solutions.\n\nWe have collectively realized projects by providing expert volunteer support and technical resources. These projects have been open-source solutions accessible and controllable by everyone, primarily official institutions and non-governmental organizations. Our role has been facilitating volunteer communication and resource management coordination.\n\nAs a non-profit organization focusing on social benefit, AYA continues its journey with a [software foundation identity](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) hosting various IT projects."
+  },
+  "Stories": {
+    "All": "All",
+    "Status": "Status",
+    "Announcement": "Announcement",
+    "Article": "Article",
+    "Content": "Content",
+    "Presentation": "Presentation"
   }
 }

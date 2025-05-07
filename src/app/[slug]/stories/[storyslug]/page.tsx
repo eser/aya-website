@@ -2,15 +2,15 @@ import * as React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
+import { mdx } from "@/shared/lib/mdx.tsx";
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-
-import { Timeline } from "./_components/timeline.tsx";
-import styles from "./page.module.css";
+import { components } from "@/shared/components/userland/userland.ts";
 
 type IndexPageProps = {
   params: Promise<{
     slug: string;
+    pageslug: string;
   }>;
 };
 
@@ -25,9 +25,20 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
+  const page = profileData.pages.find((page) => page.slug === params.pageslug);
+  if (page === undefined) {
+    notFound();
+  }
+
+  const pageData = await backend.getProfilePage(page.id, locale.code);
+
+  if (pageData === null) {
+    notFound();
+  }
+
   return {
-    title: profileData.title,
-    description: profileData.description,
+    title: `${profileData.title} - ${pageData.title}`,
+    description: pageData.summary,
   };
 }
 
@@ -37,19 +48,29 @@ async function IndexPage(props: IndexPageProps) {
   const { locale } = await getTranslations();
 
   const profileData = await backend.getProfile(params.slug, locale.code);
+
   if (profileData === null) {
     notFound();
   }
 
-  const storiesData = await backend.getStories(profileData.id, locale.code);
-
-  if (storiesData === null) {
+  const page = profileData.pages.find((page) => page.slug === params.pageslug);
+  if (page === undefined) {
     notFound();
   }
 
+  const pageData = await backend.getProfilePage(page.id, locale.code);
+
+  if (pageData === null) {
+    notFound();
+  }
+
+  const contentText = `# ${pageData.title}\n\n${pageData.content}`;
+
+  const mdxSource = await mdx(contentText, components);
+
   return (
-    <div className={styles["timeline-container"]}>
-      <Timeline stories={storiesData} />
+    <div className="flex max-w-[980px] flex-col items-start">
+      <article className="content">{mdxSource?.content}</article>
     </div>
   );
 }

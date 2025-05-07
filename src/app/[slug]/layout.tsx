@@ -64,12 +64,6 @@ async function Layout(props: LayoutProps) {
                   <SiteLink href={`/${params.slug}`}>{t("Layout", "Profile")}</SiteLink>
                 </li>
 
-                {profileData.show_stories && (
-                  <li>
-                    <SiteLink href={`/${params.slug}/stories`}>{t("Layout", "Stories")}</SiteLink>
-                  </li>
-                )}
-
                 {profileData.show_projects && (
                   <li>
                     <SiteLink href={`/${params.slug}/projects`}>{t("Layout", "Projects")}</SiteLink>

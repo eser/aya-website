@@ -1,0 +1,7 @@
+@reference "../../../shared/globals.css";
+
+.filterBar {
+  & > [role="group"] {
+    @apply w-auto;
+  }
+}

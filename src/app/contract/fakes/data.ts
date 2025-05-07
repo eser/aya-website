@@ -5,7 +5,6 @@ import type { GetProfileData } from "@/shared/modules/backend/profiles/get-profi
 import type { GetProfilesData } from "@/shared/modules/backend/profiles/get-profiles.ts";
 import type { GetUserData } from "@/shared/modules/backend/users/get-user.ts";
 import type { GetUsersData } from "@/shared/modules/backend/users/get-users.ts";
-import type { GetStoryData } from "@/shared/modules/backend/stories/get-story.ts";
 import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories.ts";
 
 export function generateFakeData(_localeCode: string, entity: string, identifier: string | undefined) {
@@ -28,8 +27,6 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
         pronouns: faker.helpers.arrayElement(["he/him", "she/her", "they/them", null]),
         title: faker.person.fullName(),
         description: faker.lorem.paragraph(),
-        custom_index_page_id: null,
-        show_stories: faker.datatype.boolean(),
         show_projects: faker.datatype.boolean(),
         show_members: faker.datatype.boolean(),
         created_at: faker.date.past(),
@@ -47,8 +44,6 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       pronouns: faker.helpers.arrayElement(["he/him", "she/her", "they/them", null]),
       title: faker.person.fullName(),
       description: faker.lorem.paragraph(),
-      custom_index_page_id: null,
-      show_stories: faker.datatype.boolean(),
       show_projects: faker.datatype.boolean(),
       show_members: faker.datatype.boolean(),
       created_at: faker.date.past(),
@@ -103,25 +98,7 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
   }
 
   if (entity === "stories") {
-    if (!hasIdentifier) {
-      return Array.from({ length: 10 }, () => ({
-        id: faker.string.ulid(),
-        kind: "status",
-        slug: faker.lorem.slug(),
-        cover_picture_uri: faker.image.url(),
-        title: faker.lorem.sentence(),
-        summary: faker.lorem.paragraph(),
-        content: faker.lorem.paragraphs(),
-        is_featured: faker.datatype.boolean(),
-        published_at: faker.date.past(),
-        author_profile_id: faker.string.ulid(),
-        created_at: faker.date.past(),
-        updated_at: faker.date.recent(),
-        deleted_at: null,
-      })) satisfies GetStoriesData;
-    }
-
-    return {
+    return Array.from({ length: 10 }, () => ({
       id: faker.string.ulid(),
       kind: "status",
       slug: faker.lorem.slug(),
@@ -131,11 +108,11 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       content: faker.lorem.paragraphs(),
       is_featured: faker.datatype.boolean(),
       published_at: faker.date.past(),
-      author_profile_id: faker.string.ulid(),
+      author_profile_id: identifier ?? faker.string.ulid(),
       created_at: faker.date.past(),
       updated_at: faker.date.recent(),
       deleted_at: null,
-    } satisfies GetStoryData;
+    })) satisfies GetStoriesData;
   }
 
   return null;

@@ -1,13 +1,13 @@
-export type StoryKind = "status" | "announcement" | "news" | "article";
+export type StoryKind = "status" | "announcement" | "article" | "content" | "presentation";
 
 export type Story = {
   id: string;
   kind: StoryKind;
-  slug: string;
+  slug: string | null;
 
   cover_picture_uri: string | null;
-  title: string;
-  summary: string;
+  title: string | null;
+  summary: string | null;
   content: string;
 
   is_featured: boolean;
