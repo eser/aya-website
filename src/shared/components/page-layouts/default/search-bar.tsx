@@ -2,9 +2,9 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Calendar, Settings, User, Users } from "lucide-react";
 
 import { cn } from "@/shared/lib/cn.ts";
+import { Icons } from "@/shared/components/icons.tsx";
 import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
@@ -61,7 +61,7 @@ export function SearchBar() {
           <CommandEmpty>{t("Search", "No results found.")}</CommandEmpty>
           <CommandGroup heading={t("Search", "Suggestions")}>
             <CommandItem disabled>
-              <Calendar className="mr-2 h-4 w-4" />
+              <Icons.calendar className="mr-2 h-4 w-4" />
               <span>{t("Search", "Events")}</span>
               <CommandShortcut>⌘E</CommandShortcut>
             </CommandItem>
@@ -74,7 +74,7 @@ export function SearchBar() {
                 setOpen(false);
               }}
             >
-              <Users className="mr-2 h-4 w-4" />
+              <Icons.users className="mr-2 h-4 w-4" />
               <span>AYA</span>
             </CommandItem>
             <CommandItem
@@ -83,7 +83,7 @@ export function SearchBar() {
                 setOpen(false);
               }}
             >
-              <User className="mr-2 h-4 w-4" />
+              <Icons.user className="mr-2 h-4 w-4" />
               <span>Eser Ozvataf</span>
             </CommandItem>
           </CommandGroup>
@@ -96,7 +96,7 @@ export function SearchBar() {
               }}
               disabled={theme === "default"}
             >
-              <Settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: System")}</span>
             </CommandItem>
             <CommandItem
@@ -106,7 +106,7 @@ export function SearchBar() {
               }}
               disabled={theme === "light"}
             >
-              <Settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: Light")}</span>
             </CommandItem>
             <CommandItem
@@ -116,7 +116,7 @@ export function SearchBar() {
               }}
               disabled={theme === "midnight"}
             >
-              <Settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="mr-2 h-4 w-4" />
               <span>{t("Search", "Theme: Midnight")}</span>
             </CommandItem>
           </CommandGroup>

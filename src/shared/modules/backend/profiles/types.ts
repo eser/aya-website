@@ -13,9 +13,9 @@ export type Profile = {
   show_projects: boolean;
   show_members: boolean;
 
-  created_at: Date;
-  updated_at: Date | null;
-  deleted_at: Date | null;
+  created_at: string;
+  updated_at: string | null;
+  deleted_at: string | null;
 };
 
 export type ProfileLinkKind = "website" | "github" | "bsky" | "x";
@@ -41,9 +41,9 @@ export type ProfileLink = {
   auth_refresh_token: string | null;
   auth_refresh_token_expires_at: Date | null;
 
-  created_at: Date;
-  updated_at: Date | null;
-  deleted_at: Date | null;
+  created_at: string;
+  updated_at: string | null;
+  deleted_at: string | null;
 };
 
 export type ProfilePage = {
@@ -58,11 +58,11 @@ export type ProfilePage = {
   summary: string;
   content: string;
 
-  published_at: Date | null;
+  published_at: string | null;
 
-  created_at: Date;
-  updated_at: Date | null;
-  deleted_at: Date | null;
+  created_at: string;
+  updated_at: string | null;
+  deleted_at: string | null;
 };
 
 export type ProfileMembershipKind = "follower" | "sponsor" | "contributor" | "maintainer" | "lead" | "owner";
@@ -74,7 +74,7 @@ export type ProfileMembership = {
   profile_id: string;
   user_id: string;
 
-  created_at: Date;
-  updated_at: Date | null;
-  deleted_at: Date | null;
+  created_at: string;
+  updated_at: string | null;
+  deleted_at: string | null;
 };

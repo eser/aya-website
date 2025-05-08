@@ -14,7 +14,7 @@ export type User = {
   x_handle: string | null;
   x_remote_id: string | null;
   individual_profile_id: string | null;
-  created_at: Date;
-  updated_at: Date | null;
-  deleted_at: Date | null;
+  created_at: string;
+  updated_at: string | null;
+  deleted_at: string | null;
 };

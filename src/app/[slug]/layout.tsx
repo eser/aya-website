@@ -36,15 +36,16 @@ async function Layout(props: LayoutProps) {
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 items-start">
-          <aside className="flex flex-col gap-4">
+          <aside className={styles.bio}>
             {profileData.profile_picture_uri && (
-              <Image
-                src={profileData.profile_picture_uri}
-                alt={`${profileData.title}'s profile picture`}
-                width={280}
-                height={280}
-                className="rounded-full border"
-              />
+              <div className={styles["profile-picture"]}>
+                <Image
+                  src={profileData.profile_picture_uri}
+                  alt={`${profileData.title}'s profile picture`}
+                  width={280}
+                  height={280}
+                />
+              </div>
             )}
 
             <div className={styles.hero}>

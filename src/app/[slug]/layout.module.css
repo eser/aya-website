@@ -1,5 +1,17 @@
 @reference "../../shared/globals.css";
 
+.bio {
+  @apply flex flex-col gap-4;
+
+  & > .profile-picture {
+    @apply flex justify-center md:justify-start;
+
+    & > img {
+      @apply rounded-full border;
+    }
+  }
+}
+
 .hero {
   .title {
     @apply font-serif text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-none mt-0 mb-2;
@@ -15,13 +27,17 @@
 }
 
 .nav {
-  @apply font-serif;
+  @apply font-serif flex justify-center md:justify-start;
 
   & > ul {
-    @apply space-y-2 md:space-y-3 lg:space-y-4 list-none p-0;
+    @apply space-y-2 md:space-y-3 lg:space-y-4 list-none p-0 flex flex-row md:flex-col flex-wrap justify-center;
 
     & > li {
-      @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-none;
+      @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-none relative;
+
+      &:not(:last-child):after {
+        @apply px-2 content-["·"] md:content-none;
+      }
 
       & > a {
         @apply text-muted-foreground hover:text-foreground no-underline;

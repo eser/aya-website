@@ -1,14 +1,22 @@
 import * as React from "react";
 
 import {
+  Calendar,
+  GitCommit,
+  GitFork,
+  GitPullRequest,
   type Icon as LucideIcon,
   Instagram,
   Laptop,
   Link,
   LucideProps,
   Moon,
+  Settings,
+  Star,
   SunMedium,
   Twitter,
+  User,
+  Users,
   Youtube,
 } from "lucide-react";
 
@@ -21,7 +29,15 @@ export const Icons = {
   twitter: Twitter,
   instagram: Instagram,
   youtube: Youtube,
+  gitFork: GitFork,
+  gitPullRequest: GitPullRequest,
+  gitCommit: GitCommit,
+  star: Star,
   link: Link,
+  calendar: Calendar,
+  settings: Settings,
+  user: User,
+  users: Users,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 296" {...props}>
       <title>Logot</title>

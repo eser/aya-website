@@ -4,7 +4,7 @@
     "npm:@biomejs/biome@2.0.0-beta.2": "2.0.0-beta.2",
     "npm:@biomejs/biome@^2.0.0-beta.2": "2.0.0-beta.2",
     "npm:@faker-js/faker@^9.7.0": "9.7.0",
-    "npm:@hookform/resolvers@^5.0.1": "5.0.1_react-hook-form@7.56.2__react@19.1.0_react@19.1.0",
+    "npm:@hookform/resolvers@^5.0.1": "5.0.1_react-hook-form@7.56.3__react@19.1.0_react@19.1.0",
     "npm:@next/env@^15.3.2": "15.3.2",
     "npm:@radix-ui/react-accessible-icon@^1.1.6": "1.1.6_@types+react@19.1.3_@types+react-dom@19.1.3__@types+react@19.1.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:@radix-ui/react-accordion@^1.2.10": "1.2.10_@types+react@19.1.3_@types+react-dom@19.1.3__@types+react@19.1.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -42,11 +42,11 @@
     "npm:@testing-library/react@^16.3.0": "16.3.0_@testing-library+dom@10.4.0_@types+react@19.1.3_@types+react-dom@19.1.3__@types+react@19.1.3_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:@types/mdx@^2.0.13": "2.0.13",
     "npm:@types/negotiator@~0.6.3": "0.6.3",
-    "npm:@types/node@^22.15.15": "22.15.15",
+    "npm:@types/node@^22.15.17": "22.15.17",
     "npm:@types/picomatch@4": "4.0.0",
     "npm:@types/react-dom@^19.1.3": "19.1.3_@types+react@19.1.3",
     "npm:@types/react@^19.1.3": "19.1.3",
-    "npm:adr-tool@0.3": "0.3.0_@oclif+config@1.18.17_@types+node@22.15.15_typescript@5.8.3",
+    "npm:adr-tool@0.3": "0.3.0_@oclif+config@1.18.17_@types+node@22.15.17_typescript@5.8.3",
     "npm:babel-plugin-react-compiler@^19.1.0-rc.1": "19.1.0-rc.1",
     "npm:class-variance-authority@~0.7.1": "0.7.1",
     "npm:clsx@^2.1.1": "2.1.1",
@@ -59,13 +59,12 @@
     "npm:negotiator@1": "1.0.0",
     "npm:next-mdx-remote@5": "5.0.0_react@19.1.0_@types+react@19.1.3",
     "npm:next-themes@~0.4.6": "0.4.6_react@19.1.0_react-dom@19.1.0__react@19.1.0",
-    "npm:next@15.4.0-canary.24": "15.4.0-canary.24_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
-    "npm:next@^15.4.0-canary.24": "15.4.0-canary.24_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
+    "npm:next@^15.4.0-canary.27": "15.4.0-canary.27_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:picomatch@^4.0.2": "4.0.2",
     "npm:postcss@^8.5.3": "8.5.3",
     "npm:react-day-picker@^9.6.7": "9.6.7_react@19.1.0",
     "npm:react-dom@^19.1.0": "19.1.0_react@19.1.0",
-    "npm:react-hook-form@^7.56.2": "7.56.2_react@19.1.0",
+    "npm:react-hook-form@^7.56.3": "7.56.3_react@19.1.0",
     "npm:react-resizable-panels@^3.0.1": "3.0.1_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react@^19.1.0": "19.1.0",
     "npm:reading-time@^1.5.0": "1.5.0",
@@ -222,7 +221,7 @@
     "@floating-ui/utils@0.2.9": {
       "integrity": "sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg=="
     },
-    "@hookform/resolvers@5.0.1_react-hook-form@7.56.2__react@19.1.0_react@19.1.0": {
+    "@hookform/resolvers@5.0.1_react-hook-form@7.56.3__react@19.1.0_react@19.1.0": {
       "integrity": "sha512-u/+Jp83luQNx9AdyW2fIPGY6Y7NG68eN2ZW8FOJYL+M0i4s49+refdJdOp/A9n9HFQtQs3HIDHQvX3ZET2o7YA==",
       "dependencies": [
         "@standard-schema/utils",
@@ -416,46 +415,46 @@
     "@next/env@15.3.2": {
       "integrity": "sha512-xURk++7P7qR9JG1jJtLzPzf0qEvqCN0A/T3DXf8IPMKo9/6FfjxtEffRJIIew/bIL4T3C2jLLqBor8B/zVlx6g=="
     },
-    "@next/env@15.4.0-canary.24": {
-      "integrity": "sha512-a9XW8stKoDILs5ySIhv/WvnXqfdBJ3CSMFZk6DGWogaHj0JcZmjJqZYWc5PVO6rdswXuYzpnEHXKZ54l05PUrg=="
+    "@next/env@15.4.0-canary.27": {
+      "integrity": "sha512-D+WUQnqGrVu095md3Hj6yeX+TgkjzsCLG7DMf5M55nD73EH6kfoBCvxyoDzW1+XBx/pUFpZKhNz5lXVdBE+84A=="
     },
-    "@next/swc-darwin-arm64@15.4.0-canary.24": {
-      "integrity": "sha512-KZTWf+lKcn/xU3QmTSGzxeWpsKe2HVhkH9A8Q0ZSbu2GKulekqlgA3Er0IdOAIs76ici7GOtOQAt4k8xjpX85g==",
+    "@next/swc-darwin-arm64@15.4.0-canary.27": {
+      "integrity": "sha512-q0gH5sIPlF/mhYa+ybrUTS8ynyhaOKMCc5HXXHE2JdXabEXsQSMoaF9wfZCSJddSEG8fkbQpDFW6fUSP8xprVg==",
       "os": ["darwin"],
       "cpu": ["arm64"]
     },
-    "@next/swc-darwin-x64@15.4.0-canary.24": {
-      "integrity": "sha512-QrSRUkggMA0kfYOxM5Xn5h3SBgI3Qbq+G1SmH71/VXz2NmG7HjrcyQPG4wYp6w7v3jhubSqPREzDjPNqtOxP1Q==",
+    "@next/swc-darwin-x64@15.4.0-canary.27": {
+      "integrity": "sha512-PJ+Xzx8WY1QGQ887J6rtjNMOrDqpizzrzgc+tJpNVH+25oPsv5LVt1mTgXMbQkKL8V3uKPKPCedhIkeyRk4gHw==",
       "os": ["darwin"],
       "cpu": ["x64"]
     },
-    "@next/swc-linux-arm64-gnu@15.4.0-canary.24": {
-      "integrity": "sha512-Nsn3SmZzAjYS/n+ZDGvCxsrE7ngMTZu0h4vp+L7nBb6kPNzipnDpwqPTy2heCqlIVA7xPnMCYJ5UKaFHyYjecg==",
+    "@next/swc-linux-arm64-gnu@15.4.0-canary.27": {
+      "integrity": "sha512-ZhhFheXHvp0CM/CgsIC4nvdBPlEgPD2JXWaXpc2Oybpka9AUaMpfutJ1V3HDq6dGUF3YCUN/E+nWGPrSIufAvQ==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@next/swc-linux-arm64-musl@15.4.0-canary.24": {
-      "integrity": "sha512-SvQ7/Jx5ZqvVFMf3xpSKJg9azj0YOJpPdhR383NdOI9Eem5QLjnbWLEWqfc6p8hNkNzEpAuhEdf5bOWnMLFBxg==",
+    "@next/swc-linux-arm64-musl@15.4.0-canary.27": {
+      "integrity": "sha512-lEJqls8M9ak5nZddqFiD+sXYoJWyGRhPZhQ5qBXsBxJL0XTR6zBjMK85z4r6uGd16GNcIPSJI7tiYyCmGWEcOQ==",
       "os": ["linux"],
       "cpu": ["arm64"]
     },
-    "@next/swc-linux-x64-gnu@15.4.0-canary.24": {
-      "integrity": "sha512-nfngpiPavN+phfCnjeS0tqAo8DBtjHGHFnQB30mLZwvVQ6buiAn4BlSgh7hjApaDGNOlPDondC8t6yNDMuakUQ==",
+    "@next/swc-linux-x64-gnu@15.4.0-canary.27": {
+      "integrity": "sha512-LViLANCL+aAVn3VYzh/5DNmmS1MH+yQB2ymaErWfB6YtpP7F9YA+8X/jT+A/jS5cibayIDgxbLksHb3fg+NbTg==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@next/swc-linux-x64-musl@15.4.0-canary.24": {
-      "integrity": "sha512-7HLdl3cZq3uaBPK0es6GhSNIX9rI0b8YJ+AoETPM4LzTG5P/Wfbx+KY3dLlTfU3Ycf4DpwFxlmQeogsT/NYKzg==",
+    "@next/swc-linux-x64-musl@15.4.0-canary.27": {
+      "integrity": "sha512-AzPOnLAs3Tme02N2t5mWH7s6Si9m5VafwXZuKjH/ETB5Vx4v350oPQtHY29SncAM6nXu1S2nA3Xe3uue2Zr8fg==",
       "os": ["linux"],
       "cpu": ["x64"]
     },
-    "@next/swc-win32-arm64-msvc@15.4.0-canary.24": {
-      "integrity": "sha512-dqHsTLd0kkh3BjpA+GBgqmkqCHq4HPtUXZPc25ti0fistb2pOy9oFG3r1sO8DoYY//gUI4hgacFt1snv2MsyYA==",
+    "@next/swc-win32-arm64-msvc@15.4.0-canary.27": {
+      "integrity": "sha512-2Du6gYz9WODig0BcpHIrIH86A9bE1hGsdgLaqqNVNrR9T1RZX/Ohd89AhErVLFCim84kfo8oPoefyUbkLBJ3QA==",
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "@next/swc-win32-x64-msvc@15.4.0-canary.24": {
-      "integrity": "sha512-HxldCCDWW1ytENYu+gNnXg6bRCsMYZs/cMW5uFgc3jXRl4DJ8vpPIjVmjATtatlMJvw4JwGaFdnEjwD8R2H6dA==",
+    "@next/swc-win32-x64-msvc@15.4.0-canary.27": {
+      "integrity": "sha512-rt0C6Fdrx/tzkpcweLLKM8gwJS5hyp9HaKnQEZ8ZvfQ+oSZ+wvCz1wi3K0wF/OoFIwnAZprNxRdAtU69P93c+w==",
       "os": ["win32"],
       "cpu": ["x64"]
     },
@@ -512,7 +511,7 @@
       ],
       "deprecated": true
     },
-    "@oclif/core@2.16.0_@types+node@22.15.15_typescript@5.8.3": {
+    "@oclif/core@2.16.0_@types+node@22.15.17_typescript@5.8.3": {
       "integrity": "sha512-dL6atBH0zCZl1A1IXCKJgLPrM/wR7K+Wi401E/IvqsK8m2iCHW+0TEOGrans/cuN3oTW+uxIyJFHJ8Im0k4qBw==",
       "dependencies": [
         "@types/cli-progress",
@@ -584,7 +583,7 @@
       ],
       "deprecated": true
     },
-    "@oclif/plugin-help@5.2.20_@types+node@22.15.15_typescript@5.8.3": {
+    "@oclif/plugin-help@5.2.20_@types+node@22.15.17_typescript@5.8.3": {
       "integrity": "sha512-u+GXX/KAGL9S10LxAwNUaWdzbEBARJ92ogmM7g3gDVud2HioCmvWQCDohNRVZ9GYV9oKwZ/M8xwd6a1d95rEKQ==",
       "dependencies": [
         "@oclif/core"
@@ -1924,8 +1923,8 @@
         "undici-types@6.20.0"
       ]
     },
-    "@types/node@22.15.15": {
-      "integrity": "sha512-R5muMcZob3/Jjchn5LcO8jdKwSCbzqmPB6ruBxMcf9kbxtniZHP327s6C37iOfuw8mbKK3cAQa7sEl7afLrQ8A==",
+    "@types/node@22.15.17": {
+      "integrity": "sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==",
       "dependencies": [
         "undici-types@6.21.0"
       ]
@@ -1979,7 +1978,7 @@
       "integrity": "sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==",
       "bin": true
     },
-    "adr-tool@0.3.0_@oclif+config@1.18.17_@types+node@22.15.15_typescript@5.8.3": {
+    "adr-tool@0.3.0_@oclif+config@1.18.17_@types+node@22.15.17_typescript@5.8.3": {
       "integrity": "sha512-TpMwz13OPFU0e4kgkC3iNE3Of+VyqfAdqcBKM6NLWh6Crf+OQgpdGN7g/x0MyEbXezM62IzSkts7c0bfa6FECg==",
       "dependencies": [
         "@oclif/command",
@@ -2573,7 +2572,7 @@
         "@types/unist@3.0.3",
         "devlop",
         "hastscript@9.0.1",
-        "property-information@7.0.0",
+        "property-information@7.1.0",
         "vfile",
         "vfile-location",
         "web-namespaces"
@@ -2620,7 +2619,7 @@
         "mdast-util-mdx-expression",
         "mdast-util-mdx-jsx",
         "mdast-util-mdxjs-esm",
-        "property-information@7.0.0",
+        "property-information@7.1.0",
         "space-separated-tokens",
         "style-to-js",
         "unist-util-position",
@@ -2640,7 +2639,7 @@
         "mdast-util-mdx-expression",
         "mdast-util-mdx-jsx",
         "mdast-util-mdxjs-esm",
-        "property-information@7.0.0",
+        "property-information@7.1.0",
         "space-separated-tokens",
         "style-to-js",
         "unist-util-position",
@@ -2679,7 +2678,7 @@
         "@types/hast@3.0.4",
         "comma-separated-tokens",
         "hast-util-parse-selector@4.0.0",
-        "property-information@7.0.0",
+        "property-information@7.1.0",
         "space-separated-tokens"
       ]
     },
@@ -3497,10 +3496,10 @@
         "react-dom"
       ]
     },
-    "next@15.4.0-canary.24_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
-      "integrity": "sha512-YzjyAhuNu/DSejEyjk8palmoHRyB6w0El5pUmNemeDLs/qaK8GgWjd6CcFcxEYvBiEjhID6B6t+pDfbTms7Xsw==",
+    "next@15.4.0-canary.27_babel-plugin-react-compiler@19.1.0-rc.1_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
+      "integrity": "sha512-GUv+3GqyH56Ev4Upy0tA7aRtiaPocZywInUlD5OSIaG6zhaoUen+acml5knZa+N2Zxwu+Vm8e2gaBXx5fOy7tg==",
       "dependencies": [
-        "@next/env@15.4.0-canary.24",
+        "@next/env@15.4.0-canary.27",
         "@swc/helpers",
         "babel-plugin-react-compiler",
         "caniuse-lite",
@@ -3632,8 +3631,8 @@
     "property-information@6.5.0": {
       "integrity": "sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig=="
     },
-    "property-information@7.0.0": {
-      "integrity": "sha512-7D/qOz/+Y4X/rzSB6jKxKUsQnphO046ei8qxG59mtM3RG3DHgTK81HrxrmoDVINJb8NKT5ZsRbwHvQ6B68Iyhg=="
+    "property-information@7.1.0": {
+      "integrity": "sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ=="
     },
     "queue-microtask@1.2.3": {
       "integrity": "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
@@ -3722,8 +3721,8 @@
         "scheduler"
       ]
     },
-    "react-hook-form@7.56.2_react@19.1.0": {
-      "integrity": "sha512-vpfuHuQMF/L6GpuQ4c3ZDo+pRYxIi40gQqsCmmfUBwm+oqvBhKhwghCuj2o00YCgSfU6bR9KC/xnQGWm3Gr08A==",
+    "react-hook-form@7.56.3_react@19.1.0": {
+      "integrity": "sha512-IK18V6GVbab4TAo1/cz3kqajxbDPGofdF0w7VHdCo0Nt8PrPlOZcuuDq9YYIV1BtjcX78x0XsldbQRQnQXWXmw==",
       "dependencies": [
         "react"
       ]
@@ -4218,7 +4217,7 @@
     "trough@2.2.0": {
       "integrity": "sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw=="
     },
-    "ts-node@10.9.2_@types+node@22.15.15_typescript@5.8.3": {
+    "ts-node@10.9.2_@types+node@22.15.17_typescript@5.8.3": {
       "integrity": "sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==",
       "dependencies": [
         "@cspotcode/source-map-support",
@@ -4226,7 +4225,7 @@
         "@tsconfig/node12",
         "@tsconfig/node14",
         "@tsconfig/node16",
-        "@types/node@22.15.15",
+        "@types/node@22.15.17",
         "acorn",
         "acorn-walk",
         "arg",
@@ -4540,7 +4539,7 @@
         "npm:@testing-library/react@^16.3.0",
         "npm:@types/mdx@^2.0.13",
         "npm:@types/negotiator@~0.6.3",
-        "npm:@types/node@^22.15.15",
+        "npm:@types/node@^22.15.17",
         "npm:@types/picomatch@4",
         "npm:@types/react-dom@^19.1.3",
         "npm:@types/react@^19.1.3",
@@ -4557,12 +4556,12 @@
         "npm:negotiator@1",
         "npm:next-mdx-remote@5",
         "npm:next-themes@~0.4.6",
-        "npm:next@^15.4.0-canary.24",
+        "npm:next@^15.4.0-canary.27",
         "npm:picomatch@^4.0.2",
         "npm:postcss@^8.5.3",
         "npm:react-day-picker@^9.6.7",
         "npm:react-dom@^19.1.0",
-        "npm:react-hook-form@^7.56.2",
+        "npm:react-hook-form@^7.56.3",
         "npm:react-resizable-panels@^3.0.1",
         "npm:react@^19.1.0",
         "npm:reading-time@^1.5.0",

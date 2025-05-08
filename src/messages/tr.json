@@ -45,5 +45,27 @@
     "Article": "Makale",
     "Content": "İçerik",
     "Presentation": "Sunum"
+  },
+  "Projects": {
+    "A collection of open source projects and contributions.": "Açık kaynak projeleri ve katkıların bir koleksiyonu.",
+    "Last update": "Son güncelleme",
+    "Project description": "Proje açıklaması",
+    "Project repository": "Proje repositorysi",
+    "Project website": "Proje websitesi",
+    "Project contributor count": "Proje katılımcı sayısı",
+    "My role in the project": "Projedeki rolüm",
+    "My first contribution": "İlk katkım",
+    "My last contribution": "Son katkım",
+    "My contributions": "Katkılarım",
+    "Opened PRs by me": "Açık PR'lerim",
+    "Merged PRs by me": "Kabul edilen PR'lerim",
+    "Issues opened by me": "Açık issue'lerim",
+    "Issues contributed by me": "Katkıda bulunan issue'lerim",
+    "follower": "Takipçi",
+    "sponsor": "Sponsor",
+    "contributor": "Katkıda bulunan",
+    "maintainer": "Sürdüren",
+    "lead": "Lider",
+    "owner": "Sahibi"
   }
 }

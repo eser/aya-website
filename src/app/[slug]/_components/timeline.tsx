@@ -2,6 +2,7 @@
 
 import * as React from "react";
 
+import { formatDateString } from "@/shared/lib/date.ts";
 import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories.ts";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
@@ -14,7 +15,7 @@ export interface TimelineProps {
 }
 
 export function Timeline(props: TimelineProps) {
-  const { t } = useTranslations();
+  const { t, locale } = useTranslations();
 
   const [activeFilter, setActiveFilter] = React.useState<FilterKeyType>("all");
 
@@ -37,7 +38,7 @@ export function Timeline(props: TimelineProps) {
         {filteredStories.map((story) => (
           <li key={story.id} className={styles.item}>
             <div className={styles.dot} />
-            <time className={styles.date}>{new Date(story.published_at!).toLocaleDateString("tr-TR")}</time>
+            <time className={styles.date}>{formatDateString(story.published_at!, locale.code)}</time>
             <SiteLink className={styles.box} href={`/${story.author_profile.slug}/stories/${story.slug}`}>
               <span className={styles.kind}>{filterMapping[story.kind]}</span>
               <p className={styles.content}>{story.title}</p>

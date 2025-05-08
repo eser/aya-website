@@ -45,5 +45,27 @@
     "Article": "Article",
     "Content": "Content",
     "Presentation": "Presentation"
+  },
+  "Projects": {
+    "A collection of open source projects and contributions.": "A collection of open source projects and contributions.",
+    "Last update": "Last update",
+    "Project description": "Project description",
+    "Project repository": "Project repository",
+    "Project website": "Project website",
+    "Project contributor count": "Project contributor count",
+    "My role in the project": "My role in the project",
+    "My first contribution": "My first contribution",
+    "My last contribution": "My last contribution",
+    "My contributions": "My contributions",
+    "Opened PRs by me": "Opened PRs by me",
+    "Merged PRs by me": "Merged PRs by me",
+    "Issues opened by me": "Issues opened by me",
+    "Issues contributed by me": "Issues contributed by me",
+    "follower": "Follower",
+    "sponsor": "Sponsor",
+    "contributor": "Contributor",
+    "maintainer": "Maintainer",
+    "lead": "Lead",
+    "owner": "Owner"
   }
 }
