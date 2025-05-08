@@ -37,9 +37,9 @@ export type ProfileLink = {
   auth_provider: string | null;
   auth_token_scope: string | null;
   auth_token: string | null;
-  auth_token_expires_at: Date | null;
+  auth_token_expires_at: string | null;
   auth_refresh_token: string | null;
-  auth_refresh_token_expires_at: Date | null;
+  auth_refresh_token_expires_at: string | null;
 
   created_at: string;
   updated_at: string | null;

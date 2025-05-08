@@ -1,54 +1,50 @@
 @reference "../../../globals.css";
 
-a.link {
-  @apply block transition-all duration-200 no-underline;
+.card {
+  @apply relative h-full border border-border/50 bg-card dark:bg-card/80 transition-all duration-200;
 
-  & > .card {
-    @apply relative h-full border border-border/50 bg-card dark:bg-card/80 transition-all duration-200;
+  & > .content {
+    @apply flex h-full flex-col px-6;
 
-    & > .content {
-      @apply flex h-full flex-col px-6;
+    & > .header {
+      @apply flex flex-col;
 
-      & > .header {
-        @apply flex flex-col;
+      & > .title {
+        @apply text-xl font-semibold tracking-tight text-foreground/90;
+      }
+    }
 
-        & > .title {
-          @apply text-xl font-semibold tracking-tight text-foreground/90;
+    & > .attributes {
+      @apply flex flex-col gap-2 text-sm;
+
+      & > .row {
+        @apply flex items-center gap-2;
+
+        & > div:first-child {
+          @apply flex-1/4;
+        }
+
+        & > div:last-child {
+          @apply flex-3/4 text-muted-foreground;
         }
       }
+    }
 
-      & > .attributes {
-        @apply flex flex-col gap-2 text-sm;
+    & > .footer {
+      @apply mt-8 flex items-center justify-between pt-4 border-t border-border/50;
 
-        & > .row {
-          @apply flex items-center gap-2;
-
-          & > div:first-child {
-            @apply flex-1/4;
-          }
-
-          & > div:last-child {
-            @apply flex-3/4 text-muted-foreground;
-          }
-        }
+      & > .date {
+        @apply text-xs text-muted-foreground/80;
       }
 
-      & > .footer {
-        @apply mt-8 flex items-center justify-between pt-4 border-t border-border/50;
+      & > .stats {
+        @apply flex items-center gap-4;
 
-        & > .date {
-          @apply text-xs text-muted-foreground/80;
-        }
+        & > .stat {
+          @apply flex items-center gap-1.5 text-sm text-muted-foreground/80;
 
-        & > .stats {
-          @apply flex items-center gap-4;
-
-          & > .stat {
-            @apply flex items-center gap-1.5 text-sm text-muted-foreground/80;
-
-            & > .icon {
-              @apply h-4 w-4 opacity-70;
-            }
+          & > .icon {
+            @apply h-4 w-4 opacity-70;
           }
         }
       }

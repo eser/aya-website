@@ -38,6 +38,7 @@
       "show_members": false,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null,
       "links": [],
       "pages": []
     },
@@ -54,6 +55,7 @@
       "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null,
       "links": [],
       "pages": [
         {
@@ -101,6 +103,7 @@
       "show_members": false,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null,
       "links": [],
       "pages": []
     },
@@ -117,6 +120,7 @@
       "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
+      "deleted_at": null,
       "links": [],
       "pages": [
         {

@@ -29,8 +29,8 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
         description: faker.lorem.paragraph(),
         show_projects: faker.datatype.boolean(),
         show_members: faker.datatype.boolean(),
-        created_at: faker.date.past(),
-        updated_at: faker.date.recent(),
+        created_at: faker.date.past().toISOString(),
+        updated_at: faker.date.recent().toISOString(),
         deleted_at: null,
       })) satisfies GetProfilesData;
     }
@@ -46,8 +46,8 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       description: faker.lorem.paragraph(),
       show_projects: faker.datatype.boolean(),
       show_members: faker.datatype.boolean(),
-      created_at: faker.date.past(),
-      updated_at: faker.date.recent(),
+      created_at: faker.date.past().toISOString(),
+      updated_at: faker.date.recent().toISOString(),
       // deleted_at: null,
 
       links: [],
@@ -71,8 +71,8 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
         x_handle: faker.internet.username(),
         x_remote_id: faker.string.uuid(),
         individual_profile_id: faker.string.ulid(),
-        created_at: faker.date.past(),
-        updated_at: faker.date.recent(),
+        created_at: faker.date.past().toISOString(),
+        updated_at: faker.date.recent().toISOString(),
         deleted_at: null,
       })) satisfies GetUsersData;
     }
@@ -91,8 +91,8 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       x_handle: faker.internet.username(),
       x_remote_id: faker.string.uuid(),
       individual_profile_id: faker.string.ulid(),
-      created_at: faker.date.past(),
-      updated_at: faker.date.recent(),
+      created_at: faker.date.past().toISOString(),
+      updated_at: faker.date.recent().toISOString(),
       deleted_at: null,
     } satisfies GetUserData;
   }
@@ -107,14 +107,14 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       summary: faker.lorem.paragraph(),
       content: faker.lorem.paragraphs(),
       is_featured: faker.datatype.boolean(),
-      published_at: faker.date.past(),
+      published_at: faker.date.past().toISOString(),
       author_profile: {
         id: identifier ?? faker.string.ulid(),
         slug: faker.lorem.slug(),
         title: faker.person.fullName(),
       },
-      created_at: faker.date.past(),
-      updated_at: faker.date.recent(),
+      created_at: faker.date.past().toISOString(),
+      updated_at: faker.date.recent().toISOString(),
       deleted_at: null,
     })) satisfies GetStoriesData;
   }
