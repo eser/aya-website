@@ -75,7 +75,7 @@ export async function ProjectCard(props: ProjectCardProps) {
             </div>
           </div>
           <div className={styles.section}>
-            <div className={styles.heading}>Out of 50 open PRs</div>
+            <div className={styles.heading}>Out of 50 total PRs</div>
             <div className={styles.text}>{t("Projects", "PRs")}</div>
             <div className={styles.information}>
               <div>
@@ -95,7 +95,7 @@ export async function ProjectCard(props: ProjectCardProps) {
             </div>
           </div>
           <div className={styles.section}>
-            <div className={styles.heading}>Out of 200 open Issues</div>
+            <div className={styles.heading}>Out of 200 total Issues</div>
             <div className={styles.text}>{t("Projects", "Issues")}</div>
             <div className={styles.information}>
               <div>

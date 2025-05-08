@@ -67,7 +67,7 @@
     }
 
     & > .footer {
-      @apply mt-4 flex justify-center lg:justify-end gap-2;
+      @apply flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-end gap-2;
     }
   }
 }
