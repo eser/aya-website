@@ -20,14 +20,26 @@
     }
 
     & > .box {
-      @apply block no-underline;
+      @apply no-underline flex flex-col lg:flex-row gap-4;
 
-      & > .kind {
-        @apply font-bold text-secondary-foreground mb-2 block text-[1.1em];
+      & > .cover-picture {
+        @apply flex-1/5 w-full h-full object-contain rounded-md;
       }
 
-      & > .content {
-        @apply text-secondary-foreground;
+      & > .text {
+        @apply flex-4/5;
+
+        & > .kind {
+          @apply font-bold text-secondary-foreground mb-2 block text-[1.1em];
+        }
+
+        & > .title {
+          @apply text-secondary-foreground text-lg;
+        }
+
+        & > .summary {
+          @apply text-muted-foreground text-sm;
+        }
       }
     }
   }

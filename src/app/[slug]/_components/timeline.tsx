@@ -40,8 +40,14 @@ export function Timeline(props: TimelineProps) {
             <div className={styles.dot} />
             <time className={styles.date}>{formatDateString(story.published_at!, locale.code)}</time>
             <SiteLink className={styles.box} href={`/${story.author_profile.slug}/stories/${story.slug}`}>
-              <span className={styles.kind}>{filterMapping[story.kind]}</span>
-              <p className={styles.content}>{story.title}</p>
+              {story.cover_picture_uri && (
+                <img src={story.cover_picture_uri} alt={story.title ?? ""} className={styles["cover-picture"]} />
+              )}
+              <div className={styles.text}>
+                <span className={styles.kind}>{filterMapping[story.kind]}</span>
+                <p className={styles.title}>{story.title}</p>
+                <p className={styles.summary}>{story.summary}</p>
+              </div>
             </SiteLink>
           </li>
         ))}

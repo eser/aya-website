@@ -181,6 +181,14 @@ body {
     @apply font-serif break-words text-base sm:text-lg md:text-xl lg:text-2xl leading-none mb-4;
   }
 
+  h4 {
+    @apply font-serif break-words text-sm sm:text-base md:text-lg lg:text-xl leading-none mb-2;
+  }
+
+  h5 {
+    @apply font-serif break-words text-xs sm:text-sm md:text-base lg:text-lg leading-none mb-0;
+  }
+
   ol,
   ul,
   p {

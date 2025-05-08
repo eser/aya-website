@@ -103,6 +103,7 @@ export function generateFakeData(_localeCode: string, entity: string, identifier
       kind: "status",
       slug: faker.lorem.slug(),
       cover_picture_uri: faker.image.url(),
+      external_uri: faker.internet.url(),
       title: faker.lorem.sentence(),
       summary: faker.lorem.paragraph(),
       content: faker.lorem.paragraphs(),

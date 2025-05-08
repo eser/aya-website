@@ -40,7 +40,15 @@
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
       "links": [],
-      "pages": []
+      "pages": [
+        {
+          "id": "01JTRXDZB1Y2AAAK35YJ0S7RXT",
+          "slug": "cv",
+          "cover_picture_uri": null,
+          "title": "Özgeçmiş",
+          "summary": "Eser Ozvataf'ın özgeçmişi"
+        }
+      ]
     },
     "aya": {
       "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
@@ -105,7 +113,15 @@
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
       "links": [],
-      "pages": []
+      "pages": [
+        {
+          "id": "01JTRXDZB1Y2AAAK35YJ0S7RXT",
+          "slug": "cv",
+          "cover_picture_uri": null,
+          "title": "Curriculum Vitae",
+          "summary": "CV of Eser Ozvataf"
+        }
+      ]
     },
     "aya": {
       "id": "01JT4FS0K93K4GG4Z40ZDFY3EQ",
@@ -190,6 +206,15 @@
       "summary": "AYA hakkında bilgi",
       "published_at": "2024-10-17T23:27:04.036Z",
       "content": "**AYA** (Açık Yazılım Ağı), sosyal bir yarar oluşturmak motivasyonuyla nitelikli bilişim çözümleri\nüreten gönüllülerin bir araya gelmesine ve projeler gerçekleştirmesine imkan sağlayan bir platformdur.\n\nBugüne kadar projelere yetkin ve uzman gönüllü desteği ve teknik kaynaklar sunarak kolektif bir\nşekilde gerçeklenmelerini sağladık. Bu projeler resmi kurumlar ve sivil toplum kuruluşları başta olmak\nüzere herkesin kullanımına ve denetimine açık, açık kaynak lisanslarına sahip bilişim çözümleri\noldular. Bizim buradaki rolümüz hem gönüllülerin aralarındaki iletişime aracı olmak hem de kaynak\nyönetiminde koordinasyon sağlamak oldu.\n\nSosyal yarar gözeten ve kar amacı gütmeyen bir oluşum olarak AYA, bugün yoluna portföyünde bilişim\nprojeleri barındıran [yazılım vakfı kimliğiyle](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz)\ndevam ediyor.\n\n<iframe\n    className=\"w-full aspect-[16/9] mb-8\"\n    width=\"560\"\n    height=\"505\"\n    src=\"https://www.youtube.com/embed/mktym-FxWvg\"\n    title=\"Yazılımcı Günleri 2023 | ESER ÖZVATAF - AÇIK YAZILIM AĞI VE AFET HARİTA PROJESİ\"\n    frameBorder=\"0\"\n    allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n    allowFullScreen\n>\n</iframe>\n\n\n## Kısa Geçmişimiz\n\nGünümüzde yazılım geliştirme pratikleri konjonktürel olarak açık kaynak ve özgür yazılım\nanlayışlarını özümseyerek, uzmanların internet üzerinden birlikte bilişim çözümleri\ngeliştirebilmelerine elverişli bir noktaya gelmiştir.\n\nGitHub gibi mecralar üzerinde açık kaynaklı yazılım projeleri başlatabilmek ve mevcut projelere\nrahatlıkla katkılarda bulunabilmek mümkün. Gelinen bu nokta Mozilla, Linux Foundation, Apache\nFoundation, Cloud Native Computing Foundation vb. yazılım vakıflarının yıllarca süren\nçalışmalarının bir sonucu olarak görülebilir.\n\nÜlkemizde de geçmişte Linux Kullanıcı Derneği, Pardus vb. oluşumlar etrafında birçok açık kaynak\ntopluluğu oluşmuş, çeşitli çalışmalara öncülük etmişlerdir. Bunlardan biri olan ve 2015’de kurulan\n[Açık Kaynak İnisiyatifi](https://acikkaynak.github.io) GitHub üzerinden insanları bir araya getirmeyi planlamış,\naçık kaynak geliştirme alanında insanların birbiri ile iletişimde olmasını sağlamayı amaçlamıştır.\nAçık Kaynak İnisiyatifinin yürüttüğü bu çalışmalar hem açık kaynak gönüllüsü insanların birbiri ile\niletişımde olması, hem de bilgi birikimi oluşturmaları konusunda bayrağı ileri taşımıştır.\n\nŞubat 2023’te Kahramanmaraş’ta gerçekleşen ve 10 ili etkileyen deprem sonrası, Twitter üzerinde\nkoordine olan gönüllülerin oluşturduğu bir grup da buradaki bilgi birikimini kullanarak “deprem\nyardımı için” organize olmuş; kısa sürede çalışmaları GitHub ve Discord üzerinde koordine ederek,\n24.000’den fazla bilişim sektörü gönüllüsünü iletişimde tutan ve kaynak yönetimini üstlenen bir\nplatform oluşturmuştur.\n\nBir süre sonra **AYA** olarak isimlendirdiğimiz bu oluşum, topluluk tarafından GitHub\nüzerinde 50’ye yakın proje çıktısı oluşturulmasına imkan sağladı; deprem sonrası hayati önem\ntaşıyan sorunları çözebilecek teknolojiler sunabilmek için AFAD, AHBAP, AKUT gibi birçok resmi\nkurum ve sivil toplum kuruluşu ile irtibat noktası olduk ve bilişim desteğinin sağlanmasında aracı\nolarak hareket ettik.\n\n\n## Amacımız\n\nTemel çerçevede kriz ve ihtiyaç anlarında sahada olan ve toplum yararına çalışan kurumların bilişim\nihtiyaçlarını karşılamak için bir araya geldik. Devamında, alandaki en faydalı katkıları\nsağlayabilecek insanları ve teknolojik kaynakları bir araya getirmeyi amaçlayarak yola çıktık.\n\nBöylece hem kaynakları verimli kullanmak, afet senaryoları gibi olası kriz anlarındaki kaosu en aza\nindirmek, hem de gönüllülerin çabalarını doğru yönlendirmek için bir platform sağlayabiliyorduk.\nAncak [bu süreçte](/aya/stories/20230217-acik-yazilim-agi-ve-6-subat) edindiğimiz deneyim bizlere gösterdi\nki, kriz anları hareket etmek için çok geç kalınmış anlar oluyor.\n\nBu nedenle amacımızı revize ederek, geçmişte [Açık Kaynak İnisiyatifi](https://acikkaynak.github.io)nin\noluşturduğu kapsamdan devam etmeye karar verdik. Bu kapsamda AYA’nın amacı;\n\n- Sosyal yarar oluşturacak bilişim çözümleri geliştirmeye yönelik farkındalık oluşturmak,\n- pratik ihtiyaçların karşılanması için bilgi birikimini ve teknik kaynakları bir araya getirerek\n  bilişim çözümlerin tasarlanmasına öncü olmak,\n- sürdürülebilir bir “açık kaynak ekosisteminin” oluşmasına ve açık kaynak projeler üretilmesine\n  katkıda bulunmak,\n- üretilen projelerin sahalarda kullanımı ve yaygınlaşmasını sağlamak,\n\nolarak belirledik.\n\n\n## Hedeflerimiz\n\nAçık kaynak ve özgür yazılım pratiklerinin sosyal yarar oluşturmak için kullanılmasına yönelik\nbir örnek teşkil etmek hedeflerimizin çatısını oluşturuyor.\n\nMevcut Hedeflerimiz,\n- Bilişim alanındaki gönüllü sayısını arttırmak,\n- Geliştiricilerin birbirleri ile iletişimini sağlamak,\n- Kolektif çalışma kültürünü geliştirmek,\n- Sosyal fayda üreten bilişim çözümlerinin üretimini teşvik etmek,\n- Toplum yararına çalışan kurumların ihtiyaçlarını karşılamak,\n- Sektörde en güncel ve geçerli pratiklerinin üretilen bilişim çözümlerinde uygulanmasını\n  sağlamak,\n- Yazılım sektöründe darboğaz oluştuğunda geliştiricilerin deneyim kazanmasını sağlayacak\n  projeler bulundurmak,\n\nolarak listelenebilir."
+    },
+    "01JTRXDZB1Y2AAAK35YJ0S7RXT": {
+      "id": "01JTRXDZB1Y2AAAK35YJ0S7RXT",
+      "slug": "cv",
+      "cover_picture_uri": null,
+      "title": "Curriculum Vitae",
+      "summary": "CV of Eser Ozvataf",
+      "published_at": "2024-10-17T23:27:04.036Z",
+      "content": "## Experience\n\n### Head of Engineering, Teknasyon\n\nMay 2023 - Present\n\n### CTO, Datapad\n\nOct 2022 - May 2023\n\nDatapad is a tech startup is to enable a data-driven culture for teams of all\nsizes. They’re on the road to build the world’s easiest data solution. Raised\n$1m in pre-seed, backed by 500 Startups.\n\n### Engineering Director, Founding DevRel, Getir\n\nDec 2021 - Oct 2022\n\nGetir is a decacorn tech startup that delivers ultra-fast groceries.\n\nAchievements:\n\n- The first DevRel of the company, being the founder of the discipline\n- Led the “Agile Office”, organizational agility professionals team of agile\n  coaches and scrum masters\n- Completed 3 bootcamps, along with 14 new recruitments\n- Attended some external events\n- Celebrated May the 4th: Star Wars Day\n- Started technical event series named Getir Tech Talks\n- Worked on improvements to hiring processes\n- Worked on improvements to onboarding processes\n- Crafted an observation-based career framework for the entire technology\n  department\n- Introduced an internal mobility policy for those who have long tenure\n- Crafted a maturity matrix to state common goals for squads in perspective of\n  tech-data-product concerns\n- Held over 100 face-to-face interviews to collect insights\n\n### Director, Açık Yazılım\n\nNov 2020 - Dec 2021\n\nAçık Yazılım is founded by myself during the COVID-19 pandemic. As a software\nconsulting company, it outsources know-how and workforce for its customers\ncontracted with.\n\nAchievements:\n\n- Founded the company and contracted with customers\n- Delivered and maintained a contracted work which is a marketplace specialized\n  in holistic wellbeing services\n- Provided consultancy to a well-known Turkish Unicorn during their transition\n  to product-based agile teams\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, Python\n- Amazon Web Services, Google Cloud Provider, Cloudflare, Cloudflare Pages,\n  GitHub Actions\n- Kubernetes, Docker\n- Node.js, Deno, Cypress, Jest, webpack\n- React, React Hooks, GraphQL, Django\n\n### Coordinator of Projects, Turkish Open Source Platform\n\nDec 2020 - May 2021\n\nAn establishment under the auspices of the Ministry of Industry and Technology\nof the Turkish state, Turkey Open Source Platform aims to increase the number of\nsoftware developers Turkey needs, to increase the qualifications of existing\nsoftware developers, and to develop the open-source ecosystem. In this respect,\nthe platform performs a similar function to CNCF (CloudNative Foundation) and\nLinux Foundation.\n\nAchievements:\n\n- Established and facilitated weekly meetings of project groups under five\n  different project topics in order to produce the software needed by the public\n  and private sectors in Turkey with open source software (These topics were\n  Natural Language Processing, Cloud and Database Systems, Mobility, Linux\n  (Pardus) and Digital Badges.)\n- Formed collaborations between platform stakeholders\n- Planned and kicked off online a webinar series and two hackathons\n- Designed an architecture and developed project analysis of a digital badge and\n  verification project\n- Assisted and reviewed technical output related with projects\n\n### Software Manager, Setur\n\nSep 2018 - Nov 2020\n\nSetur is the tourism and duty-free merchandising company of Koç Holding Group of\nCompanies, which is on the Fortune 500 list.\n\nAchievements:\n\n- Accomplished the leadership and coaching of Agile & DevOps transformation\n  which led the company to have 80% accurate estimations\n- Led 9 cross-functional product teams, with a total of 30+ people with various\n  functions (UX, QA, SE, BA, etc.)\n- Designed company-wide prioritization flow to maintain both product and\n  technical roadmaps of products\n- Achieved faster onboarding process and development of culture by initiating a\n  knowledge base that consists of both cultural and technical guidelines\n- Achieved faster troubleshooting and bug detection by established software\n  quality assurance and delivery metrics with monitoring, tracing, and alerting\n  mechanisms\n- Transformed Windows & .NET only ecosystem into polyglot-enabled,\n  Linux-containerized, orchestrated and multi-regional infrastructure runs on\n  Kubernetes\n- Improved IT recruitment processes, implemented technical assessments, attended\n  300+ recruitment meetings\n- Enabled remote and multi-regional development culture\n- Organized a meetup and several training sessions\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, .NET, Java\n- Microsoft Azure, Azure DevOps\n- Linux, Windows, macOS\n- Kubernetes, Docker\n- Postgres, SQL Server, MongoDB, ElasticSearch\n- Node.js, Cypress, Jest, webpack, Kibana, Grafana\n- React, React Native\n- Microservices, DDD\n- CloudNative, OpenSource\n\n### Lead Software Developer, KoçSistem\n\nMay 2016 - Sep 2018\n\nKoçSistem is the information technology company of Koç Holding Group of\nCompanies, which is on the Fortune 500 list. They offers a wide range of\nproducts and services in areas such as Internet of Things, Big Data & Analytics,\nSecurity, Corporate Cloud, Corporate Mobility, Business Solutions, Digital\nWorkforce and RPA.\n\nAchievements:\n\n- Kicked off the company’s main application framework and was the first member\n  of the company’s DevOps and Software Architecture teams\n- Developed a React project for initializing codebases that use the company’s\n  main application framework with selected components on a web wizard form\n- Helped other teams to embrace Agile and DevOps practices\n- Took parts of analysis and decisions of company’s product choices (such as\n  CMSes, orchestration tools, etc)\n- Delivered the company’s first serverless project that runs on AWS Lambda\n- Delivered and maintained 3 enterprise solutions to customers\n- Attended recruitment meetings as a technical interviewer\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, .NET\n- Amazon Web Services\n- Jenkins, JMeter, Docker\n- SQL Server, Oracle, MongoDB, ElasticSearch\n- Node.js, AWS Lambda, AWS Cognito, AWS S3\n- React, Redux\n- FaaS, DDD\n\n### Software Architect, Mobilex\n\nSep 2015 - Apr 2016\n\nMobileX is a fast-growing tech company focused on building and marketing highly\nscalable mobile applications. Despite being such a young company, they have a\ntrack record of building & growing mobile apps on various verticals that reached\nover 120 million users across 160 countries.\n\nAchievements:\n\n- Developed a complete backend and cloud architecture for Instagram-like\n  application with location-awareness\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript\n- Amazon Web Services\n- Terraform, Docker\n- Postgres, MongoDB\n- Node.js, AWS VPC, AWS EC2, AWS ElasticBeanstalk, AWS S3\n- OpenStreetMaps\n\n### E-Commerce Software Consultant, Zaimoglu Holding\n\nSep 2014 - Aug 2015\n\n### Social Media Oriented Web Development and Research Assistant, Eastern Mediterranean University\n\nSep 2013 - Sep 2014\n\n### Team Lead, Goldsoft Trading\n\nJun 2012 - Aug 2013\n\n### Head of Software Development, CMFNet\n\nJun 2008 - May 2012\n\n### Software Design Engineer, DevBiz\n\nApr 2006 - Jan 2007\n\n### Backend Developer and System Administrator, Ispro\n\nMar 2005 - Apr 2006\n\n### Web Developer, Egebilgi\n\nJun 2004 - Feb 2005\n\n### Web Developer, Sis Hosting\n\nJan 2001 - Aug 2002\n\n## Education\n\n### Master’s Degree - Information and Communication Technologies in Education\n\n2013 - 2019\n\nEastern Mediterranean University, CGPA: 3.44 / 4.00\n\n### Bachelor of Science - Information Technology\n\n2010 - 2012\n\nEastern Mediterranean University, CGPA: 3.12 / 4.00\n\n### Associate’s Degree - Computer Programming\n\n2002 - 2004\n\nCelal Bayar University, CGPA: 78.77/100\n\n## Certificates and Exams\n\n### LEAD Execution Program - Personal Branding, Reputation and Perception Management Training for Leaders\n\nSep 2019\n\nIssuer: Koç Holding HR - Koç University\n\n### LEAD Execution Program - Customer Experience\n\nSep 2019\n\nIssuer: Koç Holding HR - Koç University\n\n### Assessment Center\n\nAug 2019\n\nIssuer: TAG\n\n### Applied Entrepreneurship Training\n\nApr 2016\n\nIssuer: KOSGEB\n\n### edx CS-169.1x: Software as a Service\n\nAug 2013\n\nIssuer: Berkeley (University of California)\n\n[https://verify.edx.org/cert/da723362e8b74500992fc4bc84e5324c](https://verify.edx.org/cert/da723362e8b74500992fc4bc84e5324c)\n\n### edx 6.00x: Introduction to Computer Science and Programming\n\nJun 2013\n\nIssuer: The Massachusetts Institute of Technology\n\n[https://verify.edx.org/cert/4b90bae7e00a4d94b9793c93339334ba](https://verify.edx.org/cert/4b90bae7e00a4d94b9793c93339334ba)\n\n### Academic Personnel and Graduate Education Exam\n\nMay 2012\n\nIssuer: OSYM\n\n### General English (EFL) - Upper-Intermediate (Council of Europe B2)\n\nJun 2011\n\nIssuer: UKLA\n\n### Project Management Methodologies and Practices\n\nJun 2011\n\nIssuer: Turkcell Akademi\n\n### MCTS - Microsoft Windows Mobile Application Development\n\nMay 2010\n\nIssuer: Microsoft\n\n### MCTS - Microsoft Windows Mobile Designing, Implementing and Managing\n\nMay 2010\n\nIssuer: Microsoft\n\n[Go back to the homepage](../../README.md)"
     }
   },
   "profile-pages.en": {
@@ -228,15 +253,165 @@
       "summary": "Information about AYA",
       "published_at": "2024-10-17T23:27:04.036Z",
       "content": "**AYA** (Açık Yazılım Ağı) is a platform enabling volunteers motivated by social good to collaborate and develop quality information technology solutions.\n\nWe have collectively realized projects by providing expert volunteer support and technical resources. These projects have been open-source solutions accessible and controllable by everyone, primarily official institutions and non-governmental organizations. Our role has been facilitating volunteer communication and resource management coordination.\n\nAs a non-profit organization focusing on social benefit, AYA continues its journey with a [software foundation identity](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) hosting various IT projects.\n\n<iframe className=\"w-full aspect-[16/9] mb-8\" width=\"560\" height=\"505\" src=\"https://www.youtube.com/embed/mktym-FxWvg\" title=\"Yazılımcı Günleri 2023 | ESER ÖZVATAF - AÇIK YAZILIM AĞI VE AFET HARİTA PROJESİ\" frameBorder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowFullScreen></iframe>\n\n## Brief History\n\nToday, software development practices have adopted open-source and free software principles, enabling collaborative IT solutions online.\n\nPlatforms like GitHub allow initiating and contributing to open-source projects easily. This development results from years of work by foundations such as Mozilla, Linux Foundation, Apache Foundation, and CNCF.\n\nIn Türkiye, several open-source communities have emerged, such as the Linux Users Association and Pardus, contributing significantly. Among these was the [Açık Kaynak İnisiyatifi](https://acikkaynak.github.io), founded in 2015, promoting open-source development through GitHub.\n\nAfter the February 2023 earthquake in Kahramanmaraş, volunteers coordinated through Twitter, creating a platform that quickly mobilized over 24,000 IT volunteers via GitHub and Discord.\n\nNamed **AYA**, this initiative enabled nearly 50 projects addressing critical post-earthquake issues, liaising with organizations like AFAD, AHBAP, and AKUT.\n\n## Objectives\n\nOur primary aim is addressing IT needs of field organizations during crises, combining optimal resources and expertise to minimize chaos and efficiently direct volunteer efforts.\n\nBased on our experiences, we revised our purpose to:\n- Raise awareness about IT solutions for social good.\n- Lead development of practical IT solutions.\n- Contribute to a sustainable open-source ecosystem.\n- Promote widespread use of these solutions.\n\n## Goals\n\nOur current goals are:\n- Increasing IT volunteer participation.\n- Encouraging developer communication.\n- Cultivating collective work culture.\n- Supporting development of social-benefit IT solutions.\n- Meeting institutional needs effectively.\n- Applying industry best practices.\n- Offering projects to help developers gain experience during industry bottlenecks."
+    },
+    "01JTRXDZB1Y2AAAK35YJ0S7RXT": {
+      "id": "01JTRXDZB1Y2AAAK35YJ0S7RXT",
+      "slug": "cv",
+      "cover_picture_uri": null,
+      "title": "Curriculum Vitae",
+      "summary": "CV of Eser Ozvataf",
+      "published_at": "2024-10-17T23:27:04.036Z",
+      "content": "## Experience\n\n### Head of Engineering, Teknasyon\n\nMay 2023 - Present\n\n### CTO, Datapad\n\nOct 2022 - May 2023\n\nDatapad is a tech startup is to enable a data-driven culture for teams of all\nsizes. They’re on the road to build the world’s easiest data solution. Raised\n$1m in pre-seed, backed by 500 Startups.\n\n### Engineering Director, Founding DevRel, Getir\n\nDec 2021 - Oct 2022\n\nGetir is a decacorn tech startup that delivers ultra-fast groceries.\n\nAchievements:\n\n- The first DevRel of the company, being the founder of the discipline\n- Led the “Agile Office”, organizational agility professionals team of agile\n  coaches and scrum masters\n- Completed 3 bootcamps, along with 14 new recruitments\n- Attended some external events\n- Celebrated May the 4th: Star Wars Day\n- Started technical event series named Getir Tech Talks\n- Worked on improvements to hiring processes\n- Worked on improvements to onboarding processes\n- Crafted an observation-based career framework for the entire technology\n  department\n- Introduced an internal mobility policy for those who have long tenure\n- Crafted a maturity matrix to state common goals for squads in perspective of\n  tech-data-product concerns\n- Held over 100 face-to-face interviews to collect insights\n\n### Director, Açık Yazılım\n\nNov 2020 - Dec 2021\n\nAçık Yazılım is founded by myself during the COVID-19 pandemic. As a software\nconsulting company, it outsources know-how and workforce for its customers\ncontracted with.\n\nAchievements:\n\n- Founded the company and contracted with customers\n- Delivered and maintained a contracted work which is a marketplace specialized\n  in holistic wellbeing services\n- Provided consultancy to a well-known Turkish Unicorn during their transition\n  to product-based agile teams\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, Python\n- Amazon Web Services, Google Cloud Provider, Cloudflare, Cloudflare Pages,\n  GitHub Actions\n- Kubernetes, Docker\n- Node.js, Deno, Cypress, Jest, webpack\n- React, React Hooks, GraphQL, Django\n\n### Coordinator of Projects, Turkish Open Source Platform\n\nDec 2020 - May 2021\n\nAn establishment under the auspices of the Ministry of Industry and Technology\nof the Turkish state, Turkey Open Source Platform aims to increase the number of\nsoftware developers Turkey needs, to increase the qualifications of existing\nsoftware developers, and to develop the open-source ecosystem. In this respect,\nthe platform performs a similar function to CNCF (CloudNative Foundation) and\nLinux Foundation.\n\nAchievements:\n\n- Established and facilitated weekly meetings of project groups under five\n  different project topics in order to produce the software needed by the public\n  and private sectors in Turkey with open source software (These topics were\n  Natural Language Processing, Cloud and Database Systems, Mobility, Linux\n  (Pardus) and Digital Badges.)\n- Formed collaborations between platform stakeholders\n- Planned and kicked off online a webinar series and two hackathons\n- Designed an architecture and developed project analysis of a digital badge and\n  verification project\n- Assisted and reviewed technical output related with projects\n\n### Software Manager, Setur\n\nSep 2018 - Nov 2020\n\nSetur is the tourism and duty-free merchandising company of Koç Holding Group of\nCompanies, which is on the Fortune 500 list.\n\nAchievements:\n\n- Accomplished the leadership and coaching of Agile & DevOps transformation\n  which led the company to have 80% accurate estimations\n- Led 9 cross-functional product teams, with a total of 30+ people with various\n  functions (UX, QA, SE, BA, etc.)\n- Designed company-wide prioritization flow to maintain both product and\n  technical roadmaps of products\n- Achieved faster onboarding process and development of culture by initiating a\n  knowledge base that consists of both cultural and technical guidelines\n- Achieved faster troubleshooting and bug detection by established software\n  quality assurance and delivery metrics with monitoring, tracing, and alerting\n  mechanisms\n- Transformed Windows & .NET only ecosystem into polyglot-enabled,\n  Linux-containerized, orchestrated and multi-regional infrastructure runs on\n  Kubernetes\n- Improved IT recruitment processes, implemented technical assessments, attended\n  300+ recruitment meetings\n- Enabled remote and multi-regional development culture\n- Organized a meetup and several training sessions\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, .NET, Java\n- Microsoft Azure, Azure DevOps\n- Linux, Windows, macOS\n- Kubernetes, Docker\n- Postgres, SQL Server, MongoDB, ElasticSearch\n- Node.js, Cypress, Jest, webpack, Kibana, Grafana\n- React, React Native\n- Microservices, DDD\n- CloudNative, OpenSource\n\n### Lead Software Developer, KoçSistem\n\nMay 2016 - Sep 2018\n\nKoçSistem is the information technology company of Koç Holding Group of\nCompanies, which is on the Fortune 500 list. They offers a wide range of\nproducts and services in areas such as Internet of Things, Big Data & Analytics,\nSecurity, Corporate Cloud, Corporate Mobility, Business Solutions, Digital\nWorkforce and RPA.\n\nAchievements:\n\n- Kicked off the company’s main application framework and was the first member\n  of the company’s DevOps and Software Architecture teams\n- Developed a React project for initializing codebases that use the company’s\n  main application framework with selected components on a web wizard form\n- Helped other teams to embrace Agile and DevOps practices\n- Took parts of analysis and decisions of company’s product choices (such as\n  CMSes, orchestration tools, etc)\n- Delivered the company’s first serverless project that runs on AWS Lambda\n- Delivered and maintained 3 enterprise solutions to customers\n- Attended recruitment meetings as a technical interviewer\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript, .NET\n- Amazon Web Services\n- Jenkins, JMeter, Docker\n- SQL Server, Oracle, MongoDB, ElasticSearch\n- Node.js, AWS Lambda, AWS Cognito, AWS S3\n- React, Redux\n- FaaS, DDD\n\n### Software Architect, Mobilex\n\nSep 2015 - Apr 2016\n\nMobileX is a fast-growing tech company focused on building and marketing highly\nscalable mobile applications. Despite being such a young company, they have a\ntrack record of building & growing mobile apps on various verticals that reached\nover 120 million users across 160 countries.\n\nAchievements:\n\n- Developed a complete backend and cloud architecture for Instagram-like\n  application with location-awareness\n\nTechnologies, Platforms, and Concepts experienced during the period:\n\n- JavaScript\n- Amazon Web Services\n- Terraform, Docker\n- Postgres, MongoDB\n- Node.js, AWS VPC, AWS EC2, AWS ElasticBeanstalk, AWS S3\n- OpenStreetMaps\n\n### E-Commerce Software Consultant, Zaimoglu Holding\n\nSep 2014 - Aug 2015\n\n### Social Media Oriented Web Development and Research Assistant, Eastern Mediterranean University\n\nSep 2013 - Sep 2014\n\n### Team Lead, Goldsoft Trading\n\nJun 2012 - Aug 2013\n\n### Head of Software Development, CMFNet\n\nJun 2008 - May 2012\n\n### Software Design Engineer, DevBiz\n\nApr 2006 - Jan 2007\n\n### Backend Developer and System Administrator, Ispro\n\nMar 2005 - Apr 2006\n\n### Web Developer, Egebilgi\n\nJun 2004 - Feb 2005\n\n### Web Developer, Sis Hosting\n\nJan 2001 - Aug 2002\n\n## Education\n\n### Master’s Degree - Information and Communication Technologies in Education\n\n2013 - 2019\n\nEastern Mediterranean University, CGPA: 3.44 / 4.00\n\n### Bachelor of Science - Information Technology\n\n2010 - 2012\n\nEastern Mediterranean University, CGPA: 3.12 / 4.00\n\n### Associate’s Degree - Computer Programming\n\n2002 - 2004\n\nCelal Bayar University, CGPA: 78.77/100\n\n## Certificates and Exams\n\n### LEAD Execution Program - Personal Branding, Reputation and Perception Management Training for Leaders\n\nSep 2019\n\nIssuer: Koç Holding HR - Koç University\n\n### LEAD Execution Program - Customer Experience\n\nSep 2019\n\nIssuer: Koç Holding HR - Koç University\n\n### Assessment Center\n\nAug 2019\n\nIssuer: TAG\n\n### Applied Entrepreneurship Training\n\nApr 2016\n\nIssuer: KOSGEB\n\n### edx CS-169.1x: Software as a Service\n\nAug 2013\n\nIssuer: Berkeley (University of California)\n\n[https://verify.edx.org/cert/da723362e8b74500992fc4bc84e5324c](https://verify.edx.org/cert/da723362e8b74500992fc4bc84e5324c)\n\n### edx 6.00x: Introduction to Computer Science and Programming\n\nJun 2013\n\nIssuer: The Massachusetts Institute of Technology\n\n[https://verify.edx.org/cert/4b90bae7e00a4d94b9793c93339334ba](https://verify.edx.org/cert/4b90bae7e00a4d94b9793c93339334ba)\n\n### Academic Personnel and Graduate Education Exam\n\nMay 2012\n\nIssuer: OSYM\n\n### General English (EFL) - Upper-Intermediate (Council of Europe B2)\n\nJun 2011\n\nIssuer: UKLA\n\n### Project Management Methodologies and Practices\n\nJun 2011\n\nIssuer: Turkcell Akademi\n\n### MCTS - Microsoft Windows Mobile Application Development\n\nMay 2010\n\nIssuer: Microsoft\n\n### MCTS - Microsoft Windows Mobile Designing, Implementing and Managing\n\nMay 2010\n\nIssuer: Microsoft\n\n[Go back to the homepage](../../README.md)"
     }
   },
   "stories": {
     "01JT1TXYSDXZFET19492RH7YR5": [
       {
+        "id": "01JTP6PZ6770WM3BR53NEKTJC7",
+        "kind": "status",
+        "slug": "thinking-about-the-next-big-thing",
+        "cover_picture_uri": null,
+        "external_uri": null,
+        "title": "Thinking about the next big thing...",
+        "summary": null,
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2025-05-09T23:27:04.036Z",
+        "created_at": "2025-05-09T23:27:04.036Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXQPQD5MGMWZM5MS3C4P99",
+        "kind": "content",
+        "slug": "backend-ve-golang-101-bolum-2",
+        "cover_picture_uri": "https://i.ytimg.com/vi/DJ6zvLNcJjY/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=DJ6zvLNcJjY",
+        "title": "Backend ve Golang 101, Orhan Özkerçin ve Eser Özvataf - Bölüm 2",
+        "summary": "Orhan Özkerçin'in Frontend'den Full-Stack'e yolculuğunda ona dilim döndüğünce yardımcı olmaya çalıştığım \"Backend ve Golang 101, Orhan Özkerçin ve Eser Özvataf\"ın ikinci bölümü ile karşınızdayız. Bu seride mümkün olduğunca hem backend tarafından yaklaşımları hem de golang'in dünyasını tanımaya, keşfetmeye çalışıyoruz. Her türlü geri bildirimlerinizi ve önerilerinizi yorumlarda bizimle paylaşabilirsiniz.",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2025-02-19T12:00:00.000Z",
+        "created_at": "2025-02-19T12:00:00.000Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXVF3D54WVVQ6WSEAJPYSZ",
+        "kind": "content",
+        "slug": "backend-ve-golang-101-bolum-1",
+        "cover_picture_uri": "https://i.ytimg.com/vi/8rvxzEgGPOE/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=8rvxzEgGPOE",
+        "title": "Backend ve Golang 101, Orhan Özkerçin ve Eser Özvataf - Bölüm 1",
+        "summary": "Uzun süredir başlayamadığımız, ertelediğımız Orhan Özkerçin'in Frontend'den Full-Stack'e yolculuğunda ona dilim döndüğünce yardımcı olmaya çalıştığım \"Backend ve Golang 101, Orhan Özkerçin ve Eser Özvataf\" yayında. Her türlü geri bildirimlerinizi ve önerilerinizi yorumlarda bizimle paylaşabilirsiniz.",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2025-02-17T12:00:00.000Z",
+        "created_at": "2025-02-17T12:00:00.000Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXQPQD5MGMWZM5MS3C4P98",
+        "kind": "content",
+        "slug": "ai-gelistirme-pratikleri",
+        "cover_picture_uri": "https://i.ytimg.com/vi/hmnBW_1yZCU/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=hmnBW_1yZCU",
+        "title": "AI Geliştirme Pratikleri - Ekran görüntüsünden e2e cypress testleri hazırlamak - Windsurf IDE",
+        "summary": "Kanala katılmak için, https://www.youtube.com/@eserlive/join Geri Bildirimler için, Twitter/X: https://x.com/eserozvataf Discord: ...",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2025-01-08T21:27:31Z",
+        "created_at": "2025-01-08T21:27:31Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXQPQD5MGMWZM5MS3C4P97",
+        "kind": "content",
+        "slug": "ai-junior-yazilimci",
+        "cover_picture_uri": "https://i.ytimg.com/vi/VamHCU2u48s/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=VamHCU2u48s",
+        "title": "AI Junior Yazılımcı - \"Devin AI\" Unboxing/inceleme - Aylık 500$ eder mi?",
+        "summary": "Mehmet Ali Peker ile birlikte gerçekleştirdiğimiz canlı yayında Devin AI'ı inceleyerek AI-assisted kod geliştirmenin durumunu ...",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2024-12-18T07:55:55Z",
+        "created_at": "2024-12-18T07:55:55Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXQPQD5MGMWZM5MS3C4P96",
+        "kind": "content",
+        "slug": "cursor-ide-incelemesi",
+        "cover_picture_uri": "https://i.ytimg.com/vi/IqTmvgc7mvs/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=IqTmvgc7mvs",
+        "title": "Cursor IDE İncelemesi w/ Mehmet Ali Peker",
+        "summary": "Mehmet Ali Peker ile birlikte gerçekleştirdiğimiz canlı yayında Cursor ve Visual Studio Code arasındaki farklardan başlayarak ...",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2024-09-04T21:09:47Z",
+        "created_at": "2024-09-04T21:09:47Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
+        "id": "01JTRXQPQD5MGMWZM5MS3C4P95",
+        "kind": "content",
+        "slug": "acikkaynak-info-api",
+        "cover_picture_uri": "https://i.ytimg.com/vi/dlWRNZClj6I/mqdefault.jpg",
+        "external_uri": "https://www.youtube.com/watch?v=dlWRNZClj6I",
+        "title": "acikkaynak.info API w/ serverless",
+        "summary": "Kanala katılmak için, https://www.youtube.com/@eserlive/join Geri Bildirimler için, Twitter/X: https://x.com/eserozvataf Discord: ...",
+        "content": null,
+        "is_featured": false,
+        "author_profile": {
+          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "slug": "eser",
+          "title": "Eser Ozvataf"
+        },
+        "published_at": "2024-09-01T20:37:39Z",
+        "created_at": "2024-09-01T20:37:39Z",
+        "updated_at": null,
+        "deleted_at": null
+      },
+      {
         "id": "01JTP6P5EMKEDZRVE6Q7FPV0RZ",
         "kind": "status",
         "slug": "updated-my-status-with-exciting-news",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Updated my status with exciting news!",
         "summary": null,
         "content": null,
@@ -256,6 +431,7 @@
         "kind": "article",
         "slug": "published-a-new-article-on-medium-about-react-hooks",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Published a new article on Medium about React Hooks.",
         "summary": null,
         "content": null,
@@ -275,6 +451,7 @@
         "kind": "content",
         "slug": "recorded-a-new-video-on-youtube-about-radix-ui",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Recorded a new video on YouTube about Radix UI.",
         "summary": null,
         "content": null,
@@ -294,6 +471,7 @@
         "kind": "announcement",
         "slug": "started-a-new-role-as-senior-developer-at-tech-corp",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Started a new role as Senior Developer at Tech Corp.",
         "summary": null,
         "content": null,
@@ -313,26 +491,8 @@
         "kind": "presentation",
         "slug": "gave-a-talk-at-the-local-tech-meetup",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Gave a talk at the Local Tech Meetup.",
-        "summary": null,
-        "content": null,
-        "is_featured": false,
-        "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
-          "slug": "eser",
-          "title": "Eser Ozvataf"
-        },
-        "published_at": "2024-10-17T23:27:04.036Z",
-        "created_at": "2024-10-17T23:27:04.036Z",
-        "updated_at": null,
-        "deleted_at": null
-      },
-      {
-        "id": "01JTP6PZ6770WM3BR53NEKTJC7",
-        "kind": "status",
-        "slug": "thinking-about-the-next-big-thing",
-        "cover_picture_uri": null,
-        "title": "Thinking about the next big thing...",
         "summary": null,
         "content": null,
         "is_featured": false,
@@ -351,6 +511,7 @@
         "kind": "status",
         "slug": "completed-milestone-1-for-the-ongoing-project",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Completed milestone 1 for the ongoing project.",
         "summary": null,
         "content": null,
@@ -372,6 +533,7 @@
         "kind": "article",
         "slug": "20240107-vakif-kimligimiz-ve-sinirlarimiz",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Vakıf Kimliğimiz ve Sınırlarımız",
         "summary": "Yazılım Vakfı olmak, durduğumuz pozisyon ve sorumluluk tanımımız",
         "content": "[Hakkımızda](/aya/about) bölümüne bir göz gezdirdiyseniz, AYA’nın kendini bir\n\"yazılım vakfı\" olarak tanımladığını fark etmişsinizdir.\n\nPeki “yazılım vakfı” olmak nedir?\n\nYazılım vakıfları, açık kaynak ve özgür yazılım projelerini desteklemek,\ngeliştirmek ve korumak amacıyla kurulan kar amacı gütmeyen organizasyonlardır.\n\nAYA özelinde, resmi kurumlar nezdinde bir resmiyetimiz bulunmadığı için\n“gönüllülerin AYA ile bağlayıcı bir ilişkisi olmaksızın, ihtiyaç anları için bir\naraya gelip sosyal yarar için bilişim çözümleri üretmesi”ni sürdürülebilir\nkılmak adına bu organizasyon kimliğini benimsiyor ve bu sınırlarda kalmaya özen\ngösteriyoruz.\n\nÇalışma modelimizi belirleyen akışlarımıza [İşleyiş](/aya/processes) bölümünden\nulaşmanız mümkün. Zira yazının geri kalanında yazılım vakfı kimliğinin bizi\nnasıl konumladığı ve hangi sınırları çizdiğini açıklamaya çalışacağım.\n\n### Resmiyet ve Gönüllülük\n\nAYA internet üzerindeki “sanal topluluklardan” farklı değildir ve AYA’nın bir\nparçası olmak _özel durumlar hariç_ gönüllülük esası ile sağlanır. Nasıl\ninsanlar kendileri sosyal medya üzerinde \"çay sevenler topluluğu\" oluşturup buna\nistedikleri gibi girip çıkabiliyor veya kendilerini o grubun bir üyesi olarak\ntanıtabiliyorlarsa; AYA’da da herhangi bir resmi üyelik, üye takibi ve benzeri\nsüreç olmaksızın kişilerin benimseyebileceği veya reddedilebileceği bir\ngönüllülük yapısı vardır.\n\nGönüllülerimizin grup içinde ve dışındaki hareket ve söylemleri tamamen kendi\nbakış açılarını yansıtmakta, ve kendi sorumluluklarındadır.\n[AYA’nın web sitesi olan acikyazilimagi.com](https://acikyazilimagi.com)\nüzerindeki bilgiler haricinde kalan her türlü kaynak yanıltıcı olma riskine\nsahiptir.\n\n### Çalışmalarımızın Kapsamı\n\nAYA olarak çalışmalarımızın kapsamı her zaman STKlar/yetkili kurumlar/akredite\nkurumların bir alternatifi olmak yerine, tamamlayıcısı olmak yönünde oldu.\nBilişim dünyasında tekrar kullanılabilirliğin önemini vurgulayarak, üretilen\nçözümlerin dünyanın herhangi bir yerinde ve herhangi bir zamanda tekrar\nkullanılabilir kılınması ve açık kaynak olarak dünya hazinesine kazandırılması\ndışında bir amaç taşımadık.\n\nBu esaslarda AYA bir sağlayıcı, işletici veya yüklenici rolde değil, yarar\nsağlayacak akılcı mühendislik çözümlerinin geliştirilmesinde ve korunmasında\nkendine görev atfetmektedir.\n\n### Çözümlerin Hak Sahipliği\n\nAYA projeler ve proje grupları için bir “liman” görevi görür. Kendi tanınırlık\nve ağ avantajını kullanarak aslında Türkiye’de açık kaynak geliştirme yapmak\nisteyenler için bir platform sağlar.\n\nNasıl ki,\n\n- Bir hackathon esnasında yapılan projeler proje ekibine ait, ama hackathon\n  çıktıları ve hackathon esnasındaki kaynaklar organizasyona aitse,\n- [Docker Hub](https://hub.docker.com/) veya [GitHub](https://github.com/)\n  üzerinde yer alan projeleri bu platformlar barındırıyor olsalar dahi,\n  içeriklerinden kurum olarak sorumlu değilse,\n\nAYA da farklı bir konumda durmuyor. Odaklandığımız nokta insanların açık kaynak\ngeliştirmek için önlerinden birçok engeli kaldırmak. Bu sayede ekosisteme yeni\nprojeler ve açık kaynak gönüllüleri kazandırıyoruz.\n\n### Projeler ve Portföyümüz\n\nAYA, gönüllülük esasıyla geliştirilmek istenen projeleri “kuluçka programına”\nalarak onları desteklemeyi hedefler.\n\nKuluçkaya alınacak projeler için beklediğimiz temel kriterler\n[İşleyiş](/aya/processes) bölümünde yer almaktadır.\n\nKuluçkaya alınan projelere gerekli kaynakları sağlamak, projelerin gelişim\nsüreçlerine yardımcı olmak, ve belirli bir süre sonra bu projeleri “mezun”\nolmasını sağlamak AYA’nın temel modelini oluşturur.\n\nMezun projelerin GitHub üzerindeki varlıkları ve kontrolü\n[açık yazılıma ağı GitHub organizasyonuna](https://github.com/acikyazilimagi)\ntransfer edilir. Elbette ki açık kaynak geliştirme pratikleri doğrultusunda\nbunlardan herhangi bir an için kopya almak (fork) daima mümkündür.",
@@ -391,6 +553,7 @@
         "kind": "article",
         "slug": "20230217-acik-yazilim-agi-ve-6-subat",
         "cover_picture_uri": null,
+        "external_uri": null,
         "title": "Açık Yazılım Ağı ve 6 Şubat",
         "summary": "Nasıl toplandık, nasıl büyüdük ve bundan sonra ne olacak?",
         "content": "6 Şubat 2023’de yaşadığımız coğrafyada elim bir olay gerçekleşti.\nKahramanmaraş’ta gerçekleşen ve en az 10 ilimizi daha etkileyen deprem felaketi\nsonucunda aynı coğrafyayı paylaştığımız insanlar kayıplar ve travmalar yaşadık.\n\nDaha önce herhangi bir arama-kurtarma eğitimi almamış, bölgeye gitmek istese\nyolda durdurulacak, örgütsüz ve bir şeyler yapmak için gönüllü olabilecek\ninsanların ilk aklına gelen şeyi gerçekleştirmek istedik: profesyoneli olduğumuz\nkonular üzerinden felaketten etkilenenlere yardımcı olmak.\n\nBu acı olay vesilesiyle, son kontrol ettiğimde nüfusu 23,950 kişiyi aşmış,\nyazılım alanında faaliyet gösteren gönüllüler olarak bir Discord sunucusunda bir\naraya geldik ve kendimizi Açık Yazılım Ağı olarak isimlendirmeye başladık.\n\n**Açıklama:** 6 Şubat’tan bu yana zamanı etkin kullanmak için hep kısa kısa\nyazdım, kimsenin zamanını fazladan tüketmemeye çalıştım. Discord’da dahi sahnede\nen az benim konuştuğumu, twitter’da oldukça az tweet attığımı\ngözlemlemişsinizdir. Bugün bu uzun yazıyı kaleme almamın nedeni insanların\nbundan sonrasına ilişkin özelden ilettikleri mesajları teker teker değil, toplu\nhalde yanıtlamak. Ve halen iletişim yapamadığımız konular, soru işaretleri varsa\naçık bir biçimde yanıtlamak için bu yazıyı yayınlıyorum.\n\n## Nasıl toplandık?\n\nHem daha önce topluluk adına birçok yayın yaptığım hem de mesai arkadaşım Furkan\nKılıç’ın Twitter’da yine yazılım ekosisteminden tanıdığım İrem Kömürcü ile\nmesajlaşmalarını gördüm, nasıl yardım edebileceklerini tartışıyorlardı. Ben\nşahsen henüz hiçbir haber takip edememiş, şirketin planlama toplantımıza\nhazırlanıyordum. Toplantımız esnasında bir yandan Twitter’daki mesajları göz\nucuyla okuyor, Furkan’ın ortaya attığı “bir ısı haritası oluşturalım” fikri için\naçılan Telegram grubunu takip etmeye çalışıyordum.\n\nToplantımız biter bitmez Discord’a geçtik. Furkan’la “benim genel yetkilendirme\nile ilgileneceğim, onların uygulamaya başlayacağı” ufak bir planlama yaptık.\n\nFurkan’ın “sosyal medya’da insanların ürettiği yardım çağrılarının ısı\nharitasını oluşturma fikri” o kadar temel bir doğruya dayanıyordu ki... makro\nölçekte ülkede yetkililer dışında kalan hiç kimsenin bölgeden haber alamaması,\nmikro ölçekte ise olayın canlılığı ile daha mahallesinde ne olduğunu\nkavrayamamış insanların hangi bölgede nasıl bir yoğunluk olduğunu\ngözlemleyebilmesi sağlanıyordu. Bu basit ama güçlü fikri “gelin birlikte\ngeliştirelim” çağrısı ile dalga dalga yayıldı. İnsanlar “IT Deprem Yardım”\nismiyle oluşturduğumuz Discord sunucusunda toparlanmaya başladılar.\n\n## Nasıl büyüdük?\n\nBilişim sektörüne temas eden herkese yaptığımız açık çağrı yanıt bulunca\nFurkan’la ilk stratejimiz, onun projeyle ilgilenmesi, benimse biraz daha genel\nresme bakıp yetkilendirmeleri yapmak, repository’leri açmam üzerine oldu.\n\nKendi adıma yapacaklarım zaten kafamda netti,\n[github.com/acikkaynak](https://github.com/acikkaynak) 2015 yılından bu yana\nvardı ve zaten tam da insanlarla birlikte geliştirme yapmaya hazırdı. Kendi\nçevremde, topluluktan tanıdığım arkadaşlarımızla da yürütülen ufak projelerde\nbenimsenen fikirsel altyapı birçok profesyonelin de bu çalışmalara dahil\nolabileceği bir zemine elverişliydi.\n\nFurkan ise frontend, backend, tasarım gibi ekipler oluşturup bu kişilerden\nbazılarını projelerde yetkilendirilmek için bana yönlendiriyordu.\n\nProjelerimizi o noktadan itibaren Apache 2.0 açık kaynak lisansı ile herkesçe\ndenetlenebilir, herkesin nezaretinde geliştirilen bir yapıya kavuşturduk. Veri\ndışında her konuda şeffaf olduk, verileri yalnızca STKlar/yetkili\nkurumlar/akredite kurumlar ile paylaşacak şekilde bir ilke belirledik. Bu bizim\nsüreç boyunca hassasiyetle koruduğumuz temel iki ilkemizi oluşturdu.\n\nSon kontrol ettiğimde yalnızca discord sunucumuzda 24,000 kişi olmamıza az\nkalmıştı. Süreçte mutlaka küstürdüğümüz, kendini dahil olamamış hissederek\nuzaklaşan kişiler de olmuştur.\n\n![Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1676612473943/89951b44-d922-4e81-a0cb-9404d16c9701.png)\n\n## Açık kaynak olmasının anlamı nedir?\n\nProjelerin açık kaynak olmalı kriterini benimsedik çünkü başından bu yana\namacımız: yaptığımız iş denetlenebilir, gerektiğinde belirli sistemlere entegre\nedilebilir ve diğer insanların da az bir eforla bir ucundan tutabileceği şekilde\ngeliştirmeye açık olmalıydı.\n\nKurumsal bir şirkette bir projeye dahil olan birileri, belki 3. haftasının\nsonunda “süreçlere uygun” geliştirme yapmaya başlayabilir durumda oluyorsa bizde\nbu süre 5-6 dakikaya indi.\n\nO an “projeyi çıkartma” motivasyonuyla düşünemediğimiz ama sonradan da fark\nettiğimiz bir nokta ise; gün 1’den açık kaynak ilerleyerek aslında ileride\nbizden bağımsız bu sistemlerin herhangi bir ülkedeki başka herhangi bir\nSTKsının/yetkili kurumunun/akredite kurumunun bunları kullanabilmesini sağladık.\n\nAçık kaynak olarak geliştirdiği için artık bizim bu projelerin kaynak kodlarını\n“kapatma” veya başka bir yerde kullanılmasına engel olma şansımız yok. Bu\nanlamda projenin kaynak kodları kimsenin sahipliğinde veya tekelinde değil. Kötü\nbir vesileyle de olsa, bizim bu çalışmaları “gönüllüler” olarak yapıp, dünya\nbilgi hazinesine bağışlamış duruma geldik.\n\n## Ne tür projeler geliştiriliyor?\n\nİlk olarak **afetharita.com** ile çıktık. Daha sonra yeni fikirler geldikçe yine\naçık kaynak bir yazılım vakfı gibi (Apache Foundation, CloudNative Computing\nFoundation, Free Software Foundation, Linux Foundation, Mozilla Foundation v.s.)\ngelen projeleri değerlendirip, bunlara gönüllü ekipler kurup ilerlemelerinin\nönündeki engelleri kaldırmaya çalıştık.\n\nBugün üzerinde uğraştığımız projeleri [Projelerimiz](/projects) bölümü altından\ngörüntüleyebilirsiniz.\n\n## Denetim ve güvenlik ne aşamada?\n\nKonu açık kaynaklı geliştirme olunca akla gelen ilk sorulardan birisini\neleyelim: Hayır, herkes dilediğince müdahale edemiyor. Öncelikle proje liderleri\nprojelerde yetkili oluyor. Ancak herkes geliştirilen kodları okuyup, yeni\ndeğişiklik önerilerinde bulunabiliyorlar. Bunu bir meclis yapısı gibi\ndüşünebilirsiniz. Nasıl kanunlar herkese açıksa ve ve her kanun önerisi kabul\nedilmiyorsa, bu süreç de “öneriler” ile gidiyor. Projede yetkili olanlar da bu\nönerileri kabul edip, kendi şerhlerini düşüp projeye dahil etme veya etmeme\ntasarrufunda bulunabiliyorlar.\n\nYine süreçte gönüllü olarak gece gündüz çalışan bir altyapı ekibimiz oluştu ve\nonlar da bize süreç boyunca desteklerini esirgemeyen bulut sağlayıcılarla\nbirlikte güvenilir bir ortam sağlıyorlar.\n\nÖzellikle afetten sonraki 2. gün siber saldırıların da gelmesiyle yine sektörden\nçok deneyimli siber güvenlik firmalarının ve uzmanlarının destekleri ile hem kod\ntarafındaki hem de altyapı tarafındaki zaafiyetlerimizi belirli aralıklarla\nkontrol ettirdiğimiz bir yapıya kavuştuk.\n\n## Kimlerden destek aldık?\n\nNeredeyse herkesten!\n\nGün 0’da gönüllülerden.\n\nSaatler sonra bilinen bulut hizmetleri sağlayan tüm firmalar bize yardımcı\nolmaya çalıştı. Hiçbir hizmet talebimizde hayır denilmediği gibi, mevcut\nhizmetlerindeki limitleri bizler için kaldırdıkları oldu.\n\nProje ekiplerindeki insanların firmalarına haber vermesiyle birlikte firmalar da\nbize ulaşıp “nasıl yardımcı olacaklarını” sordular. Birçok firma çalışanlarının\naçık kaynaklı olarak katkıda bulunabilmelerini desteklediler. İlgili alanlarda\nnasıl destek verebilecekleri konusunda kafa yorduk ve iletişime her zaman açık\nhaldelerdi.\n\n## Sektörel kazanımlarımız neler oldu?\n\nBu afet durumu ile bir araya gelmenin ülkemize, coğrafyamıza çok fazla kayıp\nyaşattığı aşikar. **İşin sahadaki STKlara/yetkili kurumlara/akredite kurumlara\ngeri hizmet sağlamak kısımlarını dışarıda bırakarak** (diğer türlü haddimizi\naşıp, diğer kurumlarla yarıştığımız anlamı çıkabilir, o nedenle lütfen maruz\ngörün) Tüm bu kayıplarımızı aklımızda ve kalbimizde tutarak, yalnızca buradaki\nçalışma kapsamında **teknik** bir değerlendirme yapmamız gerekirse:\n\n- Bilişim sektöründeki kişiler twitter’daki hararetli tartışmaları,\n  küskünlükleri gerilerinde bırakarak, zor anlarda yardımlaşma ve dayanışma\n  zemininde bir araya gelip, birlikte çalışabildiklerini hissettiler\n\n- Sahaya nasıl yardım ulaştırabileceği konusunda sabahlara kadar tartışan\n  yüzlerce kişi hepimizin birbirine inancını tazeledi\n\n- İnsanlar açık kaynak geliştirme, bulut hizmetleri v.b. yeni çalışma\n  disiplinleri ile tanıştılar\n\n- Birçok organizasyonun seneler içinde alacağı yolu sektörün belirli\n  pratikleriyle 2-3 günde bir düzene getirebildik\n\n- Kaos gibi görünen bir yapıda çalışan, canlıda olan yazılımlar örebildik\n\n- Kurumlara, geçmişte birçok kez “hukuki” nedenlerle çekince ile yaklaştıkları\n  “açık kaynak geliştirmenin” çok kaygılanacak bir yönü olmadığını ispat ettik\n\n- Farklı kurumlar altındaki insanlar birbirleri ile çalıştılar, farklı\n  yaklaşımlar, farklı kültürler bir araya geldiler ve birbirlerini tanıyıp yeni\n  ilişkiler başlattılar\n\n- Yazılım alanında sürekli tartışan insanlar gibi görünüyorduk, hem kendimiz hem\n  de dış partiler potansiyelimizi gözlemleyebilmiş oldu\n\n- Kurumlara, medyaya, çevremize, bizden sonraki nesillere ve en çok da kendimize\n  ilham “influence” oluşturduk. Bir arkadaşımla yaptığım toplantıda 1-2 aydır\n  yazılım alanında kötü zamanlar geçirdiğini ama buradaki birlikle tekrar\n  doğduğunu konuştuk.\n\n  Dahası şöyle mesajlar aldık: “Hatay’da 12 yaşında öksüz kalan akrabam bana\n  _abi çocuklar için de bölüm ekleyelim bana bilgisayar alalım kod yazcam_ dedi,\n  _**afetcocuk.com**’u bana al_ diyor.”\n\n## Bundan sonra ne olacak?\n\nBunun bir kişisel bir de Açık Yazılım Ağı için yanıtı var.\n\nPlanlama esnasında naçizane belirli ilkeler etrafında kalmaya özen gösterdim,\nekipte koordinasyon tarafındaki diğer arkadaşlarımın da hemfikir olduğunu\ngördükçe mutlu oldum:\n\n- Yaptığımız çalışmalarda tekrarı önlemek ve odaklanmak,\n\n- Gönüllü olan kişilerin sırtından angarya işleri mümkün olduğunca kaldırmak,\n\n- Yasal zeminde kalmak,\n\n- Gönüllü olarak katkıda bulunan insanlarda kötü bir his oluşturmamak,\n\n- Taşıyabileceğimiz kadar yük kaldırmak,\n\n- Açık kaynak olarak devam etmek,\n\n- STKlara/yetkili kurumlara/akredite kurumlara destek vermeye devam etmek,\n\nPlan listesi olarak somutlaştırmak gerekirse,\n\n**Eser Özvataf olarak kişisel kısım:**\n\n- Açık Yazılım Ağı hızlı başladı. Kendi adıma, bunun bundan sonra daha\n  sürdürülebilir olması için çalışacağım\n\n- Ekipten ikna edebildiğim arkadaşları ara ara\n  [YouTube kanalım](https://eser.live)’a çağırıp Açık Yazılım Ağı için online\n  hackathon’lar düzenleyeceğim\n\n- Bazı kurumlardan destek alarak 2-3 ayda bir fiziksel Açık Yazılım Ağı\n  Hackathonları düzenleyip odak projeler çıkartarak, yalnızca afet anlarında\n  değil, sürekli bir açık kaynak bilinci oluşmasını sağlayacağım\n  (başarabilirsem)\n\n- Süreçte olduğu gibi, bundan sonra da kurumlar ile irtibatta olup ortak\n  projeler yapmak, açık kaynak projelere katkıda sağlamaya çalışmak, içlerinde\n  “Açık Kaynak Geliştirici” istihdam etmek için onları ikna etmeye çalışacağım\n\n- Apache Foundation, CloudNative Computing Foundation, Free Software Foundation,\n  Linux Foundation, Mozilla Foundation v.b. ne ise Türkiye’ye de bir yazılım\n  vakfı kazandırmaya çalışacağım (işin hukuki/resmi tarafına değil fikir ve çatı\n  kısmını inşa etmeye odaklı durumdayım)\n\n- Bu ve benzeri durumlar için gelecekte kişisel olmayan verileri paylaşmak için\n  nasıl bir veri platformu inşa ederiz’i planlamaya çalışacağım\n\n- Açık Yazılım Ağı’nın mevcut çözümlerinin “paketlenmesi” kısmında çalışmalarım\n  olacak\n\n- Açık Yazılım Ağı’nın portföyündeki yazılımları tanıtıp bunları kullanıcılara\n  ulaştıracağım\n\n- Açık Yazılım Ağı’nın çözebileceği potansiyel sorunlar, durumları keşfe\n  çıkacağım\n\n**Açık Yazılım Ağı kısmı:**\n\n- Bir “davranış kodu” ve “dahiliyet politikası” yayınlayacağız (bkz:\n  [https://github.com/mozilla/inclusion](https://github.com/mozilla/inclusion))\n\n- Süreç boyunca kendi mesai saatlerinde dahi gece/gündüz çalışan arkadaşlarla\n  iletişimi senkron iletişimden asenkron iletişime döndürülecek\n\n- Çok tekrar eden süreçler için akış yapıları kurgulayıp formlarla ilerlenecek\n\n  - Yeni proje formları\n\n  - Yeni katılımcı formları\n\n  - Kaynak ihtiyaçları\n\n  - İş talepleri\n\n  - Ve benzerleri...\n\n- Sürecin hukuki kısmı ile ilgili gereken yükümlülükler yerine getirilecek\n  (kişisel verileri yok etme v.b.). Bunun için bir deklarasyon çalışmamız\n  gelecek hafta başına kadar yayınlanacak\n\n- Projeler belirli portfolyolara oturtulacak. Bunun için web sitesi üzerinde\n  projelerimizin olduğu çalışmamız gelecek hafta başına kadar yayınlanacak\n\n- Projeler tek bir çözüm gibi paketlenecek, bir araya getirilecek\n\n- Paketlenen çözüm white-label ürünler olarak kurulabilir hale getirilecek (bir\n  wordpress benzeri blog kurar gibi düşünün)\n\n- Discord çatımızın altında yer alan kitle ile bağlantıda kalmanın yollarını\n  arayacağız\n\n**Kısacası** aslında “biz devam edeceğiz, KVKK, GPDR başta olmak üzere yasalara\nuyumlu bir şekilde, STKlara/yetkili kurumlara/akredite kurumlara çözümler\nsağlayacağız. projeler konusunda da odak sağlamak için birkaç gün içinde yeni\nbir yönelge yayınlayacağız”.\n\n## Bize nasıl destek olunabilir?\n\nÖncelikle gönüllü başladık ve servis sağlayıcı kurumların bizlere açtığı bazı\nhesaplar dışında hiçbir bağış, teşvik, fon v.b. ile ilerlemedik. Bir yazılım\ntopluluğunun ötesinde davranışlarımız olmadı.\n\nDolayısıyla bir yazılım topluluğunun temel ihtiyaçları olan bilinirlik, çevre\noluşturma, katılımlarla büyüme ihtiyaçlarımız halen devam ediyor. Özellikle\nprojede yer aldığını bildiğiniz insanları takip ederseniz zaten destek olmuş\nolacaksınız. İlk olarak Twitter, ikinci aşamada Instagram bu süreçte en net\nkitlesel aktarımın olduğu platformlar oldu. Bu kanallardan açık yazılım ağı\ngönüllülerini ve açık yazılım ağının kendisini takip edebilirsiniz. Ben bilhassa\nbu süreçte [kendi Twitter hesabım](https://twitter.com/eserozvataf)da\nyazmaktansa diğer arkadaşlarımızın tweetlerini dolaşıma sokmaya odaklandım\n(zaten birçoğumuzun tweet yazacak zamanımız olmadı).\n\nFarkındaysanız destek için sosyal medyaya yönlendirdim. Çünkü somut bir plan\nçıktığında Açık Yazılım Ağı’nın eylemlerini duyuracak bir kanal oluşturmaya\nihtiyacımız var. O nedenle iletişimde kalalım!\n\n## İletişim\n\nİlk günden itibaren sunucudaki moderasyonu tek kişi düzenlemeye çalıştığım an\nbile aklımda en kritik işlerden biri “iç iletişim” idi. Discord’un “sahne”\nözelliğini oluşturmak, ve o kısmı Furkan’a devrettiğimiz için periyodik\ngüncellemeler verme konusunda bayağı baskılamış olabilirim. Daha sonra bu\nDiscord içerisinde bir ritüel haline geldi.\n\nŞimdi iletişimi bir halka daha şeffaf, erişilebilir ve dışa dönük yapma zamanı.\n\nYukarıda da bahsettim, buradaki eforlara dair hem geri bildirimler almak hem de\ndaha net konuları aktarmak, hem işin başındaki insanlarla iletişimde bulunmak\niçin kendi adıma Açık Yazılım Ağı ile ilgilendiğim süreçte\n[https://eser.live](https://eser.live) adresinde yayında olmaya çalışacağım.\nEminim bu yayınlarda topluluktan birçok kişi bana katılacaktır, onların\ntaraflarını dinleyip bir yandan da neler yapabiliriz birlikte konuşmuş olacağız.\n\n## Kapanış ve kişisel öngörülerim\n\nKorkunç bir afet yaşadık. Birçoğumuz için bunun travmatik sonuçları olacak.\nAtlattığımız her badirede olduğu gibi biz her ne kadar eski hayatlarımıza dönmek\nistersek isteyelim, bir şeyler değişecek veya kendimizi aynı noktada bulmamak\niçin değişmek zorunda olacak.\n\nAçık kaynak ile tanıştığım yıllarda, okulunu henüz bitirmemiş alaylı bir\nyazılımcı olduğum ve çalışmaya devam ettiğim için “uzaktan çalışma”yı da pratik\nediyordum. Pandemi tüm dünyada birçok hasar bıraktı, uzaktan çalışma artık\ngaripsenmeyen bir pratik olarak hayatımıza girdi.\n\nAçık Yazılım Ağı da kötü bir vesileyle olsa da bizim açık kaynak’ın önemini ve\nbirlikte öreceğimiz sistemleri tanımak için değişimde rolü olan bir çark haline\ngelebilir. Yeter ki biz coğrafya olarak aynı kaderi tekrar yaşamamak için bir\nşeyler yapmak isteyelim.",
@@ -410,11 +573,12 @@
   "projects": {
     "01JT1TXYSDXZFET19492RH7YR5": [
       {
+        "id": "01JTRSQ7JF99W8C4W5QF699WKB",
         "title": "topluluklar",
         "description": "Yazılımcı Topluluk ve Mecraları",
         "lastUpdated": "2024-10-17T23:27:04.036Z",
         "repository": "eser/topluluklar",
-        "website": null,
+        "website": "https://eser.github.io/topluluklar",
         "role": "owner",
         "stats": {
           "issues": 20,
@@ -427,11 +591,12 @@
         }
       },
       {
+        "id": "01JTRSQS8M09ENWF4N5E9SNX1Q",
         "title": "stack",
         "description": "The Portability Solution for Your Code! 🚀 Powered By Deno and JavaScript.",
         "lastUpdated": "2024-10-17T23:27:04.036Z",
         "repository": "eser/stack",
-        "website": null,
+        "website": "https://eser.github.io/stack",
         "role": "maintainer",
         "stats": {
           "issues": 4,
@@ -444,11 +609,12 @@
         }
       },
       {
+        "id": "01JTRSR2WZ6JDKGSY57M8SDBDR",
         "title": "golang-service-template",
         "description": "Go Boilerplate provides a robust foundation that is always ready to be open-sourced",
         "lastUpdated": "2024-10-17T23:27:04.036Z",
         "repository": "eser/golang-service-template",
-        "website": null,
+        "website": "https://eser.github.io/golang-service-template",
         "role": "contributor",
         "stats": {
           "issues": 4,
