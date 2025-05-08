@@ -3,28 +3,10 @@ import * as React from "react";
 import { formatDateString } from "@/shared/lib/date.ts";
 import { Card } from "@/shared/components/ui/card.tsx";
 import { Icons } from "@/shared/components/icons.tsx";
+import type { Project } from "@/shared/modules/backend/projects/types.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
+
 import styles from "./project-card.module.css";
-
-export type ProjectRole = "follower" | "sponsor" | "contributor" | "maintainer" | "lead" | "owner";
-
-export type Project = {
-  title: string;
-  description: string;
-  lastUpdated: string;
-  repository: string | null;
-  website: string | null;
-  role: ProjectRole;
-  stats: {
-    issues: number;
-    stars: number;
-    commits: number;
-    prs: {
-      total: number;
-      resolved: number;
-    };
-  };
-};
 
 export interface ProjectCardProps {
   project: Project;

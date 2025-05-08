@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { type Project, ProjectCard, type ProjectRole } from "@/shared/components/userland/projects/project-card.tsx";
+import { ProjectCard } from "@/shared/components/userland/projects/project-card.tsx";
 import { ProjectGrid } from "@/shared/components/userland/projects/project-grid.tsx";
 
 type IndexPageProps = {
@@ -30,61 +30,6 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   };
 }
 
-// Example project data - replace with actual data from your backend
-const projects: Array<Project> = [
-  {
-    title: "topluluklar",
-    description: "Yazılımcı Topluluk ve Mecraları",
-    lastUpdated: "2024-10-17T23:27:04.036Z",
-    repository: "eser/topluluklar",
-    website: null,
-    role: "owner" as ProjectRole,
-    stats: {
-      issues: 20,
-      stars: 206,
-      commits: 156,
-      prs: {
-        total: 45,
-        resolved: 42,
-      },
-    },
-  },
-  {
-    title: "stack",
-    description: "The Portability Solution for Your Code! 🚀 Powered By Deno and JavaScript.",
-    lastUpdated: "2024-10-17T23:27:04.036Z",
-    repository: "eser/stack",
-    website: null,
-    role: "maintainer" as ProjectRole,
-    stats: {
-      issues: 4,
-      stars: 83,
-      commits: 234,
-      prs: {
-        total: 28,
-        resolved: 25,
-      },
-    },
-  },
-  {
-    title: "golang-service-template",
-    description: "Go Boilerplate provides a robust foundation that is always ready to be open-sourced",
-    lastUpdated: "2024-10-17T23:27:04.036Z",
-    repository: "eser/golang-service-template",
-    website: null,
-    role: "contributor" as ProjectRole,
-    stats: {
-      issues: 4,
-      stars: 64,
-      commits: 47,
-      prs: {
-        total: 12,
-        resolved: 10,
-      },
-    },
-  },
-];
-
 async function IndexPage(props: IndexPageProps) {
   const params = await props.params;
 
@@ -92,6 +37,12 @@ async function IndexPage(props: IndexPageProps) {
 
   const profileData = await backend.getProfile(params.slug, locale.code);
   if (profileData === null) {
+    notFound();
+  }
+
+  const projectsData = await backend.getProjects(profileData.id, locale.code);
+
+  if (projectsData === null) {
     notFound();
   }
 
@@ -105,7 +56,7 @@ async function IndexPage(props: IndexPageProps) {
       </div>
 
       <ProjectGrid>
-        {projects.map((project) => (
+        {projectsData.map((project) => (
           <ProjectCard
             key={project.title}
             project={project}

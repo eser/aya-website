@@ -5,6 +5,7 @@ import { getProfiles } from "./profiles/get-profiles.ts";
 import { getProfile } from "./profiles/get-profile.ts";
 import { getProfilePage } from "./profiles/get-profile-page.ts";
 import { getStories } from "./stories/get-stories.ts";
+import { getProjects } from "./projects/get-projects.ts";
 
 export const backend = {
   getCustomDomain,
@@ -14,4 +15,5 @@ export const backend = {
   getProfile,
   getProfilePage,
   getStories,
+  getProjects,
 };

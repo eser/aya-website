@@ -406,5 +406,61 @@
         "deleted_at": null
       }
     ]
+  },
+  "projects": {
+    "01JT1TXYSDXZFET19492RH7YR5": [
+      {
+        "title": "topluluklar",
+        "description": "Yazılımcı Topluluk ve Mecraları",
+        "lastUpdated": "2024-10-17T23:27:04.036Z",
+        "repository": "eser/topluluklar",
+        "website": null,
+        "role": "owner",
+        "stats": {
+          "issues": 20,
+          "stars": 206,
+          "commits": 156,
+          "prs": {
+            "total": 45,
+            "resolved": 42
+          }
+        }
+      },
+      {
+        "title": "stack",
+        "description": "The Portability Solution for Your Code! 🚀 Powered By Deno and JavaScript.",
+        "lastUpdated": "2024-10-17T23:27:04.036Z",
+        "repository": "eser/stack",
+        "website": null,
+        "role": "maintainer",
+        "stats": {
+          "issues": 4,
+          "stars": 83,
+          "commits": 234,
+          "prs": {
+            "total": 28,
+            "resolved": 25
+          }
+        }
+      },
+      {
+        "title": "golang-service-template",
+        "description": "Go Boilerplate provides a robust foundation that is always ready to be open-sourced",
+        "lastUpdated": "2024-10-17T23:27:04.036Z",
+        "repository": "eser/golang-service-template",
+        "website": null,
+        "role": "contributor",
+        "stats": {
+          "issues": 4,
+          "stars": 64,
+          "commits": 47,
+          "prs": {
+            "total": 12,
+            "resolved": 10
+          }
+        }
+      }
+    ],
+    "01JT4FS0K93K4GG4Z40ZDFY3EQ": []
   }
 }
