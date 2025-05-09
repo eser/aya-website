@@ -1,8 +1,8 @@
-# [aya-website](https://github.com/eser/aya-website)'a katkıda bulunma
+# [aya.is-webclient](https://github.com/eser/aya.is-webclient)'a katkıda bulunma
 
 👍🎉 Öncelikle, katkıda bulunmak için zaman ayırdığınız için teşekkürler! 🎉👍
 
-Aşağıda GitHub'da yer alan aya-website ve paketlerine katkıda bulunmaya bir dizi yönlendirme bulacaksınız. Bunlar
+Aşağıda GitHub'da yer alan aya.is-webclient ve paketlerine katkıda bulunmaya bir dizi yönlendirme bulacaksınız. Bunlar
 çoğunlukla yönlendirmelerdir, katı kurallar değil. Muhakeme yeteneğinizi kullanmaktan çekinmeyin ve bu belgedeki
 yönergelere dahi bir pull request ile değişiklik önermekten geri durmayın.
 
@@ -10,9 +10,9 @@ yönergelere dahi bir pull request ile değişiklik önermekten geri durmayın.
 
 ### Davranış Kuralları
 
-Bu proje ve katılımcıları [Katkıcı Ahdi Topluluk Sözleşmesi](https://acikyazilimagi.com/aya/policies)ne uymakla
-mükelleftir. Katkı sağladığınız an bu kuralları kabul etmiş sayılırsınız. Lütfen yönergede tarif edilen tolere
-edilemeyecek davranışları [info@acikyazilim.com](mailto:info@acikyazilim.com) adresine bildirin.
+Bu proje ve katılımcıları [Katkıcı Ahdi Topluluk Sözleşmesi](https://aya.is/aya/policies)ne uymakla mükelleftir.
+Katkı sağladığınız an bu kuralları kabul etmiş sayılırsınız. Lütfen yönergede tarif edilen tolere edilemeyecek
+davranışları [info@aya.is](mailto:info@aya.is) adresine bildirin.
 
 ### Teknik Gereklilikler
 

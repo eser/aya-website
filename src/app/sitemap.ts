@@ -9,7 +9,7 @@ export function sitemap() {
 
   // return (
   //   posts?.map(({ id }) => ({
-  //     url: `https://acikyazilimagi.com/${id}`,
+  //     url: `https://aya.is/${id}`,
   //     lastModified: new Date(),
   //   })) ?? []
   // );

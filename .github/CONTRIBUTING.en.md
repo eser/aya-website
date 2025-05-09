@@ -1,4 +1,4 @@
-# Contributing to [aya-website](https://github.com/eser/aya-website)
+# Contributing to [aya.is-webclient](https://github.com/eser/aya.is-webclient)
 
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍
 
@@ -10,9 +10,9 @@ in a pull request.
 
 ### Code of Conduct
 
-This project and everyone participating in it is governed by the
-[Code of Conduct](https://acikyazilimagi.com/aya/policies). By participating, you are expected to uphold this code.
-Please report unacceptable behavior to [info@acikyazilim.com](mailto:info@acikyazilim.com).
+This project and everyone participating in it is governed by the [Code of Conduct](https://aya.is/aya/policies). By
+participating, you are expected to uphold this code. Please report unacceptable behavior to
+[info@aya.is](mailto:info@aya.is).
 
 ### Technical Requirements
 

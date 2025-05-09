@@ -1,5 +1,5 @@
 {
-  "name": "aya-website",
+  "name": "aya.is-webclient",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -19,8 +19,8 @@
     "web",
     "site"
   ],
-  "homepage": "https://acikyazilimagi.com",
-  "author": "aya <info@acikyazilimagi.com>",
+  "homepage": "https://aya.is",
+  "author": "aya <info@aya.is>",
   "contributors": [
     {
       "name": "Eser Ozvataf",
@@ -30,10 +30,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eser/aya-website.git"
+    "url": "git+https://github.com/eser/aya.is-webclient.git"
   },
   "bugs": {
-    "url": "https://github.com/eser/aya-website/issues"
+    "url": "https://github.com/eser/aya.is-webclient/issues"
   },
   "license": "Apache-2.0",
   "scripts": {

@@ -39,7 +39,7 @@ export const siteConfig: SiteConfig = {
   },
 
   // deno-lint-ignore no-process-global
-  host: process.env.NEXT_PUBLIC_HOST ?? "acikyazilimagi.com",
+  host: process.env.NEXT_PUBLIC_HOST ?? "aya.is",
   // deno-lint-ignore no-process-global
   backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "http://localhost:3000/contract/mocks",
 
