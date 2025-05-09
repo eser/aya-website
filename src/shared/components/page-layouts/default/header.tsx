@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { siteConfig } from "@/shared/config.ts";
+// import { siteConfig } from "@/shared/config.ts";
 import { GitHubLogin } from "@/shared/modules/auth/github-login.tsx";
 import { ThemeSwitcher } from "./theme-switcher.tsx";
 import { MainNav } from "./main-nav.tsx";
@@ -13,8 +13,10 @@ type HeaderProps = {
   placeholders: Record<string, string>;
 };
 
-export async function Header(props: HeaderProps) {
-  const login = await siteConfig.features.login();
+export function Header(props: HeaderProps) {
+  // TODO(@eser) temporarily disabled
+  // const login = await siteConfig.features.login();
+  const login = false;
 
   return (
     <header className={styles.header}>
