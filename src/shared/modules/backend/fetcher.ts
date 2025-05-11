@@ -8,7 +8,7 @@ export async function fetcher<T>(relativePath: string): Promise<T | null> {
     : siteConfig;
 
   const targetUrl = `${latestConfig.backendUri}${relativePath}`;
-  // console.log("targetUrl", targetUrl);
+  console.log("targetUrl", targetUrl);
   const request = await fetch(targetUrl);
 
   if (request.status === 404) {
