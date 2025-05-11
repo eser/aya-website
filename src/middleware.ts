@@ -17,7 +17,7 @@ async function applyCustomDomainMiddleware(req: NextRequest, res: NextResponse):
     return res;
   }
 
-  const target = new URL(`/${customDomain.profile_slug}${req.nextUrl.pathname}`, req.nextUrl);
+  const target = new URL(`/${customDomain.slug}${req.nextUrl.pathname}`, req.nextUrl);
   if (target.pathname.endsWith("/")) {
     target.pathname = target.pathname.slice(0, -1);
   }
@@ -25,7 +25,7 @@ async function applyCustomDomainMiddleware(req: NextRequest, res: NextResponse):
   const newResponse = NextResponse.rewrite(target);
 
   newResponse.headers.set("x-custom-domain-host", host);
-  newResponse.headers.set("x-custom-domain-profile", customDomain.profile_slug);
+  newResponse.headers.set("x-custom-domain-profile", customDomain.slug);
 
   return newResponse;
 }

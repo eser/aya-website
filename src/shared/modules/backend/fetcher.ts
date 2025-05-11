@@ -1,8 +1,13 @@
-import { siteConfig } from "@/shared/config.ts";
+import { type SiteConfig, siteConfig } from "@/shared/config.ts";
 import type { Result } from "./types.ts";
 
 export async function fetcher<T>(relativePath: string): Promise<T | null> {
-  const targetUrl = `${siteConfig.backendUri}${relativePath}`;
+  const latestConfig = ("siteConfig" in globalThis)
+    // @ts-expect-error globalThis is not typed
+    ? (globalThis.siteConfig as SiteConfig)
+    : siteConfig;
+
+  const targetUrl = `${latestConfig.backendUri}${relativePath}`;
   // console.log("targetUrl", targetUrl);
   const request = await fetch(targetUrl);
 
