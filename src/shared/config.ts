@@ -63,6 +63,7 @@ export const forbiddenSlugs: readonly string[] = [
   "community",
   "config",
   "contact",
+  "contributions",
   "dashboard",
   "element",
   "elements",

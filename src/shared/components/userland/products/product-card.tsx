@@ -21,7 +21,7 @@ export async function ProductCard(props: ProductCardProps) {
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <Link href={`/profiles/${props.product.id}`} className={styles.header}>
+        <Link href={`/${props.product.slug}`} className={styles.header}>
           <h3 className={styles.title}>{props.product.title}</h3>
           <div className={styles.stats}>
             {props.membership?.properties?.stats?.commits !== undefined && (
@@ -56,20 +56,20 @@ export async function ProductCard(props: ProductCardProps) {
         <div className={styles.description}>{props.product.description}</div>
         <div className={styles.attributes}>
           <div className={styles.section}>
-            <div className={styles.heading}>{t("Projects", "My role in the project")}</div>
-            <div className={styles.text}>{t("Projects", props.membership?.kind ?? "-")}</div>
+            <div className={styles.heading}>{t("Contributions", "My role in the project")}</div>
+            <div className={styles.text}>{t("Contributions", props.membership?.kind ?? "-")}</div>
             <div className={styles.information}>
               <div>
                 <Icons.gitCommit className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "My first contribution")}</div>
+                  <div className={styles.key}>{t("Contributions", "My first contribution")}</div>
                   <div className={styles.value}>01 Mayıs 2022</div>
                 </div>
               </div>
               <div>
                 <Icons.gitCommit className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "My last contribution")}</div>
+                  <div className={styles.key}>{t("Contributions", "My last contribution")}</div>
                   <div className={styles.value}>23 Mayıs 2025</div>
                 </div>
               </div>
@@ -77,19 +77,19 @@ export async function ProductCard(props: ProductCardProps) {
           </div>
           <div className={styles.section}>
             <div className={styles.heading}>Out of 50 total</div>
-            <div className={styles.text}>{t("Projects", "PRs")}</div>
+            <div className={styles.text}>{t("Contributions", "PRs")}</div>
             <div className={styles.information}>
               <div>
                 <Icons.gitPullRequest className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "Opened PRs by me")}</div>
+                  <div className={styles.key}>{t("Contributions", "Opened PRs by me")}</div>
                   <div className={styles.value}>20</div>
                 </div>
               </div>
               <div>
                 <Icons.gitPullRequest className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "Merged PRs by me")}</div>
+                  <div className={styles.key}>{t("Contributions", "Merged PRs by me")}</div>
                   <div className={styles.value}>10</div>
                 </div>
               </div>
@@ -97,19 +97,19 @@ export async function ProductCard(props: ProductCardProps) {
           </div>
           <div className={styles.section}>
             <div className={styles.heading}>Out of 200 total</div>
-            <div className={styles.text}>{t("Projects", "Issues")}</div>
+            <div className={styles.text}>{t("Contributions", "Issues")}</div>
             <div className={styles.information}>
               <div>
                 <Icons.gitPullRequest className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "Issues opened by me")}</div>
+                  <div className={styles.key}>{t("Contributions", "Issues opened by me")}</div>
                   <div className={styles.value}>20</div>
                 </div>
               </div>
               <div>
                 <Icons.gitPullRequest className={styles.icon} />
                 <div>
-                  <div className={styles.key}>{t("Projects", "Issues contributed by me")}</div>
+                  <div className={styles.key}>{t("Contributions", "Issues contributed by me")}</div>
                   <div className={styles.value}>10</div>
                 </div>
               </div>
@@ -117,16 +117,16 @@ export async function ProductCard(props: ProductCardProps) {
           </div>
           {
             /* <div className={styles.section}>
-            <div>{t("Projects", "My contributions")}</div>
+            <div>{t("Contributions", "My contributions")}</div>
             <div>~</div>
           </div> */
           }
         </div>
         <div className={styles.footer}>
-          <Link href={`/profiles/${props.product.slug}`} className={styles.header}>
+          <Link href={`/${props.product.slug}`} className={styles.header}>
             <Button variant="default">
               <Icons.star className={styles.icon} />
-              {t("Projects", "Project Details")}
+              {t("Contributions", "Project Details")}
               <ArrowRightIcon />
             </Button>
           </Link>

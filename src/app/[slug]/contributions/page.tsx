@@ -25,7 +25,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
   }
 
   return {
-    title: `${profileData.title} - ${t("Layout", "Projects")}`,
+    title: `${profileData.title} - ${t("Layout", "Contributions")}`,
     description: profileData.description,
   };
 }
@@ -44,9 +44,9 @@ async function IndexPage(props: IndexPageProps) {
   return (
     <article className="content space-y-6">
       <div className="flex flex-col gap-2">
-        <h2>{t("Layout", "Projects")}</h2>
+        <h2>{t("Layout", "Contributions")}</h2>
         <h3 className="text-muted-foreground">
-          {t("Projects", "A collection of open source projects and contributions.")}
+          {t("Contributions", "A collection of open source projects and organizations.")}
         </h3>
       </div>
 
@@ -54,17 +54,19 @@ async function IndexPage(props: IndexPageProps) {
         {membershipData.map((membership) => {
           const product = membership.profile;
 
-          membership.properties.stats = {
-            "issues": {
-              "total": 20,
-              "resolved": 10,
+          membership.properties = {
+            stats: {
+              issues: {
+                total: 20,
+                resolved: 10,
+              },
+              prs: {
+                total: 45,
+                resolved: 42,
+              },
+              stars: 206,
+              commits: 156,
             },
-            "prs": {
-              "total": 45,
-              "resolved": 42,
-            },
-            "stars": 206,
-            "commits": 156,
           };
 
           return (

@@ -7,7 +7,7 @@
     "About": "About",
     "Profile": "Profile",
     "Stories": "Stories",
-    "Projects": "Projects",
+    "Contributions": "Contributions",
     "Content not yet available.": "Content not yet available.",
     "Change theme": "Change theme",
     "System": "System",
@@ -46,8 +46,8 @@
     "Content": "Content",
     "Presentation": "Presentation"
   },
-  "Projects": {
-    "A collection of open source projects and contributions.": "A collection of open source projects and contributions.",
+  "Contributions": {
+    "A collection of open source projects and organizations.": "A collection of open source projects and organizations.",
     "Last update": "Last update",
     "Project Details": "Project Details",
     "Project description": "Project description",

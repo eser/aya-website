@@ -7,7 +7,7 @@
     "About": "Hakkında",
     "Profile": "Profil",
     "Stories": "Hikayeler",
-    "Projects": "Projeler",
+    "Contributions": "Katkılar",
     "Content not yet available.": "Henüz içerik bulunmamaktadır.",
     "Change theme": "Temayı değiştir",
     "System": "Sistem",
@@ -46,8 +46,8 @@
     "Content": "İçerik",
     "Presentation": "Sunum"
   },
-  "Projects": {
-    "A collection of open source projects and contributions.": "Açık kaynak projeleri ve katkıların bir koleksiyonu.",
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Açık kaynak projelerin ve organizasyonların bir koleksiyonu.",
     "Last update": "Son güncelleme",
     "Project Details": "Proje Detayları",
     "Project description": "Proje açıklaması",
