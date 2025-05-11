@@ -2,8 +2,9 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-import { Card } from "@/shared/components/ui/card.tsx";
+import { SiteLink } from "@/shared/components/site-link.tsx";
 import { Icons } from "@/shared/components/icons.tsx";
+import { Card } from "@/shared/components/ui/card.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import type { Profile, ProfileMembership } from "@/shared/modules/backend/profiles/types.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
@@ -123,13 +124,13 @@ export async function ProductCard(props: ProductCardProps) {
           }
         </div>
         <div className={styles.footer}>
-          <Link href={`/${props.product.slug}`} className={styles.header}>
+          <SiteLink href={`/${props.product.slug}`} className={styles.header}>
             <Button variant="default">
               <Icons.star className={styles.icon} />
               {t("Contributions", "Project Details")}
               <ArrowRightIcon />
             </Button>
-          </Link>
+          </SiteLink>
         </div>
       </div>
     </Card>
