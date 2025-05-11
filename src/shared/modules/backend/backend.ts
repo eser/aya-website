@@ -1,19 +1,15 @@
 import { getCustomDomain } from "./profiles/get-custom-domain.ts";
-import { getUsers } from "./users/get-users.ts";
-import { getUser } from "./users/get-user.ts";
-import { getProfiles } from "./profiles/get-profiles.ts";
+import { getProfilesByKind } from "./profiles/get-profiles-by-kind.ts";
 import { getProfile } from "./profiles/get-profile.ts";
 import { getProfilePage } from "./profiles/get-profile-page.ts";
-import { getStories } from "./stories/get-stories.ts";
-import { getProjects } from "./projects/get-projects.ts";
+import { getProfileMemberships } from "./profiles/get-profile-memberships.ts";
+import { getStoriesByAuthorProfile } from "./stories/get-stories-by-author-profile.ts";
 
 export const backend = {
   getCustomDomain,
-  getUsers,
-  getUser,
-  getProfiles,
+  getProfilesByKind,
   getProfile,
   getProfilePage,
-  getStories,
-  getProjects,
+  getProfileMemberships,
+  getStoriesByAuthorProfile,
 };

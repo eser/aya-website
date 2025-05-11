@@ -36,12 +36,7 @@ async function IndexPage(props: IndexPageProps) {
 
   const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
-  if (profileData === null) {
-    notFound();
-  }
-
-  const storiesData = await backend.getStories(profileData.id, locale.code);
+  const storiesData = await backend.getStoriesByAuthorProfile(params.slug, locale.code);
 
   if (storiesData === null) {
     notFound();

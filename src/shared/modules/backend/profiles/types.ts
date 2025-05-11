@@ -1,4 +1,4 @@
-export type ProfileKind = "individual" | "product";
+export type ProfileKind = "individual" | "product" | "organization";
 
 export type Profile = {
   id: string;
@@ -9,9 +9,6 @@ export type Profile = {
   pronouns: string | null;
   title: string;
   description: string;
-
-  show_projects: boolean;
-  show_members: boolean;
 
   created_at: string;
   updated_at: string | null;
@@ -70,11 +67,7 @@ export type ProfileMembershipKind = "follower" | "sponsor" | "contributor" | "ma
 export type ProfileMembership = {
   id: string;
   kind: ProfileMembershipKind;
+  properties: unknown;
 
-  profile_id: string;
-  user_id: string;
-
-  created_at: string;
-  updated_at: string | null;
-  deleted_at: string | null;
+  profile: Profile;
 };

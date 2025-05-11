@@ -5,37 +5,31 @@
     }
   },
   "users": {
-    "01JT1TWN9X9VZSKJWMBDNY7NGW": {
-      "id": "01JT1TWN9X9VZSKJWMBDNY7NGW",
-      "kind": "regular",
-      "first_name": "Eser",
-      "last_name": "Ozvataf",
+    "01J1M954JCJ0N1Q3378S70N0Z9": {
+      "id": "01J1M954JCJ0N1Q3378S70N0Z9",
+      "kind": "admin",
+      "name": "Eser Ozvataf",
       "email": "eser@acikyazilim.com",
-      "phone": "403.504.0982 x281",
+      "phone": null,
       "github_handle": "eser",
-      "github_remote_id": "5f63761d-6bcc-4072-889a-81a7b21b28ef",
-      "bsky_handle": "eser",
-      "bsky_remote_id": "4218480d-bfff-4697-86b2-f18b0fd08b25",
+      "bsky_handle": "eser.bsky.social",
       "x_handle": "eser",
-      "x_remote_id": "fe0db924-35df-41e7-823a-24b8dda0d9ea",
-      "individual_profile_id": "01JT1TXYSDXZFET19492RH7YR5",
-      "created_at": "2024-10-17T23:27:04.036Z",
-      "updated_at": "2025-04-29T14:05:54.664Z",
+      "individual_profile_id": "01J27JA3WM81T7D1TCNJ6Q06P5",
+      "created_at": "2024-06-30T09:55:54.720911Z",
+      "updated_at": null,
       "deleted_at": null
     }
   },
   "profiles": {
     "eser": {
-      "id": "01JT1TXYSDXZFET19492RH7YR5",
+      "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
       "kind": "individual",
       "slug": "eser",
       "custom_domain": "eser.dev",
       "profile_picture_uri": "https://avatars.githubusercontent.com/u/866558?v=4",
-      "title": "Eser Ozvataf",
       "pronouns": "he/him",
+      "title": "Eser Ozvataf",
       "description": "Founder @acikyazilim • Streaming @ eser.live • Açık Kaynak, DevRel, DevOps and Agile Evangelist • Generalist",
-      "show_projects": true,
-      "show_members": false,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
@@ -56,11 +50,9 @@
       "slug": "aya",
       "custom_domain": null,
       "profile_picture_uri": "/assets/logo.png",
-      "title": "AYA",
       "pronouns": null,
+      "title": "AYA",
       "description": "Gönüllü geliştirilen yazılımlarla oluşan bir yazılım vakfı",
-      "show_projects": true,
-      "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
@@ -99,16 +91,14 @@
   },
   "profiles.en": {
     "eser": {
-      "id": "01JT1TXYSDXZFET19492RH7YR5",
+      "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
       "kind": "individual",
       "slug": "eser",
       "custom_domain": "eser.dev",
       "profile_picture_uri": "https://avatars.githubusercontent.com/u/866558?v=4",
-      "title": "Eser Ozvataf",
       "pronouns": "he/him",
+      "title": "Eser Ozvataf",
       "description": "Founder @acikyazilim • Streaming @ eser.live • Open Source, DevRel, DevOps and Agile Evangelist • Generalist",
-      "show_projects": true,
-      "show_members": false,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
@@ -129,11 +119,9 @@
       "slug": "aya",
       "custom_domain": null,
       "profile_picture_uri": "/assets/logo.png",
-      "title": "AYA",
       "pronouns": null,
+      "title": "AYA",
       "description": "A software foundation formed by volunteer-developed software",
-      "show_projects": true,
-      "show_members": true,
       "created_at": "2024-10-17T23:27:04.036Z",
       "updated_at": "2025-04-29T14:05:54.664Z",
       "deleted_at": null,
@@ -265,7 +253,7 @@
     }
   },
   "stories": {
-    "01JT1TXYSDXZFET19492RH7YR5": [
+    "01J27JA3WM81T7D1TCNJ6Q06P5": [
       {
         "id": "01JTP6PZ6770WM3BR53NEKTJC7",
         "kind": "status",
@@ -277,7 +265,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -297,7 +285,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -317,7 +305,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -337,7 +325,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -357,7 +345,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -377,7 +365,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -397,7 +385,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -417,7 +405,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -437,7 +425,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -457,7 +445,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -477,7 +465,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -497,7 +485,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -517,7 +505,7 @@
         "content": null,
         "is_featured": false,
         "author_profile": {
-          "id": "01JT1TXYSDXZFET19492RH7YR5",
+          "id": "01J27JA3WM81T7D1TCNJ6Q06P5",
           "slug": "eser",
           "title": "Eser Ozvataf"
         },
@@ -571,7 +559,7 @@
     ]
   },
   "projects": {
-    "01JT1TXYSDXZFET19492RH7YR5": [
+    "01J27JA3WM81T7D1TCNJ6Q06P5": [
       {
         "id": "01JTRSQ7JF99W8C4W5QF699WKB",
         "title": "topluluklar",

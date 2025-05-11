@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 
 import { formatDateString } from "@/shared/lib/date.ts";
-import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories.ts";
+import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories-by-author-profile.ts";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
@@ -39,9 +40,15 @@ export function Timeline(props: TimelineProps) {
           <li key={story.id} className={styles.item}>
             <div className={styles.dot} />
             <time className={styles.date}>{formatDateString(story.published_at!, locale.code)}</time>
-            <SiteLink className={styles.box} href={`/${story.author_profile.slug}/stories/${story.slug}`}>
+            <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
               {story.cover_picture_uri && (
-                <img src={story.cover_picture_uri} alt={story.title ?? ""} className={styles["cover-picture"]} />
+                <Image
+                  src={story.cover_picture_uri}
+                  width={200}
+                  height={200}
+                  alt={story.title ?? ""}
+                  className={styles["cover-picture"]}
+                />
               )}
               <div className={styles.text}>
                 <span className={styles.kind}>{filterMapping[story.kind]}</span>

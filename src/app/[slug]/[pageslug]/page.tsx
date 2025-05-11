@@ -25,12 +25,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
-  const page = profileData.pages.find((page) => page.slug === params.pageslug);
-  if (page === undefined) {
-    notFound();
-  }
-
-  const pageData = await backend.getProfilePage(page.id, locale.code);
+  const pageData = await backend.getProfilePage(profileData.slug, params.pageslug, locale.code);
 
   if (pageData === null) {
     notFound();
@@ -47,18 +42,7 @@ async function IndexPage(props: IndexPageProps) {
 
   const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
-
-  if (profileData === null) {
-    notFound();
-  }
-
-  const page = profileData.pages.find((page) => page.slug === params.pageslug);
-  if (page === undefined) {
-    notFound();
-  }
-
-  const pageData = await backend.getProfilePage(page.id, locale.code);
+  const pageData = await backend.getProfilePage(params.slug, params.pageslug, locale.code);
 
   if (pageData === null) {
     notFound();

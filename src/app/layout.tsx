@@ -7,7 +7,7 @@ import { NavigationProvider } from "@/shared/modules/navigation/navigation-provi
 import { TranslationsProvider } from "@/shared/modules/i18n/translations-provider.tsx";
 import { getNavigationState } from "@/shared/modules/navigation/get-navigation-state.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { RegisterBackend } from "./register-backend.tsx";
+import { RegisterGlobals } from "./register-globals.tsx";
 import { Analytics } from "./analytics.tsx";
 import "../shared/globals.css";
 
@@ -54,7 +54,7 @@ async function Layout(props: LayoutProps) {
             {props.children}
           </NavigationProvider>
         </TranslationsProvider>
-        <RegisterBackend />
+        <RegisterGlobals />
         <Analytics />
       </body>
     </html>

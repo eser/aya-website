@@ -3,6 +3,7 @@ import type { Result } from "./types.ts";
 
 export async function fetcher<T>(relativePath: string): Promise<T | null> {
   const targetUrl = `${siteConfig.backendUri}${relativePath}`;
+  // console.log("targetUrl", targetUrl);
   const request = await fetch(targetUrl);
 
   if (request.status === 404) {

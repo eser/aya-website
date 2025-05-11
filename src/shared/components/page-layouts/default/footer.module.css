@@ -5,13 +5,15 @@
     @apply container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between sm:items-center gap-6 sm:gap-0;
 
     & > .links {
-      @apply flex flex-col sm:flex-row gap-2 sm:gap-4 text-sm;
+      @apply flex flex-row flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 text-sm;
 
       & .div {
         @apply h-auto;
       }
     }
 
-    /* & > .locales {} */
+    & > .locales {
+      @apply flex flex-row justify-center sm:justify-end gap-2 sm:gap-4 text-sm;
+    }
   }
 }

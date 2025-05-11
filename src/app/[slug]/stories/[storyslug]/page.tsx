@@ -25,7 +25,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
-  const storiesData = await backend.getStories(profileData.id, locale.code);
+  const storiesData = await backend.getStoriesByAuthorProfile(profileData.slug, locale.code);
 
   if (storiesData === null) {
     notFound();
@@ -53,7 +53,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const storiesData = await backend.getStories(profileData.id, locale.code);
+  const storiesData = await backend.getStoriesByAuthorProfile(profileData.slug, locale.code);
 
   if (storiesData === null) {
     notFound();

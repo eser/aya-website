@@ -35,14 +35,9 @@ async function IndexPage(props: IndexPageProps) {
 
   const { t, locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
-  if (profileData === null) {
-    notFound();
-  }
+  const membershipData = await backend.getProfileMemberships(params.slug, "product", locale.code);
 
-  const projectsData = await backend.getProjects(profileData.id, locale.code);
-
-  if (projectsData === null) {
+  if (membershipData === null) {
     notFound();
   }
 
@@ -56,12 +51,28 @@ async function IndexPage(props: IndexPageProps) {
       </div>
 
       <ProjectGrid>
-        {projectsData.map((project) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-          />
-        ))}
+        {membershipData.map((membership) => {
+          const project = membership.profile;
+
+          // TODO(@eser) will be refactored to use the backend data
+          project.role = membership.kind;
+          project.stats = {
+            "issues": 20,
+            "stars": 206,
+            "commits": 156,
+            "prs": {
+              "total": 45,
+              "resolved": 42,
+            },
+          };
+
+          return (
+            <ProjectCard
+              key={membership.id}
+              project={project}
+            />
+          );
+        })}
       </ProjectGrid>
     </article>
   );

@@ -10,8 +10,8 @@ export type GetStoriesData = (Omit<Story, "author_profile_id"> & {
   };
 })[];
 
-export async function getStories(id: string, locale: string) {
-  const response = await fetcher<GetStoriesData>(`/${locale}/stories/${id}`);
+export async function getStoriesByAuthorProfile(slug: string, locale: string) {
+  const response = await fetcher<GetStoriesData>(`/${locale}/profiles/${slug}/stories`);
 
   return response;
 }
