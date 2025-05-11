@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 
 import { cn } from "@/shared/lib/utils.ts";
 import type { StoryKind } from "@/shared/modules/backend/stories/types.ts";

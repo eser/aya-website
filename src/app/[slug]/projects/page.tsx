@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -54,17 +54,17 @@ async function IndexPage(props: IndexPageProps) {
         {membershipData.map((membership) => {
           const product = membership.profile;
 
-          // @ts-expect-error TODO(@eser) will be refactored to use the backend data
-          product.role = membership.kind;
-          // @ts-expect-error TODO(@eser) will be refactored to use the backend data
-          product.stats = {
-            "issues": 20,
-            "stars": 206,
-            "commits": 156,
+          membership.properties.stats = {
+            "issues": {
+              "total": 20,
+              "resolved": 10,
+            },
             "prs": {
               "total": 45,
               "resolved": 42,
             },
+            "stars": 206,
+            "commits": 156,
           };
 
           return (

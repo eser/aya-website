@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react";
 
 import { cn } from "../../lib/utils.ts";

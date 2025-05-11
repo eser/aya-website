@@ -67,7 +67,20 @@ export type ProfileMembershipKind = "follower" | "sponsor" | "contributor" | "ma
 export type ProfileMembership = {
   id: string;
   kind: ProfileMembershipKind;
-  properties: unknown;
+  properties: {
+    stats?: {
+      commits: number;
+      prs: {
+        resolved: number;
+        total: number;
+      };
+      issues: {
+        resolved: number;
+        total: number;
+      };
+      stars: number;
+    };
+  };
 
   profile: Profile;
 };

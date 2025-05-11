@@ -1,6 +1,6 @@
 "use client";
 
-import type * as React from "react";
+import * as React from "react";
 import { useTheme } from "next-themes";
 
 import { cn } from "@/shared/lib/cn.ts";

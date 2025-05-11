@@ -24,31 +24,31 @@ export async function ProductCard(props: ProductCardProps) {
         <Link href={`/profiles/${props.product.id}`} className={styles.header}>
           <h3 className={styles.title}>{props.product.title}</h3>
           <div className={styles.stats}>
-            {props.product.stats.commits !== undefined && (
+            {props.membership?.properties?.stats?.commits !== undefined && (
               <span className={styles.stat}>
                 <Icons.gitCommit className={styles.icon} />
-                {props.product.stats.commits}
+                {props.membership?.properties?.stats?.commits}
               </span>
             )}
-            {props.product.stats.prs && (
+            {props.membership?.properties?.stats?.prs && (
               <span
                 className={styles.stat}
-                title={`${props.product.stats.prs.resolved} resolved out of ${props.product.stats.prs.total} PRs`}
+                title={`${props.membership?.properties?.stats?.prs.resolved} resolved out of ${props.membership?.properties?.stats?.prs.total} PRs`}
               >
                 <Icons.gitPullRequest className={styles.icon} />
-                {props.product.stats.prs.resolved}/{props.product.stats.prs.total}
+                {props.membership?.properties?.stats?.prs.resolved}/{props.membership?.properties?.stats?.prs.total}
               </span>
             )}
-            {props.product.stats.issues !== undefined && (
+            {props.membership?.properties?.stats?.issues !== undefined && (
               <span className={styles.stat}>
                 <Icons.gitFork className={styles.icon} />
-                {props.product.stats.issues}
+                {props.membership?.properties?.stats?.issues.total}
               </span>
             )}
-            {props.product.stats.stars !== undefined && (
+            {props.membership?.properties?.stats?.stars !== undefined && (
               <span className={styles.stat}>
                 <Icons.star className={styles.icon} />
-                {props.product.stats.stars}
+                {props.membership?.properties?.stats?.stars}
               </span>
             )}
           </div>
@@ -57,7 +57,7 @@ export async function ProductCard(props: ProductCardProps) {
         <div className={styles.attributes}>
           <div className={styles.section}>
             <div className={styles.heading}>{t("Projects", "My role in the project")}</div>
-            <div className={styles.text}>{t("Projects", props.product.role)}</div>
+            <div className={styles.text}>{t("Projects", props.membership?.kind ?? "-")}</div>
             <div className={styles.information}>
               <div>
                 <Icons.gitCommit className={styles.icon} />
@@ -123,12 +123,6 @@ export async function ProductCard(props: ProductCardProps) {
           }
         </div>
         <div className={styles.footer}>
-          <Link href={`https://github.com/${props.product.repository}`} target="_blank">
-            <Button variant="outline">
-              <Icons.github className={styles.icon} />
-              {props.product.repository}
-            </Button>
-          </Link>
           <Link href={`/profiles/${props.product.slug}`} className={styles.header}>
             <Button variant="default">
               <Icons.star className={styles.icon} />

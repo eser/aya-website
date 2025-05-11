@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 
 import { mdx } from "@/shared/lib/mdx.tsx";

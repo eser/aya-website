@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { Separator } from "@/shared/components/ui/separator.tsx";

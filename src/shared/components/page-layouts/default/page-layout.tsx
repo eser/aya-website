@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 
 import { ThemeProvider } from "@/shared/modules/themes/theme-provider.tsx";
 

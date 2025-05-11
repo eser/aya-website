@@ -1,4 +1,4 @@
-import type * as React from "react";
+import * as React from "react";
 
 import { Astronaut } from "@/shared/components/widgets/astronaut/astronaut.tsx";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";

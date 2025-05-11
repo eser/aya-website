@@ -1,6 +1,6 @@
 "use client";
 
-import type * as React from "react";
+import * as React from "react";
 
 import { Bree_Serif, Open_Sans } from "next/font/google";
 
