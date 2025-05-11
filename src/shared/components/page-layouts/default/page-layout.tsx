@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { ThemeProvider } from "@/shared/modules/themes/theme-provider.tsx";
+import { backend } from "@/shared/modules/backend/backend.ts";
 
 import { Header } from "./header.tsx";
 import { Footer } from "./footer.tsx";
@@ -13,7 +14,9 @@ type PageLayoutProps = {
   children: React.ReactNode;
 };
 
-export function PageLayout(props: PageLayoutProps) {
+export async function PageLayout(props: PageLayoutProps) {
+  const spotlight = await backend.getSpotlight() ?? [];
+
   return (
     <>
       <FontProvider />
@@ -26,7 +29,7 @@ export function PageLayout(props: PageLayoutProps) {
         attribute="data-theme"
       >
         <div className="min-h-screen flex flex-col">
-          <Header placeholders={props.placeholders} />
+          <Header placeholders={props.placeholders} spotlight={spotlight} />
           <main className="flex-1">{props.children}</main>
           <Footer />
           <ResponsiveIndicator />

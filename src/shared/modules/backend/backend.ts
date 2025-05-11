@@ -4,6 +4,7 @@ import { getProfile } from "./profiles/get-profile.ts";
 import { getProfilePage } from "./profiles/get-profile-page.ts";
 import { getProfileMemberships } from "./profiles/get-profile-memberships.ts";
 import { getStoriesByAuthorProfile } from "./stories/get-stories-by-author-profile.ts";
+import { getSpotlight } from "./profiles/get-spotlight.ts";
 
 export const backend = {
   getCustomDomain,
@@ -12,4 +13,5 @@ export const backend = {
   getProfilePage,
   getProfileMemberships,
   getStoriesByAuthorProfile,
+  getSpotlight,
 };

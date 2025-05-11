@@ -4,9 +4,10 @@ import * as React from "react";
 import { useTheme } from "next-themes";
 
 import { cn } from "@/shared/lib/cn.ts";
-import { Icons } from "@/shared/components/icons.tsx";
 import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
+import type { GetSpotlightData } from "@/shared/modules/backend/profiles/get-spotlight.ts";
+import { Icons } from "@/shared/components/icons.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
   CommandDialog,
@@ -19,7 +20,11 @@ import {
   CommandShortcut,
 } from "@/shared/components/ui/command.tsx";
 
-export function SearchBar() {
+type SearchBarProps = {
+  spotlight: GetSpotlightData;
+};
+
+export function SearchBar(props: SearchBarProps) {
   const [open, setOpen] = React.useState(false);
 
   const { t, supportedLocales, localeCode } = useTranslations();
@@ -68,24 +73,19 @@ export function SearchBar() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading={t("Search", "Profiles")}>
-            <CommandItem
-              onSelect={() => {
-                navigation.push("/aya");
-                setOpen(false);
-              }}
-            >
-              <Icons.users className="mr-2 h-4 w-4" />
-              <span>AYA</span>
-            </CommandItem>
-            <CommandItem
-              onSelect={() => {
-                navigation.push("/eser");
-                setOpen(false);
-              }}
-            >
-              <Icons.user className="mr-2 h-4 w-4" />
-              <span>Eser Ozvataf</span>
-            </CommandItem>
+            {props.spotlight.map((profile) => (
+              <CommandItem
+                key={profile.id}
+                onSelect={() => {
+                  navigation.push(`/${profile.slug}`);
+                  setOpen(false);
+                }}
+              >
+                <Icons.users className="mr-2 h-4 w-4" />
+                <span>{profile.title}</span>
+                <span className="sr-only">{profile.description}</span>
+              </CommandItem>
+            ))}
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading={t("Search", "Themes")}>
