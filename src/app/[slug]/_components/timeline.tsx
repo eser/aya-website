@@ -39,7 +39,7 @@ export function Timeline(props: TimelineProps) {
         {filteredStories.map((story) => (
           <li key={story.id} className={styles.item}>
             <div className={styles.dot} />
-            <time className={styles.date}>{formatDateString(story.published_at!, locale.code)}</time>
+            <time className={styles.date}>{formatDateString(story.published_at, locale.code)}</time>
             <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
               {story.cover_picture_uri && (
                 <Image

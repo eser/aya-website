@@ -1,7 +1,7 @@
 import { headers } from "next/headers";
 
 import { fallbackLocaleCode, supportedLocales } from "@/shared/config.ts";
-import { type Locale } from "@/shared/modules/i18n/locales.ts";
+import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
 export type NavigationState = {
   host: string | null;

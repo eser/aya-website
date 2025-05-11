@@ -1,11 +1,11 @@
-import * as React from "react";
+import type * as React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { ProjectCard } from "@/shared/components/userland/projects/project-card.tsx";
-import { ProjectGrid } from "@/shared/components/userland/projects/project-grid.tsx";
+import { ProductCard } from "@/shared/components/userland/products/product-card.tsx";
+import { ProductGrid } from "@/shared/components/userland/products/product-grid.tsx";
 
 type IndexPageProps = {
   params: Promise<{
@@ -50,13 +50,14 @@ async function IndexPage(props: IndexPageProps) {
         </h3>
       </div>
 
-      <ProjectGrid>
+      <ProductGrid>
         {membershipData.map((membership) => {
-          const project = membership.profile;
+          const product = membership.profile;
 
-          // TODO(@eser) will be refactored to use the backend data
-          project.role = membership.kind;
-          project.stats = {
+          // @ts-expect-error TODO(@eser) will be refactored to use the backend data
+          product.role = membership.kind;
+          // @ts-expect-error TODO(@eser) will be refactored to use the backend data
+          product.stats = {
             "issues": 20,
             "stars": 206,
             "commits": 156,
@@ -67,13 +68,14 @@ async function IndexPage(props: IndexPageProps) {
           };
 
           return (
-            <ProjectCard
+            <ProductCard
               key={membership.id}
-              project={project}
+              product={product}
+              membership={membership}
             />
           );
         })}
-      </ProjectGrid>
+      </ProductGrid>
     </article>
   );
 }

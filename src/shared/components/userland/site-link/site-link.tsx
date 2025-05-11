@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import type * as React from "react";
 
 import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 

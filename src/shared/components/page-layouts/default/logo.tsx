@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 import { siteConfig } from "@/shared/config.ts";
 import { cn } from "@/shared/lib/cn.ts";

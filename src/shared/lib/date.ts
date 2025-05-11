@@ -8,6 +8,10 @@ export function formatDate(date: Date, locale: string) {
   return date.toLocaleDateString(locale);
 }
 
-export function formatDateString(dateString: string, locale: string) {
+export function formatDateString(dateString: string | null, locale: string) {
+  if (dateString === null) {
+    return "";
+  }
+
   return formatDate(new Date(dateString), locale);
 }

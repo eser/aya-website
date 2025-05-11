@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 

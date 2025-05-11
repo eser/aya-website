@@ -1,4 +1,4 @@
-import { type NextRequest } from "next/server";
+import type { NextRequest } from "next/server";
 import Negotiator from "negotiator";
 import picoMatch from "picomatch/posix.js";
 

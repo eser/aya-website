@@ -1,5 +1,5 @@
 import "server-only";
-import * as React from "react";
+import type * as React from "react";
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/shared/config.ts";

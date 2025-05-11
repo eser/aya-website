@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 import {
   Calendar,
@@ -9,7 +9,7 @@ import {
   Instagram,
   Laptop,
   Link,
-  LucideProps,
+  type LucideProps,
   Moon,
   Settings,
   Star,

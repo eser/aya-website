@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 

@@ -5,58 +5,59 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Card } from "@/shared/components/ui/card.tsx";
 import { Icons } from "@/shared/components/icons.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
-import type { Project } from "@/shared/modules/backend/projects/types.ts";
+import type { Profile, ProfileMembership } from "@/shared/modules/backend/profiles/types.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 
-import styles from "./project-card.module.css";
+import styles from "./product-card.module.css";
 
-export interface ProjectCardProps {
-  project: Project;
+export interface ProductCardProps {
+  product: Profile;
+  membership?: ProfileMembership;
 }
 
-export async function ProjectCard(props: ProjectCardProps) {
+export async function ProductCard(props: ProductCardProps) {
   const { t } = await getTranslations();
 
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <Link href={`/projects/${props.project.id}`} className={styles.header}>
-          <h3 className={styles.title}>{props.project.title}</h3>
+        <Link href={`/profiles/${props.product.id}`} className={styles.header}>
+          <h3 className={styles.title}>{props.product.title}</h3>
           <div className={styles.stats}>
-            {props.project.stats.commits !== undefined && (
+            {props.product.stats.commits !== undefined && (
               <span className={styles.stat}>
                 <Icons.gitCommit className={styles.icon} />
-                {props.project.stats.commits}
+                {props.product.stats.commits}
               </span>
             )}
-            {props.project.stats.prs && (
+            {props.product.stats.prs && (
               <span
                 className={styles.stat}
-                title={`${props.project.stats.prs.resolved} resolved out of ${props.project.stats.prs.total} PRs`}
+                title={`${props.product.stats.prs.resolved} resolved out of ${props.product.stats.prs.total} PRs`}
               >
                 <Icons.gitPullRequest className={styles.icon} />
-                {props.project.stats.prs.resolved}/{props.project.stats.prs.total}
+                {props.product.stats.prs.resolved}/{props.product.stats.prs.total}
               </span>
             )}
-            {props.project.stats.issues !== undefined && (
+            {props.product.stats.issues !== undefined && (
               <span className={styles.stat}>
                 <Icons.gitFork className={styles.icon} />
-                {props.project.stats.issues}
+                {props.product.stats.issues}
               </span>
             )}
-            {props.project.stats.stars !== undefined && (
+            {props.product.stats.stars !== undefined && (
               <span className={styles.stat}>
                 <Icons.star className={styles.icon} />
-                {props.project.stats.stars}
+                {props.product.stats.stars}
               </span>
             )}
           </div>
         </Link>
-        <div className={styles.description}>{props.project.description}</div>
+        <div className={styles.description}>{props.product.description}</div>
         <div className={styles.attributes}>
           <div className={styles.section}>
             <div className={styles.heading}>{t("Projects", "My role in the project")}</div>
-            <div className={styles.text}>{t("Projects", props.project.role)}</div>
+            <div className={styles.text}>{t("Projects", props.product.role)}</div>
             <div className={styles.information}>
               <div>
                 <Icons.gitCommit className={styles.icon} />
@@ -122,13 +123,13 @@ export async function ProjectCard(props: ProjectCardProps) {
           }
         </div>
         <div className={styles.footer}>
-          <Link href={`https://github.com/${props.project.repository}`} target="_blank">
+          <Link href={`https://github.com/${props.product.repository}`} target="_blank">
             <Button variant="outline">
               <Icons.github className={styles.icon} />
-              {props.project.repository}
+              {props.product.repository}
             </Button>
           </Link>
-          <Link href={`/projects/${props.project.id}`} className={styles.header}>
+          <Link href={`/profiles/${props.product.slug}`} className={styles.header}>
             <Button variant="default">
               <Icons.star className={styles.icon} />
               {t("Projects", "Project Details")}

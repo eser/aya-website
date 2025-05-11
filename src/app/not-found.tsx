@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 // FIXME(@eser) adding layout there breaks the entire site
 

@@ -1,6 +1,6 @@
 // import * as flags from "flags/next";
 
-import { type Locale } from "@/shared/modules/i18n/locales.ts";
+import type { Locale } from "@/shared/modules/i18n/locales.ts";
 
 import * as flags from "./fake-flags-sdk.ts";
 
@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
   // deno-lint-ignore no-process-global
   host: process.env.NEXT_PUBLIC_HOST ?? "aya.is",
   // deno-lint-ignore no-process-global
-  backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "http://localhost:3000/contract/mocks",
+  backendUri: process.env.NEXT_PUBLIC_BACKEND_URI ?? "https://api.aya.is",
 
   features: {
     login: flags.flag({
@@ -90,6 +90,7 @@ export const forbiddenSlugs: readonly string[] = [
   "profile",
   "profiles",
   "projects",
+  "products",
   "register",
   "root",
   "search",
