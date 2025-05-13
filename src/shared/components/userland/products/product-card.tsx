@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
-import { SiteLink } from "@/shared/components/site-link.tsx";
+import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 import { Icons } from "@/shared/components/icons.tsx";
 import { Card } from "@/shared/components/ui/card.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
