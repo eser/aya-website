@@ -44,3 +44,11 @@
     }
   }
 }
+
+.emptyState {
+  @apply py-10 text-center;
+
+  & > p {
+    @apply text-muted-foreground text-lg font-medium;
+  }
+}
