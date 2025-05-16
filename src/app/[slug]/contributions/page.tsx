@@ -6,6 +6,7 @@ import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { ProductCard } from "@/shared/components/userland/products/product-card.tsx";
 import { ProductGrid } from "@/shared/components/userland/products/product-grid.tsx";
+import styles from "./page.module.css";
 
 type IndexPageProps = {
   params: Promise<{
@@ -50,9 +51,10 @@ async function IndexPage(props: IndexPageProps) {
         </h3>
       </div>
 
-      <ProductGrid>
-        {membershipData.map((membership) => {
-          const product = membership.profile;
+      {membershipData.length > 0 ? (
+        <ProductGrid>
+          {membershipData.map((membership) => {
+            const product = membership.profile;
 
           membership.properties = {
             stats: {
@@ -76,8 +78,13 @@ async function IndexPage(props: IndexPageProps) {
               membership={membership}
             />
           );
-        })}
-      </ProductGrid>
+          })}
+        </ProductGrid>
+      ) : (
+        <div className={styles.emptyState}>
+          <p>{t("Contributions", "No contributions found.")}</p>
+        </div>
+      )}
     </article>
   );
 }
