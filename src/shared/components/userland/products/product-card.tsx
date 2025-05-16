@@ -1,5 +1,4 @@
 import * as React from "react";
-import Link from "next/link";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
@@ -11,10 +10,10 @@ import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 
 import styles from "./product-card.module.css";
 
-export interface ProductCardProps {
+export type ProductCardProps = {
   product: Profile;
   membership?: ProfileMembership;
-}
+};
 
 export async function ProductCard(props: ProductCardProps) {
   const { t } = await getTranslations();
@@ -22,7 +21,7 @@ export async function ProductCard(props: ProductCardProps) {
   return (
     <Card className={styles.card}>
       <div className={styles.content}>
-        <Link href={`/${props.product.slug}`} className={styles.header}>
+        <SiteLink href={`/${props.product.slug}`} className={styles.header}>
           <h3 className={styles.title}>{props.product.title}</h3>
           <div className={styles.stats}>
             {props.membership?.properties?.stats?.commits !== undefined && (
@@ -53,7 +52,7 @@ export async function ProductCard(props: ProductCardProps) {
               </span>
             )}
           </div>
-        </Link>
+        </SiteLink>
         <div className={styles.description}>{props.product.description}</div>
         <div className={styles.attributes}>
           <div className={styles.section}>

@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 import { fallbackLocaleCode, siteConfig, supportedLocales } from "@/shared/config.ts";
 import * as localeMatcher from "@/shared/modules/i18n/locales.ts";
-import { getCustomDomain } from "@/shared/modules/backend/profiles/get-custom-domain.ts";
+import { backend } from "@/shared/modules/backend/backend.ts";
 
 async function applyCustomDomainMiddleware(req: NextRequest, res: NextResponse): Promise<NextResponse> {
   const host = req.headers.get("host")?.split(":", 1).at(0);
@@ -11,7 +11,7 @@ async function applyCustomDomainMiddleware(req: NextRequest, res: NextResponse):
     return res;
   }
 
-  const customDomain = await getCustomDomain(host);
+  const customDomain = await backend.getCustomDomain(host);
 
   if (customDomain === null) {
     return res;

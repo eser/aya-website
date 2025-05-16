@@ -51,40 +51,42 @@ async function IndexPage(props: IndexPageProps) {
         </h3>
       </div>
 
-      {membershipData.length > 0 ? (
-        <ProductGrid>
-          {membershipData.map((membership) => {
-            const product = membership.profile;
+      {membershipData.length > 0
+        ? (
+          <ProductGrid>
+            {membershipData.map((membership) => {
+              const product = membership.profile;
 
-          membership.properties = {
-            stats: {
-              issues: {
-                total: 20,
-                resolved: 10,
-              },
-              prs: {
-                total: 45,
-                resolved: 42,
-              },
-              stars: 206,
-              commits: 156,
-            },
-          };
+              membership.properties = {
+                stats: {
+                  issues: {
+                    total: 20,
+                    resolved: 10,
+                  },
+                  prs: {
+                    total: 45,
+                    resolved: 42,
+                  },
+                  stars: 206,
+                  commits: 156,
+                },
+              };
 
-          return (
-            <ProductCard
-              key={membership.id}
-              product={product}
-              membership={membership}
-            />
-          );
-          })}
-        </ProductGrid>
-      ) : (
-        <div className={styles.emptyState}>
-          <p>{t("Contributions", "No contributions found.")}</p>
-        </div>
-      )}
+              return (
+                <ProductCard
+                  key={membership.id}
+                  product={product}
+                  membership={membership}
+                />
+              );
+            })}
+          </ProductGrid>
+        )
+        : (
+          <div className={styles.emptyState}>
+            <p>{t("Contributions", "No contributions found.")}</p>
+          </div>
+        )}
     </article>
   );
 }

@@ -35,36 +35,38 @@ export function Timeline(props: TimelineProps) {
     <>
       <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} mapping={filterMapping} />
 
-      {filteredStories.length > 0 ? (
-        <ul className={styles.items}>
-          {filteredStories.map((story) => (
-            <li key={story.id} className={styles.item}>
-              <div className={styles.dot} />
-              <time className={styles.date}>{formatDateString(story.published_at, locale.code)}</time>
-              <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
-                {story.cover_picture_uri && (
-                  <Image
-                    src={story.cover_picture_uri}
-                    width={200}
-                    height={200}
-                    alt={story.title ?? ""}
-                    className={styles["cover-picture"]}
-                  />
-                )}
-                <div className={styles.text}>
-                  <span className={styles.kind}>{filterMapping[story.kind]}</span>
-                  <p className={styles.title}>{story.title}</p>
-                  <p className={styles.summary}>{story.summary}</p>
-                </div>
-              </SiteLink>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div className={styles.emptyState}>
-          <p>{t("Layout", "Content not yet available.")}</p>
-        </div>
-      )}
+      {filteredStories.length > 0
+        ? (
+          <ul className={styles.items}>
+            {filteredStories.map((story) => (
+              <li key={story.id} className={styles.item}>
+                <div className={styles.dot} />
+                <time className={styles.date}>{formatDateString(story.published_at, locale.code)}</time>
+                <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
+                  {story.cover_picture_uri && (
+                    <Image
+                      src={story.cover_picture_uri}
+                      width={200}
+                      height={200}
+                      alt={story.title ?? ""}
+                      className={styles["cover-picture"]}
+                    />
+                  )}
+                  <div className={styles.text}>
+                    <span className={styles.kind}>{filterMapping[story.kind]}</span>
+                    <p className={styles.title}>{story.title}</p>
+                    <p className={styles.summary}>{story.summary}</p>
+                  </div>
+                </SiteLink>
+              </li>
+            ))}
+          </ul>
+        )
+        : (
+          <div className={styles.emptyState}>
+            <p>{t("Layout", "Content not yet available.")}</p>
+          </div>
+        )}
     </>
   );
 }

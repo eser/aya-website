@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import Link from "next/link";
+import NextLinkOrig from "next/link";
+// More robust workaround for Deno/Next.js Link typing issues
+const Link = NextLinkOrig as unknown as typeof import("next/link").default;
 
 import { siteConfig } from "@/shared/config.ts";
 import { cn } from "@/shared/lib/cn.ts";

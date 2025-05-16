@@ -1,8 +1,56 @@
 ---
 description:
 globs:
-alwaysApply: false
+alwaysApply: true
 ---
-# Backend interaction
+# Backend Interaction Workflow
 
-Backend APIs are called from react server components by importing [backend.ts](mdc:src/shared/modules/backend/backend.ts). Each method of exported `backend` object calls respective API with returning correct return type.
+This document outlines the standard procedure for interacting with backend services, specifically tailored for generative AI and code agents.
+
+## Centralized Backend Module
+
+The primary mechanism for backend communication is through a centralized module located at `src/shared/modules/backend/backend.ts`.
+
+**Path:** `[src/shared/modules/backend/backend.ts](mdc:src/shared/modules/backend/backend.ts)`
+
+## How to Use
+
+1.  **Import the `backend` Object:**
+    React Server Components, or any other server-side modules needing backend data, should import the `backend` object from this central file.
+    ```typescript
+    import { backend } from "@/shared/modules/backend/backend.ts";
+    ```
+
+2.  **Access API Methods:**
+    The `backend` object exports various methods, each corresponding to a specific backend API endpoint or data-fetching operation. These methods are clearly named and provide type safety for parameters and return values.
+    ```typescript
+    // Example: Fetching a user profile
+    type UserProfileProps = {
+      userId: string;
+    };
+
+    async function UserProfile(props: UserProfileProps) {
+      const profile = await backend.getProfile({ id: props.userId });
+      // ... render profile
+    }
+
+    // Example: Fetching stories by an author
+    type AuthorStoriesProps = {
+      authorId: string;
+    };
+
+    async function AuthorStories(props: AuthorStoriesProps) {
+      const stories = await backend.getStoriesByAuthorProfile({ authorProfileId: props.authorId });
+      // ... render stories
+    }
+    ```
+
+## Benefits for AI Agents
+
+-   **Single Source of Truth:** Agents should treat `backend.ts` as the definitive source for discovering and utilizing available backend functionalities. There's no need to scan other directories or guess API function locations.
+-   **Clear Contract:** Each method on the `backend` object represents a well-defined contract with the backend, including expected inputs and outputs, enforced by TypeScript.
+-   **Simplified Interaction:** This pattern simplifies the task for AI agents by providing a consistent and predictable way to make backend calls.
+-   **Abstraction:** The internal structure of how these backend functions are organized (e.g., within `profiles/` or `stories/` sub-folders) is abstracted away, allowing agents to focus on the available operations.
+
+**Guidance for Agents:**
+When tasked with implementing features that require backend data, always refer to the methods exported by `src/shared/modules/backend/backend.ts`. Assume that any necessary backend interaction is exposed through this central `backend` object.
