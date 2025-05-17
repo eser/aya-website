@@ -71,5 +71,10 @@
     "lead": "Chef de file",
     "owner": "Propriétaire",
     "No contributions found.": "Aucune contribution trouvée."
+  },
+  "ElementsPage": {
+    "Individuals": "Individus",
+    "Organizations": "Organisations",
+    "NoProfilesFound": "Aucun profil trouvé."
   }
 }

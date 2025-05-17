@@ -71,5 +71,10 @@
     "lead": "Líder",
     "owner": "Proprietário",
     "No contributions found.": "Nenhuma contribuição encontrada."
+  },
+  "ElementsPage": {
+    "Individuals": "Indivíduos",
+    "Organizations": "Organizações",
+    "NoProfilesFound": "Nenhum perfil encontrado."
   }
 }

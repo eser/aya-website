@@ -71,5 +71,10 @@
     "lead": "Lead",
     "owner": "Owner",
     "No contributions found.": "No contributions found."
+  },
+  "ElementsPage": {
+    "Individuals": "Individuals",
+    "Organizations": "Organizations",
+    "NoProfilesFound": "No profiles found."
   }
 }

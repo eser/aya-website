@@ -71,5 +71,10 @@
     "lead": "负责人",
     "owner": "所有者",
     "No contributions found.": "未找到贡献。"
+  },
+  "ElementsPage": {
+    "Individuals": "个人",
+    "Organizations": "组织",
+    "NoProfilesFound": "未找到任何个人资料。"
   }
 }

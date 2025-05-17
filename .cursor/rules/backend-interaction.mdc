@@ -54,3 +54,7 @@ The primary mechanism for backend communication is through a centralized module 
 
 **Guidance for Agents:**
 When tasked with implementing features that require backend data, always refer to the methods exported by `src/shared/modules/backend/backend.ts`. Assume that any necessary backend interaction is exposed through this central `backend` object.
+
+### Type Imports
+
+While backend *functions* must be accessed via the central `backend` object, importing TypeScript *types* directly from backend submodules (e.g., `import type { MyType } from '@/shared/modules/backend/profiles/types';`) is permissible for type safety, especially when these types define the structure of data returned by the backend functions or are used as parameters by those functions.

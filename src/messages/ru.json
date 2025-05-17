@@ -71,5 +71,10 @@
     "lead": "Руководитель",
     "owner": "Владелец",
     "No contributions found.": "Вклады не найдены."
+  },
+  "ElementsPage": {
+    "Individuals": "Частные лица",
+    "Organizations": "Организации",
+    "NoProfilesFound": "Профили не найдены."
   }
 }

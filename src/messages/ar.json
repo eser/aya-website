@@ -71,5 +71,10 @@
     "lead": "قائد",
     "owner": "مالك",
     "No contributions found.": "لم يتم العثور على مساهمات."
+  },
+  "ElementsPage": {
+    "Individuals": "الأفراد",
+    "Organizations": "المنظمات",
+    "NoProfilesFound": "لم يتم العثور على ملفات شخصية."
   }
 }

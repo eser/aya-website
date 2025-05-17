@@ -8,11 +8,11 @@ import styles from "./filter-bar.module.css";
 
 export type FilterKeyType = StoryKind | "all";
 
-export interface FilterBarProps {
+export type FilterBarProps = {
   activeFilter: FilterKeyType;
   setActiveFilter: (filter: FilterKeyType) => void;
   mapping: Record<FilterKeyType, string>;
-}
+};
 
 export function FilterBar(props: FilterBarProps) {
   return (

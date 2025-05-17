@@ -71,5 +71,10 @@
     "lead": "リード",
     "owner": "所有者",
     "No contributions found.": "貢献が見つかりませんでした。"
+  },
+  "ElementsPage": {
+    "Individuals": "個人",
+    "Organizations": "組織",
+    "NoProfilesFound": "プロフィールが見つかりませんでした。"
   }
 }

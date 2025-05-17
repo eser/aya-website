@@ -1,45 +1,52 @@
 import * as React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.tsx";
+import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
-import { components } from "@/shared/components/userland/userland.ts";
+import { ProfileCard } from "@/shared/components/userland/profile-card/profile-card.tsx";
 
-type IndexPageProps = {
-  params: Promise<never>;
-};
-
-// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export async function generateMetadata(_props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
-
   return {
     title: t("Layout", "Elements"),
-    description: "",
   };
 }
 
-async function IndexPage(_props: IndexPageProps) {
+// Main page component
+async function ElementsPage() {
   const { t, locale } = await getTranslations();
+
+  const profiles = await backend.getProfilesByKind(locale.code, "organization");
 
   const placeholders: Record<string, string> = {
     locale: locale.name,
   };
 
-  const contentText = `# ${t("Layout", "Elements")}
-
-${t("Layout", "Content not yet available.")}`;
-
-  const mdxSource = await mdx(contentText, components);
-
   return (
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
-        <article className="content">{mdxSource?.content}</article>
+        <div className="content">
+          <h2>{t("Layout", "Elements")}</h2>
+
+          {/* Organizations Section */}
+          {profiles !== null && profiles.length > 0
+            ? (
+              <section className="mb-12">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {profiles.map((profile) => <ProfileCard key={profile.slug} profile={profile} />)}
+                </div>
+              </section>
+            )
+            : (
+              <div className="text-center py-10">
+                <p className="text-xl text-muted-foreground">{t("ElementsPage", "NoProfilesFound")}</p>
+              </div>
+            )}
+        </div>
       </section>
     </PageLayout>
   );
 }
 
-export { IndexPage as default };
+export { ElementsPage as default };
