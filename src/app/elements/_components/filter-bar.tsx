@@ -19,16 +19,16 @@ export function FilterBar(props: FilterBarProps) {
   const { t } = useTranslations();
 
   const kindOptions: { label: string; value: ProfileKindFilter }[] = [
-    { label: t("ElementsPage", "AllTypes"), value: "" },
-    { label: t("ElementsPage", "Individuals"), value: "individual" },
-    { label: t("ElementsPage", "Organizations"), value: "organization" },
+    { label: t("Elements", "AllTypes"), value: "" },
+    { label: t("Elements", "Individuals"), value: "individual" },
+    { label: t("Elements", "Organizations"), value: "organization" },
   ];
 
   return (
     <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between p-4 border rounded-lg bg-card">
       <div className="md:flex-5/12 flex flex-col gap-2">
         <Label htmlFor="kind-filter" className="font-semibold">
-          {t("ElementsPage", "FilterByKind")}
+          {t("Elements", "FilterByKind")}
         </Label>
         <ToggleGroup
           type="single"
@@ -37,7 +37,7 @@ export function FilterBar(props: FilterBarProps) {
           onValueChange={(value) => {
             props.onKindChange(value as ProfileKindFilter);
           }}
-          aria-label={t("ElementsPage", "FilterByKind")}
+          aria-label={t("Elements", "FilterByKind")}
           id="kind-filter"
           className="w-full"
         >
@@ -56,7 +56,7 @@ export function FilterBar(props: FilterBarProps) {
         <Input
           id="search-text"
           type="text"
-          placeholder={t("ElementsPage", "SearchPlaceholder")}
+          placeholder={t("Elements", "SearchPlaceholder")}
           value={props.searchText}
           onChange={(e) => props.onSearchTextChange(e.target.value)}
           className="h-10"

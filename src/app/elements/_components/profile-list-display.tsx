@@ -37,7 +37,7 @@ export function ProfileListDisplay(props: ProfileListDisplayProps) {
   if (filteredProfiles.length === 0) {
     return (
       <div className="text-center py-10 text-xl text-muted-foreground">
-        {t("ElementsPage", "NoProfilesFound")}
+        {t("Elements", "NoProfilesFound")}
       </div>
     );
   }

@@ -74,7 +74,7 @@
     "owner": "Owner",
     "No contributions found.": "No contributions found."
   },
-  "ElementsPage": {
+  "Elements": {
     "Individuals": "Individuals",
     "Organizations": "Organizations",
     "NoProfilesFound": "No profiles found matching your criteria.",
@@ -85,5 +85,9 @@
   "News": {
     "News item image": "News item image",
     "No image available": "No image available"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "Search products by name or description...",
+    "NoProductsFound": "No products found matching your criteria."
   }
 }

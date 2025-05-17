@@ -74,7 +74,7 @@
     "owner": "Sahibi",
     "No contributions found.": "Herhangi bir katkı bulunamadı."
   },
-  "ElementsPage": {
+  "Elements": {
     "Individuals": "Kişiler",
     "Organizations": "Organizasyonlar",
     "NoProfilesFound": "Kriterlerinize uygun profil bulunamadı.",
@@ -85,5 +85,9 @@
   "News": {
     "News item image": "Haber görseli",
     "No image available": "Görsel mevcut değil"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "Ürünleri isme veya açıklamaya göre ara...",
+    "NoProductsFound": "Kriterlerinize uygun ürün bulunamadı."
   }
 }

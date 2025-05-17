@@ -1,35 +1,26 @@
 import * as React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.tsx";
+import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
-import { components } from "@/shared/components/userland/userland.ts";
+import { ProductsContent } from "./_components/products-content.tsx";
 
-type IndexPageProps = {
-  params: Promise<never>;
-};
-
-// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export async function generateMetadata(_props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
-
   return {
     title: t("Layout", "Products"),
-    description: "",
   };
 }
 
-async function IndexPage(_props: IndexPageProps) {
+async function IndexPage() {
   const { t, locale } = await getTranslations();
+
+  const profiles = await backend.getProfilesByKinds(locale.code, ["product"]);
 
   const placeholders: Record<string, string> = {
     locale: locale.name,
   };
-
-  const contentText = `${t("Layout", "Content not yet available.")}`;
-
-  const mdxSource = await mdx(contentText, components);
 
   return (
     <PageLayout placeholders={placeholders}>
@@ -37,7 +28,7 @@ async function IndexPage(_props: IndexPageProps) {
         <div className="content">
           <h2>{t("Layout", "Products")}</h2>
 
-          <article>{mdxSource?.content}</article>
+          <ProductsContent initialProfiles={profiles!} />
         </div>
       </section>
     </PageLayout>

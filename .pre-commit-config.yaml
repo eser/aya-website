@@ -76,6 +76,7 @@ repos:
             src/messages/.*|
             src/app/\[slug\]/_components/.*|
             src/app/elements/_components/.*|
+            src/app/products/_components/.*|
             LICENSE|
             README.md|
             README.en.md
