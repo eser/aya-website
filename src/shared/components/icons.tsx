@@ -1,44 +1,31 @@
 import * as React from "react";
+import * as Lucide from "lucide-react";
 
-import {
-  Calendar,
-  GitCommit,
-  GitFork,
-  GitPullRequest,
-  type Icon as LucideIcon,
-  Instagram,
-  Laptop,
-  Link,
-  type LucideProps,
-  Moon,
-  Settings,
-  Star,
-  SunMedium,
-  Twitter,
-  User,
-  Users,
-  Youtube,
-} from "lucide-react";
-
-export type Icon = typeof LucideIcon;
+export type Icon = Lucide.LucideIcon;
+export type IconProps = Lucide.LucideProps;
 
 export const Icons = {
-  sun: SunMedium,
-  moon: Moon,
-  laptop: Laptop,
-  twitter: Twitter,
-  instagram: Instagram,
-  youtube: Youtube,
-  gitFork: GitFork,
-  gitPullRequest: GitPullRequest,
-  gitCommit: GitCommit,
-  star: Star,
-  link: Link,
-  calendar: Calendar,
-  settings: Settings,
-  user: User,
-  users: Users,
-  logo: (props: LucideProps) => (
+  box: Lucide.Box,
+  boxes: Lucide.Boxes,
+  sun: Lucide.SunMedium,
+  moon: Lucide.Moon,
+  laptop: Lucide.Laptop,
+  twitter: Lucide.Twitter,
+  instagram: Lucide.Instagram,
+  youtube: Lucide.Youtube,
+  gitFork: Lucide.GitFork,
+  gitPullRequest: Lucide.GitPullRequest,
+  gitCommit: Lucide.GitCommit,
+  scrollText: Lucide.ScrollText,
+  star: Lucide.Star,
+  link: Lucide.Link,
+  newspaper: Lucide.Newspaper,
+  calendar: Lucide.Calendar,
+  settings: Lucide.Settings,
+  user: Lucide.User,
+  users: Lucide.Users,
+  usersRound: Lucide.UsersRound,
+  logo: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307 296" {...props}>
       <title>Logot</title>
       <g clipPath="url(#clip0_1_15)">
@@ -67,7 +54,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  github: (props: LucideProps) => (
+  github: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.549 438.549" width="24" height="24" {...props}>
       <title>GitHub</title>
       <path
@@ -77,12 +64,3 @@ export const Icons = {
     </svg>
   ),
 };
-
-export function getLinkIcon(iconSet: string | null, iconKey: string | null) {
-  if (iconSet === "lucide" && iconKey !== null) {
-    const Icon = Icons[iconKey as keyof typeof Icons];
-    return <Icon />;
-  }
-
-  return <Icons.link />;
-}

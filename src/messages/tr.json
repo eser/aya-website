@@ -10,6 +10,7 @@
     "Contributions": "Katkılar",
     "News": "Haberler",
     "Articles": "Makaleler",
+    "Events": "Etkinlikler",
     "Content not yet available.": "Henüz içerik bulunmamaktadır.",
     "Change theme": "Temayı değiştir",
     "System": "Sistem",
@@ -25,7 +26,6 @@
     "Profile search...": "Profil arama...",
     "No results found.": "Sonuç bulunamadı.",
     "Suggestions": "Öneriler",
-    "Events": "Etkinlikler",
     "Profiles": "Profiller",
     "Themes": "Temalar",
     "Theme: System": "Tema: Sistem",
@@ -81,5 +81,9 @@
     "FilterByKind": "Türe göre filtrele:",
     "AllTypes": "Tümü",
     "SearchPlaceholder": "İsim veya açıklamaya göre ara..."
+  },
+  "News": {
+    "News item image": "Haber görseli",
+    "No image available": "Görsel mevcut değil"
   }
 }

@@ -10,6 +10,7 @@
     "Contributions": "기여",
     "News": "뉴스",
     "Articles": "기사",
+    "Events": "이벤트",
     "Content not yet available.": "콘텐츠를 아직 사용할 수 없습니다.",
     "Change theme": "테마 변경",
     "System": "시스템",
@@ -25,7 +26,6 @@
     "Profile search...": "프로필 검색...",
     "No results found.": "결과를 찾을 수 없습니다.",
     "Suggestions": "제안",
-    "Events": "이벤트",
     "Profiles": "프로필",
     "Themes": "테마",
     "Theme: System": "테마: 시스템",
@@ -78,5 +78,9 @@
     "Individuals": "개인",
     "Organizations": "조직",
     "NoProfilesFound": "프로필을 찾을 수 없습니다."
+  },
+  "News": {
+    "News item image": "뉴스 이미지",
+    "No image available": "사용 가능한 이미지 없음"
   }
 }

@@ -1,53 +1,33 @@
 import * as React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
-import { notFound } from "next/navigation";
 
 import { mdx } from "@/shared/lib/mdx.tsx";
-import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
 
 type IndexPageProps = {
-  params: Promise<{
-    storyslug: string;
-  }>;
+  params: Promise<never>;
 };
 
 // TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export async function generateMetadata(props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
-  const params = await props.params;
-
-  const { locale } = await getTranslations();
-
-  const storyData = await backend.getStory(locale.code, params.storyslug);
-
-  if (storyData === null) {
-    notFound();
-  }
+export async function generateMetadata(_props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
+  const { t } = await getTranslations();
 
   return {
-    title: storyData.title,
-    description: storyData.summary,
+    title: t("Layout", "Events"),
+    description: "",
   };
 }
 
-async function IndexPage(props: IndexPageProps) {
-  const params = await props.params;
-
-  const { locale } = await getTranslations();
+async function IndexPage(_props: IndexPageProps) {
+  const { t, locale } = await getTranslations();
 
   const placeholders: Record<string, string> = {
     locale: locale.name,
   };
 
-  const storyData = await backend.getStory(locale.code, params.storyslug);
-
-  if (storyData === null) {
-    notFound();
-  }
-
-  const contentText = `${storyData.content}`;
+  const contentText = `${t("Layout", "Content not yet available.")}`;
 
   const mdxSource = await mdx(contentText, components);
 
@@ -55,7 +35,7 @@ async function IndexPage(props: IndexPageProps) {
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
         <div className="content">
-          <h2>{storyData.title}</h2>
+          <h2>{t("Layout", "Events")}</h2>
 
           <article>{mdxSource?.content}</article>
         </div>

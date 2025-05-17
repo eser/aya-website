@@ -12,16 +12,10 @@ import {
   DropdownMenuTrigger,
 } from "@/shared/components/ui/dropdown-menu.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
+import { getNavItems } from "@/app/site.ts";
 
 import { Logo } from "./logo.tsx";
 import styles from "./main-nav.module.css";
-
-type NavItem = {
-  key: string;
-  title: string;
-  href?: string;
-  disabled?: boolean;
-};
 
 type MainNavProps = {
   placeholders: Record<string, string>;
@@ -30,28 +24,7 @@ type MainNavProps = {
 export async function MainNav(props: MainNavProps) {
   const { t } = await getTranslations();
 
-  const navItems: NavItem[] = [
-    {
-      key: "news",
-      title: t("Layout", "News"),
-      href: "/news/",
-    },
-    {
-      key: "articles",
-      title: t("Layout", "Articles"),
-      href: "/stories/",
-    },
-    {
-      key: "products",
-      title: t("Layout", "Products"),
-      href: "/products/",
-    },
-    {
-      key: "elements",
-      title: t("Layout", "Elements"),
-      href: "/elements/",
-    },
-  ];
+  const navItems = getNavItems(t);
 
   return (
     <nav className={styles.nav}>

@@ -10,6 +10,7 @@
     "Contributions": "貢献",
     "News": "ニュース",
     "Articles": "記事",
+    "Events": "イベント",
     "Content not yet available.": "コンテンツはまだ利用できません。",
     "Change theme": "テーマを変更",
     "System": "システム",
@@ -25,7 +26,6 @@
     "Profile search...": "プロフィール検索...",
     "No results found.": "結果が見つかりませんでした。",
     "Suggestions": "提案",
-    "Events": "イベント",
     "Profiles": "プロフィール",
     "Themes": "テーマ",
     "Theme: System": "テーマ: システム",
@@ -78,5 +78,9 @@
     "Individuals": "個人",
     "Organizations": "組織",
     "NoProfilesFound": "プロフィールが見つかりませんでした。"
+  },
+  "News": {
+    "News item image": "ニュース画像",
+    "No image available": "画像はありません"
   }
 }

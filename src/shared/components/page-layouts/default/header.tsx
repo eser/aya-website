@@ -2,7 +2,7 @@ import * as React from "react";
 
 // import { siteConfig } from "@/shared/config.ts";
 import { GitHubLogin } from "@/shared/modules/auth/github-login.tsx";
-import type { GetSpotlightData } from "@/shared/modules/backend/profiles/get-spotlight.ts";
+import type { GetSpotlightData } from "@/shared/modules/backend/site/get-spotlight.ts";
 import { ThemeSwitcher } from "./theme-switcher.tsx";
 import { MainNav } from "./main-nav.tsx";
 import { SearchBar } from "./search-bar.tsx";

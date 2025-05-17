@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { cn } from "@/shared/lib/cn.ts";
 import { useNavigationClient } from "@/shared/modules/navigation/use-navigation-client.tsx";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
-import type { GetSpotlightData } from "@/shared/modules/backend/profiles/get-spotlight.ts";
+import type { GetSpotlightData } from "@/shared/modules/backend/site/get-spotlight.ts";
 import { Icons } from "@/shared/components/icons.tsx";
 import { Button } from "@/shared/components/ui/button.tsx";
 import {
@@ -17,8 +17,9 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
+  // CommandShortcut,
 } from "@/shared/components/ui/command.tsx";
+import { getNavItems } from "@/app/site.ts";
 
 type SearchBarProps = {
   spotlight: GetSpotlightData;
@@ -32,6 +33,8 @@ export function SearchBar(props: SearchBarProps) {
   const navigation = useNavigationClient();
 
   const { theme, setTheme } = useTheme();
+
+  const navItems = getNavItems(t);
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -65,27 +68,48 @@ export function SearchBar(props: SearchBarProps) {
         <CommandList>
           <CommandEmpty>{t("Search", "No results found.")}</CommandEmpty>
           <CommandGroup heading={t("Search", "Suggestions")}>
-            <CommandItem disabled>
-              <Icons.calendar className="mr-2 h-4 w-4" />
-              <span>{t("Search", "Events")}</span>
-              <CommandShortcut>⌘E</CommandShortcut>
-            </CommandItem>
+            {navItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <CommandItem
+                  key={item.key}
+                  onSelect={() => {
+                    navigation.push(item.href);
+                    setOpen(false);
+                  }}
+                  disabled={item.disabled}
+                >
+                  <Icon className="mr-2 h-4 w-4" />
+                  <span>{item.title}</span>
+                  {/* <CommandShortcut>⌘E</CommandShortcut> */}
+                </CommandItem>
+              );
+            })}
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading={t("Search", "Profiles")}>
-            {props.spotlight.map((profile) => (
-              <CommandItem
-                key={profile.id}
-                onSelect={() => {
-                  navigation.push(`/${profile.slug}`);
-                  setOpen(false);
-                }}
-              >
-                <Icons.users className="mr-2 h-4 w-4" />
-                <span>{profile.title}</span>
-                <span className="sr-only">{profile.description}</span>
-              </CommandItem>
-            ))}
+            {props.spotlight.map((profile) => {
+              const Icon = profile.kind === "individual"
+                ? Icons.user
+                : profile.kind === "organization"
+                ? Icons.users
+                : Icons.box;
+
+              return (
+                <CommandItem
+                  key={profile.id}
+                  onSelect={() => {
+                    navigation.push(`/${profile.slug}`);
+                    setOpen(false);
+                  }}
+                >
+                  <Icon className="mr-2 h-4 w-4" />
+                  <span>{profile.title}</span>
+                  <span className="sr-only">{profile.description}</span>
+                </CommandItem>
+              );
+            })}
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading={t("Search", "Themes")}>

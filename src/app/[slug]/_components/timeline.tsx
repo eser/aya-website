@@ -4,7 +4,7 @@ import * as React from "react";
 import NextImage from "next/image";
 
 import { formatDateString } from "@/shared/lib/date.ts";
-import type { GetStoriesData } from "@/shared/modules/backend/stories/get-stories-by-author-profile.ts";
+import type { Story, StoryEx } from "@/shared/modules/backend/stories/types.ts";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
@@ -14,7 +14,7 @@ import styles from "./timeline.module.css";
 const Image = NextImage; // Simple reassignment, will add @ts-expect-error at usage
 
 export type TimelineProps = {
-  stories: GetStoriesData;
+  stories: (Story | StoryEx)[];
 };
 
 export function Timeline(props: TimelineProps) {

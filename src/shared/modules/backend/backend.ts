@@ -1,11 +1,12 @@
 import { getCustomDomain } from "./profiles/get-custom-domain.ts";
-import { getProfilesByKinds } from "./profiles/get-profiles-by-kind.ts";
+import { getProfilesByKinds } from "./profiles/get-profiles-by-kinds.ts";
 import { getProfile } from "./profiles/get-profile.ts";
 import { getProfilePage } from "./profiles/get-profile-page.ts";
 import { getProfileMemberships } from "./profiles/get-profile-memberships.ts";
+import { getProfileStories } from "./profiles/get-profile-stories.ts";
 import { getStory } from "./stories/get-story.ts";
-import { getStoriesByAuthorProfile } from "./stories/get-stories-by-author-profile.ts";
-import { getSpotlight } from "./profiles/get-spotlight.ts";
+import { getStoriesByKinds } from "./stories/get-stories-by-kinds.ts";
+import { getSpotlight } from "./site/get-spotlight.ts";
 
 export const backend = {
   getCustomDomain,
@@ -14,6 +15,7 @@ export const backend = {
   getProfilePage,
   getProfileMemberships,
   getStory,
-  getStoriesByAuthorProfile,
+  getProfileStories,
+  getStoriesByKinds,
   getSpotlight,
 };

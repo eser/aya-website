@@ -20,12 +20,12 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 
   const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
+  const profileData = await backend.getProfile(locale.code, params.slug);
   if (profileData === null) {
     notFound();
   }
 
-  const storiesData = await backend.getStoriesByAuthorProfile(profileData.slug, locale.code);
+  const storiesData = await backend.getProfileStories(locale.code, profileData.slug);
 
   if (storiesData === null) {
     notFound();
@@ -47,13 +47,13 @@ async function IndexPage(props: IndexPageProps) {
 
   const { locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
+  const profileData = await backend.getProfile(locale.code, params.slug);
 
   if (profileData === null) {
     notFound();
   }
 
-  const storiesData = await backend.getStoriesByAuthorProfile(profileData.slug, locale.code);
+  const storiesData = await backend.getProfileStories(locale.code, profileData.slug);
 
   if (storiesData === null) {
     notFound();

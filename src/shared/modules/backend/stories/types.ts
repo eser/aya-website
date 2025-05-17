@@ -21,3 +21,11 @@ export type Story = {
   updated_at: string | null;
   deleted_at: string | null;
 };
+
+export type StoryEx = Omit<Story, "author_profile_id"> & {
+  author_profile: {
+    id: string;
+    slug: string;
+    title: string;
+  };
+};

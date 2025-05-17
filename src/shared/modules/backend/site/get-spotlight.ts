@@ -1,6 +1,6 @@
 import { fetcher } from "@/shared/modules/backend/fetcher.ts";
 
-import type { Profile } from "./types.ts";
+import type { Profile } from "../profiles/types.ts";
 
 export type GetSpotlightData = Profile[];
 

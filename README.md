@@ -89,7 +89,7 @@ CLI üzerinden `backend` nesnesine erişebilirsiniz.
 Profil getirme:
 
 ```js
-await backend.getProfile("eser", "tr");
+await backend.getProfile("tr", "eser");
 ```
 
 ## Nasıl Katkıda Bulunabilirsin?

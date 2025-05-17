@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-async function ElementsPage() {
+async function IndexPage() {
   const { t, locale } = await getTranslations();
 
   const profiles = await backend.getProfilesByKinds(locale.code, ["individual", "organization"]);
@@ -40,4 +40,4 @@ async function ElementsPage() {
   );
 }
 
-export { ElementsPage as default };
+export { IndexPage as default };

@@ -10,6 +10,7 @@
     "Contributions": "المساهمات",
     "News": "الأخبار",
     "Articles": "المقالات",
+    "Events": "فعاليات",
     "Content not yet available.": "المحتوى غير متوفر بعد.",
     "Change theme": "تغيير السمة",
     "System": "النظام",
@@ -25,7 +26,6 @@
     "Profile search...": "بحث في الملفات الشخصية...",
     "No results found.": "لم يتم العثور على نتائج.",
     "Suggestions": "اقتراحات",
-    "Events": "فعاليات",
     "Profiles": "الملفات الشخصية",
     "Themes": "السمات",
     "Theme: System": "السمة: النظام",
@@ -78,5 +78,9 @@
     "Individuals": "الأفراد",
     "Organizations": "المنظمات",
     "NoProfilesFound": "لم يتم العثور على ملفات شخصية."
+  },
+  "News": {
+    "News item image": "صورة الخبر",
+    "No image available": "الصورة غير متوفرة"
   }
 }

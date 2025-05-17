@@ -10,6 +10,7 @@
     "Contributions": "Bijdragen",
     "News": "Nieuws",
     "Articles": "Artikelen",
+    "Events": "Evenementen",
     "Content not yet available.": "Inhoud nog niet beschikbaar.",
     "Change theme": "Thema wijzigen",
     "System": "Systeem",
@@ -25,7 +26,6 @@
     "Profile search...": "Profiel zoeken...",
     "No results found.": "Geen resultaten gevonden.",
     "Suggestions": "Suggesties",
-    "Events": "Evenementen",
     "Profiles": "Profielen",
     "Themes": "Thema's",
     "Theme: System": "Thema: Systeem",
@@ -78,5 +78,9 @@
     "Individuals": "Individuen",
     "Organizations": "Organisaties",
     "NoProfilesFound": "Geen profielen gevonden."
+  },
+  "News": {
+    "News item image": "Nieuwsafbeelding",
+    "No image available": "Geen afbeelding beschikbaar"
   }
 }

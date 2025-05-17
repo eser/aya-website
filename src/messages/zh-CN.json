@@ -10,6 +10,7 @@
     "Contributions": "贡献",
     "News": "新闻",
     "Articles": "文章",
+    "Events": "活动",
     "Content not yet available.": "内容暂不可用。",
     "Change theme": "更改主题",
     "System": "系统",
@@ -25,7 +26,6 @@
     "Profile search...": "个人资料搜索...",
     "No results found.": "未找到结果。",
     "Suggestions": "建议",
-    "Events": "活动",
     "Profiles": "个人资料",
     "Themes": "主题",
     "Theme: System": "主题：系统",
@@ -78,5 +78,9 @@
     "Individuals": "个人",
     "Organizations": "组织",
     "NoProfilesFound": "未找到任何个人资料。"
+  },
+  "News": {
+    "News item image": "新闻图片",
+    "No image available": "无可用图像"
   }
 }

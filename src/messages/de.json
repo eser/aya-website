@@ -10,6 +10,7 @@
     "Contributions": "Beiträge",
     "News": "Nachrichten",
     "Articles": "Artikel",
+    "Events": "Veranstaltungen",
     "Content not yet available.": "Inhalt noch nicht verfügbar.",
     "Change theme": "Design ändern",
     "System": "System",
@@ -25,7 +26,6 @@
     "Profile search...": "Profilsuche...",
     "No results found.": "Keine Ergebnisse gefunden.",
     "Suggestions": "Vorschläge",
-    "Events": "Veranstaltungen",
     "Profiles": "Profile",
     "Themes": "Designs",
     "Theme: System": "Design: System",
@@ -78,5 +78,9 @@
     "Individuals": "Einzelpersonen",
     "Organizations": "Organisationen",
     "NoProfilesFound": "Keine Profile gefunden."
+  },
+  "News": {
+    "News item image": "Nachrichtenbild",
+    "No image available": "Kein Bild verfügbar"
   }
 }

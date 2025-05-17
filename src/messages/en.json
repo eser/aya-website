@@ -1,8 +1,6 @@
 {
   "Layout": {
     "Homepage": "Homepage",
-    "News": "News",
-    "Articles": "Articles",
     "Elements": "Elements",
     "Products": "Products",
     "Policies": "Policies",
@@ -10,6 +8,9 @@
     "Profile": "Profile",
     "Stories": "Stories",
     "Contributions": "Contributions",
+    "News": "News",
+    "Articles": "Articles",
+    "Events": "Events",
     "Content not yet available.": "Content not yet available.",
     "Change theme": "Change theme",
     "System": "System",
@@ -25,7 +26,6 @@
     "Profile search...": "Profile search...",
     "No results found.": "No results found.",
     "Suggestions": "Suggestions",
-    "Events": "Events",
     "Profiles": "Profiles",
     "Themes": "Themes",
     "Theme: System": "Theme: System",
@@ -81,5 +81,9 @@
     "FilterByKind": "Filter by type:",
     "AllTypes": "All",
     "SearchPlaceholder": "Search by name or description..."
+  },
+  "News": {
+    "News item image": "News item image",
+    "No image available": "No image available"
   }
 }

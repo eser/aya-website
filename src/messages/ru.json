@@ -10,6 +10,7 @@
     "Contributions": "Вклады",
     "News": "Новости",
     "Articles": "Статьи",
+    "Events": "События",
     "Content not yet available.": "Контент пока недоступен.",
     "Change theme": "Сменить тему",
     "System": "Системная",
@@ -25,7 +26,6 @@
     "Profile search...": "Поиск профиля...",
     "No results found.": "Ничего не найдено.",
     "Suggestions": "Предложения",
-    "Events": "События",
     "Profiles": "Профили",
     "Themes": "Темы",
     "Theme: System": "Тема: Системная",
@@ -78,5 +78,9 @@
     "Individuals": "Частные лица",
     "Organizations": "Организации",
     "NoProfilesFound": "Профили не найдены."
+  },
+  "News": {
+    "News item image": "Изображение новости",
+    "No image available": "Нет изображения"
   }
 }

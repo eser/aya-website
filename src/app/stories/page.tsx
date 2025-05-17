@@ -1,35 +1,27 @@
 import * as React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
-import { mdx } from "@/shared/lib/mdx.tsx";
+import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
-import { components } from "@/shared/components/userland/userland.ts";
+import { Story } from "@/shared/components/userland/story/story.tsx";
 
-type IndexPageProps = {
-  params: Promise<never>;
-};
-
-// TODO(@eser) add more from https://beta.nextjs.org/docs/api-reference/metadata
-export async function generateMetadata(_props: IndexPageProps, _parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getTranslations();
 
   return {
     title: t("Layout", "Articles"),
-    description: "",
   };
 }
 
-async function IndexPage(_props: IndexPageProps) {
+async function IndexPage() {
   const { t, locale } = await getTranslations();
+
+  const stories = await backend.getStoriesByKinds(locale.code, ["article"]);
 
   const placeholders: Record<string, string> = {
     locale: locale.name,
   };
-
-  const contentText = `${t("Layout", "Content not yet available.")}`;
-
-  const mdxSource = await mdx(contentText, components);
 
   return (
     <PageLayout placeholders={placeholders}>
@@ -37,7 +29,25 @@ async function IndexPage(_props: IndexPageProps) {
         <div className="content">
           <h2>{t("Layout", "Articles")}</h2>
 
-          <article>{mdxSource?.content}</article>
+          {stories !== null && stories.length > 0
+            ? (
+              <div className="divide-y divide-border">
+                {stories.map((story) => (
+                  <Story
+                    key={story.id}
+                    story={story}
+                  />
+                ))}
+              </div>
+            )
+            : (
+              <div className="text-center py-10">
+                <p className="text-xl text-muted-foreground">
+                  {/* TODO: Add a specific translation key e.g., t("NewsPage", "NoNewsFound") */}
+                  {t("Layout", "Content not yet available.")}
+                </p>
+              </div>
+            )}
         </div>
       </section>
     </PageLayout>

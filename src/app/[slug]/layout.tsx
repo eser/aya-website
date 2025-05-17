@@ -26,7 +26,7 @@ async function Layout(props: LayoutProps) {
     slug: params.slug,
   };
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
+  const profileData = await backend.getProfile(locale.code, params.slug);
 
   if (profileData === null) {
     notFound();

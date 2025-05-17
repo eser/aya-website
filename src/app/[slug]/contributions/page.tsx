@@ -20,7 +20,7 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
 
   const { t, locale } = await getTranslations();
 
-  const profileData = await backend.getProfile(params.slug, locale.code);
+  const profileData = await backend.getProfile(locale.code, params.slug);
   if (profileData === null) {
     notFound();
   }
@@ -36,7 +36,7 @@ async function IndexPage(props: IndexPageProps) {
 
   const { t, locale } = await getTranslations();
 
-  const membershipData = await backend.getProfileMemberships(params.slug, "product", locale.code);
+  const membershipData = await backend.getProfileMemberships(locale.code, params.slug, "product");
 
   if (membershipData === null) {
     notFound();

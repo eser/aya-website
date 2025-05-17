@@ -1,9 +1,9 @@
-/* src/shared/components/userland/profile-card/profile-card.module.css */
-@reference "../../../../shared/globals.css"; /* Adjusted path */
+@reference "../../../../shared/globals.css";
 
 .cardLink {
   @apply block no-underline rounded-lg shadow-md transition-shadow duration-200 ease-in-out bg-card
     text-card-foreground;
+
   &:hover {
     @apply shadow-xl;
   }
