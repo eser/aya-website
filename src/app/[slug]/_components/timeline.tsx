@@ -20,17 +20,17 @@ export type TimelineProps = {
 export function Timeline(props: TimelineProps) {
   const { t, locale } = useTranslations();
 
-  const [activeFilter, setActiveFilter] = React.useState<FilterKeyType>("all");
+  const [activeFilter, setActiveFilter] = React.useState<FilterKeyType>("");
 
-  const filteredStories = props.stories.filter((story) => activeFilter === "all" || story.kind === activeFilter);
+  const filteredStories = props.stories.filter((story) => activeFilter === "" || story.kind === activeFilter);
 
   const filterMapping: Record<FilterKeyType, string> = {
-    all: t("Stories", "All"),
-    status: t("Stories", "Status"),
-    announcement: t("Stories", "Announcement"),
-    article: t("Stories", "Article"),
-    content: t("Stories", "Content"),
-    presentation: t("Stories", "Presentation"),
+    "": t("Stories", "All"),
+    "status": t("Stories", "Status"),
+    "announcement": t("Stories", "Announcement"),
+    "article": t("Stories", "Article"),
+    "content": t("Stories", "Content"),
+    "presentation": t("Stories", "Presentation"),
   };
 
   return (

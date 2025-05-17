@@ -4,9 +4,9 @@ import type { Profile } from "./types.ts";
 
 export type GetProfilesData = Profile[];
 
-export async function getProfilesByKind(locale: string, kind: string) {
+export async function getProfilesByKinds(locale: string, kinds: string[]) {
   const response = await fetcher<GetProfilesData>(
-    `/${locale}/profiles?filter_kind=${kind}`,
+    `/${locale}/profiles?filter_kind=${kinds.join(",")}`,
   );
 
   return response;

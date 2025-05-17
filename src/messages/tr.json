@@ -73,8 +73,11 @@
     "No contributions found.": "Herhangi bir katkı bulunamadı."
   },
   "ElementsPage": {
-    "Individuals": "Bireyler",
+    "Individuals": "Kişiler",
     "Organizations": "Organizasyonlar",
-    "NoProfilesFound": "Profil bulunamadı."
+    "NoProfilesFound": "Kriterlerinize uygun profil bulunamadı.",
+    "FilterByKind": "Türe göre filtrele:",
+    "AllTypes": "Tümü",
+    "SearchPlaceholder": "İsim veya açıklamaya göre ara..."
   }
 }

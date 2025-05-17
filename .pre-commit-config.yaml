@@ -75,6 +75,7 @@ repos:
             ops/docker/Dockerfile|
             src/messages/.*|
             src/app/\[slug\]/_components/.*|
+            src/app/elements/_components/.*|
             LICENSE|
             README.md|
             README.en.md

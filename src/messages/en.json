@@ -75,6 +75,9 @@
   "ElementsPage": {
     "Individuals": "Individuals",
     "Organizations": "Organizations",
-    "NoProfilesFound": "No profiles found."
+    "NoProfilesFound": "No profiles found matching your criteria.",
+    "FilterByKind": "Filter by type:",
+    "AllTypes": "All",
+    "SearchPlaceholder": "Search by name or description..."
   }
 }

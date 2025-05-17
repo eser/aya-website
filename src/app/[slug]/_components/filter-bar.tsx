@@ -6,7 +6,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/shared/components/ui/toggle-grou
 
 import styles from "./filter-bar.module.css";
 
-export type FilterKeyType = StoryKind | "all";
+export type FilterKeyType = "" | StoryKind;
 
 export type FilterBarProps = {
   activeFilter: FilterKeyType;
