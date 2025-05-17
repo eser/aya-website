@@ -48,7 +48,7 @@
     "format:fix": "deno fmt"
   },
   "dependencies": {
-    "next": "15.4.0-canary.36"
+    "next": "15.4.0-canary.37"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0-beta.4",
@@ -112,7 +112,7 @@
     "postcss": "^8.5.3",
     "react-day-picker": "^9.7.0",
     "react-dom": "^19.1.0",
-    "react-hook-form": "^7.56.3",
+    "react-hook-form": "^7.56.4",
     "react-resizable-panels": "^3.0.2",
     "react": "^19.1.0",
     "reading-time": "^1.5.0",
