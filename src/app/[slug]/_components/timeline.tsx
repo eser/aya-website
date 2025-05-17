@@ -46,7 +46,6 @@ export function Timeline(props: TimelineProps) {
                 <time className={styles.date}>{formatDateString(story.published_at, locale.code)}</time>
                 <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
                   {story.cover_picture_uri && (
-                    /* @ts-expect-error TODO: Investigate Next.js Image typing issues with Deno/React 19 */
                     <Image
                       src={story.cover_picture_uri}
                       width={200}

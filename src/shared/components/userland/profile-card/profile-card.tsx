@@ -26,7 +26,6 @@ export function ProfileCard(props: ProfileCardProps) {
       <div className={styles.profileCard}>
         {profile.profile_picture_uri && (
           <div className={styles.avatarContainer}>
-            {/* @ts-expect-error TODO: Investigate Next.js Image typing issues with Deno/React 19 */}
             <Image
               src={profile.profile_picture_uri}
               alt={`${profile.title}'s picture`}
