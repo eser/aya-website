@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "Página Inicial",
+    "Elements": "Elementos",
+    "Products": "Produtos",
+    "Policies": "Políticas",
+    "About": "Sobre",
+    "Profile": "Perfil",
+    "Stories": "Histórias",
+    "Contributions": "Contribuições",
+    "Content not yet available.": "Conteúdo ainda não disponível.",
+    "Change theme": "Mudar tema",
+    "System": "Sistema",
+    "Light": "Claro",
+    "Midnight": "Escuro"
+  },
+  "Loading": {
+    "Loading...": "A carregar..."
+  },
+  "Search": {
+    "General search": "Pesquisa geral",
+    "Search": "Pesquisar",
+    "Profile search...": "Pesquisa de perfis...",
+    "No results found.": "Nenhum resultado encontrado.",
+    "Suggestions": "Sugestões",
+    "Events": "Eventos",
+    "Profiles": "Perfis",
+    "Themes": "Temas",
+    "Theme: System": "Tema: Sistema",
+    "Theme: Light": "Tema: Claro",
+    "Theme: Midnight": "Tema: Escuro",
+    "Localization": "Localização"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA a Rede de Código Aberto",
+    "A software foundation formed by volunteer-developed software": "Uma fundação de software formada por software desenvolvido por voluntários",
+    "Rest of the story": "Resto da história",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (significa Rede de Código Aberto em turco)** é uma plataforma que permite a voluntários motivados pelo bem social colaborar e desenvolver soluções de tecnologia da informação de qualidade.\n\nRealizámos projetos coletivamente, fornecendo apoio de voluntários especializados e recursos técnicos. Estes projetos foram soluções de código aberto acessíveis e controláveis por todos, principalmente instituições oficiais e organizações não governamentais. O nosso papel tem sido facilitar a comunicação dos voluntários e a coordenação da gestão de recursos.\n\nComo organização sem fins lucrativos focada no benefício social, a AYA continua a sua jornada com uma [identidade de fundação de software](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) que acolhe diversos projetos de TI."
+  },
+  "Stories": {
+    "All": "Todos",
+    "Status": "Estado",
+    "Announcement": "Anúncio",
+    "Article": "Artigo",
+    "Content": "Conteúdo",
+    "Presentation": "Apresentação"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Uma coleção de projetos e organizações de código aberto.",
+    "Last update": "Última atualização",
+    "Project Details": "Detalhes do projeto",
+    "Project description": "Descrição do projeto",
+    "Project repository": "Repositório do projeto",
+    "Project website": "Site do projeto",
+    "Project contributor count": "Número de contribuidores do projeto",
+    "My role in the project": "O meu papel no projeto",
+    "PRs": "PRs",
+    "Issues": "Problemas",
+    "My first contribution": "A minha primeira contribuição",
+    "My last contribution": "A minha última contribuição",
+    "My contributions": "As minhas contribuições",
+    "Opened PRs by me": "Abertos por mim",
+    "Merged PRs by me": "Aceites",
+    "Issues opened by me": "Abertos por mim",
+    "Issues contributed by me": "Minhas contribuições",
+    "follower": "Seguidor",
+    "sponsor": "Patrocinador",
+    "contributor": "Contribuidor",
+    "maintainer": "Mantenedor",
+    "lead": "Líder",
+    "owner": "Proprietário",
+    "No contributions found.": "Nenhuma contribuição encontrada."
+  }
+}

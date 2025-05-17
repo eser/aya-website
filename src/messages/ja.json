@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "ホームページ",
+    "Elements": "要素",
+    "Products": "製品",
+    "Policies": "ポリシー",
+    "About": "概要",
+    "Profile": "プロフィール",
+    "Stories": "ストーリー",
+    "Contributions": "貢献",
+    "Content not yet available.": "コンテンツはまだ利用できません。",
+    "Change theme": "テーマを変更",
+    "System": "システム",
+    "Light": "ライト",
+    "Midnight": "ミッドナイト"
+  },
+  "Loading": {
+    "Loading...": "読み込み中..."
+  },
+  "Search": {
+    "General search": "一般検索",
+    "Search": "検索",
+    "Profile search...": "プロフィール検索...",
+    "No results found.": "結果が見つかりませんでした。",
+    "Suggestions": "提案",
+    "Events": "イベント",
+    "Profiles": "プロフィール",
+    "Themes": "テーマ",
+    "Theme: System": "テーマ: システム",
+    "Theme: Light": "テーマ: ライト",
+    "Theme: Midnight": "テーマ: ミッドナイト",
+    "Localization": "ローカリゼーション"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA オープンソースネットワーク",
+    "A software foundation formed by volunteer-developed software": "ボランティア開発ソフトウェアによって形成されたソフトウェア財団",
+    "Rest of the story": "物語の続き",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA（トルコ語でオープンソースネットワークを意味します）**は、社会貢献を目的とするボランティアが協力して質の高い情報技術ソリューションを開発できるようにするプラットフォームです。\n\n私たちは、専門的なボランティアのサポートと技術リソースを提供することにより、共同でプロジェクトを実現してきました。これらのプロジェクトは、主に公的機関や非政府組織をはじめ、誰もがアクセスして管理できるオープンソースソリューションです。私たちの役割は、ボランティアのコミュニケーションとリソース管理の調整を促進することでした。\n\n社会貢献に焦点を当てた非営利団体として、AYAはさまざまなITプロジェクトをホストする[ソフトウェア財団のアイデンティティ](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz)でその旅を続けています。"
+  },
+  "Stories": {
+    "All": "すべて",
+    "Status": "ステータス",
+    "Announcement": "お知らせ",
+    "Article": "記事",
+    "Content": "コンテンツ",
+    "Presentation": "プレゼンテーション"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "オープンソースプロジェクトと組織のコレクションです。",
+    "Last update": "最終更新",
+    "Project Details": "プロジェクト詳細",
+    "Project description": "プロジェクトの説明",
+    "Project repository": "プロジェクトリポジトリ",
+    "Project website": "プロジェクトウェブサイト",
+    "Project contributor count": "プロジェクト貢献者数",
+    "My role in the project": "プロジェクトでの私の役割",
+    "PRs": "PR",
+    "Issues": "課題",
+    "My first contribution": "私の最初の貢献",
+    "My last contribution": "私の最後の貢献",
+    "My contributions": "私の貢献",
+    "Opened PRs by me": "私がオープンしたPR",
+    "Merged PRs by me": "承認済み",
+    "Issues opened by me": "私がオープンした課題",
+    "Issues contributed by me": "私の貢献",
+    "follower": "フォロワー",
+    "sponsor": "スポンサー",
+    "contributor": "貢献者",
+    "maintainer": "メンテナー",
+    "lead": "リード",
+    "owner": "所有者",
+    "No contributions found.": "貢献が見つかりませんでした。"
+  }
+}

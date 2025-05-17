@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "首页",
+    "Elements": "元素",
+    "Products": "产品",
+    "Policies": "政策",
+    "About": "关于",
+    "Profile": "个人资料",
+    "Stories": "故事",
+    "Contributions": "贡献",
+    "Content not yet available.": "内容暂不可用。",
+    "Change theme": "更改主题",
+    "System": "系统",
+    "Light": "浅色",
+    "Midnight": "深色"
+  },
+  "Loading": {
+    "Loading...": "加载中..."
+  },
+  "Search": {
+    "General search": "常规搜索",
+    "Search": "搜索",
+    "Profile search...": "个人资料搜索...",
+    "No results found.": "未找到结果。",
+    "Suggestions": "建议",
+    "Events": "活动",
+    "Profiles": "个人资料",
+    "Themes": "主题",
+    "Theme: System": "主题：系统",
+    "Theme: Light": "主题：浅色",
+    "Theme: Midnight": "主题：深色",
+    "Localization": "本地化"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA 开源网络",
+    "A software foundation formed by volunteer-developed software": "一个由志愿者开发的软件组成的软件基金会",
+    "Rest of the story": "故事的其余部分",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA（土耳其语意为开源网络）**是一个平台，使出于社会公益目的的志愿者能够协作开发高质量的信息技术解决方案。\n\n我们通过提供专业的志愿者支持和技术资源，共同实现了多个项目。这些项目是开源解决方案，主要面向官方机构和非政府组织，供所有人访问和控制。我们的角色是促进志愿者沟通和资源管理协调。\n\n作为一个专注于社会公益的非营利组织，AYA 以[软件基金会的身份](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz)继续其旅程，托管各种 IT 项目。"
+  },
+  "Stories": {
+    "All": "全部",
+    "Status": "状态",
+    "Announcement": "公告",
+    "Article": "文章",
+    "Content": "内容",
+    "Presentation": "演示"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "开源项目和组织的集合。",
+    "Last update": "最后更新",
+    "Project Details": "项目详情",
+    "Project description": "项目描述",
+    "Project repository": "项目存储库",
+    "Project website": "项目网站",
+    "Project contributor count": "项目贡献者数量",
+    "My role in the project": "我在项目中的角色",
+    "PRs": "拉取请求",
+    "Issues": "问题",
+    "My first contribution": "我的首次贡献",
+    "My last contribution": "我的最后一次贡献",
+    "My contributions": "我的贡献",
+    "Opened PRs by me": "我开启的 PR",
+    "Merged PRs by me": "已接受",
+    "Issues opened by me": "我开启的问题",
+    "Issues contributed by me": "我的贡献",
+    "follower": "关注者",
+    "sponsor": "赞助者",
+    "contributor": "贡献者",
+    "maintainer": "维护者",
+    "lead": "负责人",
+    "owner": "所有者",
+    "No contributions found.": "未找到贡献。"
+  }
+}

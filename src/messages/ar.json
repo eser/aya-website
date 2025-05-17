@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "الصفحة الرئيسية",
+    "Elements": "العناصر",
+    "Products": "المنتجات",
+    "Policies": "السياسات",
+    "About": "حول",
+    "Profile": "الملف الشخصي",
+    "Stories": "القصص",
+    "Contributions": "المساهمات",
+    "Content not yet available.": "المحتوى غير متوفر بعد.",
+    "Change theme": "تغيير السمة",
+    "System": "النظام",
+    "Light": "فاتح",
+    "Midnight": "داكن"
+  },
+  "Loading": {
+    "Loading...": "جاري التحميل..."
+  },
+  "Search": {
+    "General search": "بحث عام",
+    "Search": "بحث",
+    "Profile search...": "بحث في الملفات الشخصية...",
+    "No results found.": "لم يتم العثور على نتائج.",
+    "Suggestions": "اقتراحات",
+    "Events": "فعاليات",
+    "Profiles": "الملفات الشخصية",
+    "Themes": "السمات",
+    "Theme: System": "السمة: النظام",
+    "Theme: Light": "السمة: فاتح",
+    "Theme: Midnight": "السمة: داكن",
+    "Localization": "التوطين"
+  },
+  "Home": {
+    "AYA the Open Source Network": "آيا شبكة المصدر المفتوح",
+    "A software foundation formed by volunteer-developed software": "مؤسسة برمجيات مكونة من برامج مطورة بواسطة متطوعين",
+    "Rest of the story": "بقية القصة",
+    "GitHub": "GitHub",
+    "IntroText": "**آيا (تعني شبكة المصدر المفتوح بالتركية)** هي منصة تمكّن المتطوعين ذوي الدافع الخيري الاجتماعي من التعاون وتطوير حلول تقنية معلومات عالية الجودة.\n\nلقد قمنا بشكل جماعي بتحقيق مشاريع من خلال توفير دعم المتطوعين الخبراء والموارد التقنية. كانت هذه المشاريع عبارة عن حلول مفتوحة المصدر يمكن للجميع الوصول إليها والتحكم فيها، وبشكل أساسي المؤسسات الرسمية والمنظمات غير الحكومية. كان دورنا هو تسهيل تواصل المتطوعين وتنسيق إدارة الموارد.\n\nكمنظمة غير ربحية تركز على المنفعة الاجتماعية، تواصل آيا رحلتها [بهوية مؤسسة برمجيات](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) تستضيف مشاريع تقنية معلومات متنوعة."
+  },
+  "Stories": {
+    "All": "الكل",
+    "Status": "الحالة",
+    "Announcement": "إعلان",
+    "Article": "مقالة",
+    "Content": "محتوى",
+    "Presentation": "عرض تقديمي"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "مجموعة من مشاريع ومنظمات المصدر المفتوح.",
+    "Last update": "آخر تحديث",
+    "Project Details": "تفاصيل المشروع",
+    "Project description": "وصف المشروع",
+    "Project repository": "مستودع المشروع",
+    "Project website": "موقع المشروع",
+    "Project contributor count": "عدد المساهمين في المشروع",
+    "My role in the project": "دوري في المشروع",
+    "PRs": "طلبات السحب",
+    "Issues": "القضايا",
+    "My first contribution": "أول مساهمة لي",
+    "My last contribution": "آخر مساهمة لي",
+    "My contributions": "مساهماتي",
+    "Opened PRs by me": "طلبات السحب التي فتحتها",
+    "Merged PRs by me": "المقبولة",
+    "Issues opened by me": "القضايا التي فتحتها",
+    "Issues contributed by me": "القضايا التي ساهمت فيها",
+    "follower": "متابع",
+    "sponsor": "راعي",
+    "contributor": "مساهم",
+    "maintainer": "صائن",
+    "lead": "قائد",
+    "owner": "مالك",
+    "No contributions found.": "لم يتم العثور على مساهمات."
+  }
+}

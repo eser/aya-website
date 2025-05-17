@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "Página de inicio",
+    "Elements": "Elementos",
+    "Products": "Productos",
+    "Policies": "Políticas",
+    "About": "Acerca de",
+    "Profile": "Perfil",
+    "Stories": "Historias",
+    "Contributions": "Contribuciones",
+    "Content not yet available.": "Contenido aún no disponible.",
+    "Change theme": "Cambiar tema",
+    "System": "Sistema",
+    "Light": "Claro",
+    "Midnight": "Oscuro"
+  },
+  "Loading": {
+    "Loading...": "Cargando..."
+  },
+  "Search": {
+    "General search": "Búsqueda general",
+    "Search": "Buscar",
+    "Profile search...": "Búsqueda de perfiles...",
+    "No results found.": "No se encontraron resultados.",
+    "Suggestions": "Sugerencias",
+    "Events": "Eventos",
+    "Profiles": "Perfiles",
+    "Themes": "Temas",
+    "Theme: System": "Tema: Sistema",
+    "Theme: Light": "Tema: Claro",
+    "Theme: Midnight": "Tema: Oscuro",
+    "Localization": "Localización"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA la Red de Código Abierto",
+    "A software foundation formed by volunteer-developed software": "Una fundación de software formada por software desarrollado por voluntarios",
+    "Rest of the story": "Resto de la historia",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (significa Red de Código Abierto en turco)** es una plataforma que permite a voluntarios motivados por el bien social colaborar y desarrollar soluciones de tecnología de la información de calidad.\n\nHemos realizado proyectos colectivamente proporcionando apoyo de voluntarios expertos y recursos técnicos. Estos proyectos han sido soluciones de código abierto accesibles y controlables por todos, principalmente instituciones oficiales y organizaciones no gubernamentales. Nuestro papel ha sido facilitar la comunicación de los voluntarios y la coordinación de la gestión de recursos.\n\nComo organización sin fines de lucro centrada en el beneficio social, AYA continúa su viaje con una [identidad de fundación de software](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) que alberga diversos proyectos de TI."
+  },
+  "Stories": {
+    "All": "Todos",
+    "Status": "Estado",
+    "Announcement": "Anuncio",
+    "Article": "Artículo",
+    "Content": "Contenido",
+    "Presentation": "Presentación"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Una colección de proyectos y organizaciones de código abierto.",
+    "Last update": "Última actualización",
+    "Project Details": "Detalles del proyecto",
+    "Project description": "Descripción del proyecto",
+    "Project repository": "Repositorio del proyecto",
+    "Project website": "Sitio web del proyecto",
+    "Project contributor count": "Número de colaboradores del proyecto",
+    "My role in the project": "Mi rol en el proyecto",
+    "PRs": "PRs",
+    "Issues": "Incidencias",
+    "My first contribution": "Mi primera contribución",
+    "My last contribution": "Mi última contribución",
+    "My contributions": "Mis contribuciones",
+    "Opened PRs by me": "Abiertos por mí",
+    "Merged PRs by me": "Aceptados",
+    "Issues opened by me": "Abiertas por mí",
+    "Issues contributed by me": "Mis contribuciones",
+    "follower": "Seguidor",
+    "sponsor": "Patrocinador",
+    "contributor": "Colaborador",
+    "maintainer": "Mantenedor",
+    "lead": "Líder",
+    "owner": "Propietario",
+    "No contributions found.": "No se encontraron contribuciones."
+  }
+}

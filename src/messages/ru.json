@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "Главная страница",
+    "Elements": "Элементы",
+    "Products": "Продукты",
+    "Policies": "Политики",
+    "About": "О нас",
+    "Profile": "Профиль",
+    "Stories": "Истории",
+    "Contributions": "Вклады",
+    "Content not yet available.": "Контент пока недоступен.",
+    "Change theme": "Сменить тему",
+    "System": "Системная",
+    "Light": "Светлая",
+    "Midnight": "Темная"
+  },
+  "Loading": {
+    "Loading...": "Загрузка..."
+  },
+  "Search": {
+    "General search": "Общий поиск",
+    "Search": "Поиск",
+    "Profile search...": "Поиск профиля...",
+    "No results found.": "Ничего не найдено.",
+    "Suggestions": "Предложения",
+    "Events": "События",
+    "Profiles": "Профили",
+    "Themes": "Темы",
+    "Theme: System": "Тема: Системная",
+    "Theme: Light": "Тема: Светлая",
+    "Theme: Midnight": "Тема: Темная",
+    "Localization": "Локализация"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA Сеть Открытого Исходного Кода",
+    "A software foundation formed by volunteer-developed software": "Программный фонд, сформированный на основе программного обеспечения, разработанного волонтерами",
+    "Rest of the story": "Остальная часть истории",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (означает Сеть Открытого Исходного Кода на турецком)** — это платформа, позволяющая волонтерам, мотивированным общественным благом, сотрудничать и разрабатывать качественные решения в области информационных технологий.\n\nМы коллективно реализовывали проекты, предоставляя экспертную волонтерскую поддержку и технические ресурсы. Эти проекты представляли собой решения с открытым исходным кодом, доступные и контролируемые всеми, в первую очередь официальными учреждениями и неправительственными организациями. Наша роль заключалась в содействии общению волонтеров и координации управления ресурсами.\n\nЯвляясь некоммерческой организацией, ориентированной на общественное благо, AYA продолжает свой путь как [программный фонд](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz), размещающий различные ИТ-проекты."
+  },
+  "Stories": {
+    "All": "Все",
+    "Status": "Статус",
+    "Announcement": "Объявление",
+    "Article": "Статья",
+    "Content": "Контент",
+    "Presentation": "Презентация"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Коллекция проектов и организаций с открытым исходным кодом.",
+    "Last update": "Последнее обновление",
+    "Project Details": "Детали проекта",
+    "Project description": "Описание проекта",
+    "Project repository": "Репозиторий проекта",
+    "Project website": "Веб-сайт проекта",
+    "Project contributor count": "Количество участников проекта",
+    "My role in the project": "Моя роль в проекте",
+    "PRs": "PR",
+    "Issues": "Задачи",
+    "My first contribution": "Мой первый вклад",
+    "My last contribution": "Мой последний вклад",
+    "My contributions": "Мои вклады",
+    "Opened PRs by me": "Открытые мной",
+    "Merged PRs by me": "Принятые",
+    "Issues opened by me": "Открытые мной",
+    "Issues contributed by me": "Мои вклады",
+    "follower": "Подписчик",
+    "sponsor": "Спонсор",
+    "contributor": "Участник",
+    "maintainer": "Сопровождающий",
+    "lead": "Руководитель",
+    "owner": "Владелец",
+    "No contributions found.": "Вклады не найдены."
+  }
+}

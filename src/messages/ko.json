@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "홈페이지",
+    "Elements": "요소",
+    "Products": "제품",
+    "Policies": "정책",
+    "About": "소개",
+    "Profile": "프로필",
+    "Stories": "이야기",
+    "Contributions": "기여",
+    "Content not yet available.": "콘텐츠를 아직 사용할 수 없습니다.",
+    "Change theme": "테마 변경",
+    "System": "시스템",
+    "Light": "라이트",
+    "Midnight": "미드나이트"
+  },
+  "Loading": {
+    "Loading...": "로드 중..."
+  },
+  "Search": {
+    "General search": "일반 검색",
+    "Search": "검색",
+    "Profile search...": "프로필 검색...",
+    "No results found.": "결과를 찾을 수 없습니다.",
+    "Suggestions": "제안",
+    "Events": "이벤트",
+    "Profiles": "프로필",
+    "Themes": "테마",
+    "Theme: System": "테마: 시스템",
+    "Theme: Light": "테마: 라이트",
+    "Theme: Midnight": "테마: 미드나이트",
+    "Localization": "현지화"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA 오픈 소스 네트워크",
+    "A software foundation formed by volunteer-developed software": "자원봉사자가 개발한 소프트웨어로 구성된 소프트웨어 재단",
+    "Rest of the story": "이야기의 나머지 부분",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (터키어로 오픈 소스 네트워크를 의미)**는 사회적 선을 추구하는 자원봉사자들이 협력하여 양질의 정보 기술 솔루션을 개발할 수 있도록 하는 플랫폼입니다.\n\n우리는 전문가 자원봉사 지원과 기술 자원을 제공함으로써 공동으로 프로젝트를 실현해 왔습니다. 이러한 프로젝트는 주로 공식 기관 및 비정부 기구를 포함하여 모든 사람이 접근하고 제어할 수 있는 오픈 소스 솔루션이었습니다. 우리의 역할은 자원봉사자 커뮤니케이션과 자원 관리 조정을 촉진하는 것이었습니다.\n\n사회적 이익에 중점을 둔 비영리 단체로서 AYA는 다양한 IT 프로젝트를 호스팅하는 [소프트웨어 재단 정체성](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz)으로 여정을 계속하고 있습니다."
+  },
+  "Stories": {
+    "All": "모두",
+    "Status": "상태",
+    "Announcement": "공지",
+    "Article": "기사",
+    "Content": "콘텐츠",
+    "Presentation": "프레젠테이션"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "오픈 소스 프로젝트 및 조직 모음입니다.",
+    "Last update": "마지막 업데이트",
+    "Project Details": "프로젝트 세부 정보",
+    "Project description": "프로젝트 설명",
+    "Project repository": "프로젝트 저장소",
+    "Project website": "프로젝트 웹사이트",
+    "Project contributor count": "프로젝트 기여자 수",
+    "My role in the project": "프로젝트에서의 내 역할",
+    "PRs": "PR",
+    "Issues": "문제",
+    "My first contribution": "나의 첫 번째 기여",
+    "My last contribution": "나의 마지막 기여",
+    "My contributions": "나의 기여",
+    "Opened PRs by me": "내가 연 PR",
+    "Merged PRs by me": "수락됨",
+    "Issues opened by me": "내가 연 문제",
+    "Issues contributed by me": "나의 기여",
+    "follower": "팔로워",
+    "sponsor": "스폰서",
+    "contributor": "기여자",
+    "maintainer": "관리자",
+    "lead": "리드",
+    "owner": "소유자",
+    "No contributions found.": "기여를 찾을 수 없습니다."
+  }
+}

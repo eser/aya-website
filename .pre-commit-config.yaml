@@ -42,6 +42,7 @@ repos:
           - ".github/typos.toml"
         exclude: |
           (?x)^(
+            src/messages/.*|
             docs/.*
           )$
   - repo: https://github.com/compilerla/conventional-pre-commit
@@ -72,6 +73,7 @@ repos:
             .git/COMMIT_EDITMSG|
             docs/.*|
             ops/docker/Dockerfile|
+            src/messages/.*|
             src/app/\[slug\]/_components/.*|
             LICENSE|
             README.md|

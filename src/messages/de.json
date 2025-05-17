@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "Startseite",
+    "Elements": "Elemente",
+    "Products": "Produkte",
+    "Policies": "Richtlinien",
+    "About": "Über uns",
+    "Profile": "Profil",
+    "Stories": "Geschichten",
+    "Contributions": "Beiträge",
+    "Content not yet available.": "Inhalt noch nicht verfügbar.",
+    "Change theme": "Design ändern",
+    "System": "System",
+    "Light": "Hell",
+    "Midnight": "Dunkel"
+  },
+  "Loading": {
+    "Loading...": "Wird geladen..."
+  },
+  "Search": {
+    "General search": "Allgemeine Suche",
+    "Search": "Suche",
+    "Profile search...": "Profilsuche...",
+    "No results found.": "Keine Ergebnisse gefunden.",
+    "Suggestions": "Vorschläge",
+    "Events": "Veranstaltungen",
+    "Profiles": "Profile",
+    "Themes": "Designs",
+    "Theme: System": "Design: System",
+    "Theme: Light": "Design: Hell",
+    "Theme: Midnight": "Design: Dunkel",
+    "Localization": "Lokalisierung"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA Das Open Source Netzwerk",
+    "A software foundation formed by volunteer-developed software": "Eine Software-Stiftung, gegründet durch von Freiwilligen entwickelte Software",
+    "Rest of the story": "Rest der Geschichte",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (bedeutet Open Source Netzwerk auf Türkisch)** ist eine Plattform, die es Freiwilligen mit sozialem Engagement ermöglicht, zusammenzuarbeiten und hochwertige Informationstechnologielösungen zu entwickeln.\n\nWir haben gemeinsam Projekte realisiert, indem wir fachkundige Freiwilligenunterstützung und technische Ressourcen bereitgestellt haben. Diese Projekte waren Open-Source-Lösungen, die für jeden zugänglich und kontrollierbar sind, vor allem für offizielle Institutionen und Nichtregierungsorganisationen. Unsere Rolle bestand darin, die Kommunikation der Freiwilligen und die Koordination des Ressourcenmanagements zu erleichtern.\n\nAls gemeinnützige Organisation mit Fokus auf sozialen Nutzen setzt AYA seine Reise mit einer [Software-Stiftungsidentität](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) fort, die verschiedene IT-Projekte beherbergt."
+  },
+  "Stories": {
+    "All": "Alle",
+    "Status": "Status",
+    "Announcement": "Ankündigung",
+    "Article": "Artikel",
+    "Content": "Inhalt",
+    "Presentation": "Präsentation"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Eine Sammlung von Open-Source-Projekten und -Organisationen.",
+    "Last update": "Letzte Aktualisierung",
+    "Project Details": "Projektdetails",
+    "Project description": "Projektbeschreibung",
+    "Project repository": "Projekt-Repository",
+    "Project website": "Projekt-Webseite",
+    "Project contributor count": "Anzahl der Projektmitwirkenden",
+    "My role in the project": "Meine Rolle im Projekt",
+    "PRs": "PRs",
+    "Issues": "Issues",
+    "My first contribution": "Mein erster Beitrag",
+    "My last contribution": "Mein letzter Beitrag",
+    "My contributions": "Meine Beiträge",
+    "Opened PRs by me": "Von mir geöffnet",
+    "Merged PRs by me": "Akzeptiert",
+    "Issues opened by me": "Von mir geöffnet",
+    "Issues contributed by me": "Meine Beiträge",
+    "follower": "Follower",
+    "sponsor": "Sponsor",
+    "contributor": "Mitwirkender",
+    "maintainer": "Maintainer",
+    "lead": "Leitung",
+    "owner": "Eigentümer",
+    "No contributions found.": "Keine Beiträge gefunden."
+  }
+}

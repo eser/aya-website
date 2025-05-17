@@ -1,0 +1,75 @@
+{
+  "Layout": {
+    "Homepage": "Page d'accueil",
+    "Elements": "Éléments",
+    "Products": "Produits",
+    "Policies": "Politiques",
+    "About": "À propos",
+    "Profile": "Profil",
+    "Stories": "Histoires",
+    "Contributions": "Contributions",
+    "Content not yet available.": "Contenu non encore disponible.",
+    "Change theme": "Changer de thème",
+    "System": "Système",
+    "Light": "Clair",
+    "Midnight": "Sombre"
+  },
+  "Loading": {
+    "Loading...": "Chargement..."
+  },
+  "Search": {
+    "General search": "Recherche générale",
+    "Search": "Rechercher",
+    "Profile search...": "Recherche de profil...",
+    "No results found.": "Aucun résultat trouvé.",
+    "Suggestions": "Suggestions",
+    "Events": "Événements",
+    "Profiles": "Profils",
+    "Themes": "Thèmes",
+    "Theme: System": "Thème : Système",
+    "Theme: Light": "Thème : Clair",
+    "Theme: Midnight": "Thème : Sombre",
+    "Localization": "Localisation"
+  },
+  "Home": {
+    "AYA the Open Source Network": "AYA le Réseau Open Source",
+    "A software foundation formed by volunteer-developed software": "Une fondation logicielle formée par des logiciels développés par des bénévoles",
+    "Rest of the story": "Reste de l'histoire",
+    "GitHub": "GitHub",
+    "IntroText": "**AYA (signifie Réseau Open Source en turc)** est une plateforme permettant à des bénévoles motivés par le bien social de collaborer et de développer des solutions informatiques de qualité.\n\nNous avons collectivement réalisé des projets en fournissant un soutien bénévole expert et des ressources techniques. Ces projets ont été des solutions open source accessibles et contrôlables par tous, principalement des institutions officielles et des organisations non gouvernementales. Notre rôle a été de faciliter la communication des bénévoles et la coordination de la gestion des ressources.\n\nEn tant qu'organisation à but non lucratif axée sur le bénéfice social, AYA poursuit son voyage avec une [identité de fondation logicielle](/aya/stories/20240107-vakif-kimligimiz-ve-sinirlarimiz) hébergeant divers projets informatiques."
+  },
+  "Stories": {
+    "All": "Tous",
+    "Status": "Statut",
+    "Announcement": "Annonce",
+    "Article": "Article",
+    "Content": "Contenu",
+    "Presentation": "Présentation"
+  },
+  "Contributions": {
+    "A collection of open source projects and organizations.": "Une collection de projets et d'organisations open source.",
+    "Last update": "Dernière mise à jour",
+    "Project Details": "Détails du projet",
+    "Project description": "Description du projet",
+    "Project repository": "Dépôt du projet",
+    "Project website": "Site web du projet",
+    "Project contributor count": "Nombre de contributeurs au projet",
+    "My role in the project": "Mon rôle dans le projet",
+    "PRs": "PRs",
+    "Issues": "Problèmes",
+    "My first contribution": "Ma première contribution",
+    "My last contribution": "Ma dernière contribution",
+    "My contributions": "Mes contributions",
+    "Opened PRs by me": "Ouvert par moi",
+    "Merged PRs by me": "Accepté",
+    "Issues opened by me": "Ouvert par moi",
+    "Issues contributed by me": "Mes contributions",
+    "follower": "Suiveur",
+    "sponsor": "Sponsor",
+    "contributor": "Contributeur",
+    "maintainer": "Mainteneur",
+    "lead": "Chef de file",
+    "owner": "Propriétaire",
+    "No contributions found.": "Aucune contribution trouvée."
+  }
+}
