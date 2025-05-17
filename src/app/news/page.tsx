@@ -15,7 +15,7 @@ export async function generateMetadata(_props: IndexPageProps, _parent: Resolvin
   const { t } = await getTranslations();
 
   return {
-    title: t("Layout", "Articles"),
+    title: t("Layout", "News"),
     description: "",
   };
 }
@@ -27,7 +27,7 @@ async function IndexPage(_props: IndexPageProps) {
     locale: locale.name,
   };
 
-  const contentText = `# ${t("Layout", "Articles")}
+  const contentText = `# ${t("Layout", "News")}
 
 ${t("Layout", "Content not yet available.")}`;
 
