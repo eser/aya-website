@@ -47,14 +47,18 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const contentText = `# ${storyData.title}\n\n${storyData.content}`;
+  const contentText = `${storyData.content}`;
 
   const mdxSource = await mdx(contentText, components);
 
   return (
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
-        <article className="content">{mdxSource?.content}</article>
+        <div className="content">
+          <h2>{storyData.title}</h2>
+
+          <article>{mdxSource?.content}</article>
+        </div>
       </section>
     </PageLayout>
   );

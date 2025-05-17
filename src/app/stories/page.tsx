@@ -27,16 +27,18 @@ async function IndexPage(_props: IndexPageProps) {
     locale: locale.name,
   };
 
-  const contentText = `# ${t("Layout", "Articles")}
-
-${t("Layout", "Content not yet available.")}`;
+  const contentText = `${t("Layout", "Content not yet available.")}`;
 
   const mdxSource = await mdx(contentText, components);
 
   return (
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
-        <article className="content">{mdxSource?.content}</article>
+        <div className="content">
+          <h2>{t("Layout", "Articles")}</h2>
+
+          <article>{mdxSource?.content}</article>
+        </div>
       </section>
     </PageLayout>
   );

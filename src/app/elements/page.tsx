@@ -30,10 +30,11 @@ async function ElementsPage() {
   return (
     <PageLayout placeholders={placeholders}>
       <section className="container mx-auto px-4 py-8">
-        <h1 className="mb-10 text-4xl font-bold tracking-tight text-center">
-          {t("Layout", "Elements")}
-        </h1>
-        <ElementsContent initialProfiles={initialProfiles} />
+        <div className="content">
+          <h2>{t("Layout", "Elements")}</h2>
+
+          <ElementsContent initialProfiles={initialProfiles} />
+        </div>
       </section>
     </PageLayout>
   );
