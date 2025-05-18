@@ -48,10 +48,10 @@ export async function ProfileListItem(props: ProfileListItemProps) {
             {props.membership?.properties?.github?.prs && (
               <span
                 className={styles.stat}
-                title={`${props.membership?.properties?.github?.prs.resolved} resolved out of ${props.membership?.properties?.stats?.prs.total} PRs`}
+                title={`${props.membership?.properties?.github?.prs.resolved} resolved out of ${props.membership?.properties?.github?.prs.total} PRs`}
               >
                 <Icons.gitPullRequest className={styles.icon} />
-                {props.membership?.properties?.github?.prs.resolved}/{props.membership?.properties?.stats?.prs.total}
+                {props.membership?.properties?.github?.prs.resolved}/{props.membership?.properties?.github?.prs.total}
               </span>
             )}
             {props.membership?.properties?.github?.issues !== undefined && (
