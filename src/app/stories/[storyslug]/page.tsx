@@ -53,7 +53,7 @@ async function IndexPage(props: IndexPageProps) {
 
   return (
     <PageLayout placeholders={placeholders}>
-      <section className="container mx-auto px-4 py-8">
+      <section className="container px-4 py-8 mx-auto">
         <div className="content">
           <h2>{storyData.title}</h2>
 

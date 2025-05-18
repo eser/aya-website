@@ -7,7 +7,7 @@ export function ResponsiveIndicator() {
   }
 
   return (
-    <div className="fixed bottom-1 right-1 z-50 flex h-6 w-6 items-center justify-center rounded-full bg-gray-800 p-3 font-mono text-xs text-white">
+    <div className="fixed z-50 flex items-center justify-center w-6 h-6 p-3 font-mono text-xs text-white bg-gray-800 rounded-full bottom-1 right-1">
       <div className="block sm:hidden">xs</div>
       <div className="hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden">sm</div>
       <div className="hidden md:block lg:hidden xl:hidden 2xl:hidden">md</div>

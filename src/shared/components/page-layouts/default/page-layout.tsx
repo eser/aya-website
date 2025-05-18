@@ -28,7 +28,7 @@ export async function PageLayout(props: PageLayoutProps) {
         themes={["default", "light", "midnight"]}
         attribute="data-theme"
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="flex flex-col min-h-screen">
           <Header placeholders={props.placeholders} spotlight={spotlight} />
           <main className="flex-1">{props.children}</main>
           <Footer />

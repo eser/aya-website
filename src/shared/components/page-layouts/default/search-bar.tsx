@@ -80,7 +80,7 @@ export function SearchBar(props: SearchBarProps) {
                   }}
                   disabled={item.disabled}
                 >
-                  <Icon className="mr-2 h-4 w-4" />
+                  <Icon className="w-4 h-4 mr-2" />
                   <span>{item.title}</span>
                   {/* <CommandShortcut>⌘E</CommandShortcut> */}
                 </CommandItem>
@@ -104,7 +104,7 @@ export function SearchBar(props: SearchBarProps) {
                     setOpen(false);
                   }}
                 >
-                  <Icon className="mr-2 h-4 w-4" />
+                  <Icon className="w-4 h-4 mr-2" />
                   <span>{profile.title}</span>
                   <span className="sr-only">{profile.description}</span>
                 </CommandItem>
@@ -120,7 +120,7 @@ export function SearchBar(props: SearchBarProps) {
               }}
               disabled={theme === "default"}
             >
-              <Icons.settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="w-4 h-4 mr-2" />
               <span>{t("Search", "Theme: System")}</span>
             </CommandItem>
             <CommandItem
@@ -130,7 +130,7 @@ export function SearchBar(props: SearchBarProps) {
               }}
               disabled={theme === "light"}
             >
-              <Icons.settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="w-4 h-4 mr-2" />
               <span>{t("Search", "Theme: Light")}</span>
             </CommandItem>
             <CommandItem
@@ -140,7 +140,7 @@ export function SearchBar(props: SearchBarProps) {
               }}
               disabled={theme === "midnight"}
             >
-              <Icons.settings className="mr-2 h-4 w-4" />
+              <Icons.settings className="w-4 h-4 mr-2" />
               <span>{t("Search", "Theme: Midnight")}</span>
             </CommandItem>
           </CommandGroup>
@@ -155,7 +155,7 @@ export function SearchBar(props: SearchBarProps) {
                 }}
                 disabled={locale.code === localeCode}
               >
-                <span className="mr-2 h-4 w-4">{locale.flag}</span>
+                <span className="w-4 h-4 mr-2">{locale.flag}</span>
                 <span>{locale.name}</span>
               </CommandItem>
             ))}

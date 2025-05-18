@@ -25,8 +25,8 @@ export function FilterBar(props: FilterBarProps) {
   ];
 
   return (
-    <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between p-4 border rounded-lg bg-card">
-      <div className="md:flex-5/12 flex flex-col gap-2">
+    <div className="flex flex-col p-4 mb-8 border rounded-lg gap-4 md:flex-row md:items-end md:justify-between bg-card">
+      <div className="flex flex-col md:flex-5/12 gap-2">
         <Label htmlFor="kind-filter" className="font-semibold">
           {t("Elements", "FilterByKind")}
         </Label>
@@ -49,7 +49,7 @@ export function FilterBar(props: FilterBarProps) {
         </ToggleGroup>
       </div>
 
-      <div className="md:flex-7/12 flex flex-col gap-2">
+      <div className="flex flex-col md:flex-7/12 gap-2">
         <Label htmlFor="search-text" className="font-semibold">
           {t("Search", "Search")}
         </Label>

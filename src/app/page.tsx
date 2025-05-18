@@ -26,7 +26,7 @@ async function IndexPage() {
 
   return (
     <PageLayout placeholders={placeholders}>
-      <section className="container mx-auto px-4 grid items-center">
+      <section className="container items-center px-4 mx-auto grid">
         <div className="flex max-w-[980px] flex-col items-start pt-10">
           <div className={styles["astronaut-layer"]}>
             <Astronaut width={400} height={400} />

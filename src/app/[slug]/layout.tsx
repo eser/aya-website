@@ -34,7 +34,7 @@ async function Layout(props: LayoutProps) {
 
   return (
     <PageLayout placeholders={placeholders}>
-      <section className="container mx-auto px-4 py-8">
+      <section className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 items-start">
           <aside className={styles.bio}>
             {profileData.profile_picture_uri && (

@@ -29,7 +29,7 @@ export function ProductListDisplay(props: ProductListDisplayProps) {
 
   if (filteredProducts.length === 0) {
     return (
-      <div className="text-center py-10">
+      <div className="py-10 text-center">
         <p className="text-xl text-muted-foreground">{t("Products", "NoProductsFound")}</p>
       </div>
     );
