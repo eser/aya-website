@@ -1,0 +1,38 @@
+.codeBlock {
+  overflow-x: auto;
+  padding: 1rem;
+  background: var(--shiki-bg, #181a1b);
+  border-radius: 0.5rem;
+  font-size: 0.95em;
+  margin: 1.5rem 0;
+}
+
+:global(pre[data-line]) {
+  padding: 0 1rem;
+}
+
+:global([data-highlighted-line]) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+:global(code[data-line-numbers] > [data-line]::before) {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 0.75rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+:global(code[data-line-numbers-max-digits="2"] > [data-line]::before) {
+  width: 1.25rem;
+}
+
+:global(code[data-line-numbers-max-digits="3"] > [data-line]::before) {
+  width: 1.75rem;
+}
+
+:global(code[data-line-numbers-max-digits="4"] > [data-line]::before) {
+  width: 2.25rem;
+}
