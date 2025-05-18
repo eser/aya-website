@@ -2,7 +2,7 @@ import { getCustomDomain } from "./profiles/get-custom-domain.ts";
 import { getProfilesByKinds } from "./profiles/get-profiles-by-kinds.ts";
 import { getProfile } from "./profiles/get-profile.ts";
 import { getProfilePage } from "./profiles/get-profile-page.ts";
-import { getProfileMemberships } from "./profiles/get-profile-memberships.ts";
+import { getProfileContributions } from "./profiles/get-profile-contributions.ts";
 import { getProfileStories } from "./profiles/get-profile-stories.ts";
 import { getStory } from "./stories/get-story.ts";
 import { getStoriesByKinds } from "./stories/get-stories-by-kinds.ts";
@@ -13,7 +13,7 @@ export const backend = {
   getProfilesByKinds,
   getProfile,
   getProfilePage,
-  getProfileMemberships,
+  getProfileContributions,
   getStory,
   getProfileStories,
   getStoriesByKinds,

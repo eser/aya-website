@@ -49,7 +49,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  const membershipData = await backend.getProfileMemberships(locale.code, params.slug, "product");
+  const membershipData = await backend.getProfileContributions(locale.code, params.slug);
 
   if (membershipData === null) {
     notFound();
