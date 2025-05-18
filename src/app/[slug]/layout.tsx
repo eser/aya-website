@@ -83,9 +83,9 @@ async function Layout(props: LayoutProps) {
                     const Icon = findIcon(link.kind);
 
                     return (
-                      <SiteLink key={link.id} href={link.uri ?? ""} title={link.title}>
+                      <a key={link.id} href={link.uri ?? ""} title={link.title}>
                         <Icon />
-                      </SiteLink>
+                      </a>
                     );
                   })}
                 </div>
