@@ -48,7 +48,7 @@
     "format:fix": "deno fmt"
   },
   "dependencies": {
-    "next": "15.4.0-canary.37"
+    "next": "15.4.0-canary.38"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0-beta.4",

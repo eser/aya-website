@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 
 import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
-import { ProductCard } from "@/shared/components/userland/products/product-card.tsx";
-import { ProductGrid } from "@/shared/components/userland/products/product-grid.tsx";
+import { ProfileListItem } from "@/shared/components/userland/profile-list/profile-list-item.tsx";
+import { ProfileList } from "@/shared/components/userland/profile-list/profile-list.tsx";
 import styles from "./page.module.css";
 
 type IndexPageProps = {
@@ -66,34 +66,15 @@ async function IndexPage(props: IndexPageProps) {
 
       {membershipData.length > 0
         ? (
-          <ProductGrid>
-            {membershipData.map((membership) => {
-              const product = membership.profile;
-
-              membership.properties = {
-                stats: {
-                  issues: {
-                    total: 20,
-                    resolved: 10,
-                  },
-                  prs: {
-                    total: 45,
-                    resolved: 42,
-                  },
-                  stars: 206,
-                  commits: 156,
-                },
-              };
-
-              return (
-                <ProductCard
-                  key={membership.id}
-                  product={product}
-                  membership={membership}
-                />
-              );
-            })}
-          </ProductGrid>
+          <ProfileList>
+            {membershipData.map((membership) => (
+              <ProfileListItem
+                key={membership.id}
+                profile={membership.profile}
+                membership={membership}
+              />
+            ))}
+          </ProfileList>
         )
         : (
           <div className={styles.emptyState}>

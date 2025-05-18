@@ -4,8 +4,8 @@ import { Profile } from "./profile/profile.tsx";
 import { SiteLink } from "./site-link/site-link.tsx";
 import { List } from "./list/list.tsx";
 import { ListItem } from "./list/list-item.tsx";
-import { ProductCard } from "./products/product-card.tsx";
-import { ProductGrid } from "./products/product-grid.tsx";
+import { ProfileListItem } from "./profile-list/profile-list-item.tsx";
+import { ProfileList } from "./profile-list/profile-list.tsx";
 
 export const components = {
   Card,
@@ -14,6 +14,6 @@ export const components = {
   SiteLink,
   List,
   ListItem,
-  ProductCard,
-  ProductGrid,
+  ProfileList,
+  ProfileListItem,
 };

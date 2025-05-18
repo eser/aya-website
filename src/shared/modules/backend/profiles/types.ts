@@ -68,7 +68,7 @@ export type ProfileMembership = {
   id: string;
   kind: ProfileMembershipKind;
   properties: {
-    stats?: {
+    github?: {
       commits: number;
       prs: {
         resolved: number;
@@ -80,7 +80,9 @@ export type ProfileMembership = {
       };
       stars: number;
     };
+    videos?: number;
   };
 
   profile: Profile;
+  member_profile: Profile;
 };
