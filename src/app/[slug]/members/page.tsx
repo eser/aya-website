@@ -25,12 +25,12 @@ export async function generateMetadata(props: IndexPageProps, _parent: Resolving
     notFound();
   }
 
-  if (profileData.kind !== "individual") {
+  if (profileData.kind !== "organization" && profileData.kind !== "product") {
     notFound();
   }
 
   return {
-    title: `${profileData.title} - ${t("Layout", "Contributions")}`,
+    title: `${profileData.title} - ${t("Layout", "Members")}`,
     description: profileData.description,
   };
 }
@@ -45,7 +45,7 @@ async function IndexPage(props: IndexPageProps) {
     notFound();
   }
 
-  if (profileData.kind !== "individual") {
+  if (profileData.kind !== "organization" && profileData.kind !== "product") {
     notFound();
   }
 
@@ -58,9 +58,9 @@ async function IndexPage(props: IndexPageProps) {
   return (
     <article className="content space-y-6">
       <div className="flex flex-col gap-2">
-        <h2>{t("Layout", "Contributions")}</h2>
+        <h2>{t("Layout", "Members")}</h2>
         <h3 className="text-muted-foreground">
-          {t("Contributions", "A collection of open source projects and organizations.")}
+          {t("Members", "Individuals and organizations that are members of this profile.")}
         </h3>
       </div>
 
@@ -97,7 +97,7 @@ async function IndexPage(props: IndexPageProps) {
         )
         : (
           <div className={styles.emptyState}>
-            <p>{t("Contributions", "No contributions found.")}</p>
+            <p>{t("Members", "No members found.")}</p>
           </div>
         )}
     </article>

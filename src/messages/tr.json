@@ -8,6 +8,7 @@
     "Profile": "Profil",
     "Stories": "Hikayeler",
     "Contributions": "Katkılar",
+    "Members": "Üyeler",
     "News": "Haberler",
     "Articles": "Makaleler",
     "Events": "Etkinlikler",
@@ -73,6 +74,10 @@
     "lead": "Lider",
     "owner": "Sahibi",
     "No contributions found.": "Herhangi bir katkı bulunamadı."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "Bu profilin üyeleri, kişiler ve organizasyonlar.",
+    "No members found.": "Üye bulunamadı."
   },
   "Elements": {
     "Individuals": "Kişiler",

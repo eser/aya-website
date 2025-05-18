@@ -11,6 +11,7 @@
     "News": "Nieuws",
     "Articles": "Artikelen",
     "Events": "Evenementen",
+    "Members": "Leden",
     "Content not yet available.": "Inhoud nog niet beschikbaar.",
     "Change theme": "Thema wijzigen",
     "System": "Systeem",
@@ -77,10 +78,21 @@
   "Elements": {
     "Individuals": "Individuen",
     "Organizations": "Organisaties",
-    "NoProfilesFound": "Geen profielen gevonden."
+    "NoProfilesFound": "Geen profielen gevonden die aan uw criteria voldoen.",
+    "FilterByKind": "Filteren op type:",
+    "AllTypes": "Alle",
+    "SearchPlaceholder": "Zoeken op naam of omschrijving..."
   },
   "News": {
     "News item image": "Nieuwsafbeelding",
     "No image available": "Geen afbeelding beschikbaar"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "Zoek producten op naam of omschrijving...",
+    "NoProductsFound": "Geen producten gevonden die aan uw criteria voldoen."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "Individuen en organisaties die lid zijn van dit profiel.",
+    "No members found.": "Geen leden gevonden."
   }
 }

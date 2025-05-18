@@ -11,11 +11,13 @@
     "News": "الأخبار",
     "Articles": "المقالات",
     "Events": "فعاليات",
+    "Members": "الأعضاء",
     "Content not yet available.": "المحتوى غير متوفر بعد.",
     "Change theme": "تغيير السمة",
     "System": "النظام",
     "Light": "فاتح",
-    "Midnight": "داكن"
+    "Midnight": "داكن",
+    "NoProfilesFound": "لم يتم العثور على ملفات شخصية."
   },
   "Loading": {
     "Loading...": "جاري التحميل..."
@@ -82,5 +84,13 @@
   "News": {
     "News item image": "صورة الخبر",
     "No image available": "الصورة غير متوفرة"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "البحث في المنتجات بالاسم أو الوصف...",
+    "NoProductsFound": "لم يتم العثور على منتجات تطابق معاييرك."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "الأفراد والمنظمات الأعضاء في هذا الملف الشخصي.",
+    "No members found.": "لم يتم العثور على أعضاء."
   }
 }

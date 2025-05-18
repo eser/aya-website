@@ -11,6 +11,7 @@
     "News": "뉴스",
     "Articles": "기사",
     "Events": "이벤트",
+    "Members": "멤버",
     "Content not yet available.": "콘텐츠를 아직 사용할 수 없습니다.",
     "Change theme": "테마 변경",
     "System": "시스템",
@@ -77,10 +78,21 @@
   "Elements": {
     "Individuals": "개인",
     "Organizations": "조직",
-    "NoProfilesFound": "프로필을 찾을 수 없습니다."
+    "NoProfilesFound": "기준에 맞는 프로필을 찾을 수 없습니다.",
+    "FilterByKind": "종류별로 필터링:",
+    "AllTypes": "모두",
+    "SearchPlaceholder": "이름 또는 설명으로 검색..."
   },
   "News": {
     "News item image": "뉴스 이미지",
     "No image available": "사용 가능한 이미지 없음"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "이름 또는 설명으로 제품 검색...",
+    "NoProductsFound": "기준에 맞는 제품을 찾을 수 없습니다."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "이 프로필의 멤버인 개인 및 조직.",
+    "No members found.": "멤버를 찾을 수 없습니다."
   }
 }

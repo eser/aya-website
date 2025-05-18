@@ -8,6 +8,7 @@
     "Profile": "Profile",
     "Stories": "Stories",
     "Contributions": "Contributions",
+    "Members": "Members",
     "News": "News",
     "Articles": "Articles",
     "Events": "Events",
@@ -73,6 +74,10 @@
     "lead": "Lead",
     "owner": "Owner",
     "No contributions found.": "No contributions found."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "Individuals and organizations that are members of this profile.",
+    "No members found.": "No members found."
   },
   "Elements": {
     "Individuals": "Individuals",

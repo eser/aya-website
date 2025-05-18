@@ -11,6 +11,7 @@
     "News": "新闻",
     "Articles": "文章",
     "Events": "活动",
+    "Members": "成员",
     "Content not yet available.": "内容暂不可用。",
     "Change theme": "更改主题",
     "System": "系统",
@@ -77,10 +78,21 @@
   "Elements": {
     "Individuals": "个人",
     "Organizations": "组织",
-    "NoProfilesFound": "未找到任何个人资料。"
+    "NoProfilesFound": "未找到符合您标准的个人资料。",
+    "FilterByKind": "按类型筛选：",
+    "AllTypes": "所有",
+    "SearchPlaceholder": "按名称或描述搜索..."
   },
   "News": {
     "News item image": "新闻图片",
     "No image available": "无可用图像"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "按名称或描述搜索产品...",
+    "NoProductsFound": "未找到符合您标准的产品。"
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "此个人资料的成员（个人和组织）。",
+    "No members found.": "未找到任何成员。"
   }
 }

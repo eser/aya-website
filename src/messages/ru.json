@@ -11,6 +11,7 @@
     "News": "Новости",
     "Articles": "Статьи",
     "Events": "События",
+    "Members": "Участники",
     "Content not yet available.": "Контент пока недоступен.",
     "Change theme": "Сменить тему",
     "System": "Системная",
@@ -77,10 +78,21 @@
   "Elements": {
     "Individuals": "Частные лица",
     "Organizations": "Организации",
-    "NoProfilesFound": "Профили не найдены."
+    "NoProfilesFound": "Профили, соответствующие вашим критериям, не найдены.",
+    "FilterByKind": "Фильтровать по типу:",
+    "AllTypes": "Все",
+    "SearchPlaceholder": "Поиск по названию или описанию..."
   },
   "News": {
     "News item image": "Изображение новости",
     "No image available": "Нет изображения"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "Поиск продуктов по названию или описанию...",
+    "NoProductsFound": "Продукты, соответствующие вашим критериям, не найдены."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "Частные лица и организации, являющиеся участниками этого профиля.",
+    "No members found.": "Участники не найдены."
   }
 }

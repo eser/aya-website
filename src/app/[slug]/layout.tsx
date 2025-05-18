@@ -65,9 +65,17 @@ async function Layout(props: LayoutProps) {
                   <SiteLink href={`/${params.slug}`}>{t("Layout", "Profile")}</SiteLink>
                 </li>
 
-                <li>
-                  <SiteLink href={`/${params.slug}/contributions`}>{t("Layout", "Contributions")}</SiteLink>
-                </li>
+                {profileData.kind === "individual" && (
+                  <li>
+                    <SiteLink href={`/${params.slug}/contributions`}>{t("Layout", "Contributions")}</SiteLink>
+                  </li>
+                )}
+
+                {(profileData.kind === "organization" || profileData.kind === "product") && (
+                  <li>
+                    <SiteLink href={`/${params.slug}/members`}>{t("Layout", "Members")}</SiteLink>
+                  </li>
+                )}
 
                 {profileData.pages?.map((page) => (
                   <li key={page.slug}>

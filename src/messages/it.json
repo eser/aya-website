@@ -11,6 +11,7 @@
     "News": "Notizie",
     "Articles": "Articoli",
     "Events": "Eventi",
+    "Members": "Membri",
     "Content not yet available.": "Contenuto non ancora disponibile.",
     "Change theme": "Cambia tema",
     "System": "Sistema",
@@ -77,10 +78,21 @@
   "Elements": {
     "Individuals": "Individui",
     "Organizations": "Organizzazioni",
-    "NoProfilesFound": "Nessun profilo trovato."
+    "NoProfilesFound": "Nessun profilo trovato che corrisponda ai tuoi criteri.",
+    "FilterByKind": "Filtra per tipo:",
+    "AllTypes": "Tutti",
+    "SearchPlaceholder": "Cerca per nome o descrizione..."
   },
   "News": {
     "News item image": "Immagine della notizia",
     "No image available": "Nessuna immagine disponibile"
+  },
+  "Products": {
+    "SearchProductsPlaceholder": "Cerca prodotti per nome o descrizione...",
+    "NoProductsFound": "Nessun prodotto trovato che corrisponda ai tuoi criteri."
+  },
+  "Members": {
+    "Individuals and organizations that are members of this profile.": "Individui e organizzazioni membri di questo profilo.",
+    "No members found.": "Nessun membro trovato."
   }
 }
