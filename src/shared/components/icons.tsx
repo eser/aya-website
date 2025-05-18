@@ -11,6 +11,7 @@ export const Icons = {
   moon: Lucide.Moon,
   laptop: Lucide.Laptop,
   twitter: Lucide.Twitter,
+  linkedin: Lucide.Linkedin,
   instagram: Lucide.Instagram,
   youtube: Lucide.Youtube,
   gitFork: Lucide.GitFork,

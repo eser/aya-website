@@ -30,6 +30,7 @@ export type ProfileLink = {
   remote_id: string | null;
   public_id: string | null;
   uri: string | null;
+  title: string;
 
   auth_provider: string | null;
   auth_access_token_scope: string | null;

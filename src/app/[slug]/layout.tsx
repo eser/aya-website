@@ -6,8 +6,29 @@ import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
+import { Icons } from "@/shared/components/icons.tsx";
 
 import styles from "./layout.module.css";
+
+function findIcon(kind: string) {
+  switch (kind) {
+    case "github":
+      return Icons.github;
+    case "twitter":
+    case "x":
+      return Icons.twitter;
+    case "linkedin":
+      return Icons.linkedin;
+    case "instagram":
+      return Icons.instagram;
+    case "youtube":
+      return Icons.youtube;
+    // case "bsky":
+    //   return Icons.bsky;
+    default:
+      return Icons.link;
+  }
+}
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -55,6 +76,20 @@ async function Layout(props: LayoutProps) {
                 {profileData.slug}
                 {profileData.pronouns && ` · ${profileData.pronouns}`}
               </div>
+
+              {profileData.links?.length > 0 && (
+                <div className={styles.links}>
+                  {profileData.links?.map((link) => {
+                    const Icon = findIcon(link.kind);
+
+                    return (
+                      <SiteLink key={link.id} href={link.uri ?? ""} title={link.title}>
+                        <Icon />
+                      </SiteLink>
+                    );
+                  })}
+                </div>
+              )}
 
               <p className={styles.description}>{profileData.description}</p>
             </div>

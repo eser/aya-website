@@ -7,40 +7,56 @@
     @apply flex justify-center md:justify-start;
 
     & > img {
-      @apply rounded-full border;
+      @apply border rounded-full;
     }
   }
 }
 
 .hero {
   .title {
-    @apply font-serif text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-none mt-0 mb-2;
+    @apply mt-0 mb-2 font-serif text-base font-semibold leading-none sm:text-lg md:text-xl lg:text-2xl;
   }
 
   .subtitle {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl font-sans font-light text-muted-foreground leading-none mt-0 mb-4;
+    @apply mt-0 mb-4 font-sans text-sm font-light leading-none sm:text-base md:text-lg lg:text-xl text-muted-foreground;
+  }
+
+  .links {
+    @apply flex gap-4 mb-3 text-sm text-muted;
+
+    & > a {
+      & svg {
+        @apply stroke-muted-foreground;
+      }
+
+      &:hover {
+        & svg {
+          @apply stroke-foreground;
+        }
+      }
+    }
   }
 
   .description {
-    @apply text-sm font-sans font-normal leading-snug text-left mt-0 mb-4;
+    @apply mt-0 mb-4 font-sans text-sm font-normal leading-snug text-left;
   }
 }
 
 .nav {
-  @apply font-serif flex justify-center md:justify-start;
+  @apply flex justify-center font-serif md:justify-start;
 
   & > ul {
-    @apply space-y-2 md:space-y-3 lg:space-y-4 list-none p-0 flex flex-row md:flex-col flex-wrap justify-center;
+    @apply flex flex-row flex-wrap justify-center p-0 space-y-2 list-none md:space-y-3 lg:space-y-4 md:flex-col;
 
     & > li {
-      @apply text-base sm:text-lg md:text-xl lg:text-2xl leading-none relative;
+      @apply relative text-base leading-none sm:text-lg md:text-xl lg:text-2xl;
 
       &:not(:last-child):after {
         @apply px-2 content-["·"] md:content-none;
       }
 
       & > a {
-        @apply text-muted-foreground hover:text-foreground no-underline;
+        @apply no-underline text-muted-foreground hover:text-foreground;
       }
     }
   }
