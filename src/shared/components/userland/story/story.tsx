@@ -1,9 +1,11 @@
+"use client";
+
 import * as React from "react";
 import NextImage from "next/image";
 
 import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
-import type { StoryEx } from "@/shared/modules/backend/stories/types.ts";
-import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
+import type { Story, StoryEx } from "@/shared/modules/backend/stories/types.ts";
+import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
 import { cn } from "@/shared/lib/utils.ts";
 import { formatDateString } from "@/shared/lib/date.ts";
 
@@ -12,11 +14,11 @@ import styles from "./story.module.css";
 const Image = NextImage;
 
 export type StoryProps = {
-  story: StoryEx;
+  story: Story | StoryEx;
 };
 
-export async function Story(props: StoryProps) {
-  const { t, locale } = await getTranslations();
+export function Story(props: StoryProps) {
+  const { t, locale } = useTranslations();
 
   return (
     <SiteLink role="card" href={`/stories/${props.story.slug}`}>

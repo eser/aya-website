@@ -7,6 +7,9 @@ import { backend } from "@/shared/modules/backend/backend.ts";
 import { getTranslations } from "@/shared/modules/i18n/get-translations.tsx";
 import { PageLayout } from "@/shared/components/page-layouts/default/page-layout.tsx";
 import { components } from "@/shared/components/userland/userland.ts";
+import { StoryFooter } from "./_components/story-footer.tsx";
+
+export const revalidate = 300;
 
 type IndexPageProps = {
   params: Promise<{
@@ -58,6 +61,8 @@ async function IndexPage(props: IndexPageProps) {
           <h2>{storyData.title}</h2>
 
           <article>{mdxSource?.content}</article>
+
+          <StoryFooter story={storyData} />
         </div>
       </section>
     </PageLayout>

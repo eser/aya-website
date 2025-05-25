@@ -43,7 +43,6 @@ async function IndexPage() {
             : (
               <div className="py-10 text-center">
                 <p className="text-xl text-muted-foreground">
-                  {/* TODO: Add a specific translation key e.g., t("NewsPage", "NoNewsFound") */}
                   {t("Layout", "Content not yet available.")}
                 </p>
               </div>

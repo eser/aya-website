@@ -27,5 +27,6 @@ export type StoryEx = Omit<Story, "author_profile_id"> & {
     id: string;
     slug: string;
     title: string;
+    profile_picture_uri: string | null;
   };
 };

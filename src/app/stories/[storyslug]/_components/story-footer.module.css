@@ -1,0 +1,29 @@
+@reference "../../../../shared/globals.css";
+
+.story-footer {
+  @apply flex items-center gap-4 pt-20 pb-10;
+
+  & > .author-avatar-container {
+    @apply p-0.5 bg-card rounded-full shadow-md;
+
+    & > .author-avatar-image {
+      @apply block w-[96px] h-[96px] rounded-full object-cover border-2 border-background;
+    }
+  }
+
+  & > .story-details {
+    @apply flex flex-col items-center;
+
+    & > .author-details {
+      @apply flex flex-col;
+
+      & > .written-by-text {
+        @apply text-sm text-muted-foreground;
+      }
+
+      & > .author-name {
+        @apply text-lg font-semibold text-foreground;
+      }
+    }
+  }
+}

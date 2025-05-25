@@ -1,24 +1,25 @@
 "use client";
 
 import * as React from "react";
-import NextImage from "next/image";
+// import NextImage from "next/image";
 
-import { formatDateString } from "@/shared/lib/date.ts";
+// import { formatDateString } from "@/shared/lib/date.ts";
 import type { Story, StoryEx } from "@/shared/modules/backend/stories/types.ts";
 import { useTranslations } from "@/shared/modules/i18n/use-translations.tsx";
-import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
+import { Story as StoryComponent } from "@/shared/components/userland/story/story.tsx";
+// import { SiteLink } from "@/shared/components/userland/site-link/site-link.tsx";
 
 import { FilterBar, type FilterKeyType } from "./filter-bar.tsx"; // Import the type
-import styles from "./timeline.module.css";
+// import styles from "./timeline.module.css";
 
-const Image = NextImage; // Simple reassignment, will add @ts-expect-error at usage
+// const Image = NextImage; // Simple reassignment, will add @ts-expect-error at usage
 
 export type TimelineProps = {
   stories: (Story | StoryEx)[];
 };
 
 export function Timeline(props: TimelineProps) {
-  const { t, locale } = useTranslations();
+  const { t } = useTranslations();
 
   const [activeFilter, setActiveFilter] = React.useState<FilterKeyType>("");
 
@@ -37,38 +38,26 @@ export function Timeline(props: TimelineProps) {
     <>
       <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} mapping={filterMapping} />
 
-      {filteredStories.length > 0
-        ? (
-          <ul className={styles.items}>
-            {filteredStories.map((story) => (
-              <li key={story.id} className={styles.item}>
-                <div className={styles.dot} />
-                <time className={styles.date}>{formatDateString(story.published_at, locale.code)}</time>
-                <SiteLink className={styles.box} href={`/stories/${story.slug}`}>
-                  {story.cover_picture_uri && (
-                    <Image
-                      src={story.cover_picture_uri}
-                      width={200}
-                      height={200}
-                      alt={story.title ?? ""}
-                      className={styles["cover-picture"]}
-                    />
-                  )}
-                  <div className={styles.text}>
-                    <span className={styles.kind}>{filterMapping[story.kind]}</span>
-                    <p className={styles.title}>{story.title}</p>
-                    <p className={styles.summary}>{story.summary}</p>
-                  </div>
-                </SiteLink>
-              </li>
-            ))}
-          </ul>
-        )
-        : (
-          <div className={styles.emptyState}>
-            <p>{t("Layout", "Content not yet available.")}</p>
-          </div>
-        )}
+      <div className="py-10">
+        {filteredStories !== null && filteredStories.length > 0
+          ? (
+            <div className="divide-y divide-border">
+              {filteredStories.map((story) => (
+                <StoryComponent
+                  key={story.id}
+                  story={story}
+                />
+              ))}
+            </div>
+          )
+          : (
+            <div className="text-center">
+              <p className="text-xl text-muted-foreground">
+                {t("Layout", "Content not yet available.")}
+              </p>
+            </div>
+          )}
+      </div>
     </>
   );
 }

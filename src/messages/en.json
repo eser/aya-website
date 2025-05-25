@@ -13,10 +13,11 @@
     "Articles": "Articles",
     "Events": "Events",
     "Content not yet available.": "Content not yet available.",
-    "Change theme": "Change theme",
+    "Change theme": "Temayı değiştir",
     "System": "System",
     "Light": "Light",
-    "Midnight": "Midnight"
+    "Midnight": "Midnight",
+    "Language": "Dil"
   },
   "Loading": {
     "Loading...": "Loading..."
@@ -97,5 +98,8 @@
   "Products": {
     "SearchProductsPlaceholder": "Search products by name or description...",
     "NoProductsFound": "No products found matching your criteria."
+  },
+  "StoryPage": {
+    "Written by": "Written by"
   }
 }

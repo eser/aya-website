@@ -13,10 +13,11 @@
     "Events": "Veranstaltungen",
     "Members": "Mitglieder",
     "Content not yet available.": "Inhalt noch nicht verfügbar.",
-    "Change theme": "Design ändern",
+    "Change theme": "Theme ändern",
     "System": "System",
     "Light": "Hell",
-    "Midnight": "Dunkel"
+    "Midnight": "Dunkel",
+    "Language": "Sprache"
   },
   "Loading": {
     "Loading...": "Wird geladen..."
@@ -97,5 +98,8 @@
   "Members": {
     "Individuals and organizations that are members of this profile.": "Einzelpersonen und Organisationen, die Mitglieder dieses Profils sind.",
     "No members found.": "Keine Mitglieder gefunden."
+  },
+  "StoryPage": {
+    "Written by": "Written by"
   }
 }

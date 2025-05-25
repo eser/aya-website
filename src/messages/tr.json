@@ -16,7 +16,8 @@
     "Change theme": "Temayı değiştir",
     "System": "Sistem",
     "Light": "Açık",
-    "Midnight": "Koyu"
+    "Midnight": "Koyu",
+    "Language": "Dil"
   },
   "Loading": {
     "Loading...": "Yükleniyor..."
@@ -97,5 +98,8 @@
   "Products": {
     "SearchProductsPlaceholder": "Ürünleri isme veya açıklamaya göre ara...",
     "NoProductsFound": "Kriterlerinize uygun ürün bulunamadı."
+  },
+  "StoryPage": {
+    "Written by": "Written by"
   }
 }

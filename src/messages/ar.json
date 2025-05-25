@@ -17,7 +17,8 @@
     "System": "النظام",
     "Light": "فاتح",
     "Midnight": "داكن",
-    "NoProfilesFound": "لم يتم العثور على ملفات شخصية."
+    "NoProfilesFound": "لم يتم العثور على ملفات شخصية.",
+    "Language": "لغة"
   },
   "Loading": {
     "Loading...": "جاري التحميل..."
@@ -95,5 +96,8 @@
   "Members": {
     "Individuals and organizations that are members of this profile.": "الأفراد والمنظمات الأعضاء في هذا الملف الشخصي.",
     "No members found.": "لم يتم العثور على أعضاء."
+  },
+  "StoryPage": {
+    "Written by": "Written by"
   }
 }
