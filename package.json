@@ -54,7 +54,7 @@
     "@biomejs/biome": "^2.0.0-beta.5",
     "@faker-js/faker": "^9.8.0",
     "@hookform/resolvers": "^5.0.1",
-    "@next/env": "15.4.0-canary.51",
+    "@next/env": "15.4.0-canary.60",
     "@radix-ui/react-accessible-icon": "^1.1.6",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
