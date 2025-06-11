@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Slot, Slottable } from "@radix-ui/react-slot";
+import { Slot } from "radix-ui";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "../../lib/utils.ts";
@@ -79,7 +79,7 @@ function Button({
   asChild = false,
   ...props
 }: ButtonProps) {
-  const Comp = asChild ? Slot : "button";
+  const Comp = asChild ? Slot.Slot : "button";
 
   return (
     <Comp
@@ -97,7 +97,7 @@ function Button({
             </div>
           )
           : <Icon />)}
-      <Slottable>{props.children}</Slottable>
+      <Slot.Slottable>{props.children}</Slot.Slottable>
       {Icon &&
         iconPlacement === "right" &&
         (effect === "expandIcon"
